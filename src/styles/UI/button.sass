@@ -10,15 +10,35 @@ button.button
   line-height: 14px
   color: white
   font-weight: normal
+  transition: transform .5s
+  cursor: pointer
 
   &.icon
     display: flex
     justify-content: space-between
     align-items: center
 
-  &.black
-    border-color: black
-    color: black
+  svg, path,  rect
+    stroke: #FFFFFF
 
-    svg, path, g
-      fill: black
+  &:hover
+    transform: translateY(-4px)
+    background: white
+    color: #1D1D20
+
+    svg, path,  rect
+      stroke: #1D1D20
+
+  &.black
+    border-color: #1D1D20
+    color: #1D1D20
+
+    svg, path,  rect
+      stroke: #1D1D20
+
+    &:hover
+      background: #1D1D20
+      color: #FFFFFF
+
+      svg, path,  rect
+        stroke: #FFFFFF

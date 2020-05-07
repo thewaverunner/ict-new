@@ -11,7 +11,10 @@ const Footer = () => {
       <div className="container">
         <div className="menu">
           {/* eslint-disable-next-line */}
-          <div className="lang" onClick={() => { toggleLang(!showLange); }}>
+          <div
+            className="lang"
+            onClick={() => { toggleLang(!showLange); }}
+          >
             <h3>
               <CommentLinesIcon />
               {currentLang}
@@ -46,26 +49,27 @@ const Footer = () => {
             )}
           </div>
           <div>
-            <h3>About</h3>
-            <Link to="/"> About ICT</Link>
-            <Link
-              to="/"
-              className="gray"
-            >
-              Our Industry
-            </Link>
+            <h3>
+              <Link to=" /about">About</Link>
+            </h3>
+            <Link to="/">About ICT</Link>
+            <Link to="/">Our Industry</Link>
             <Link to="/"> Our Business</Link>
             <Link to="/"> Questions & Answers</Link>
           </div>
           <div>
-            <h3>Responsibility</h3>
+            <h3>
+              <Link to="/">Responsibility</Link>
+            </h3>
             <Link to="/"> Our Values</Link>
             <Link to="/"> Our Strategy</Link>
             <Link to="/"> CSR</Link>
             <Link to="/"> Challenges</Link>
           </div>
           <div>
-            <h3>Company</h3>
+            <h3>
+              <Link to="/">Company</Link>
+            </h3>
             <Link to="/"> Corporate Governance</Link>
             <Link to="/"> Our People</Link>
             <Link to="/"> Open Positions</Link>
@@ -74,7 +78,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="additional">
-          aa
+          <p>
+            &copy; Impact Crowd Technology S.L. All Rights Reserved
+          </p>
+          <div>
+            <Link to="#">Terms of use</Link>
+            <Link to="#">Privcy Policy</Link>
+            <Link to="#">Cookie Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

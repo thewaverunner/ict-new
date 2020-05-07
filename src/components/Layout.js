@@ -10,11 +10,13 @@ import PropTypes from 'prop-types';
 import '../styles/global.sass';
 import '../styles/layout.css';
 import Footer from './Footer';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   console.log('layout');
   return (
     <>
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

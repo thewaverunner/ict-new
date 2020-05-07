@@ -216,7 +216,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
   margin-left: 0;
@@ -611,4 +610,16 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+
+:root {
+  --white: #fff;
+  --grey: #f1f4f8b0;
+  --dark-grey: #6b7c93;
+  --green: #24b47e;
+  --teal: #4F96CE;
+  --blue: #6772e5;
+  --dark-blue: #4F3EF5;
+  --spacer: 28px;
 }
