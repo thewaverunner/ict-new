@@ -1,27 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { i18n, withTranslation } from '../i18n'
 
-const Homepage = ({ t }) => (
-  <React.Fragment>
-    {t('h1')}
+function Homepage ({ t }) {
+    return (
+        <>
+            Current language is {t('language')}
 
-    <button
-          type='button'
-          onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
-        >
-          {t('change-locale')}
-        </button>
-  </React.Fragment>
-)
+            <button onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')}>
+                Change language
+            </button>
+        </>
+    )
+}
+
 
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
+    namespacesRequired: ['common'],
 })
-
-Homepage.propTypes = {
-  t: PropTypes.func.isRequired,
-}
 
 export default withTranslation('common')(Homepage)
