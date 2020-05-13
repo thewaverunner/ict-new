@@ -27,6 +27,24 @@
     src: url(../fonts/DMSans-Medium.ttf);
 }
 
+:root {
+    --white: #fff;
+    --grey: #f1f4f8b0;
+    --dark-grey: #6b7c93;
+    --green: #24b47e;
+    --teal: #4F96CE;
+    --blue: #6772e5;
+    --dark-blue: #4F3EF5;
+    --spacer: 28px;
+}
+  
+  /* body {
+    font-family: karla, -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--dark-grey);
+} */
+  
+
 /* main styles */
 
 .main-container {

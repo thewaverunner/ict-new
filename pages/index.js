@@ -2,22 +2,27 @@ import React from 'react'
 
 import { i18n, withTranslation } from '../i18n'
 
+import StripeNavbar from '../components/StripeNavbar'
+
 function Homepage ({ t }) {
     return (
         <>
             <div className="main-container">
                 <header className="header">
                     <div className="header-container">
+
                         <div className="header-navigation-wrapper">
                             <div className="header-logo">
-                                <img src="/static/images/main-logo.png" alt="main logo"/>
+                                <img src="/static/images/main-logo.png" alt="logo"/>
                             </div>
 
-                            <nav className="header-navigation">
+                            {/* <nav className="header-navigation">
                                 <a href="#" className="header-navigation-link">responsibility</a>
                                 <a href="#" className="header-navigation-link">company</a>
                                 <a href="#" className="header-navigation-link">contact us</a>
-                            </nav>
+                            </nav> */}
+
+                            <StripeNavbar duration={300} />
                         </div>  
 
                         <div className="header-description">
