@@ -46,9 +46,20 @@ export const Caret = styled.div`
 export const DropdownBackground = styled.div`
     transform-origin: 0 0;
     background-color: var(--white);
-    border-radius: 4px;
     overflow: hidden;
     position: relative;
+    margin-top: 20px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1);
+    ${promoteLayer}
+`
+
+export const DropdownBackgroundMobile = styled.div`
+    transform-origin: 0 0;
+    background-color: var(--white);
+    overflow: hidden;
+    width:100%;
+    position: relative;
+    margin-top: 20px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1);
     ${promoteLayer}
 `
@@ -58,7 +69,6 @@ export const AltBackground = styled.div`
     width: 300%;
     height: 100%;
     position: absolute;
-    top: 0;
     left: -100%;
     transform-origin: 0 0;
     z-index: 0;

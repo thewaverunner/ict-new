@@ -7,16 +7,10 @@
         max-width: 54%;
     }
 }
-@media screen and (max-width:1360px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
-        max-width: 1100px;
-    }
 
-    .header-description {
-        max-width: 55%;
-        transform: translateY(50%);
+@media screen and (max-width:1360px){
+    .banner-wrapper {
+        max-width: 1100px;
     }
 
     .marketing-section-description {
@@ -33,15 +27,10 @@
         max-width: 63%;
     }
 }
-@media screen and (max-width: 1150px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
-        max-width: 950px;
-    }
 
-    .header-description {
-        max-width: 63%;
+@media screen and (max-width: 1150px){
+    .banner-wrapper {
+        max-width: 950px;
     }
 
     .marketing-section-description {
@@ -63,24 +52,16 @@
 }
 
 @media screen and (max-width: 1000px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
+    .banner-wrapper {
         max-width: 800px;
     }
 
-    .header-description {
-        max-width: 75%;
-    }
-
-    .header-description h1,
     .marketing-section-description h1,
     .impact-section-description h1,
     .network-section-description h1 {
         font-size: 35px;
     }
 
-    .header-description p,
     .marketing-section-description p,
     .impact-section-description p {
         font-size: 19px;
@@ -111,9 +92,7 @@
 }
 
 @media screen and (max-width: 850px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
+    .banner-wrapper {
         max-width: 700px;
     }
 
@@ -145,18 +124,12 @@
         margin-bottom: 20px;
     }
 
-    .header-description {
-        max-width: 75%;
-    }
-
-    .header-description h1,
     .marketing-section-description h1,
     .impact-section-description h1,
     .network-section-description h1 {
         font-size: 32px;
     }
 
-    .header-description p,
     .marketing-section-description p,
     .impact-section-description p {
         font-size: 17px;
@@ -179,21 +152,11 @@
     .network-section-description {
         max-width: 75%;
     }
-
-    .footer-top-content {
-        padding: 30px 0;
-    }  
 }
 
 @media screen and (max-width: 750px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
+    .banner-wrapper {
         max-width: 550px;
-    }
-
-    .header-description {
-        max-width: 75%;
     }
 
     .marketing-section-description {
@@ -213,30 +176,12 @@
     .network-section-description {
         max-width: 75%;
     }
-
-    .footer-bottom-wpapper {
-        flex-direction: column;
-    }
-
-    .footer-copyright p {
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 600px){
-    .header-container,
     .banner-wrapper,
     .footer-wrapper {
         max-width: 400px;
-    }
-
-    .header-navigation {
-        display: none;
-    }
-
-    .header-description {
-        max-width: 75%;
-        transform: translateY(40%);
     }
 
     .banner-wrapper .banner,
@@ -251,13 +196,17 @@
         transform: translateX(25%);
     }
 
-    .header-description h1, 
     .marketing-section-description h1, 
     .impact-section-description h1, 
     .network-section-description h1 {
         font-size: 28px;
     }
 
+    .header-description h1 {
+        line-height: 40px;
+        margin-top: 40px;
+    }
+   
     .impact-section-description {
         max-width: 66%;
         transform: translate(-15%, 10%);
@@ -270,24 +219,13 @@
     .network-section-description {
         max-width: 75%;
     }
-
-    .footer-bottom-wpapper {
-        flex-direction: column;
-    }
-
-    .footer-copyright p {
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 440px){
-    .header-container,
-    .banner-wrapper,
-    .footer-wrapper {
+    .banner-wrapper {
        max-width: 310px;
     }
 
-    .header-description,
     .marketing-section-description,
     .impact-section-description {
         max-width: 100%;
@@ -302,28 +240,5 @@
 
     .network-section-description {
         max-width: 75%;
-    }
-
-    .footer-bottom-wpapper {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-copyright p {
-        margin-bottom: 20px;
-    }
-
-    .footer-change-language {
-        line-height: normal;
-    }
-
-    .footer-links,
-    .footer-change-language  {
-        flex: 1 1 50%;    
-    }
-
-    .footer-top-content {
-        flex-wrap: wrap;
-        display: flex;
     }
 }

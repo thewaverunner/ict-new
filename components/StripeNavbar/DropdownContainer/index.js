@@ -5,6 +5,7 @@ import {
     DropdownRoot,
     Caret,
     DropdownBackground,
+    DropdownBackgroundMobile,
     AltBackground,
     InvertedDiv
 } from './Components'
@@ -70,12 +71,12 @@ class DropdownContainer extends Component {
                 animatingOut={animatingOut}
                 duration={duration}
             >
-                <Flipped flipId='dropdown-caret'>
+                {/* <Flipped flipId='dropdown-caret'>
                     <Caret />
-                </Flipped>
+                </Flipped> */}
 
                 <Flipped flipId='dropdown'>
-                    <DropdownBackground>
+                    <DropdownBackgroundMobile>
                         <Flipped inverseFlipId='dropdown'>
                             <InvertedDiv>
                                 <AltBackground
@@ -107,7 +108,7 @@ class DropdownContainer extends Component {
                                 )}
                             </InvertedDiv>
                         </Flipped>
-                    </DropdownBackground>
+                    </DropdownBackgroundMobile>
                 </Flipped>
             </DropdownRoot>
         )

@@ -2,43 +2,23 @@ import React from 'react'
 
 import { i18n, withTranslation } from '../i18n'
 
-import StripeNavbar from '../components/StripeNavbar'
+import BaseNavbar from '../components/BaseNavbar'
+import BaseFooter from '../components/BaseFooter'
+import BaseButton from '../components/BaseButton'
 
 function Homepage ({ t }) {
     return (
         <>
             <div className="main-container">
-                <header className="header">
-                    <div className="header-container">
-
-                        <div className="header-navigation-wrapper">
-                            <div className="header-logo">
-                                <img src="/static/images/main-logo.png" alt="logo"/>
-                            </div>
-
-                            {/* <nav className="header-navigation">
-                                <a href="#" className="header-navigation-link">responsibility</a>
-                                <a href="#" className="header-navigation-link">company</a>
-                                <a href="#" className="header-navigation-link">contact us</a>
-                            </nav> */}
-
-                            <StripeNavbar duration={300} />
-                        </div>  
-
-                        <div className="header-description">
-                            <h1>Striving for digital equality</h1>
-                            <p>We want to create the world’s largest functioning sales force, disrupting the traditional value chain and distribution of apps, software and services.</p>
-                            <a href="#">Learn more</a>    
-                        </div>  
-                    </div>       
-                </header>  
+                <BaseNavbar />
 
                 <section className="main">
                     <div className="marketing-section">
                         <div className="marketing-section-description">
                             <h1>Multi-level marketing, reinvented</h1>
                             <p>Impact Crowd Technology will, as the first digital multi-level marketing company, address the challenge of long-term sustainability.</p>
-                            <a href="#">Learn more</a>  
+                            
+                            <BaseButton mode={'dark'}>Learn more</BaseButton>
                         </div>
                     </div>
 
@@ -61,7 +41,7 @@ function Homepage ({ t }) {
                                 </div>
 
                                 <div className="banner-link">
-                                    <a href="#">Learn more</a>
+                                    <BaseButton hideBorder={true} >Learn more</BaseButton>
                                 </div>         
                             </div>
 
@@ -81,7 +61,7 @@ function Homepage ({ t }) {
                                 </div>
 
                                 <div className="banner-link">
-                                    <a href="#">Learn more</a>
+                                    <BaseButton hideBorder={true}> Learn more</BaseButton>
                                 </div>         
                             </div>
 
@@ -101,7 +81,7 @@ function Homepage ({ t }) {
                                 </div>
 
                                 <div className="banner-link">
-                                    <a href="#">Learn more</a>
+                                    <BaseButton hideBorder={true}>Learn more</BaseButton>
                                 </div>         
                             </div>
 
@@ -118,74 +98,21 @@ function Homepage ({ t }) {
                                 diversification – while simultaneously addressing major social issues.
                             </p>
 
-                            <a href="#">Learn more</a>  
+                            <BaseButton>Learn more</BaseButton>
                         </div>
                     </div>
 
                     <div className="network-section">
                         <div className="network-section-description">
                             <h1>The network marketing business model has been around for decades. And it works.</h1>
-                            <a href="#">Learn more</a>  
+                        
+                            <BaseButton>Learn more</BaseButton>
                         </div>
                     </div>
 
                 </section>
-                <footer>
-                    <div className="footer-wrapper">
-                        <div className="footer-top-content">
-                            <div className="footer-change-language">
-                                <p>English</p>
-                            </div>
 
-                            <div className="footer-links">
-                                <ul>
-                                    <li>About</li>
-                                    <li><a href="#">About ICT</a></li>
-                                    <li><a href="#">Our Industry</a></li>
-                                    <li><a href="#">Our Business</a></li>
-                                    <li><a href="#">Questions & Answers</a></li>
-                                </ul>
-                            </div>
-
-                            <div className="footer-links">          
-                                <ul>
-                                    <li>Responsibility</li>
-                                    <li><a href="#">Our Values</a></li>
-                                    <li><a href="#">Our Strategy</a></li>
-                                    <li><a href="#">CSR</a></li>
-                                    <li><a href="#">Challenges</a></li>
-                                </ul>
-                            </div> 
-
-                            <div className="footer-links">
-                                <ul>
-                                    <li>Company</li>
-                                    <li><a href="#">Corporate Governance</a></li>
-                                    <li><a href="#">Our People</a></li>
-                                    <li><a href="#">Our Posiyions</a></li>
-                                    <li><a href="#">Pressroom</a></li>
-                                    <li><a href="#">Contact US</a></li>
-                                </ul>
-                            </div>
-                        </div>  
-
-                        <div className="footer-bottom-content">
-                            <div className="footer-bottom-wpapper">
-                                <div className="footer-copyright">
-                                    <p>	&copy; Impact Crowd Technology S.L. All Rights Reserved</p>
-                                </div> 
-
-                                <div className="footer-bottom-policy">
-                                    <ul>
-                                        <li><a href="#">Terms of Use</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Cookie Policy</a></li>
-                                    </ul>    
-                                </div>
-                            </div> 
-                        </div>
-                    </div>    
-                </footer>     
+                <BaseFooter />
             </div>
         </>
     )

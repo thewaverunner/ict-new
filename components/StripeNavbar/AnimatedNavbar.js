@@ -7,11 +7,16 @@ import DropdownContainer from './DropdownContainer'
 import CompanyDropdown from './DropdownContents/CompanyDropdown'
 import DevelopersDropdown from './DropdownContents/DevelopersDropdown'
 import ProductsDropdown from './DropdownContents/ProductsDropdown'
+import MobileDropdown from './DropdownContents/MobileDropdown'
 
 const navbarConfig = [
     { title: 'Responsibility', dropdown: ProductsDropdown },
     { title: 'Company', dropdown: DevelopersDropdown },
     { title: 'Contact us', dropdown: CompanyDropdown }
+]
+
+const navbarConfigMobile = [
+    { title: '*', dropdown: MobileDropdown }
 ]
 
 export default class AnimatedNavbar extends Component {
@@ -29,6 +34,26 @@ export default class AnimatedNavbar extends Component {
     }
 
     onMouseEnter = i => {
+        if (this.props.isMobile) return
+    
+        if (this.animatingOutTimeout) {
+            clearTimeout(this.animatingOutTimeout)
+        
+            this.resetDropdownState(i)
+        
+            return
+        }
+
+        if (this.state.activeIndices[this.state.activeIndices.length - 1] === i) return
+
+        this.setState(prevState => ({
+            activeIndices: prevState.activeIndices.concat(i),
+            animatingOut: false
+        }))
+    }
+
+    onOpen = i => {
+       
         if (this.animatingOutTimeout) {
             clearTimeout(this.animatingOutTimeout)
         
@@ -54,7 +79,11 @@ export default class AnimatedNavbar extends Component {
     }
 
     render() {
-        const { duration } = this.props
+        const { duration, isMobile } = this.props
+
+        let config = navbarConfig
+
+        if (isMobile) config = navbarConfigMobile
 
         let CurrentDropdown
         let PrevDropdown
@@ -64,11 +93,11 @@ export default class AnimatedNavbar extends Component {
         const prevIndex = this.state.activeIndices.length > 1 && this.state.activeIndices[this.state.activeIndices.length - 2]
 
         if (typeof currentIndex === 'number')
-            CurrentDropdown = navbarConfig[currentIndex].dropdown
+            CurrentDropdown = config[currentIndex].dropdown
         if (typeof prevIndex === 'number') {
-            PrevDropdown = navbarConfig[prevIndex].dropdown
+            PrevDropdown = config[prevIndex].dropdown
 
-            direction = currentIndex > prevIndex ? 'right' : 'left'
+            direction = config > prevIndex ? 'right' : 'left' 
         }
 
         return (
@@ -77,13 +106,15 @@ export default class AnimatedNavbar extends Component {
                 spring={duration === 300 ? 'noWobble' : { stiffness: 10, damping: 10 }}
             >
                 <Navbar onMouseLeave={this.onMouseLeave}>
-                    {navbarConfig.map((n, index) => {
+                    {config.map((n, index) => {
                         return (
                             <NavbarItem
                                 key={n.title}
                                 title={n.title}
                                 index={index}
+                                isMobile={isMobile}
                                 onMouseEnter={this.onMouseEnter}
+                                onOpen={this.onOpen}
                             >
                                 {
                                     currentIndex === index && (
@@ -92,7 +123,7 @@ export default class AnimatedNavbar extends Component {
                                             animatingOut={this.state.animatingOut}
                                             duration={duration}
                                         >
-                                            <CurrentDropdown />
+                                            <CurrentDropdown onClose={this.onMouseLeave} />
                                             
                                             {PrevDropdown && <PrevDropdown />}
                                         </DropdownContainer>

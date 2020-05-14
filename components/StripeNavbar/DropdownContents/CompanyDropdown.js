@@ -10,7 +10,7 @@ import {
 } from './Components'
 
 const CompanyDropdownEl = styled.div`
-    width: 18.5rem;
+    min-width: 14rem;
 `
 
 const CompanyDropdown = () => {
@@ -18,50 +18,22 @@ const CompanyDropdown = () => {
         <CompanyDropdownEl>
             <DropdownSection data-first-dropdown-section>
                 <ul>
-                    <HeadingLink>
-                        <a href='/'>
-                            <Icon /> About Stripe
-                        </a>
-                    </HeadingLink>
+                   <li>
+                        <a href='#'>About ICT</a>
+                   </li>
 
-                    <HeadingLink>
-                        <a href='/'>
-                            <Icon />Customers
-                        </a>
-                    </HeadingLink>
+                    <li>
+                       <a href='#'>Our Industry</a>
+                    </li>
 
-                    <HeadingLink>
-                        <a href='/'>
-                            <Icon />Jobs
-                        </a>
-                    </HeadingLink>
-
-                    <HeadingLink noMarginBottom>
-                        <a href='/'>
-                            <Icon />Environment
-                        </a>
-                    </HeadingLink>
-                </ul>
-            </DropdownSection>
-    
-            <DropdownSection>
-                <div>
-                    <Heading>
-                        <Icon />From the Blog
-                    </Heading>
-    
-                    <LinkList marginLeft='25px'>
-                        <li>
-                            <a href='/'>Stripe Atlas &rsaquo;</a>
-                        </li>
-                        <li>
-                            <a href='/'>Stripe Home &rsaquo;</a>
-                        </li>
-                        <li>
-                            <a href='/'>Improved Fraud Detection &rsaquo;</a>
-                        </li>
-                    </LinkList>
-                </div>
+                    <li>
+                       <a href='#'>Our Business</a>
+                    </li>    
+                    
+                    <li>
+                       <a href='#'>Questinos & Answers</a>
+                    </li>
+                </ul>    
             </DropdownSection>
         </CompanyDropdownEl>
     )

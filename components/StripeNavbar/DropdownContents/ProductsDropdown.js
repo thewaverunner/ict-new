@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Icon, DropdownSection, Heading } from './Components'
 
 const ProductsDropdownEl = styled.div`
-    width: 30rem;
+   min-width: 12rem;
 `
 
 const Logo = styled.div`
@@ -35,7 +35,16 @@ const SubProductsList = styled.ul`
 
 const ProductsSection = styled.ul`
     li {
-        display: flex;
+        padding: 10px 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+        font-family: 'DM Sans Bold';
+    }
+    a:hover {
+        color: #a3a3a4;
     }
 `
 
@@ -57,68 +66,25 @@ const ProductsDropdown = () => {
     return (
         <ProductsDropdownEl>
             <DropdownSection data-first-dropdown-section>
-                <ProductsSection>
-                    <li>
-                        <div>
-                            <Logo color='blue' />
-                        </div>
+                <ProductsSection> 
+                   <ul> 
+                        <li>
+                            <a href="#">Our Values</a>
+                        </li>
 
-                        <div>
-                            <Heading color='blue'>Payments</Heading>
-                            <p>A complete payments platform</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <Logo color='green' />
-                        </div>
+                        <li>
+                            <a href="#">Our Strategy</a>
+                        </li>
 
-                        <div>
-                            <Heading color='green'>Billing</Heading>
-                            <p>Build and scale your recurring business model</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <Logo color='teal' />
-                        </div>
+                        <li>
+                            <a href="#">CSR</a>
+                        </li>
 
-                        <div>
-                            <Heading color='teal'>Connect</Heading>
-
-                            <p style={{ marginBottom: 0 }}>
-                                Everything platforms need to get sellers paid
-                            </p>
-                        </div>
-                    </li>
+                        <li>
+                            <a href="#">Challenges</a>
+                        </li>
+                   </ul> 
                 </ProductsSection>
-            </DropdownSection>
-            
-            <DropdownSection>
-                <SubProductsList>
-                    <li>
-                        <Heading noMarginBottom>Sigma</Heading>
-                        <div>Your business data at your fingertips.</div>
-                    </li>
-
-                    <li>
-                        <Heading noMarginBottom>Atlas</Heading>
-                        <div>The best way to start an internet business.</div>
-                    </li>
-
-                    <li>
-                        <Heading noMarginBottom>Radar</Heading>
-                        <div>Fight fraud with machine learning.</div>
-                    </li>
-                </SubProductsList>
-
-                <WorksWithStripe>
-                    <Heading noMarginBottom>
-                        <a href='/'>
-                            <Icon /> Works with Stripe
-                        </a>
-                    </Heading>
-                </WorksWithStripe>
             </DropdownSection>
         </ProductsDropdownEl>
     )
