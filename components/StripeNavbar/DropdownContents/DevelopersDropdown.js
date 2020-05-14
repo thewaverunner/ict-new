@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+import { withTranslation } from '../../../i18n'
+
 import {
     Icon,
     DropdownSection,
@@ -21,29 +24,29 @@ const Flex = styled.div`
     }
 `
 
-const DevelopersDropdown = () => {
+const DevelopersDropdown = ({ t }) => {
     return (
         <DevelopersDropdownEl>
             <DropdownSection data-first-dropdown-section>
                <ul> 
                 <li>
-                    <a href="#">Corporate Governance</a>
+                    <a href="#">{t('BaseFooter_Company_Governance')}</a>
                 </li>
 
                 <li>
-                    <a href="#">Our People</a>
+                    <a href="#">{t('BaseFooter_Company_People')}</a>
                 </li>
 
                 <li>
-                    <a href="#">Our Positions</a>
+                    <a href="#">{t('BaseFooter_Company_Positions')}</a>
                 </li>
 
                 <li>
-                    <a href="#">Pressroom</a>
+                    <a href="#">{t('BaseFooter_Company_Pressroom')}</a>
                 </li>
 
                 <li>
-                    <a href="#">Contact US</a>
+                    <a href="#">{t('BaseFooter_Company_Contact')}</a>
                 </li>
               </ul>                 
             </DropdownSection>
@@ -51,4 +54,4 @@ const DevelopersDropdown = () => {
     )
 }
 
-export default DevelopersDropdown
+export default withTranslation('common')(DevelopersDropdown)

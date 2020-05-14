@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { withTranslation } from '../../i18n'
+
 import {
     Footer, 
     FooterWrapper, 
@@ -18,36 +20,36 @@ import {
     FooterBottomPolicyItemLink
 } from './BaseFooter.styles'
 
-const aboutLinks = [
-    { title: 'About ICT', link: '#' },
-    { title: 'Our Industry', link: '#' },
-    { title: 'Our Business', link: '#' },
-    { title: 'Questions & Answers', link: '#' },
-]
 
-const responsibilityLinks = [
-    { title: 'Our Values', link: '#' },
-    { title: 'Our Strategy', link: '#' },
-    { title: 'CSR', link: '#' },
-    { title: 'Challenges', link: '#' },
-]
+function BaseFooter ({ t }) {
+    const aboutLinks = [
+        { title: t('BaseFooter_About_ICT'), link: '#' },
+        { title: t('BaseFooter_About_Industry'), link: '#' },
+        { title: t('BaseFooter_About_Business'), link: '#' },
+        { title: t('BaseFooter_About_FAQ'), link: '#' },
+    ]
+    
+    const responsibilityLinks = [
+        { title: t('BaseFooter_Responsibility_Values'), link: '#' },
+        { title: t('BaseFooter_Responsibility_Strategy'), link: '#' },
+        { title: t('BaseFooter_Responsibility_CSR'), link: '#' },
+        { title: t('BaseFooter_Responsibility_Challenges'), link: '#' },
+    ]
+    
+    const companyLinks = [
+        { title: t('BaseFooter_Company_Governance'), link: '#' },
+        { title: t('BaseFooter_Company_People'), link: '#' },
+        { title: t('BaseFooter_Company_Positions'), link: '#' },
+        { title: t('BaseFooter_Company_Pressroom'), link: '#' },
+        { title: t('BaseFooter_Company_Contact'), link: '#' }
+    ]
+    
+    const footerBottomLinks = [
+        { title: t('BaseFooter_Bottom_Terms'), link: '#' },
+        { title: t('BaseFooter_Bottom_Privacy'), link: '#' },
+        { title: t('BaseFooter_Bottom_Cookie'), link: '#' }
+    ]
 
-const companyLinks = [
-    { title: 'Corporate Governance', link: '#' },
-    { title: 'Our People', link: '#' },
-    { title: 'Our Positions', link: '#' },
-    { title: 'Pressroom', link: '#' },
-    { title: 'Contact US', link: '#' }
-]
-
-const footerBottomLinks = [
-    { title: 'Terms of Use', link: '#' },
-    { title: 'Privacy Policy', link: '#' },
-    { title: 'Cookie Policy', link: '#' }
-]
-
-
-function BaseFooter () {
     function renderLinks (title, links) {
         return (
             <FooterLinks>
@@ -68,18 +70,16 @@ function BaseFooter () {
         <Footer>
             <FooterWrapper>
                 <FooterTopContent>
-                    <FooterChangeLanguage>                 
-                        <p>English</p>
-                    </FooterChangeLanguage>
+                    <FooterChangeLanguage>{t('BaseFooter_Language')}</FooterChangeLanguage>
 
-                    {renderLinks('About', aboutLinks)}
-                    {renderLinks('Responsibility', responsibilityLinks)}
-                    {renderLinks('Company', companyLinks)}
+                    {renderLinks(t('BaseFooter_About'), aboutLinks)}
+                    {renderLinks(t('BaseFooter_Responsibility'), responsibilityLinks)}
+                    {renderLinks(t('BaseFooter_Company'), companyLinks)}
                 </FooterTopContent>  
 
                 <FooterBottomContent>
                     <FooterBottomWrapper>
-                        <FooterCopyright>&copy; Impact Crowd Technology S.L. All Rights Reserved</FooterCopyright> 
+                        <FooterCopyright>{t('BaseFooter_Bottom_Copyright')}</FooterCopyright> 
 
                         <FooterBottomPolicyList>
                             {footerBottomLinks.map(({ title, link }, index) => (
@@ -95,4 +95,4 @@ function BaseFooter () {
     )
 }
 
-export default BaseFooter
+export default withTranslation('common')(BaseFooter)

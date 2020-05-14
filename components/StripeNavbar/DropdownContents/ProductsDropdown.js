@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { withTranslation } from '../../../i18n'
+
 import { Icon, DropdownSection, Heading } from './Components'
 
 const ProductsDropdownEl = styled.div`
@@ -62,26 +64,26 @@ const WorksWithStripe = styled.div`
     }
 `
 
-const ProductsDropdown = () => {
+const ProductsDropdown = ({ t }) => {
     return (
         <ProductsDropdownEl>
             <DropdownSection data-first-dropdown-section>
                 <ProductsSection> 
                    <ul> 
                         <li>
-                            <a href="#">Our Values</a>
+                            <a href="#">{t('BaseFooter_Responsibility_Values')}</a>
                         </li>
 
                         <li>
-                            <a href="#">Our Strategy</a>
+                            <a href="#">{t('BaseFooter_Responsibility_Strategy')}</a>
                         </li>
 
                         <li>
-                            <a href="#">CSR</a>
+                            <a href="#">{t('BaseFooter_Responsibility_CSR')}</a>
                         </li>
 
                         <li>
-                            <a href="#">Challenges</a>
+                            <a href="#">{t('BaseFooter_Responsibility_Challenges')}</a>
                         </li>
                    </ul> 
                 </ProductsSection>
@@ -90,4 +92,4 @@ const ProductsDropdown = () => {
     )
 }
 
-export default ProductsDropdown
+export default withTranslation('common')(ProductsDropdown)

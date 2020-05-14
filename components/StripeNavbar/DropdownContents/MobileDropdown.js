@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { withTranslation } from '../../../i18n'
+
 import { Icon, DropdownSectionMobile, Heading } from './Components'
+import BaseButton from '../../BaseButton'
 
 const ProductsDropdownEl = styled.div`
     width: 100%;
@@ -84,7 +87,7 @@ const WorksWithStripe = styled.div`
     }
 `
 
-const MobileDropdown = ({ onClose }) => {
+const MobileDropdown = ({ onClose , t }) => {
     return (
         <ProductsDropdownEl>
             <DropdownSectionMobile data-first-dropdown-section>
@@ -95,42 +98,42 @@ const MobileDropdown = ({ onClose }) => {
 
                 <div className="footer-links">
                     <ul>
-                        <li>About</li>
-                        <li><a href="#">About ICT</a></li>
-                        <li><a href="#">Our Industry</a></li>
-                        <li><a href="#">Our Business</a></li>
-                        <li><a href="#">Questions & Answers</a></li>
+                        <li>{t('BaseFooter_About')}</li>
+                        <li><a href="#">{t('BaseFooter_About_ICT')}</a></li>
+                        <li><a href="#">{t('BaseFooter_About_Industry')}</a></li>
+                        <li><a href="#">{t('BaseFooter_About_Business')}</a></li>
+                        <li><a href="#">{t('BaseFooter_About_FAQ')}</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-links">          
                     <ul>
-                        <li>Responsibility</li>
-                        <li><a href="#">Our Values</a></li>
-                        <li><a href="#">Our Strategy</a></li>
-                        <li><a href="#">CSR</a></li>
-                        <li><a href="#">Challenges</a></li>
+                        <li>{t('BaseFooter_Responsibility')}</li>
+                        <li><a href="#">{t('BaseFooter_Responsibility_Values')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Responsibility_Strategy')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Responsibility_CSR')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Responsibility_Challenges')}</a></li>
                     </ul>
                 </div> 
 
                 <div className="footer-links">
                     <ul>
-                        <li>Company</li>
-                        <li><a href="#">Corporate Governance</a></li>
-                        <li><a href="#">Our People</a></li>
-                        <li><a href="#">Our Posiyions</a></li>
-                        <li><a href="#">Pressroom</a></li>
-                        <li><a href="#">Contact US</a></li>
+                        <li>{t('BaseFooter_Company')}</li>
+                        <li><a href="#">{t('BaseFooter_Company_Governance')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Company_People')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Company_Positions')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Company_Pressroom')}</a></li>
+                        <li><a href="#">{t('BaseFooter_Company_Contact')}</a></li>
                     </ul>
                 </div>
             </DropdownSectionMobile>
             
             <SubProductsListMobile>
-                    <h3>Are you our next partner?</h3>
-                    <a hfer="#">Contact Us</a>
+                    <h3>{t('BaseHeader_Mobile_Partner')}</h3>
+                    <BaseButton mode={'dark'}>{t('BaseHeader_Mobile_Contact')}</BaseButton>
             </SubProductsListMobile>
         </ProductsDropdownEl>
     )
 }
 
-export default MobileDropdown
+export default withTranslation('common')(MobileDropdown)

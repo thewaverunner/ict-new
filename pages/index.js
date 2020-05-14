@@ -1,120 +1,104 @@
 import React from 'react'
 
-import { i18n, withTranslation } from '../i18n'
+import { withTranslation } from '../i18n'
 
-import BaseNavbar from '../components/BaseNavbar'
-import BaseFooter from '../components/BaseFooter'
 import BaseButton from '../components/BaseButton'
+
+import {
+    Home,
+    Marketing,
+    MarketingDescription,
+    MarketingTitle,
+    MarketingContent,
+    BannerSection,
+    BannerWrapper,
+    BannerImage,
+    BannerDescription,
+    Banner,
+    BannerTitle,
+    BannerContent,
+    Impact,
+    ImpactDescription,
+    ImpactTitle,
+    ImpactContent,
+    Network,
+    NetworkDescription,
+    NetworkTitle
+} from './index.styles'
 
 function Homepage ({ t }) {
     return (
-        <>
-            <div className="main-container">
-                <BaseNavbar />
+        <Home>
+            <Marketing>
+                <MarketingDescription>
+                    <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>
+                    <MarketingContent>{t('HomePage_Marketing_Content')}</MarketingContent>
+                    
+                    <BaseButton mode={'dark'}>Learn more</BaseButton>
+                </MarketingDescription>
+            </Marketing>
 
-                <section className="main">
-                    <div className="marketing-section">
-                        <div className="marketing-section-description">
-                            <h1>Multi-level marketing, reinvented</h1>
-                            <p>Impact Crowd Technology will, as the first digital multi-level marketing company, address the challenge of long-term sustainability.</p>
-                            
-                            <BaseButton mode={'dark'}>Learn more</BaseButton>
-                        </div>
-                    </div>
+            <BannerSection>
+                <BannerWrapper>
+                    <Banner>
+                        <BannerImage>
+                            <img src="/static/images/first-banner.png" />
+                        </BannerImage>  
 
-                    <div className="banner-section">
-                        <div className="banner-wrapper">
-                            <div className="banner">
-                                <div className="banner-image">
-                                    <img src="/static/images/first-banner.png"/>
-                                </div>  
+                        <BannerDescription>
+                            <BannerTitle>{t('HomePage_FirstBanner_Title')}</BannerTitle>
+                            <BannerContent>{t('HomePage_FirstBanner_Content')}</BannerContent>
+                        </BannerDescription>
 
-                                <div className="banner-description">
-                                    <h2>Continuous innovation</h2>
+                        <BaseButton hideBorder={true} >Learn more</BaseButton>        
+                    </Banner>
 
-                                    <p>
-                                        We’re proud of our unstinting commitment to generating 
-                                        innovative digital products designed to provide you with new revenue streams. 
-                                        We are equally dedicated to seeking out and developing innovations 
-                                        that support our network of salespeople.
-                                    </p>
-                                </div>
+                    <Banner>
+                        <BannerImage>
+                            <img src="/static/images/second-banner.png" />
+                        </BannerImage>  
 
-                                <div className="banner-link">
-                                    <BaseButton hideBorder={true} >Learn more</BaseButton>
-                                </div>         
-                            </div>
+                        <BannerDescription>
+                            <BannerTitle>{t('HomePage_SecondBanner_Title')}</BannerTitle>
+                            <BannerContent>{t('HomePage_SecondBanner_Content')}</BannerContent>
+                        </BannerDescription>
 
-                            <div className="banner">
-                                <div className="banner-image">
-                                    <img src="/static/images/second-banner.png"/>
-                                </div>  
+                        <BaseButton hideBorder={true}> Learn more</BaseButton>      
+                    </Banner>
 
-                                <div className="banner-description">
-                                    <h2>Purely digital</h2>
+                    <Banner>
+                        <BannerImage>
+                            <img src="/static/images/third-banner.png"/>
+                        </BannerImage>
 
-                                    <p>
-                                        We intend to remain purely digital in our product offering.
-                                        We want to deliver impact technology – via our online projects that will disrupt and 
-                                        challenge traditional digital industries and software distribution channels.
-                                    </p>
-                                </div>
+                        <BannerDescription>
+                            <BannerTitle>{t('HomePage_ThirdBanner_Title')}</BannerTitle>
+                            <BannerContent>{t('HomePage_ThirdBanner_Content')} </BannerContent>
+                        </BannerDescription>
 
-                                <div className="banner-link">
-                                    <BaseButton hideBorder={true}> Learn more</BaseButton>
-                                </div>         
-                            </div>
+                        <BaseButton hideBorder={true}>Learn more</BaseButton>      
+                    </Banner>
 
-                            <div className="banner">
-                                <div className="banner-image">
-                                    <img src="/static/images/third-banner.png"/>
-                                </div>
-    
-                                <div className="banner-description">
-                                    <h2>Global reach</h2>
+                </BannerWrapper>
+            </BannerSection> 
 
-                                    <p>
-                                        Our priority is to build global frontrunners in multiple industries, 
-                                        disrupting monopolised markets by offering a unique and robust value 
-                                        proposition on a global scale. The aim of Impact Crowd Technology is to establish online global leaders.
-                                    </p>
-                                </div>
+            <Impact>
+                <ImpactDescription>
+                    <ImpactTitle>{t('HomePage_Impact_Title')}</ImpactTitle>
+                    <ImpactContent>{t('HomePage_Impact_Content')}</ImpactContent>
 
-                                <div className="banner-link">
-                                    <BaseButton hideBorder={true}>Learn more</BaseButton>
-                                </div>         
-                            </div>
+                    <BaseButton>Learn more</BaseButton>
+                </ImpactDescription>
+            </Impact>
 
-                        </div>
-                    </div> 
-
-                    <div className="impact-section">
-                        <div className="impact-section-description">
-                            <h1>Impact Technology</h1>
-
-                            <p>
-                                Impact Technology refers to the intentional use of frontier technology to 
-                                benefit and promote new sources of employment and accelerate economic 
-                                diversification – while simultaneously addressing major social issues.
-                            </p>
-
-                            <BaseButton>Learn more</BaseButton>
-                        </div>
-                    </div>
-
-                    <div className="network-section">
-                        <div className="network-section-description">
-                            <h1>The network marketing business model has been around for decades. And it works.</h1>
-                        
-                            <BaseButton>Learn more</BaseButton>
-                        </div>
-                    </div>
-
-                </section>
-
-                <BaseFooter />
-            </div>
-        </>
+            <Network>
+                <NetworkDescription>
+                    <NetworkTitle>{t('HomePage_Network_Content')}</NetworkTitle>
+                
+                    <BaseButton>Learn more</BaseButton>
+                </NetworkDescription>
+            </Network>
+        </Home>
     )
 }
 

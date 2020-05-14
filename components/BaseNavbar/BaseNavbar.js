@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import { withTranslation } from '../../i18n'
+
 import StripeNavbar from '../StripeNavbar'
 import BaseButton from '../BaseButton'
 
@@ -15,7 +17,8 @@ import {
     HeaderTitle,
 } from './BaseNavbar.styles'
 
-function BaseNavbar () {
+function BaseNavbar ({ t }) {
+
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -37,14 +40,9 @@ function BaseNavbar () {
     function renderDescription () {
         return (
             <HeaderDescriptionWrapper>
-                <HeaderTitle>Striving for digital equality</HeaderTitle>
+                <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
 
-                <HeaderDescription>
-                    We want to create the world’s largest 
-                    functioning sales force, disrupting the 
-                    traditional value chain and distribution of apps, 
-                    software and services.
-                </HeaderDescription>
+                <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
 
                 <BaseButton>Learn more</BaseButton>
             </HeaderDescriptionWrapper>
@@ -90,4 +88,4 @@ function BaseNavbar () {
     )
 }
 
-export default BaseNavbar
+export default withTranslation('common')(BaseNavbar)
