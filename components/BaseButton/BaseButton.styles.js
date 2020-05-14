@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 
 export const Button = styled.a`
-
+    background-color: transparent;
+    border: ${props => props.hideBorder ? '' : `1px solid ${props.blackStyle ? '#000000' : '#ffffff'}`};
     text-decoration: none;
     border-radius: 6px;
+    cursor: pointer;
+    padding: ${props => (props.hideBorder ? "0" : '10px 25px')};
     font-size: 14px;
-    cursor:pointer;
-    padding: ${({ hideBorder }) => hideBorder ? null : '10px 25px'};
-    color: #000000;
+    color: ${props => (props.blackStyle ? "#000000" : '#ffffff')};;
     font-family: 'DM Sans Regular';
-    border: ${({ hideBorder }) => hideBorder ? null : '1px solid #000000'};
+
+    &:hover {
+        background-color:${props => props.hideBorder ? '' : (props.blackStyle ? "#000000" : '#ffffff')};
+        color:${props => props.hideBorder ? '' : (props.blackStyle ? "#ffffff" : '#000000')};
+    }
 `

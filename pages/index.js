@@ -34,7 +34,7 @@ function Homepage ({ t }) {
                     <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>
                     <MarketingContent>{t('HomePage_Marketing_Content')}</MarketingContent>
                     
-                    <BaseButton mode={'dark'}>Learn more</BaseButton>
+                    <BaseButton blackStyle>Learn more</BaseButton>
                 </MarketingDescription>
             </Marketing>
 
@@ -50,7 +50,7 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_FirstBanner_Content')}</BannerContent>
                         </BannerDescription>
 
-                        <BaseButton hideBorder={true} >Learn more</BaseButton>        
+                        <BaseButton blackStyle hideBorder={true} >Learn more</BaseButton>        
                     </Banner>
 
                     <Banner>
@@ -63,7 +63,7 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_SecondBanner_Content')}</BannerContent>
                         </BannerDescription>
 
-                        <BaseButton hideBorder={true}> Learn more</BaseButton>      
+                        <BaseButton blackStyle hideBorder={true}> Learn more</BaseButton>      
                     </Banner>
 
                     <Banner>
@@ -76,7 +76,7 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_ThirdBanner_Content')} </BannerContent>
                         </BannerDescription>
 
-                        <BaseButton hideBorder={true}>Learn more</BaseButton>      
+                        <BaseButton blackStyle hideBorder={true}>Learn more</BaseButton>      
                     </Banner>
 
                 </BannerWrapper>
@@ -95,7 +95,7 @@ function Homepage ({ t }) {
                 <NetworkDescription>
                     <NetworkTitle>{t('HomePage_Network_Content')}</NetworkTitle>
                 
-                    <BaseButton>Learn more</BaseButton>
+                    <BaseButton blackStyle>Learn more</BaseButton>
                 </NetworkDescription>
             </Network>
         </Home>

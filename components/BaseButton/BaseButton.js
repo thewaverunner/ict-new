@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 import { Button } from './BaseButton.styles'
 
-function BaseButton ({ children, hideBorder }) {
+function BaseButton ({ children, hideBorder, blackStyle }) {
     return (
         <Link href="/">
-            <Button hideBorder={hideBorder}>{children}</Button>
+            <Button blackStyle={blackStyle} hideBorder={hideBorder}>{children}</Button>
         </Link>
     )
 }

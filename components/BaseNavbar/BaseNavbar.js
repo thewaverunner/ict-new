@@ -32,7 +32,7 @@ function BaseNavbar ({ t }) {
     }, [])
 
     function onResize () {
-        const currentIsMobile = (window.innerWidth <= 760)
+        const currentIsMobile = (window.innerWidth <= 750)
 
         setIsMobile(currentIsMobile)
     }
@@ -41,7 +41,6 @@ function BaseNavbar ({ t }) {
         return (
             <HeaderDescriptionWrapper>
                 <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
-
                 <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
 
                 <BaseButton>Learn more</BaseButton>
@@ -59,8 +58,10 @@ function BaseNavbar ({ t }) {
 
                     <StripeNavbar duration={300} isMobile={isMobile} /> 
                 </HeaderMobileNav> 
-                
-                {renderDescription()}
+
+                <HeaderContainer>   
+                    {renderDescription()}
+                </HeaderContainer>
             </>
         )
     }

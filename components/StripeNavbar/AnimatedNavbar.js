@@ -10,13 +10,13 @@ import ProductsDropdown from './DropdownContents/ProductsDropdown'
 import MobileDropdown from './DropdownContents/MobileDropdown'
 
 const navbarConfig = [
-    { title: 'Responsibility', dropdown: ProductsDropdown },
-    { title: 'Company', dropdown: DevelopersDropdown },
-    { title: 'Contact us', dropdown: CompanyDropdown }
+    { title: 'RESPONSIBILITY', dropdown: ProductsDropdown },
+    { title: 'COMPANY', dropdown: DevelopersDropdown },
+    { title: 'CONTACT US', dropdown: CompanyDropdown }
 ]
 
 const navbarConfigMobile = [
-    { title: '*', dropdown: MobileDropdown }
+    { title: null, dropdown: MobileDropdown }
 ]
 
 export default class AnimatedNavbar extends Component {
