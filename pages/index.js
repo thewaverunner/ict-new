@@ -26,7 +26,7 @@ import {
     NetworkTitle
 } from './index.styles'
 
-function Homepage ({ t }) {
+function HomePage ({ t }) {
     return (
         <Home>
             <Marketing>
@@ -103,8 +103,8 @@ function Homepage ({ t }) {
 }
 
 
-Homepage.getInitialProps = async () => ({
+HomePage.getInitialProps = async () => ({
     namespacesRequired: ['common'],
 })
 
-export default withTranslation('common')(Homepage)
+export default withTranslation('common')(HomePage)

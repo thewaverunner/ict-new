@@ -18,7 +18,6 @@ import {
 } from './BaseNavbar.styles'
 
 function BaseNavbar ({ t }) {
-
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {

@@ -9,6 +9,7 @@ export const Marketing = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 `
 
 export const MarketingDescription = styled.div`
@@ -96,7 +97,7 @@ export const MarketingContent = styled.p`
 export const BannerSection = styled.div`
   background-color: #fafafa;
   padding: 75px 0;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 850px){
     padding: 40px 0;
@@ -207,6 +208,7 @@ export const Impact = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 `
 
 export const ImpactDescription = styled.div`
@@ -288,7 +290,8 @@ export const ImpactContent = styled.p`
 
 export const Network = styled.div`
   width: 100%;
-  padding: 110px 0 125px;
+  padding: 110px 0;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 1150px){
     padding: 70px 0;
