@@ -1,5 +1,50 @@
 {
-    "language": "ZH",
+    "language": "EN",
     "error-with-status": "A {{statusCode}} error occurred on server",
-    "error-without-status": "An error occurred on the server"
+    "error-without-status": "An error occurred on the server",
+
+    "learn-more": "Lore",
+
+    "BaseFooter_Language": "English",
+
+    "BaseFooter_About": "About",
+    "BaseFooter_About_ICT": "About ICT",
+    "BaseFooter_About_Industry": "Our Industry",
+    "BaseFooter_About_Business": "Our Business",
+    "BaseFooter_About_FAQ": "Questions & Answers",
+
+    "BaseFooter_Responsibility": "Responsibility",
+    "BaseFooter_Responsibility_Values": "Our Values",
+    "BaseFooter_Responsibility_Strategy": "Our Strategy",
+    "BaseFooter_Responsibility_CSR": "CSR",
+    "BaseFooter_Responsibility_Challenges": "Challenges",
+
+    "BaseFooter_Company": "Company",
+    "BaseFooter_Company_Governance": "Corporate Governance",
+    "BaseFooter_Company_People": "Our People",
+    "BaseFooter_Company_Positions": "Our Positions",
+    "BaseFooter_Company_Pressroom": "Pressroom",
+    "BaseFooter_Company_Contact": "Contact Us",
+
+    "BaseFooter_Bottom_Terms": "Terms of Use",
+    "BaseFooter_Bottom_Privacy": "Privacy Policy",
+    "BaseFooter_Bottom_Cookie": "Cookie Policy",
+    "BaseFooter_Bottom_Copyright": "&copy; Impact Crowd Technology S.L. All Rights Reserved",
+
+    "BaseHeader_Title": "Striving for digital equality",
+    "BaseHeader_Description": "We want to create the world’s largest functioning sales force, disrupting the traditional value chain and distribution of apps, software and services.",
+    "BaseHeader_Mobile_Partner": "Are you our next partner?",
+    "BaseHeader_Mobile_Contact": "Contact Us",
+
+    "HomePage_Marketing_Title": "Multi-level marketing, reinvented",
+    "HomePage_Marketing_Content": "Impact Crowd Technology will, as the first digital multi-level marketing company, address the challenge of long-term sustainability.",
+    "HomePage_FirstBanner_Title": "Continuous innovation",
+    "HomePage_FirstBanner_Content": "We’re proud of our unstinting commitment to generating innovative digital products designed to provide you with new revenue streams.  We are equally dedicated to seeking out and developing innovations that support our network of salespeople.",
+    "HomePage_SecondBanner_Title": "Purely digital",
+    "HomePage_SecondBanner_Content": "We intend to remain purely digital in our product offering. We want to deliver impact technology – via our online projects that will disrupt and challenge traditional digital industries and software distribution channels.",
+    "HomePage_ThirdBanner_Title": "Global reach",
+    "HomePage_ThirdBanner_Content": "Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale. The aim of Impact Crowd Technology is to establish online global leaders.",
+    "HomePage_Impact_Title": "Impact Technology",
+    "HomePage_Impact_Content": "Impact Technology refers to the intentional use of frontier technology to benefit and promote new sources of employment and accelerate economic diversification – while simultaneously addressing major social issues.",
+    "HomePage_Network_Content": "The network marketing business model has been around for decades. And it works."
 }
