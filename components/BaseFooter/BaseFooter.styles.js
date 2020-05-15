@@ -6,8 +6,12 @@ export const Footer = styled.footer`
 `
 
 export const FooterWrapper = styled.div`
-    max-width: 1280px;
+    max-width: 1800px;
     margin: 0 auto;
+
+    @media screen and (max-width:1920px){
+        max-width: 1320px;
+      }
 
     @media screen and (max-width:1360px){
         max-width: 1100px;
@@ -83,7 +87,7 @@ export const FooterLinksTitle = styled.div`
 export const FooterLinksList = styled.ul``
 
 export const FooterLinksItem = styled.li`
-    line-height: 30px;
+    line-height: 40px;
 `
 
 export const FooterLinksItemLink = styled.a`
@@ -93,7 +97,8 @@ export const FooterLinksItemLink = styled.a`
     text-decoration: none;
 
     &:hover {
-        color: #a3a3a4;
+        opacity: 0.5;
+        transition: opacity .3s ease-in-out;
     }
 `
 
@@ -149,5 +154,6 @@ export const FooterBottomPolicyItemLink = styled.a`
 
     &:hover {
         color: #000000;
+        transition: color 0.3s ease-in-out;
     }
 `

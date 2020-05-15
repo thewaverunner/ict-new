@@ -6,6 +6,7 @@ import StripeNavbar from '../StripeNavbar'
 import BaseButton from '../BaseButton'
 
 import DesktopLogo from '../../public/static/images/desktop-logo.svg'
+import MobileLogo from '../../public/static/images/mobile-logo.svg'
 
 import {
     Header,
@@ -54,7 +55,7 @@ function BaseNavbar ({ t }) {
             <>
                 <HeaderMobileNav>
                     <HeaderMobileLogo>
-                        <img src="/static/images/mobile-logo.png"/>
+                        <MobileLogo />
                     </HeaderMobileLogo>
 
                     <StripeNavbar duration={300} isMobile={isMobile} /> 
@@ -72,7 +73,6 @@ function BaseNavbar ({ t }) {
             <HeaderContainer> 
                 <HeaderNavWrapper>
                     <HeaderLogo>
-                        {/* <img src="/static/images/main-logo.png" alt="logo"/> */}
                         <DesktopLogo />
                     </HeaderLogo>
 

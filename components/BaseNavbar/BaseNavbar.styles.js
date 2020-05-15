@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-    max-width: 1300px;
+    max-width: 1800px;
     margin: 0 auto;
+
+    @media screen and (max-width:1920px){
+        max-width: 1320px;
+    }
 
     @media screen and (max-width:1360px){
         max-width: 1100px;
@@ -48,7 +52,8 @@ export const Header = styled.header`
     height: 810px;
     display: flex;
     flex-direction: column;
-    background: url('../../static/images/header-background.png') no-repeat;
+    background: url('../../static/images/header-background.svg');
+    background-size: cover;
 
     @media screen and (max-width: 750px){
         padding-top: 0;

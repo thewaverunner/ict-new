@@ -58,7 +58,8 @@ export const DropdownSection = styled.div`
     }
 
     a:hover {
-        color: #a3a3a4;
+        opacity: 0.5;
+        transition: opacity .3s ease-in-out;
     }
 `
 
@@ -92,7 +93,8 @@ export const DropdownSectionMobile = styled.div`
     }
 
     a:hover {
-        color: #a3a3a4;
+        opacity: 0.5;
+        transition: opacity .3s ease-in-out;
     }
 
     .close-icon {

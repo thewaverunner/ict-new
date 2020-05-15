@@ -42,7 +42,7 @@ function HomePage ({ t }) {
                 <BannerWrapper>
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/first-banner.png" />
+                            <img src="/static/images/first-banner.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -55,7 +55,7 @@ function HomePage ({ t }) {
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/second-banner.png" />
+                            <img src="/static/images/second-banner.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -68,7 +68,7 @@ function HomePage ({ t }) {
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/third-banner.png"/>
+                            <img src="/static/images/third-banner.svg"/>
                         </BannerImage>
 
                         <BannerDescription>
