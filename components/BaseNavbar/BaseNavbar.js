@@ -5,6 +5,8 @@ import { withTranslation } from '../../i18n'
 import StripeNavbar from '../StripeNavbar'
 import BaseButton from '../BaseButton'
 
+import DesktopLogo from '../../public/static/images/desktop-logo.svg'
+
 import {
     Header,
     HeaderContainer,
@@ -70,7 +72,8 @@ function BaseNavbar ({ t }) {
             <HeaderContainer> 
                 <HeaderNavWrapper>
                     <HeaderLogo>
-                        <img src="/static/images/main-logo.png" alt="logo"/>
+                        {/* <img src="/static/images/main-logo.png" alt="logo"/> */}
+                        <DesktopLogo />
                     </HeaderLogo>
 
                     <StripeNavbar duration={300} isMobile={isMobile} />
