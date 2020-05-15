@@ -8,6 +8,7 @@
     "start": "NODE_ENV=production node index.js"
   },
   "dependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "express": "^4.17.1",
     "next": "9.3.5",
     "next-i18next": "^4.4.2",
