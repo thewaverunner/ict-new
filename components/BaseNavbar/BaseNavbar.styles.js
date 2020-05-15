@@ -52,7 +52,7 @@ export const Header = styled.header`
     height: 810px;
     display: flex;
     flex-direction: column;
-    background: url('../../static/images/header-background.svg');
+    background: url('../../static/images/header-background.svg') no-repeat;
     background-size: cover;
 
     @media screen and (max-width: 750px){

@@ -52,7 +52,7 @@ export const FooterTopContent = styled.div`
         padding: 30px 0;
     }
 
-    @media screen and (max-width: 440px){
+    @media screen and (max-width: 600px){
         flex-wrap: wrap;
         display: flex;
     }
@@ -64,7 +64,7 @@ export const FooterChangeLanguage = styled.div`
     font-family: 'DM Sans Bold';
     color: #000000;
 
-    @media screen and (max-width: 440px){
+    @media screen and (max-width: 600px){
         flex: 1 1 50%;   
     }
 `
@@ -72,8 +72,14 @@ export const FooterChangeLanguage = styled.div`
 export const FooterLinks = styled.div`
     flex-basis: 22%;
 
-    @media screen and (max-width: 440px){
-        flex: 1 1 50%;   
+    @media screen and (max-width: 600px){
+        flex: 1 1 40%;  
+        margin: 0 10px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-bottom: 30px;
+        } 
     }
 `
 

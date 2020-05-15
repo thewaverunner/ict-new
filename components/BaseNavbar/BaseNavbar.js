@@ -45,7 +45,7 @@ function BaseNavbar ({ t }) {
                 <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
                 <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
 
-                <BaseButton>Learn more</BaseButton>
+                <BaseButton>Learn more <span /></BaseButton>
             </HeaderDescriptionWrapper>
         )
     }
