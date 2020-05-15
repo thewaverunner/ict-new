@@ -17,7 +17,7 @@ import {
     HeaderLogo,
     HeaderDescription,
     HeaderDescriptionWrapper,
-    HeaderTitle,
+    HeaderTitle
 } from './BaseNavbar.styles'
 
 function BaseNavbar ({ t }) {
@@ -85,6 +85,7 @@ function BaseNavbar ({ t }) {
     }
 
     return (
+          
         <Header>
             {isMobile ? renderMobileWrapper() : renderDesktopWrapper()} 
         </Header>  
