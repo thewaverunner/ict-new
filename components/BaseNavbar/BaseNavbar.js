@@ -6,6 +6,7 @@ import StripeNavbar from '../StripeNavbar'
 import BaseButton from '../BaseButton'
 
 import DesktopLogo from '../../public/static/images/desktop-logo.svg'
+import MobileLogo from '../../public/static/images/mobile-logo.svg'
 
 import {
     Header,
@@ -16,11 +17,10 @@ import {
     HeaderLogo,
     HeaderDescription,
     HeaderDescriptionWrapper,
-    HeaderTitle,
+    HeaderTitle
 } from './BaseNavbar.styles'
 
 function BaseNavbar ({ t }) {
-
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -45,7 +45,7 @@ function BaseNavbar ({ t }) {
                 <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
                 <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
 
-                <BaseButton>Learn more</BaseButton>
+                <BaseButton>Learn more <span /></BaseButton>
             </HeaderDescriptionWrapper>
         )
     }
@@ -55,7 +55,7 @@ function BaseNavbar ({ t }) {
             <>
                 <HeaderMobileNav>
                     <HeaderMobileLogo>
-                        <img src="/static/images/mobile-logo.png"/>
+                        <MobileLogo />
                     </HeaderMobileLogo>
 
                     <StripeNavbar duration={300} isMobile={isMobile} /> 
@@ -73,7 +73,6 @@ function BaseNavbar ({ t }) {
             <HeaderContainer> 
                 <HeaderNavWrapper>
                     <HeaderLogo>
-                        {/* <img src="/static/images/main-logo.png" alt="logo"/> */}
                         <DesktopLogo />
                     </HeaderLogo>
 
@@ -86,6 +85,7 @@ function BaseNavbar ({ t }) {
     }
 
     return (
+          
         <Header>
             {isMobile ? renderMobileWrapper() : renderDesktopWrapper()} 
         </Header>  

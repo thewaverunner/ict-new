@@ -4,11 +4,13 @@ export const Home = styled.section``
 
 export const Marketing = styled.div`
   width: 100%;
-  background: url('/static/images/banner-marketing.png') no-repeat;
+  background: url('../static/images/banner-marketing.svg');
   height: 646px;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 `
 
 export const MarketingDescription = styled.div`
@@ -96,7 +98,7 @@ export const MarketingContent = styled.p`
 export const BannerSection = styled.div`
   background-color: #fafafa;
   padding: 75px 0;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 850px){
     padding: 40px 0;
@@ -104,10 +106,14 @@ export const BannerSection = styled.div`
 `
 
 export const BannerWrapper = styled.div`
-  max-width: 1320px;
+  max-width: 1800px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width:1920px){
+    max-width: 1320px;
+  }
 
   @media screen and (max-width:1360px){
     max-width: 1100px;
@@ -201,12 +207,14 @@ export const BannerContent = styled.p`
 `
 
 export const Impact = styled.div`
-  background: url('/static/images/section-impact.png') no-repeat;
+  background: url('../static/images/impact-section.svg');
+  background-size: cover;
   width: 100%;
   height: 646px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 `
 
 export const ImpactDescription = styled.div`
@@ -288,7 +296,8 @@ export const ImpactContent = styled.p`
 
 export const Network = styled.div`
   width: 100%;
-  padding: 110px 0 125px;
+  padding: 110px 0;
+  margin-bottom: 16px;
 
   @media screen and (max-width: 1150px){
     padding: 70px 0;

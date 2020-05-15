@@ -26,7 +26,7 @@ import {
     NetworkTitle
 } from './index.styles'
 
-function Homepage ({ t }) {
+function HomePage ({ t }) {
     return (
         <Home>
             <Marketing>
@@ -34,7 +34,7 @@ function Homepage ({ t }) {
                     <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>
                     <MarketingContent>{t('HomePage_Marketing_Content')}</MarketingContent>
                     
-                    <BaseButton blackStyle>Learn more</BaseButton>
+                    <BaseButton blackStyle>Learn more <span /></BaseButton>
                 </MarketingDescription>
             </Marketing>
 
@@ -42,7 +42,7 @@ function Homepage ({ t }) {
                 <BannerWrapper>
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/first-banner.png" />
+                            <img src="/static/images/first-banner.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -50,12 +50,12 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_FirstBanner_Content')}</BannerContent>
                         </BannerDescription>
 
-                        <BaseButton blackStyle hideBorder={true} >Learn more</BaseButton>        
+                        <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>        
                     </Banner>
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/second-banner.png" />
+                            <img src="/static/images/second-banner.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -63,12 +63,12 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_SecondBanner_Content')}</BannerContent>
                         </BannerDescription>
 
-                        <BaseButton blackStyle hideBorder={true}> Learn more</BaseButton>      
+                        <BaseButton blackStyle hideBorder={true}> Learn more <span /></BaseButton>      
                     </Banner>
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/third-banner.png"/>
+                            <img src="/static/images/third-banner.svg"/>
                         </BannerImage>
 
                         <BannerDescription>
@@ -76,7 +76,7 @@ function Homepage ({ t }) {
                             <BannerContent>{t('HomePage_ThirdBanner_Content')} </BannerContent>
                         </BannerDescription>
 
-                        <BaseButton blackStyle hideBorder={true}>Learn more</BaseButton>      
+                        <BaseButton blackStyle hideBorder={true}>Learn more <span /></BaseButton>      
                     </Banner>
 
                 </BannerWrapper>
@@ -87,7 +87,7 @@ function Homepage ({ t }) {
                     <ImpactTitle>{t('HomePage_Impact_Title')}</ImpactTitle>
                     <ImpactContent>{t('HomePage_Impact_Content')}</ImpactContent>
 
-                    <BaseButton>Learn more</BaseButton>
+                    <BaseButton>Learn more <span /></BaseButton>
                 </ImpactDescription>
             </Impact>
 
@@ -103,8 +103,8 @@ function Homepage ({ t }) {
 }
 
 
-Homepage.getInitialProps = async () => ({
+HomePage.getInitialProps = async () => ({
     namespacesRequired: ['common'],
 })
 
-export default withTranslation('common')(Homepage)
+export default withTranslation('common')(HomePage)

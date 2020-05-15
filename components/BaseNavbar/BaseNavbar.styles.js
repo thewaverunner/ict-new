@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-    max-width: 1300px;
+    max-width: 1800px;
     margin: 0 auto;
+
+    @media screen and (max-width:1920px){
+        max-width: 1320px;
+    }
 
     @media screen and (max-width:1360px){
         max-width: 1100px;
@@ -44,23 +48,16 @@ export const HeaderNavWrapper = styled.div`
 
 export const Header = styled.header`
     padding-top: 35px;
+    margin-bottom: 16px;
     height: 810px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    background: url('../../static/images/header-background.png') no-repeat;
+    background: url('../../static/images/header-background.svg') no-repeat;
+    background-size: cover;
 
     @media screen and (max-width: 750px){
         padding-top: 0;
     }
-`
-
-export const HeaderMobileNav = styled.div`
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 25px;
-    align-items: center;
 `
 
 export const HeaderDescriptionWrapper = styled.div`
@@ -83,14 +80,13 @@ export const HeaderDescriptionWrapper = styled.div`
     @media screen and (max-width: 600px){
         transform: translateY(40%);
     } 
-    
+
     @media screen and (max-width: 440px){
         max-width: 100%;
         text-align: center;
         transform: none;
         padding: 0 10px;
     }    
-
 `
 
 export const HeaderTitle = styled.h1`
@@ -113,6 +109,14 @@ export const HeaderTitle = styled.h1`
         line-height: 40px;
         margin-top: 40px;
     }
+`
+
+export const HeaderMobileNav = styled.div`
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    align-items: center;
 `
 
 export const HeaderDescription = styled.p`
