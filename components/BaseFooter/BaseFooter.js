@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Dropdown from 'react-dropdown';
+
 import { withTranslation } from '../../i18n'
 
 import {
@@ -17,8 +19,12 @@ import {
     FooterCopyright,
     FooterBottomPolicyList,
     FooterBottomPolicyItem,
-    FooterBottomPolicyItemLink
+    FooterBottomPolicyItemLink,
 } from './BaseFooter.styles'
+
+const options = [
+    'one', 'two', 'three'
+  ]
 
 
 function BaseFooter ({ t }) {
@@ -50,6 +56,12 @@ function BaseFooter ({ t }) {
         { title: t('BaseFooter_Bottom_Cookie'), link: '#' }
     ]
 
+    const options = [
+        'English', 'Espanol', 'Chinese'
+    ]
+
+    const defaultOption = options[0]
+
     function renderLinks (title, links) {
         return (
             <FooterLinks>
@@ -70,7 +82,16 @@ function BaseFooter ({ t }) {
         <Footer>
             <FooterWrapper>
                 <FooterTopContent>
-                    <FooterChangeLanguage>{t('BaseFooter_Language')}</FooterChangeLanguage>
+                    <FooterChangeLanguage>
+                        <img src="../static/images/language-icon.svg"/>
+
+                        <Dropdown
+                            options={options}
+                            value={defaultOption}
+                            className={'languageDropdown'}
+                            menuClassName={'languageDropdownMenu'}
+                        />
+                    </FooterChangeLanguage>
 
                     {renderLinks(t('BaseFooter_About'), aboutLinks)}
                     {renderLinks(t('BaseFooter_Responsibility'), responsibilityLinks)}
@@ -79,7 +100,7 @@ function BaseFooter ({ t }) {
 
                 <FooterBottomContent>
                     <FooterBottomWrapper>
-                        <FooterCopyright>{t('BaseFooter_Bottom_Copyright')}</FooterCopyright> 
+                        <FooterCopyright>&copy; {t('BaseFooter_Bottom_Copyright')}</FooterCopyright> 
 
                         <FooterBottomPolicyList>
                             {footerBottomLinks.map(({ title, link }, index) => (

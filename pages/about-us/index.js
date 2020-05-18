@@ -53,7 +53,7 @@ function AboutUsPage ({ t }) {
             <HeaderContainer>
                 <HeaderWrapper>
                     <HeaderDescriptionWrapper>
-                        <HeaderTitle>About ITC</HeaderTitle>
+                        <HeaderTitle>{t('AboutUsPage_Title')}</HeaderTitle>
                     </HeaderDescriptionWrapper>
                 </HeaderWrapper>
             </HeaderContainer> 

@@ -16,7 +16,7 @@ import {
     HeaderLogo,
 } from './BaseNavbar.styles'
 
-function BaseNavbar ({ t }) {
+function BaseNavbar () {
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {

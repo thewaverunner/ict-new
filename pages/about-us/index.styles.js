@@ -60,7 +60,6 @@ export const HeaderDescriptionWrapper = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: translateY(25%);
     padding: 0 10px;
   }
@@ -134,7 +133,6 @@ export const TopBannerDescription = styled.div`
   @media screen and (max-width: 440px){
     max-width: 100%;
     margin: 0 25px;
-    text-align: center;
   }
 `
 
@@ -200,7 +198,6 @@ export const ImpactSectionDescription = styled.div`
   @media screen and (max-width: 775px){
     width: 100%;
     padding: 20px;
-    text-align: center;
   }
 `
 
@@ -599,7 +596,6 @@ export const  AboutBottomDescription = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: none;
     padding: 0 10px;
   }

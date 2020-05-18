@@ -1,5 +1,18 @@
 import styled from 'styled-components'
 
+// import { BREAKPOINTS } from '../../utils/constants'
+
+// export const TEST_REMOVE_LATER = styled.header`
+//     position: absolute;
+//     left: 0; 
+//     right: 0;
+//     margin: 35px auto 0;
+
+//     @media screen and (max-width: ${BREAKPOINTS.lg}px){
+//         margin: 0 auto;
+//     }
+// `
+
 export const Header = styled.header`
     position: absolute;
     left: 0; 

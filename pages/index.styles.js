@@ -17,73 +17,72 @@ export const HeaderContainer = styled.div`
 `
 
 export const HeaderWrapper = styled.div`
-    width: 1800px;
-    margin: 0 auto;
+  width: 1800px;
+  margin: 0 auto;
 
-    @media screen and (max-width:1920px){
-        max-width: 1320px;
-    }
+  @media screen and (max-width:1920px) {
+    max-width: 1320px;
+  }
 
-    @media screen and (max-width:1360px){
-        max-width: 1100px;
-    }
+  @media screen and (max-width:1360px) {
+    max-width: 1100px;
+  }
 
-    @media screen and (max-width: 1150px){
-        max-width: 950px;
-    }
+  @media screen and (max-width: 1150px) {
+    max-width: 950px;
+  }
 
-    @media screen and (max-width: 1000px){
-        max-width: 800px;
-    }
+  @media screen and (max-width: 1000px) {
+    max-width: 800px;
+  }
     
-    @media screen and (max-width: 850px){
-        max-width: 700px;
-    }
+  @media screen and (max-width: 850px) {
+    max-width: 700px;
+  }
     
-    @media screen and (max-width: 750px){
-        max-width: 550px;
-    }
+  @media screen and (max-width: 750px) {
+    max-width: 550px;
+  }
     
-    @media screen and (max-width: 600px){
-        max-width: 400px;
-    }
+  @media screen and (max-width: 600px) {
+    max-width: 400px;
+  }
     
-    @media screen and (max-width: 440px){
-        max-width: 310px;
-    }  
+  @media screen and (max-width: 440px) {
+    max-width: 310px;
+  }  
 `
 
 export const HeaderDescriptionWrapper = styled.div`
-    max-width: 49%;
-    transform: translateY(100%); 
+  max-width: 49%;
+  transform: translateY(100%); 
 
-    @media screen and (max-width:1360px){
-      max-width: 52%;
-      transform: translateY(77%);
-    }
+  @media screen and (max-width:1360px) {
+    max-width: 52%;
+    transform: translateY(77%);
+  }
   
-    @media screen and (max-width: 1150px){
-      transform: translateY(55%);
-    }
+  @media screen and (max-width: 1150px) {
+    transform: translateY(55%);
+  }
   
-    @media screen and (max-width: 1000px){
-      transform: translateY(40%);
-    }
+  @media screen and (max-width: 1000px) {
+    transform: translateY(40%);
+  }
   
-    @media screen and (max-width: 850px){
-      max-width: 52%;
-    }
+  @media screen and (max-width: 850px) {
+    max-width: 52%;
+  }
   
-    @media screen and (max-width: 750px){
-      max-width: 66%;
-    }
+  @media screen and (max-width: 750px) {
+    max-width: 66%;
+  }
   
-    @media screen and (max-width: 440px){
-      max-width: 100%;
-      text-align: center;
-      transform: translateY(25%);
-      padding: 0 10px;
-    }
+  @media screen and (max-width: 440px) {
+    max-width: 100%;
+    transform: translateY(25%);
+    padding: 0 10px;
+  }
 `
 
 
@@ -160,9 +159,8 @@ export const MarketingDescription = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: none;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 `
 
@@ -359,9 +357,8 @@ export const ImpactDescription = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: none;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 `
 
@@ -460,5 +457,6 @@ export const NetworkTitle = styled.h1`
 
   @media screen and (max-width: 600px){
     font-size: 28px;
+    line-height: 45px;
   }
 `
