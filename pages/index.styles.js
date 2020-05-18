@@ -55,7 +55,7 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderDescriptionWrapper = styled.div`
     max-width: 49%;
-    transform: translateY(77%); 
+    transform: translateY(100%); 
 
     @media screen and (max-width:1360px){
       max-width: 52%;
