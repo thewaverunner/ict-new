@@ -23,12 +23,28 @@ import {
     ImpactContent,
     Network,
     NetworkDescription,
-    NetworkTitle
+    NetworkTitle,
+    HeaderWrapper,
+    HeaderTitle,
+    HeaderDescription,
+    HeaderContainer,
+    HeaderDescriptionWrapper
 } from './index.styles'
 
 function HomePage ({ t }) {
     return (
         <Home>
+            <HeaderContainer>
+                <HeaderWrapper>
+                    <HeaderDescriptionWrapper>
+                        <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
+                        <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
+
+                        <BaseButton>Learn more <span /></BaseButton>
+                    </HeaderDescriptionWrapper>
+                </HeaderWrapper>
+            </HeaderContainer>    
+
             <Marketing>
                 <MarketingDescription>
                     <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>

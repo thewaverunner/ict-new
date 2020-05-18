@@ -39,13 +39,25 @@ import {
     AboutBottomSection,
     AboutBottomDescription,
     AboutBottomTitle,
-    AboutBottomContent
+    AboutBottomContent,
+    HeaderContainer,
+    HeaderWrapper,
+    HeaderDescriptionWrapper,
+    HeaderTitle
 } from './index.styles'
 
 
 function AboutUsPage ({ t }) {
     return (
         <>
+            <HeaderContainer>
+                <HeaderWrapper>
+                    <HeaderDescriptionWrapper>
+                        <HeaderTitle>About ITC</HeaderTitle>
+                    </HeaderDescriptionWrapper>
+                </HeaderWrapper>
+            </HeaderContainer> 
+
             <AboutWrapper>
                 <TopBanner>
                      <TopBannerDescription>
@@ -75,6 +87,7 @@ function AboutUsPage ({ t }) {
                     <SocialImpactTitle>{t('AboutUsPage_SocialImpact_Title')}</SocialImpactTitle>
 
                     <SocialImpactContent>{t('AboutUsPage_SocialImpact_Content')}</SocialImpactContent>
+                    
                     <BaseButton>Learn more <span /></BaseButton>
                 </SocialImpactDescription>
             </SocialImpactSection>
