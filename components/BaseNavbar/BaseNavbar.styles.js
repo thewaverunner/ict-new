@@ -17,7 +17,7 @@ export const Header = styled.header`
     position: absolute;
     left: 0; 
     right: 0;
-    margin: 35px auto 0;
+    margin: 25px auto 0;
 
     @media screen and (max-width: 750px){
         margin: 0 auto;

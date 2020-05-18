@@ -3,6 +3,7 @@ import React from 'react'
 import { withTranslation } from '../i18n'
 
 import BaseButton from '../components/BaseButton'
+import BaseSection from '../components/BaseSection'
 
 import {
     Home,
@@ -21,9 +22,6 @@ import {
     ImpactDescription,
     ImpactTitle,
     ImpactContent,
-    Network,
-    NetworkDescription,
-    NetworkTitle,
     HeaderWrapper,
     HeaderTitle,
     HeaderDescription,
@@ -107,13 +105,12 @@ function HomePage ({ t }) {
                 </ImpactDescription>
             </Impact>
 
-            <Network>
-                <NetworkDescription>
-                    <NetworkTitle>{t('HomePage_Network_Content')}</NetworkTitle>
-                
-                    <BaseButton blackStyle>Learn more</BaseButton>
-                </NetworkDescription>
-            </Network>
+            <BaseSection
+                title={t('HomePage_Network_Content')}
+                titleColor={'gradient'}
+                buttonTitle={'Learn more'}
+                buttonStyle={'blackStyle'}
+            ></BaseSection>
         </Home>
     )
 }

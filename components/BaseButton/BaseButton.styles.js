@@ -4,7 +4,9 @@ export const Button = styled.a`
     background-color: transparent;
     border: ${props => props.hideBorder ? '' : `1px solid ${props.blackStyle ? '#000000' : '#ffffff'}`};
     text-decoration: none;
+    max-width: 160px;
     border-radius: 6px;
+    text-align: center;
     cursor: pointer;
     padding: ${props => (props.hideBorder ? "0" : '10px 20px')};
     font-size: 14px;

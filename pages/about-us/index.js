@@ -1,7 +1,9 @@
 import React from 'react'
 
 import { withTranslation } from '../../i18n'
+
 import BaseButton from '../../components/BaseButton'
+import BaseSection from '../../components/BaseSection'
 
 import {
     AboutWrapper,
@@ -15,20 +17,12 @@ import {
     ImpactSectionDescription,
     ImpactSectionTitle,
     ImpactSectionWrapper,
-    SocialImpactSection,
-    SocialImpactDescription,
-    SocialImpactTitle,
-    SocialImpactContent,
     InfoBannerSection,
     InfoBannerWrapper,
     InfoBanner,
     InfoBannerDescription,
     InfoBannerTitle,
     InfoBannerContent,
-    LegalEnvironmentSection,
-    LegalEnvironmentDescription,
-    LegalEnvironmentTitle,
-    LegalEnvironmentContent,
     QuestionsBannerSection,
     QuestionsBannerWrapper,
     QuestionsBanner,
@@ -80,17 +74,14 @@ function AboutUsPage ({ t }) {
                         <ImpactSectionContent>{t('AboutUsPage_ImpactBanner_Content')} </ImpactSectionContent>
                     </ImpactSectionWrapper>     
                 </ImpactSectionDescription>    
-            </ImpactSection> 
+            </ImpactSection>
 
-            <SocialImpactSection>
-                <SocialImpactDescription>
-                    <SocialImpactTitle>{t('AboutUsPage_SocialImpact_Title')}</SocialImpactTitle>
-
-                    <SocialImpactContent>{t('AboutUsPage_SocialImpact_Content')}</SocialImpactContent>
-                    
-                    <BaseButton>Learn more <span /></BaseButton>
-                </SocialImpactDescription>
-            </SocialImpactSection>
+            <BaseSection
+                backgroundImage={'/static/images/about-social-impact.svg'}
+                title={t('AboutUsPage_SocialImpact_Title')}
+                description={t('AboutUsPage_SocialImpact_Content')}
+                buttonTitle={'Learn more'}
+            ></BaseSection>
 
             <InfoBannerSection>
                 <InfoBannerWrapper>
@@ -126,15 +117,12 @@ function AboutUsPage ({ t }) {
                 </InfoBannerWrapper>
             </InfoBannerSection> 
 
-            <LegalEnvironmentSection>
-                <LegalEnvironmentDescription>
-                    <LegalEnvironmentTitle>{t('AboutUsPage_LegalEnvironment_Title')}</LegalEnvironmentTitle>
-
-                    <LegalEnvironmentContent>{t('AboutUsPage_LegalEnvironment_Content')}</LegalEnvironmentContent>
-
-                    <BaseButton>Learn more <span /></BaseButton>
-                </LegalEnvironmentDescription>
-            </LegalEnvironmentSection> 
+            <BaseSection
+                backgroundImage={'/static/images/about-legal-banner.svg'}
+                title={t('AboutUsPage_LegalEnvironment_Title')}
+                description={t('AboutUsPage_LegalEnvironment_Content')}
+                buttonTitle={'Learn more'}
+            ></BaseSection>
 
             <QuestionsBannerSection>
                 <QuestionsBannerWrapper>
