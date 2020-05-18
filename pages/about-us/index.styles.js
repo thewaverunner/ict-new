@@ -56,7 +56,6 @@ export const HeaderDescriptionWrapper = styled.div`
 
   @media screen and (max-width:1360px){
     max-width: 52%;
-
   }
 
   @media screen and (max-width: 440px){
