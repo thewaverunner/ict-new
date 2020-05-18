@@ -1,7 +1,89 @@
 import styled, { css } from 'styled-components'
 
+export const HeaderContainer = styled.div` 
+  margin-bottom: 16px;
+  height: 332px;
+  display: flex;
+  flex-direction: column;
+  background: url('../../static/images/second-page-header.svg') no-repeat;
+  background-size: cover;
+  justify-content: flex-end; 
+
+  @media screen and (max-width: 750px){
+    justify-content: center; 
+  }  
+`
+
+export const HeaderWrapper = styled.div`
+  width: 1800px;
+  margin: 0 auto;
+
+  @media screen and (max-width:1920px){
+    max-width: 1320px;
+  }
+
+  @media screen and (max-width:1360px){
+    max-width: 1100px;
+  }
+
+  @media screen and (max-width: 1150px){
+    max-width: 950px;
+  }
+
+  @media screen and (max-width: 1000px){
+    max-width: 800px;
+  }
+    
+  @media screen and (max-width: 850px){
+    max-width: 700px;
+  }
+    
+  @media screen and (max-width: 750px){
+    max-width: 550px;
+  }
+    
+  @media screen and (max-width: 600px){
+    max-width: 400px;
+  }
+    
+  @media screen and (max-width: 440px){
+    max-width: 310px;
+  }  
+`
+
+export const HeaderDescriptionWrapper = styled.div`
+  max-width: 49%;
+
+  @media screen and (max-width:1360px){
+    max-width: 52%;
+
+  }
+
+  @media screen and (max-width: 440px){
+    max-width: 100%;
+    text-align: center;
+    transform: translateY(25%);
+    padding: 0 10px;
+  }
+`
+
+
+export const HeaderTitle = styled.h1`
+  font-size: 47px;
+  font-family: 'DM Sans Bold';
+  color:#ffffff;
+  margin-bottom: 20px;
+  line-height: 70px;
+
+  @media screen and (max-width: 750px){
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+`
+
 export const AboutWrapper = styled.div`
-  width:100%;
   background: url('../static/images/about-top-banner.svg') no-repeat;
   background-size: cover;
   margin-bottom: 16px;
@@ -12,16 +94,48 @@ export const AboutWrapper = styled.div`
 `
 
 export const TopBanner = styled.div`
-  max-width: 1800px;
+  width: 1800px;
+
+  @media screen and (max-width:1920px){
+    max-width: 1320px;
+  }
+
+  @media screen and (max-width:1360px){
+    max-width: 1100px;
+  }
+
+  @media screen and (max-width: 1150px){
+      max-width: 950px;
+  }
+
+  @media screen and (max-width: 1000px){
+      max-width: 800px;
+  }
+
+  @media screen and (max-width: 850px){
+      max-width: 700px;
+  }
+
+  @media screen and (max-width: 750px){
+      max-width: 550px;
+  }
+
+  @media screen and (max-width: 600px){
+      max-width: 400px;
+  }
+
+  @media screen and (max-width: 440px){
+      max-width: 310px;
+  }  
 `
 
 export const TopBannerDescription = styled.div`
   max-width: 44%;
-  margin-left: 100px;
 
   @media screen and (max-width: 440px){
     max-width: 100%;
     margin: 0 25px;
+    text-align: center;
   }
 `
 
@@ -145,7 +259,6 @@ export const ImpactSectionContent = styled.p`
 `
 
 export const SocialImpactSection = styled.div`
-  width: 100%;
   background: url('../static/images/about-social-impact.svg') no-repeat;
   background-size: cover;
   height: 435px;
@@ -250,7 +363,6 @@ export const InfoBannerWrapper = styled.div`
 `
 
 export const InfoBanner = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 
   &:last-child {
@@ -258,7 +370,6 @@ export const InfoBanner = styled.div`
   }
 
   @media screen and (max-width: 850px){
-    flex:1 1 45%;
     padding-right: 20px;
 
     &:nth-child(1),
@@ -273,13 +384,11 @@ export const InfoBanner = styled.div`
   }
 
   @media screen and (max-width: 600px){
-    flex: 1 1 100%;
     padding: 0 10px;
   }
 `
 
 export const  InfoBannerDescription = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 `
 
@@ -298,18 +407,12 @@ export const  InfoBannerContent = styled.p`
   font-family: 'DM Sans Regular';
   line-height: 21px;
 
-  @media screen and (max-width: 1000px){
-    font-size: 12px;
-  }
-
   @media screen and (max-width: 850px){
-    font-size: 11px;
     margin-bottom: 20px;
   }
 `
 
 export const  LegalEnvironmentSection = styled.div`
-  width: 100%;
   background: url('../static/images/about-legal-banner.svg') no-repeat;
   background-size: cover;
   height: 435px;
@@ -414,7 +517,6 @@ export const  QuestionsBannerWrapper = styled.div`
 `
 
 export const  QuestionsBanner = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 
   &:last-child {
@@ -422,7 +524,6 @@ export const  QuestionsBanner = styled.div`
   }
 
   @media screen and (max-width: 750px){
-    flex: 1 1 100%;
     margin: 0 20px;
   }
 `
@@ -434,7 +535,6 @@ export const  QuestionsBannerImage = styled.div`
 `
 
 export const  QuestionsBannerDescription = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 `
 
@@ -457,7 +557,6 @@ export const  QuestionsBannerContent = styled.p`
 export const  AboutBottomSection = styled.div`
   background-color: #fffff;
   background: url('../static/images/about-bottom-banner.svg') no-repeat;
-  width: 100%;
   background-size: cover;
   height: 696px;
   display: flex;
@@ -536,9 +635,5 @@ export const  AboutBottomContent = styled.p`
 
   @media screen and (max-width: 1000px){
     font-size: 19px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 17px;
   }
 `
