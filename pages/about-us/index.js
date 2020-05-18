@@ -49,13 +49,9 @@ function AboutUsPage ({ t }) {
             <AboutWrapper>
                 <TopBanner>
                      <TopBannerDescription>
-                        <TopBannerTitle>Who we are</TopBannerTitle>
+                        <TopBannerTitle>{t('AboutUsPage_TopBanner_Title')}</TopBannerTitle>
 
-                        <TopBannerContent>
-                             This is where remarkable innovation meets rapid pace 
-                             fuelled by relentless focus. Our extraordinary drive 
-                             comes from our willingness to go that extra mile in everything we do.
-                        </TopBannerContent>
+                        <TopBannerContent>{t('AboutUsPage_TopBanner_Content')}</TopBannerContent>
                     </TopBannerDescription>    
                 </TopBanner>    
             </AboutWrapper>
@@ -67,27 +63,18 @@ function AboutUsPage ({ t }) {
 
                 <ImpactSectionDescription>
                     <ImpactSectionWrapper>
-                        <ImpactSectionTitle>Impact Crowd Technology S.L.</ImpactSectionTitle>
+                        <ImpactSectionTitle>{t('AboutUsPage_ImpactBanner_Title')}</ImpactSectionTitle>
 
-                        <ImpactSectionContent>
-                            Headquartered in Madrid, Impact Crowd Technology S.L. 
-                            is a privately held Spanish company. The company’s vision 
-                            is to create the world’s largest salesforce, disrupting the 
-                            traditional value chain and distribution of apps, software and services. 
-                        </ImpactSectionContent>
+                        <ImpactSectionContent>{t('AboutUsPage_ImpactBanner_Content')} </ImpactSectionContent>
                     </ImpactSectionWrapper>     
                 </ImpactSectionDescription>    
             </ImpactSection> 
 
             <SocialImpactSection>
                 <SocialImpactDescription>
-                    <SocialImpactTitle>Social impact at ITC</SocialImpactTitle>
+                    <SocialImpactTitle>{t('AboutUsPage_SocialImpact_Title')}</SocialImpactTitle>
 
-                    <SocialImpactContent>
-                        We are partnering with leading CSR experts to create lasting, transformative 
-                        solutions to some of the world’s most critical social challenges.
-                    </SocialImpactContent>
-
+                    <SocialImpactContent>{t('AboutUsPage_SocialImpact_Content')}</SocialImpactContent>
                     <BaseButton>Learn more <span /></BaseButton>
                 </SocialImpactDescription>
             </SocialImpactSection>
@@ -96,14 +83,9 @@ function AboutUsPage ({ t }) {
                 <InfoBannerWrapper>
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>What we believe</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_First_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>
-                                Digital products are 1’s and 0’s, duplicated through cut and paste. 
-                                Unlike many other MLM companies, our network will never have to buy 
-                                or sit on physical inventory. This differentiates our business model 
-                                from current competitors in the MLM space.
-                            </InfoBannerContent>
+                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_First_Content')}</InfoBannerContent>
                         </InfoBannerDescription>
 
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
@@ -111,14 +93,9 @@ function AboutUsPage ({ t }) {
 
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>What we do</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_Second_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>
-                                Impact Crowd Technology’s aim is to use a MLM sales structure to enable 
-                                a network of salespeople to sell other companies’ digital products. Our 
-                                focus is on cherry- picking great products and distributing these through 
-                                Crowd1’s extensive online sales network.
-                            </InfoBannerContent>
+                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_Second_Content')}</InfoBannerContent>
                         </InfoBannerDescription>
                         
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
@@ -126,16 +103,11 @@ function AboutUsPage ({ t }) {
 
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>What is our goal</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_Third_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>
-                                As the first digital MLM company, Impact Crowd Technology will 
-                                address the challenge of long- term sustainability. We aim to 
-                                build a vast library of digital products that are easily accessible 
-                                for an entire network of salespeople to use, recommend and sell.
-                            </InfoBannerContent>
+                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_Third_Content')}</InfoBannerContent>
                         </InfoBannerDescription>
-                        
+            
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
                     </InfoBanner>       
                 </InfoBannerWrapper>
@@ -143,13 +115,9 @@ function AboutUsPage ({ t }) {
 
             <LegalEnvironmentSection>
                 <LegalEnvironmentDescription>
-                    <LegalEnvironmentTitle>Legal Environment</LegalEnvironmentTitle>
+                    <LegalEnvironmentTitle>{t('AboutUsPage_LegalEnvironment_Title')}</LegalEnvironmentTitle>
 
-                    <LegalEnvironmentContent>
-                        Impact Crowd Technology has been set up in accordance 
-                        with strict corporate governance and a solid managerial 
-                        foundation that meets all European laws and regulations. 
-                    </LegalEnvironmentContent>
+                    <LegalEnvironmentContent>{t('AboutUsPage_LegalEnvironment_Content')}</LegalEnvironmentContent>
 
                     <BaseButton>Learn more <span /></BaseButton>
                 </LegalEnvironmentDescription>
@@ -163,14 +131,9 @@ function AboutUsPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>Meet our team</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_First_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>
-                                At Impact Crowd Technology, we always go that 
-                                extra mile in everything we do. Together we 
-                                have built a network of salespeople with an 
-                                unprecedented reach and future sales potential.
-                            </QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_First_Content')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>
 
@@ -180,14 +143,9 @@ function AboutUsPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>Join us</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_Second_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>
-                                ICT is a multigenerational company with employees
-                                 from 20 to 65. We are proud that so many have chosen 
-                                 to remain and grow with us and we’d like you to 
-                                 join us on our journey.
-                            </QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_Second_Content')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>
 
@@ -197,15 +155,9 @@ function AboutUsPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>Advisors</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_Third_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>
-                                Crowd1 has attracted some of the world’s leading 
-                                experts in network marketing. They have all been 
-                                attracted by the potential of Crowd1’s unique business 
-                                proposition and are motivated by ICT’s 
-                                long-term prospects and ambition.
-                            </QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_Third_Content')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>         
                 </QuestionsBannerWrapper>
@@ -213,14 +165,9 @@ function AboutUsPage ({ t }) {
 
             <AboutBottomSection>
                 <AboutBottomDescription>
-                    <AboutBottomTitle>Ambitious members extraordinary salespeople</AboutBottomTitle>
+                    <AboutBottomTitle>{t('AboutUsPage_BottomBanner_Title')}</AboutBottomTitle>
 
-                    <AboutBottomContent>
-                        Crowd1’s network consists of millions of highly ambitious 
-                        members with a love of entrepreneurship and sales that provides 
-                        both employment and a source of income. The simplicity and speed 
-                        of Crowd1 is what motivates our entrepreneurs and salespeople.
-                    </AboutBottomContent>
+                    <AboutBottomContent>{t('AboutUsPage_BottomBanner_Content')}</AboutBottomContent>
 
                     <BaseButton>Learn more <span /></BaseButton>
                 </AboutBottomDescription>    

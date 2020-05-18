@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
 export const AboutWrapper = styled.div`
-  width:100%;
   background: url('../static/images/about-top-banner.svg') no-repeat;
   background-size: cover;
   margin-bottom: 16px;
@@ -145,7 +144,6 @@ export const ImpactSectionContent = styled.p`
 `
 
 export const SocialImpactSection = styled.div`
-  width: 100%;
   background: url('../static/images/about-social-impact.svg') no-repeat;
   background-size: cover;
   height: 435px;
@@ -250,7 +248,6 @@ export const InfoBannerWrapper = styled.div`
 `
 
 export const InfoBanner = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 
   &:last-child {
@@ -258,7 +255,6 @@ export const InfoBanner = styled.div`
   }
 
   @media screen and (max-width: 850px){
-    flex:1 1 45%;
     padding-right: 20px;
 
     &:nth-child(1),
@@ -273,13 +269,11 @@ export const InfoBanner = styled.div`
   }
 
   @media screen and (max-width: 600px){
-    flex: 1 1 100%;
     padding: 0 10px;
   }
 `
 
 export const  InfoBannerDescription = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 `
 
@@ -298,18 +292,12 @@ export const  InfoBannerContent = styled.p`
   font-family: 'DM Sans Regular';
   line-height: 21px;
 
-  @media screen and (max-width: 1000px){
-    font-size: 12px;
-  }
-
   @media screen and (max-width: 850px){
-    font-size: 11px;
     margin-bottom: 20px;
   }
 `
 
 export const  LegalEnvironmentSection = styled.div`
-  width: 100%;
   background: url('../static/images/about-legal-banner.svg') no-repeat;
   background-size: cover;
   height: 435px;
@@ -414,7 +402,6 @@ export const  QuestionsBannerWrapper = styled.div`
 `
 
 export const  QuestionsBanner = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 
   &:last-child {
@@ -422,7 +409,6 @@ export const  QuestionsBanner = styled.div`
   }
 
   @media screen and (max-width: 750px){
-    flex: 1 1 100%;
     margin: 0 20px;
   }
 `
@@ -434,7 +420,6 @@ export const  QuestionsBannerImage = styled.div`
 `
 
 export const  QuestionsBannerDescription = styled.div`
-  flex: 1 1 30%;
   padding-right: 35px;
 `
 
@@ -457,7 +442,6 @@ export const  QuestionsBannerContent = styled.p`
 export const  AboutBottomSection = styled.div`
   background-color: #fffff;
   background: url('../static/images/about-bottom-banner.svg') no-repeat;
-  width: 100%;
   background-size: cover;
   height: 696px;
   display: flex;
@@ -536,9 +520,5 @@ export const  AboutBottomContent = styled.p`
 
   @media screen and (max-width: 1000px){
     font-size: 19px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 17px;
   }
 `
