@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'react-phone-input-2/lib/style.css'
+
 import { appWithTranslation } from '../i18n'
 
 import '../public/static/styles/reset.css'

@@ -16,7 +16,7 @@ import {
     HeaderLogo,
 } from './BaseNavbar.styles'
 
-function BaseNavbar ({ t }) {
+function BaseNavbar () {
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -30,7 +30,7 @@ function BaseNavbar ({ t }) {
     }, [])
 
     function onResize () {
-        const currentIsMobile = (window.innerWidth <= 750)
+        const currentIsMobile = (window.innerWidth <= 768)
 
         setIsMobile(currentIsMobile)
     }
@@ -56,7 +56,7 @@ function BaseNavbar ({ t }) {
                     <HeaderLogo>
                         <DesktopLogo />
                     </HeaderLogo>
-
+                    
                     <StripeNavbar duration={300} isMobile={isMobile} />
                 </HeaderNavWrapper> 
             </HeaderContainer>  
