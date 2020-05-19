@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 
-export const OurPositionSection = styled.div`
+export const OpenPositionsPageSection = styled.div`
     padding: 40px 0 60px;
 `
 
-export const OurPositionSectionWrapper = styled.div`
+export const OpenPositionsPageWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto;
 
@@ -27,7 +27,7 @@ export const OurPositionSectionWrapper = styled.div`
     } 
 `
 
-export const OurPositionSectionTitle = styled.h1`
+export const OpenPositionsPageTitle = styled.h1`
     font-size: 47px;
     color:#000000;
     margin-bottom: 30px;
@@ -43,12 +43,12 @@ export const OurPositionSectionTitle = styled.h1`
     } 
 `
 
-export const OurPositionList = styled.ul`
+export const OpenPositionsPageList = styled.ul`
     display: flex;
     flex-wrap: wrap;
 `
 
-export const OurPositionItem = styled.li`
+export const OpenPositionsPageItem = styled.li`
     width: 30.5%;
     text-align: center;
     border: 1px solid #707070;
@@ -73,19 +73,19 @@ export const OurPositionItem = styled.li`
     } 
 `
 
-export const OurPositionItemLink = styled.a`
+export const OpenPositionsPageItemLink = styled.a`
     display: block;
     margin: 75px 0 80px;
 `
 
-export const OurPositionItemTitle = styled.h2`
+export const OpenPositionsPageItemTitle = styled.h2`
     font-size: 31px;
     color: #000000;
     line-height: 60px;
     font-family: 'DM Sans Bold';
 `
 
-export const OurPositionItemContent = styled.p`
+export const OpenPositionsPageItemContent = styled.p`
     font-size: 21px;
     color: #000000;
     line-height: 31px;

@@ -7,41 +7,41 @@ import BaseSection from '../../components/BaseSection'
 import BaseSectionHeading from '../../components/BaseSectionHeading'
 
 import {
-    OurPositionSection,
-    OurPositionSectionWrapper,
-    OurPositionSectionTitle,
-    OurPositionItem,
-    OurPositionItemTitle,
-    OurPositionItemContent,
-    OurPositionList,
-    OurPositionItemLink
+    OpenPositionsPageSection,
+    OpenPositionsPageWrapper,
+    OpenPositionsPageTitle,
+    OpenPositionsPageList,
+    OpenPositionsPageItem,
+    OpenPositionsPageItemLink,
+    OpenPositionsPageItemTitle,
+    OpenPositionsPageItemContent,
 } from './index.styles'
 
-function WorkWithUsPage ({ t }) {
+function OpenPositionsPage ({ t }) {
     return (
         <>
             <BaseSectionHeading 
                 title={'Work with us'}
             ></BaseSectionHeading>
 
-            <OurPositionSection>
-                <OurPositionSectionWrapper>
-                    <OurPositionSectionTitle>Our open positions</OurPositionSectionTitle>
+            <OpenPositionsPageSection>
+                <OpenPositionsPageWrapper>
+                    <OpenPositionsPageTitle>Our open positions</OpenPositionsPageTitle>
 
-                    <OurPositionList>
+                    <OpenPositionsPageList>
                         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => 
-                            <OurPositionItem key={index}>
+                            <OpenPositionsPageItem key={index}>
                                 <Link href={`/open-positions/manager-${index}`}>
-                                    <OurPositionItemLink>
-                                        <OurPositionItemTitle>Job Title {index}</OurPositionItemTitle>
-                                        <OurPositionItemContent>Description</OurPositionItemContent>
-                                    </OurPositionItemLink>
+                                    <OpenPositionsPageItemLink>
+                                        <OpenPositionsPageItemTitle>Job Title {index}</OpenPositionsPageItemTitle>
+                                        <OpenPositionsPageItemContent>Description</OpenPositionsPageItemContent>
+                                    </OpenPositionsPageItemLink>
                                 </Link>
-                            </OurPositionItem>
+                            </OpenPositionsPageItem>
                         )}
-                    </OurPositionList>
-                </OurPositionSectionWrapper>
-            </OurPositionSection>    
+                    </OpenPositionsPageList>
+                </OpenPositionsPageWrapper>
+            </OpenPositionsPageSection>    
 
             <BaseSection
                 backgroundImage={'/static/images/work-with-us-banner.svg'}
@@ -54,8 +54,8 @@ function WorkWithUsPage ({ t }) {
     )
 }
 
-WorkWithUsPage.getInitialProps = async () => ({
+OpenPositionsPage.getInitialProps = async () => ({
     namespacesRequired: ['common'],
 })
 
-export default withTranslation('common')(WorkWithUsPage)
+export default withTranslation('common')(OpenPositionsPage)

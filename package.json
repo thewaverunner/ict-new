@@ -15,7 +15,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-dropdown": "^1.7.0",
+    "react-dropzone": "^11.0.1",
     "react-flip-toolkit": "^7.0.9",
+    "react-hook-form": "^5.7.2",
+    "react-phone-input-2": "^2.13.5",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {

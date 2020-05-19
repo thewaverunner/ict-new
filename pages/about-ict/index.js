@@ -8,11 +8,6 @@ import BaseSectionHeading from '../../components/BaseSectionHeading'
 import BaseSectionWide from '../../components/BaseSectionWide'
 
 import {
-    AboutWrapper,
-    TopBanner,
-    TopBannerDescription,
-    TopBannerTitle,
-    TopBannerContent,
     InfoBannerSection,
     InfoBannerWrapper,
     InfoBanner,
@@ -36,14 +31,6 @@ function AboutICTPage ({ t }) {
                 mainPage={false}
             ></BaseSectionHeading>
 
-            {/* <AboutWrapper>
-                <TopBanner>
-                     <TopBannerDescription>
-                        <TopBannerTitle>{t('AboutUsPage_TopBanner_Title')}</TopBannerTitle>
-                        <TopBannerContent>{t('AboutUsPage_TopBanner_Content')}</TopBannerContent>
-                    </TopBannerDescription>    
-                </TopBanner>    
-            </AboutWrapper> */}
             <BaseSection
                 title={t('AboutUsPage_TopBanner_Title')}
                 description={t('AboutUsPage_TopBanner_Content')}
@@ -51,6 +38,7 @@ function AboutICTPage ({ t }) {
                 textAlign={'left'}
                 titleColor={'black'}
             ></BaseSection>
+
             <BaseSectionWide
                 backgroundImage={'/static/images/about-ict-ict.svg'}
                 backgroundImageMode={'half'}

@@ -19,11 +19,7 @@ import {
     BannerDescription,
     Banner,
     BannerTitle,
-    BannerContent,
-    Impact,
-    ImpactDescription,
-    ImpactTitle,
-    ImpactContent,
+    BannerContent
 } from './index.styles'
 
 function HomePage ({ t }) {
