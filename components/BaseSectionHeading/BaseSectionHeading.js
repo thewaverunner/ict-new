@@ -1,18 +1,25 @@
 import React from 'react'
 
+import BaseButton from '../BaseButton'
+
 import {
     BaseSectionHeadingWrapper,
     BaseSectionTitle,
-    BaseSectionHeadingContent
+    BaseSectionHeadingContent,
+    BaseSectionDescription
 } from './BaseSectionHeading.styles'
 
 function BaseSectionHeading (props) {
-    const { title } = props
+    const { title, description, mainPage} = props
 
     return (
-        <BaseSectionHeadingWrapper>
+        <BaseSectionHeadingWrapper mainPage={mainPage}>
             <BaseSectionHeadingContent>
-                <BaseSectionTitle>{title}</BaseSectionTitle>
+                <BaseSectionTitle mainPage={mainPage}>{title}</BaseSectionTitle>
+
+                {description &&<BaseSectionDescription>{description}</BaseSectionDescription>}  
+
+                {description &&<BaseButton>Learn more <span /></BaseButton>}   
             </BaseSectionHeadingContent>    
         </BaseSectionHeadingWrapper>
     )

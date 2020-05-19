@@ -4,6 +4,8 @@ import { withTranslation } from '../i18n'
 
 import BaseButton from '../components/BaseButton'
 import BaseSection from '../components/BaseSection'
+import BaseSectionHeading from '../components/BaseSectionHeading'
+import BaseSectionWide from '../components/BaseSectionWide'
 
 import {
     Home,
@@ -22,27 +24,17 @@ import {
     ImpactDescription,
     ImpactTitle,
     ImpactContent,
-    HeaderWrapper,
-    HeaderTitle,
-    HeaderDescription,
-    HeaderContainer,
-    HeaderDescriptionWrapper
 } from './index.styles'
 
 function HomePage ({ t }) {
     return (
         <Home>
-            <HeaderContainer>
-                <HeaderWrapper>
-                    <HeaderDescriptionWrapper>
-                        <HeaderTitle>{t('BaseHeader_Title')}</HeaderTitle>
-                        <HeaderDescription>{t('BaseHeader_Description')}</HeaderDescription>
-
-                        <BaseButton>Learn more <span /></BaseButton>
-                    </HeaderDescriptionWrapper>
-                </HeaderWrapper>
-            </HeaderContainer>    
-
+            <BaseSectionHeading 
+                title={t('BaseHeader_Title')} 
+                description={t('BaseHeader_Description')}
+                mainPage={true}
+            ></BaseSectionHeading>
+       
             <Marketing>
                 <MarketingDescription>
                     <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>
@@ -56,7 +48,7 @@ function HomePage ({ t }) {
                 <BannerWrapper>
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/first-banner.svg"/>
+                            <img src="/static/images/home-continuous-innovation.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -69,7 +61,7 @@ function HomePage ({ t }) {
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/second-banner.svg"/>
+                            <img src="/static/images/home-purely-digital.svg"/>
                         </BannerImage>  
 
                         <BannerDescription>
@@ -82,7 +74,7 @@ function HomePage ({ t }) {
 
                     <Banner>
                         <BannerImage>
-                            <img src="/static/images/third-banner.svg"/>
+                            <img src="/static/images/home-global-reach.svg"/>
                         </BannerImage>
 
                         <BannerDescription>
@@ -96,18 +88,18 @@ function HomePage ({ t }) {
                 </BannerWrapper>
             </BannerSection> 
 
-            <Impact>
-                <ImpactDescription>
-                    <ImpactTitle>{t('HomePage_Impact_Title')}</ImpactTitle>
-                    <ImpactContent>{t('HomePage_Impact_Content')}</ImpactContent>
-
-                    <BaseButton>Learn more <span /></BaseButton>
-                </ImpactDescription>
-            </Impact>
+            <BaseSectionWide
+                backgroundImage={'/static/images/home-impact-technology.svg'}
+                backgroundImageMode={'full'}
+                title={t('HomePage_Impact_Title')}
+                description={t('HomePage_Impact_Content')}
+                buttonTitle={'Learn more'}
+            ></BaseSectionWide>
 
             <BaseSection
                 title={t('HomePage_Network_Content')}
                 titleColor={'gradient'}
+                textAlign={'center'}
                 buttonTitle={'Learn more'}
                 buttonStyle={'blackStyle'}
             ></BaseSection>

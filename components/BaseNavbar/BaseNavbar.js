@@ -30,7 +30,7 @@ function BaseNavbar () {
     }, [])
 
     function onResize () {
-        const currentIsMobile = (window.innerWidth <= 750)
+        const currentIsMobile = (window.innerWidth <= 768)
 
         setIsMobile(currentIsMobile)
     }
@@ -56,7 +56,7 @@ function BaseNavbar () {
                     <HeaderLogo>
                         <DesktopLogo />
                     </HeaderLogo>
-
+                    
                     <StripeNavbar duration={300} isMobile={isMobile} />
                 </HeaderNavWrapper> 
             </HeaderContainer>  

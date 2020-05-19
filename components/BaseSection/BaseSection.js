@@ -6,7 +6,8 @@ import {
     BaseSectionWrapper,
     BaseSectionTitle,
     BaseSectionSubtitle,
-    BaseSectionDescription
+    BaseSectionDescription,
+    BaseSectionContent
 } from './BaseSection.styles'
 
 function BaseSection (props) {
@@ -15,6 +16,7 @@ function BaseSection (props) {
         backgroundImage, 
         title,
         titleColor,
+        textAlign,
         subtitle,
         description, 
         buttonTitle, 
@@ -23,10 +25,12 @@ function BaseSection (props) {
 
     return (
         <BaseSectionWrapper backgroundImage={backgroundImage}>
-            {title && <BaseSectionTitle titleColor={titleColor}>{title}</BaseSectionTitle>}
-            {subtitle && <BaseSectionSubtitle>{subtitle}</BaseSectionSubtitle>}
-            {description && <BaseSectionDescription>{description}</BaseSectionDescription>}
-            {buttonTitle && <BaseButton blackStyle={buttonStyle}>{buttonTitle}</BaseButton>}
+            <BaseSectionContent titleColor={titleColor} textAlign={textAlign}>
+                {title && <BaseSectionTitle titleColor={titleColor}>{title}</BaseSectionTitle>}
+                {subtitle && <BaseSectionSubtitle>{subtitle}</BaseSectionSubtitle>}
+                {description && <BaseSectionDescription titleColor={titleColor}>{description}</BaseSectionDescription>}
+                {buttonTitle && <BaseButton blackStyle={buttonStyle}>{buttonTitle}</BaseButton>}
+            </BaseSectionContent>
         </BaseSectionWrapper>
     )
 }
