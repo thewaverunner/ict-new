@@ -111,43 +111,22 @@ export const BannerSection = styled.div`
 `
 
 export const BannerWrapper = styled.div`
-  max-width: 1800px;
+  max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width:1920px){
-    max-width: 1320px;
-  }
-
-  @media screen and (max-width:1360px){
-    max-width: 1100px;
-  }
-
-  @media screen and (max-width: 1150px){
+  @media screen and (max-width: 1170px) {
     max-width: 950px;
   }
 
-  @media screen and (max-width: 1000px){
-    max-width: 800px;
+  @media screen and (max-width:992px) {
+    max-width: 720px;
   }
 
-  @media screen and (max-width: 850px){
-    max-width: 700px;
-    flex-wrap: wrap;
-  }
-
-  @media screen and (max-width: 750px){
-    max-width: 550px;
-  }
-
-  @media screen and (max-width: 600px){
-    max-width: 400px;
-  }
-
-  @media screen and (max-width: 440px){
-    max-width: 310px;
-  }
+  @media screen and (max-width: 768px) {
+      max-width: 520px;
+  }  
 `
 
 export const Banner = styled.div`
@@ -158,7 +137,7 @@ export const Banner = styled.div`
     padding-right: 0;
   }
 
-  @media screen and (max-width: 850px){
+  @media screen and (max-width: 850px) {
     flex:1 1 45%;
     padding-right: 20px;
 
@@ -176,7 +155,7 @@ export const Banner = styled.div`
   @media screen and (max-width: 600px){
     flex: 1 1 100%;
     padding: 0 10px;
-  }
+  } 
 `
 
 export const BannerImage = styled.div``

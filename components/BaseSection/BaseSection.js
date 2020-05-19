@@ -27,7 +27,7 @@ function BaseSection (props) {
         <BaseSectionWrapper backgroundImage={backgroundImage}>
             <BaseSectionContent titleColor={titleColor} textAlign={textAlign}>
                 {title && <BaseSectionTitle titleColor={titleColor}>{title}</BaseSectionTitle>}
-                {subtitle && <BaseSectionSubtitle>{subtitle}</BaseSectionSubtitle>}
+                {subtitle && <BaseSectionSubtitle titleColor={titleColor}>{subtitle}</BaseSectionSubtitle>}
                 {description && <BaseSectionDescription titleColor={titleColor}>{description}</BaseSectionDescription>}
                 {buttonTitle && <BaseButton blackStyle={buttonStyle}>{buttonTitle}</BaseButton>}
             </BaseSectionContent>

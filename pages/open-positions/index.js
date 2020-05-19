@@ -1,4 +1,6 @@
 import React from 'react'
+
+import Head from 'next/head'
 import Link from 'next/link'
 
 import { withTranslation } from '../../i18n'
@@ -20,9 +22,11 @@ import {
 function OpenPositionsPage ({ t }) {
     return (
         <>
-            <BaseSectionHeading 
-                title={'Work with us'}
-            ></BaseSectionHeading>
+            <Head>
+                <title>Our open positions</title>
+            </Head>
+
+            <BaseSectionHeading title={'Work with us'} />
 
             <OpenPositionsPageSection>
                 <OpenPositionsPageWrapper>
@@ -44,12 +48,13 @@ function OpenPositionsPage ({ t }) {
             </OpenPositionsPageSection>    
 
             <BaseSection
-                backgroundImage={'/static/images/work-with-us-banner.svg'}
+                backgroundImage={'/static/images/open-positions-join-our-team.svg'}
                 title={'Join our team'}
+                titleColor={'black'}
                 description={'We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.'}
                 buttonTitle={'Contact Us'}
                 buttonStyle={'blackStyle'}
-            ></BaseSection>
+            />
         </>
     )
 }

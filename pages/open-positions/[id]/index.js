@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Head from 'next/head'
+
 import BaseButton from '../../../components/BaseButton'
 import BaseSection from '../../../components/BaseSection'
 import BaseSectionHeading from '../../../components/BaseSectionHeading'
@@ -16,15 +18,17 @@ const description = 'We are looking for an experienced SEO (Search Engine Optimi
 function OpenPositionPage ({ t }) {
     return (
         <>
-            <BaseSectionHeading 
-                title={'Work with us'}
-            ></BaseSectionHeading>
+            <Head>
+                <title>Job Title</title>
+            </Head>
+    
+            <BaseSectionHeading title={'Work with us'} />
 
             <BaseSection
-                backgroundImage={'/static/images/open-positions-job-title-background.svg'}
+                backgroundImage={'/static/images/open-positions-job-title.svg'}
                 title={'Job title'}
                 subtitle={'Marketing & Sales - Stockholm'}
-            ></BaseSection>
+            />
 
             <OpenPositionPageSection>
                 <OpenPositionPageTitle>{title}</OpenPositionPageTitle>
@@ -34,12 +38,13 @@ function OpenPositionPage ({ t }) {
             </OpenPositionPageSection>
 
             <BaseSection
-                backgroundImage={'/static/images/work-with-us-banner.svg'}
+                backgroundImage={'/static/images/open-positions-join-our-team.svg'}
                 title={'Join our team'}
+                titleColor={'black'}
                 description={'We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.'}
                 buttonTitle={'Contact Us'}
                 buttonStyle={'blackStyle'}
-            ></BaseSection>
+            />
         </>
     )
 }

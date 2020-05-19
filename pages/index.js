@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Head from 'next/head'
+
 import { withTranslation } from '../i18n'
 
 import BaseButton from '../components/BaseButton'
@@ -25,11 +27,15 @@ import {
 function HomePage ({ t }) {
     return (
         <Home>
+            <Head>
+                <title>Home page</title>
+            </Head>
+
             <BaseSectionHeading 
                 title={t('BaseHeader_Title')} 
                 description={t('BaseHeader_Description')}
                 mainPage={true}
-            ></BaseSectionHeading>
+            />
        
             <Marketing>
                 <MarketingDescription>
@@ -90,7 +96,7 @@ function HomePage ({ t }) {
                 title={t('HomePage_Impact_Title')}
                 description={t('HomePage_Impact_Content')}
                 buttonTitle={'Learn more'}
-            ></BaseSectionWide>
+            />
 
             <BaseSection
                 title={t('HomePage_Network_Content')}
@@ -98,7 +104,7 @@ function HomePage ({ t }) {
                 textAlign={'center'}
                 buttonTitle={'Learn more'}
                 buttonStyle={'blackStyle'}
-            ></BaseSection>
+            />
         </Home>
     )
 }

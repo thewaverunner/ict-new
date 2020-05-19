@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Head from 'next/head'
+
 import { withTranslation } from '../../i18n'
 
 import BaseButton from '../../components/BaseButton'
@@ -26,10 +28,14 @@ import {
 function AboutICTPage ({ t }) {
     return (
         <>
+            <Head>
+                <title>About ICT</title>
+            </Head>
+
             <BaseSectionHeading 
                 title={'About Us'} 
                 mainPage={false}
-            ></BaseSectionHeading>
+            />
 
             <BaseSection
                 title={t('AboutUsPage_TopBanner_Title')}
@@ -37,7 +43,7 @@ function AboutICTPage ({ t }) {
                 backgroundImage={'/static/images/about-top-banner.svg'}
                 textAlign={'left'}
                 titleColor={'black'}
-            ></BaseSection>
+            />
 
             <BaseSectionWide
                 backgroundImage={'/static/images/about-ict-ict.svg'}
@@ -45,7 +51,7 @@ function AboutICTPage ({ t }) {
                 backgroundImageDirection={'left'}
                 title={t('AboutUsPage_ImpactBanner_Title')}
                 description={t('AboutUsPage_ImpactBanner_Content')}
-            ></BaseSectionWide>
+            />
 
             <BaseSection
                 backgroundImage={'/static/images/about-ict-social-impact.svg'}
@@ -53,7 +59,7 @@ function AboutICTPage ({ t }) {
                 textAlign={'center'}
                 description={t('AboutUsPage_SocialImpact_Content')}
                 buttonTitle={'Learn more'}
-            ></BaseSection>
+            />
 
             <InfoBannerSection>
                 <InfoBannerWrapper>
@@ -94,7 +100,7 @@ function AboutICTPage ({ t }) {
                 title={t('AboutUsPage_LegalEnvironment_Title')}
                 description={t('AboutUsPage_LegalEnvironment_Content')}
                 buttonTitle={'Learn more'}
-            ></BaseSection>
+            />
 
             <QuestionsBannerSection>
                 <QuestionsBannerWrapper>
@@ -143,7 +149,7 @@ function AboutICTPage ({ t }) {
                 title={t('AboutUsPage_BottomBanner_Title')}
                 description={t('AboutUsPage_BottomBanner_Content')}
                 buttonTitle={'Learn more'}
-            ></BaseSectionWide>
+            />
         </>
     )
 }

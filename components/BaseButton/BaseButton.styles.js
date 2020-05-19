@@ -8,7 +8,7 @@ export const Button = styled.a`
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
-    padding: ${props => (props.hideBorder ? "0" : '10px 20px')};
+    padding: ${props => (props.hideBorder ? "0" : '10px 30px')};
     font-size: 14px;
     color: ${props => (props.blackStyle ? "#000000" : '#ffffff')};
     font-family: 'DM Sans Regular';
@@ -21,7 +21,7 @@ export const Button = styled.a`
     span {
         display: inline-block;
         width: 6px;
-        margin-left: 25px;
+        margin-left: 15px;
         height: 10px;
         background: ${props => (props.blackStyle ? "url('../static/images/base-arrow-black.svg') no-repeat;" : "url('../static/images/base-arrow-white.svg') no-repeat;")}
     }

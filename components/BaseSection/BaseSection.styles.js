@@ -38,7 +38,7 @@ export const BaseSectionContent = styled.div`
     @media screen and (max-width: 552px) {
         max-width: 92%;
         margin: 0 4% 20px;
-        align-items: ${props => props.textAlign === 'left' ? 'start' : (props.titleColor == 'gradient' ? 'center' : 'start')};
+        align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
     }
 `
 
@@ -109,5 +109,6 @@ export const BaseSectionDescription = styled.p`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         text-align: left;
+        max-width: 100%;
     }
 `
