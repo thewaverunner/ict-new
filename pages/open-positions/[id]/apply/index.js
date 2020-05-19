@@ -5,6 +5,8 @@ import Head from 'next/head'
 import { useForm } from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
 
+import { withTranslation } from '../../../../i18n'
+
 import PhoneInput from 'react-phone-input-2'
 
 import BaseSection from '../../../../components/BaseSection'
@@ -55,26 +57,26 @@ function OpenPositionApplyPage ({ t }) {
     return (
         <>
             <Head>
-                <title>Job Title - Apply</title>
+                <title>{t('OpenPositionApplyPage-Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={'Work with us'}
+                title={t('OpenPositionApplyPage-Heading')}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
-                title={'Job title'}
+                title={t('OpenPositionsJobPage-Marketing-Banner-Title')}
                 titleColor={'black'}
+                subtitle={t('OpenPositionsJobPage-Marketing-Banner-Subtitle')}
                 textAlign={'center'}
-                subtitle={'Marketing & Sales - Stockholm'}
             />
 
             <OpenPositionApplyPageWrapper>
-                <OpenPositionApplyPageTitle>Application Form</OpenPositionApplyPageTitle>
+                <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage-ApplicationForm-Title')}</OpenPositionApplyPageTitle>
 
                 <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
-                    <OpenPositionApplyPageInputTitle>Name</OpenPositionApplyPageInputTitle> 
+                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Name')}</OpenPositionApplyPageInputTitle> 
 
                     <OpenPositionApplyPageInput 
                         name="name" 
@@ -82,9 +84,9 @@ function OpenPositionApplyPage ({ t }) {
                         ref={register({ required: true })} 
                     />
 
-                    {errors.name && errors.name.type === 'required' && <OpenPositionApplyInputError>Required</OpenPositionApplyInputError>}
+                    {errors.name && errors.name.type === 'required' && <OpenPositionApplyInputError>{t('OpenPositionApplyPage-ApplicationForm-ErrorRequired')}</OpenPositionApplyInputError>}
 
-                    <OpenPositionApplyPageInputTitle>Email</OpenPositionApplyPageInputTitle> 
+                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</OpenPositionApplyPageInputTitle> 
 
                     <OpenPositionApplyPageInput
                         name="email"
@@ -98,10 +100,10 @@ function OpenPositionApplyPage ({ t }) {
                         })}
                     />
 
-                    {errors.email && errors.email.type === 'required' && <OpenPositionApplyInputError>Required</OpenPositionApplyInputError>}
+                    {errors.email && errors.email.type === 'required' && <OpenPositionApplyInputError>{t('OpenPositionApplyPage-ApplicationForm-ErrorRequired')}</OpenPositionApplyInputError>}
                     {errors.email && errors.email.type === 'patern' && <OpenPositionApplyInputError>{errors.email.message}</OpenPositionApplyInputError>}
 
-                    <OpenPositionApplyPageInputTitle>Phone</OpenPositionApplyPageInputTitle> 
+                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Phone')}</OpenPositionApplyPageInputTitle> 
 
                     <PhoneInput 
                         country={'se'} 
@@ -117,7 +119,7 @@ function OpenPositionApplyPage ({ t }) {
                         {
                             isDragActive 
                             ? (
-                                <OpenPositionApplyPageInputFileMessage>Files Uploaded</OpenPositionApplyPageInputFileMessage>
+                                <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage-ApplicationForm-Upload-Success')}</OpenPositionApplyPageInputFileMessage>
                             )
                             : (
                                 <OpenPositionApplyPageInputFileMessage>
@@ -125,15 +127,18 @@ function OpenPositionApplyPage ({ t }) {
                                         <img src="/static/images/open-positions-apply-page-upload-icon.svg" />
                                     </OpenPositionApplyPageInputFileImages>
 
-                                    <strong>Drag and drop your CV here </strong> <br/>
-                                    You can also upload files by <br/>
-                                    <span> clicking here</span>
+                                    <strong>{t('OpenPositionApplyPage-ApplicationForm-Upload_Title')}</strong> <br/>
+                                    {t('OpenPositionApplyPage-ApplicationForm-Upload_Description')} <br/>
+                                    <span>{t('OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage')}</span>
                                 </OpenPositionApplyPageInputFileMessage>
                             )
                         }
                     </OpenPositionApplyPageInputFileWrapper>
 
-                    <OpenPositionApplyPageTextareaTitle><strong>Cover Letter</strong> optional </OpenPositionApplyPageTextareaTitle> 
+                    <OpenPositionApplyPageTextareaTitle>
+                        <strong>{t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title')}</strong> 
+                        {t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description')}
+                    </OpenPositionApplyPageTextareaTitle> 
 
                     <OpenPositionApplyPageTextarea
                         rows="9"
@@ -149,9 +154,9 @@ function OpenPositionApplyPage ({ t }) {
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={'Join our team'}
+                title={t('OpenPositionsPage-JoinUs-Banner-Title')}
                 titleColor={'black'}
-                description={'We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.'}
+                description={t('OpenPositionsPage-JoinUs-Banner-Description')}
                 buttonTitle={'Contact Us'}
                 buttonStyle={'blackStyle'}
             />
@@ -159,4 +164,8 @@ function OpenPositionApplyPage ({ t }) {
     )
 }
 
-export default OpenPositionApplyPage
+OpenPositionApplyPage.getInitialProps = async () => ({
+    namespacesRequired: ['common'],
+})
+
+export default withTranslation('common')(OpenPositionApplyPage)

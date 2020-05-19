@@ -29,18 +29,18 @@ function AboutICTPage ({ t }) {
     return (
         <>
             <Head>
-                <title>About ICT</title>
+                <title>{t('AboutICTPage-Heading')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={'About Us'} 
+                title={t('AboutICTPage-Heading')}
                 mainPage={false}
             />
 
             <BaseSection
-                title={t('AboutUsPage_TopBanner_Title')}
-                description={t('AboutUsPage_TopBanner_Content')}
                 backgroundImage={'/static/images/about-top-banner.svg'}
+                title={t('AboutICTPage_AboutICTBanner_Title')}
+                description={t('AboutICTPage_AboutICTBanner_Description')}
                 textAlign={'left'}
                 titleColor={'black'}
             />
@@ -49,15 +49,15 @@ function AboutICTPage ({ t }) {
                 backgroundImage={'/static/images/about-ict-ict.svg'}
                 backgroundImageMode={'half'}
                 backgroundImageDirection={'left'}
-                title={t('AboutUsPage_ImpactBanner_Title')}
-                description={t('AboutUsPage_ImpactBanner_Content')}
+                title={t('AboutICTPage_ICT_Title')}
+                description={t('AboutICTPage_ICT_Description')}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/about-ict-social-impact.svg'}
-                title={t('AboutUsPage_SocialImpact_Title')}
+                title={t('AboutICTPage_SocialImpact_Title')}
+                description={t('AboutICTPage_SocialImpact_Description')}
                 textAlign={'center'}
-                description={t('AboutUsPage_SocialImpact_Content')}
                 buttonTitle={'Learn more'}
             />
 
@@ -65,9 +65,9 @@ function AboutICTPage ({ t }) {
                 <InfoBannerWrapper>
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_First_Title')}</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutICTPage_InfoBanner_First_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_First_Content')}</InfoBannerContent>
+                            <InfoBannerContent>{t('AboutICTPage_InfoBanner_First_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
 
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
@@ -75,9 +75,9 @@ function AboutICTPage ({ t }) {
 
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_Second_Title')}</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutICTPage_InfoBanner_Second_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_Second_Content')}</InfoBannerContent>
+                            <InfoBannerContent>{t('AboutICTPage_InfoBanner_Second_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
                         
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
@@ -85,9 +85,9 @@ function AboutICTPage ({ t }) {
 
                     <InfoBanner>
                         <InfoBannerDescription>
-                            <InfoBannerTitle>{t('AboutUsPage_InfoBanner_Third_Title')}</InfoBannerTitle>
+                            <InfoBannerTitle>{t('AboutICTPage_InfoBanner_Third_Title')}</InfoBannerTitle>
 
-                            <InfoBannerContent>{t('AboutUsPage_InfoBanner_Third_Content')}</InfoBannerContent>
+                            <InfoBannerContent>{t('AboutICTPage_InfoBanner_Third_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
             
                         <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
@@ -97,8 +97,8 @@ function AboutICTPage ({ t }) {
 
             <BaseSection
                 backgroundImage={'/static/images/about-ict-legal-environment.svg'}
-                title={t('AboutUsPage_LegalEnvironment_Title')}
-                description={t('AboutUsPage_LegalEnvironment_Content')}
+                title={t('AboutICTPage_LegalEnvironment_Title')}
+                description={t('AboutICTPage_LegalEnvironment_Description')}
                 buttonTitle={'Learn more'}
             />
 
@@ -110,9 +110,9 @@ function AboutICTPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_First_Title')}</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutICTPage_QuestionBanner_First_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_First_Content')}</QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutICTPage_QuestionBanner_First_Description')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>
 
@@ -122,9 +122,9 @@ function AboutICTPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_Second_Title')}</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutICTPage_QuestionBanner_Second_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_Second_Content')}</QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutICTPage_QuestionBanner_Second_Description')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>
 
@@ -134,9 +134,9 @@ function AboutICTPage ({ t }) {
                         </QuestionsBannerImage>
 
                         <QuestionsBannerDescription>
-                            <QuestionsBannerTitle>{t('AboutUsPage_QuestionBanner_Third_Title')}</QuestionsBannerTitle>
+                            <QuestionsBannerTitle>{t('AboutICTPage_QuestionBanner_Third_Title')}</QuestionsBannerTitle>
 
-                            <QuestionsBannerContent>{t('AboutUsPage_QuestionBanner_Third_Content')}</QuestionsBannerContent>
+                            <QuestionsBannerContent>{t('AboutICTPage_QuestionBanner_Third_Description')}</QuestionsBannerContent>
                         </QuestionsBannerDescription>   
                     </QuestionsBanner>         
                 </QuestionsBannerWrapper>
@@ -146,8 +146,8 @@ function AboutICTPage ({ t }) {
                 backgroundImage={'/static/images/about-ict-million-picture.svg'}
                 backgroundImageMode={'shadow'}
                 backgroundImageDirection={'left'}
-                title={t('AboutUsPage_BottomBanner_Title')}
-                description={t('AboutUsPage_BottomBanner_Content')}
+                title={t('AbAboutICTPage_ICTCrowdBanner_Title')}
+                description={t('AbAboutICTPage_ICTCrowdBanner_Description')}
                 buttonTitle={'Learn more'}
             />
         </>

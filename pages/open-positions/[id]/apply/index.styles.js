@@ -128,6 +128,7 @@ export const OpenPositionApplyPageTextareaTitle = styled.div`
         font-size: 14px;
         margin-bottom: 10px;
         font-family: "DM Sans Bold";
+        margin-right: 20px;
     }
 `
 
