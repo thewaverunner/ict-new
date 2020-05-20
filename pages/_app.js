@@ -1,4 +1,5 @@
 import React from 'react'
+import App from 'next/app'
 
 import 'react-phone-input-2/lib/style.css'
 
@@ -10,7 +11,7 @@ import '../public/static/styles/main.css'
 import BaseNavbar from '../components/BaseNavbar'
 import BaseFooter from '../components/BaseFooter'
 
-function App ({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
     return (
         <div className="main-container">
             <BaseNavbar />
@@ -22,4 +23,10 @@ function App ({ Component, pageProps }) {
     )
 }
 
-export default appWithTranslation(App)
+MyApp.getInitialProps = async (appContext) => {
+    const appProps = await App.getInitialProps(appContext)
+
+    return { ...appProps }
+}
+
+export default appWithTranslation(MyApp)
