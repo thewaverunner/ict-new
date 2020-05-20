@@ -34,7 +34,7 @@ function OpenPositionJobPage ({ t }) {
                 <OpenPositionPageTitle>{t('OpenPositionsJobPage-Job-Title')}</OpenPositionPageTitle>
                 <OpenPositionPageDescription>{t('OpenPositionsJobPage-Job-Description')}</OpenPositionPageDescription>
 
-                <BaseButton blackStyle>Apply now</BaseButton>
+                <BaseButton blackStyle>{t('OpenPositionsJobPage-Job-Apply')}</BaseButton>
             </OpenPositionPageSection>
 
             <BaseSection

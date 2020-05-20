@@ -145,14 +145,14 @@ export const OpenPositionApplyInputError = styled.p`
 export const OpenPositionApplyPageSubmit = styled.input`
     background-color: transparent;
     border: 1px solid #000000;
-    text-decoration: none;
     border-radius: 6px;
-    text-align: center;
     cursor: pointer;
+    color: #000000;
     padding: 15px 85px;
     font-size: 14px;
-    color: #000000;
     font-family: 'DM Sans Regular';
+    text-decoration: none;
+    text-align: center;
 
     &:hover {
         background-color: #000000;
