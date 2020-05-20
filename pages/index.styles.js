@@ -7,111 +7,10 @@ export const Header = styled.header`
         padding-top: 0;
     }
 `
-export const HeaderContainer = styled.div` 
-  margin-bottom: 16px;
-  height: 810px;
-  display: flex;
-  flex-direction: column;
-  background: url('../../static/images/header-background.svg') no-repeat;
-  background-size: cover; 
-`
-
-export const HeaderWrapper = styled.div`
-    width: 1800px;
-    margin: 0 auto;
-
-    @media screen and (max-width:1920px){
-        max-width: 1320px;
-    }
-
-    @media screen and (max-width:1360px){
-        max-width: 1100px;
-    }
-
-    @media screen and (max-width: 1150px){
-        max-width: 950px;
-    }
-
-    @media screen and (max-width: 1000px){
-        max-width: 800px;
-    }
-    
-    @media screen and (max-width: 850px){
-        max-width: 700px;
-    }
-    
-    @media screen and (max-width: 750px){
-        max-width: 550px;
-    }
-    
-    @media screen and (max-width: 600px){
-        max-width: 400px;
-    }
-    
-    @media screen and (max-width: 440px){
-        max-width: 310px;
-    }  
-`
-
-export const HeaderDescriptionWrapper = styled.div`
-    max-width: 49%;
-    transform: translateY(100%); 
-
-    @media screen and (max-width:1360px){
-      max-width: 52%;
-      transform: translateY(77%);
-    }
-  
-    @media screen and (max-width: 1150px){
-      transform: translateY(55%);
-    }
-  
-    @media screen and (max-width: 1000px){
-      transform: translateY(40%);
-    }
-  
-    @media screen and (max-width: 850px){
-      max-width: 52%;
-    }
-  
-    @media screen and (max-width: 750px){
-      max-width: 66%;
-    }
-  
-    @media screen and (max-width: 440px){
-      max-width: 100%;
-      text-align: center;
-      transform: translateY(25%);
-      padding: 0 10px;
-    }
-`
-
-
-export const HeaderTitle = styled.h1`
-    font-size: 47px;
-    font-family: 'DM Sans Bold';
-    color:#ffffff;
-    margin-bottom: 20px;
-    line-height: 70px;
-
-    @media screen and (max-width: 600px){
-        font-size: 35px;
-        line-height: 40px;
-        margin-top: 40px;
-    }
-`
-
-export const HeaderDescription = styled.p`
-    font-size: 21px;
-    color: #ffffff;
-    margin-bottom: 60px;
-    font-family: 'DM Sans Regular';
-    line-height: 35px;
-`
 
 export const Marketing = styled.div`
   width: 100%;
-  background: url('../static/images/banner-marketing.svg');
+  background: url('../static/images/home-marketing.svg');
   height: 646px;
   background-size: cover;
   display: flex;
@@ -160,9 +59,8 @@ export const MarketingDescription = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: none;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 `
 
@@ -213,43 +111,22 @@ export const BannerSection = styled.div`
 `
 
 export const BannerWrapper = styled.div`
-  max-width: 1800px;
+  max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width:1920px){
-    max-width: 1320px;
-  }
-
-  @media screen and (max-width:1360px){
-    max-width: 1100px;
-  }
-
-  @media screen and (max-width: 1150px){
+  @media screen and (max-width: 1170px) {
     max-width: 950px;
   }
 
-  @media screen and (max-width: 1000px){
-    max-width: 800px;
+  @media screen and (max-width:992px) {
+    max-width: 720px;
   }
 
-  @media screen and (max-width: 850px){
-    max-width: 700px;
-    flex-wrap: wrap;
-  }
-
-  @media screen and (max-width: 750px){
-    max-width: 550px;
-  }
-
-  @media screen and (max-width: 600px){
-    max-width: 400px;
-  }
-
-  @media screen and (max-width: 440px){
-    max-width: 310px;
-  }
+  @media screen and (max-width: 768px) {
+      max-width: 520px;
+  }  
 `
 
 export const Banner = styled.div`
@@ -260,7 +137,7 @@ export const Banner = styled.div`
     padding-right: 0;
   }
 
-  @media screen and (max-width: 850px){
+  @media screen and (max-width: 850px) {
     flex:1 1 45%;
     padding-right: 20px;
 
@@ -278,7 +155,7 @@ export const Banner = styled.div`
   @media screen and (max-width: 600px){
     flex: 1 1 100%;
     padding: 0 10px;
-  }
+  } 
 `
 
 export const BannerImage = styled.div``
@@ -359,9 +236,8 @@ export const ImpactDescription = styled.div`
 
   @media screen and (max-width: 440px){
     max-width: 100%;
-    text-align: center;
     transform: none;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 `
 
@@ -460,5 +336,6 @@ export const NetworkTitle = styled.h1`
 
   @media screen and (max-width: 600px){
     font-size: 28px;
+    line-height: 45px;
   }
 `

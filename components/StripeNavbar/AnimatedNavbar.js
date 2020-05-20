@@ -13,7 +13,7 @@ const navbarConfig = [
     { title: 'ABOUT US', dropdown: CompanyDropdown },
     { title: 'RESPONSIBILITY', dropdown: ProductsDropdown },
     { title: 'COMPANY', dropdown: DevelopersDropdown },
-    // { title: 'CONTACT US', dropdown: CompanyDropdown},
+    { title: 'CONTACT US', dropdown: null },
 ]
 
 const navbarConfigMobile = [
@@ -118,7 +118,7 @@ export default class AnimatedNavbar extends Component {
                                 onOpen={this.onOpen}
                             >
                                 {
-                                    currentIndex === index && (
+                                    currentIndex === index && CurrentDropdown !== null && (
                                         <DropdownContainer
                                             direction={direction}
                                             animatingOut={this.state.animatingOut}

@@ -6,40 +6,20 @@ export const Footer = styled.footer`
 `
 
 export const FooterWrapper = styled.div`
-    max-width: 1800px;
+    max-width: 1170px;
     margin: 0 auto;
 
-    @media screen and (max-width:1920px){
-        max-width: 1320px;
-      }
-
-    @media screen and (max-width:1360px){
-        max-width: 1100px;
-    }
-
-    @media screen and (max-width: 1150px){
+    @media screen and (max-width: 1170px) {
         max-width: 950px;
     }
 
-    @media screen and (max-width: 1000px){
-        max-width: 800px;
+    @media screen and (max-width:992px) {
+        max-width: 720px;
     }
-    
-    @media screen and (max-width: 850px){
-        max-width: 700px;
-    }
-    
-    @media screen and (max-width: 750px){
-        max-width: 550px;
-    }
-    
-    @media screen and (max-width: 600px){
-        max-width: 400px;
-    }
-    
-    @media screen and (max-width: 440px){
-        max-width: 310px;
-    }   
+
+    @media screen and (max-width: 768px) {
+        max-width: 520px;
+    }  
 `
 
 export const FooterTopContent = styled.div`
@@ -63,23 +43,27 @@ export const FooterChangeLanguage = styled.div`
     font-size: 16px;
     font-family: 'DM Sans Bold';
     color: #000000;
+    display: flex;
+    position: relative;
 
-    @media screen and (max-width: 600px){
-        flex: 1 1 50%;   
+    img {
+        width: 12px;
+        height: 12px;
+        margin: 3px 5px 0;
+    }
+
+    @media screen and (max-width: 552px){
+        flex: 1 1 100%;  
+        margin: 20px; 
     }
 `
 
 export const FooterLinks = styled.div`
     flex-basis: 22%;
 
-    @media screen and (max-width: 600px){
-        flex: 1 1 40%;  
-        margin: 0 10px;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-            margin-bottom: 30px;
-        } 
+    @media screen and (max-width: 552px){
+        flex: 1 1 100%;  
+        margin: 20px;
     }
 `
 
@@ -101,10 +85,10 @@ export const FooterLinksItemLink = styled.a`
     font-family: 'DM Sans Medium';
     color:#1D1D20;
     text-decoration: none;
+    transition: opacity .3s ease-in-out;
 
     &:hover {
         opacity: 0.5;
-        transition: opacity .3s ease-in-out;
     }
 `
 
@@ -123,10 +107,6 @@ export const FooterBottomWrapper = styled.div`
     @media screen and (max-width: 750px){
         flex-direction: column;
     }
-
-    @media screen and (max-width: 440px){
-        text-align: center;
-    }
 `
 
 export const FooterCopyright = styled.div`
@@ -136,6 +116,7 @@ export const FooterCopyright = styled.div`
 
     @media screen and (max-width: 750px){
         margin-bottom: 20px;
+        text-align: center;
     }
 `
 

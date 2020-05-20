@@ -245,3 +245,55 @@ img {
     background-color: #000000;
     color:#ffffff;
 }
+
+.languageDropdown {
+    position: relative;
+}
+
+.languageDropdownMenu {
+    position: absolute;
+    top: -120px;
+    left: -30%;
+    width: 90px;
+    background: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 0 16px rgba(0, 0 ,0 , 0.2);
+}
+
+.languageDropdown .Dropdown-option {
+    font-size: 14px;
+    color: #000000;
+    opacity: 0.5;
+    font-family: 'DM Sans Medium';
+}
+
+.languageDropdown .Dropdown-option:hover {
+    cursor: pointer;
+}
+
+.languageDropdown .Dropdown-option.is-selected {
+    opacity: 1;
+}
+
+.languageDropdown .Dropdown-option.is-selected:after {
+    content: url('/static/images/check-circle.svg');
+    margin-left: 3px;
+    vertical-align: text-bottom;
+}
+
+.languageDropdown .Dropdown-option:nth-child(2) {
+    margin: 17px 0;
+}
+
+.languageDropdownMenu:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    z-index: 0;
+}
