@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Dropdown from 'react-dropdown';
+import Dropdown from 'react-dropdown'
 
-import { withTranslation } from '../../i18n'
+import { i18n, withTranslation } from '../../i18n'
 
 import {
     Footer, 
@@ -21,11 +21,6 @@ import {
     FooterBottomPolicyItem,
     FooterBottomPolicyItemLink,
 } from './BaseFooter.styles'
-
-const options = [
-    'one', 'two', 'three'
-  ]
-
 
 function BaseFooter ({ t }) {
     const aboutLinks = [
@@ -56,11 +51,13 @@ function BaseFooter ({ t }) {
         { title: t('BaseFooter_Bottom_Cookie'), link: '#' }
     ]
 
-    const options = [
-        'English', 'Espanol', 'Chinese'
+    const languages = [
+        { value: 'en', label: 'English' },
+        { value: 'es', label: 'Espanol' },
+        { value: 'zh', label: 'Chinese' },
     ]
 
-    const defaultOption = options[0]
+    const defaultLanguage = languages.filter((language) => language.value === i18n.language)[0] || languages[0]
 
     function renderLinks (title, links) {
         return (
@@ -78,6 +75,10 @@ function BaseFooter ({ t }) {
         )
     }
 
+    function onSelectLanguage (language) {
+        i18n.changeLanguage(language.value)
+    }
+
     return (
         <Footer>
             <FooterWrapper>
@@ -86,8 +87,9 @@ function BaseFooter ({ t }) {
                         <img src="/static/images/language-icon.svg"/>
 
                         <Dropdown
-                            options={options}
-                            value={defaultOption}
+                            options={languages}
+                            value={defaultLanguage}
+                            onChange={onSelectLanguage}
                             className={'languageDropdown'}
                             menuClassName={'languageDropdownMenu'}
                         />
