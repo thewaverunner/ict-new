@@ -70,7 +70,13 @@ function AboutICTPage ({ t }) {
                             <InfoBannerContent>{t('AboutICTPage_InfoBanner_First_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
 
-                        <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
+                        <BaseButton 
+                            blackStyle 
+                            hideBorder={true} 
+                            withArrow={true}
+                        >
+                            Learn more
+                        </BaseButton>   
                     </InfoBanner>
 
                     <InfoBanner>
@@ -80,7 +86,13 @@ function AboutICTPage ({ t }) {
                             <InfoBannerContent>{t('AboutICTPage_InfoBanner_Second_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
                         
-                        <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
+                        <BaseButton 
+                            blackStyle 
+                            hideBorder={true} 
+                            withArrow={true} 
+                        >
+                            Learn more
+                        </BaseButton>   
                     </InfoBanner>  
 
                     <InfoBanner>
@@ -90,7 +102,13 @@ function AboutICTPage ({ t }) {
                             <InfoBannerContent>{t('AboutICTPage_InfoBanner_Third_Description')}</InfoBannerContent>
                         </InfoBannerDescription>
             
-                        <BaseButton blackStyle hideBorder={true} >Learn more <span /></BaseButton>   
+                        <BaseButton 
+                            blackStyle 
+                            hideBorder={true} 
+                            withArrow={true} 
+                        >
+                            Learn more
+                        </BaseButton>   
                     </InfoBanner>       
                 </InfoBannerWrapper>
             </InfoBannerSection> 
@@ -145,7 +163,7 @@ function AboutICTPage ({ t }) {
             <BaseSectionWide
                 backgroundImage={'/static/images/about-ict-million-picture.svg'}
                 backgroundImageMode={'shadow'}
-                backgroundImageDirection={'left'}
+                backgroundImageDirection={'right'}
                 title={t('AbAboutICTPage_ICTCrowdBanner_Title')}
                 description={t('AbAboutICTPage_ICTCrowdBanner_Description')}
                 buttonTitle={'Learn more'}

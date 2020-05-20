@@ -23,7 +23,7 @@ export const OpenPositionApplyPageTitle = styled.h1`
     line-height: 56px;
     text-align: center;
     color: #000000;
-    margin-bottom: 25px;
+    margin-bottom: 55px;
 
     @media screen and (max-width: 552px) {
         font-size: 33px;
@@ -33,9 +33,7 @@ export const OpenPositionApplyPageTitle = styled.h1`
 
 export const OpenPositionApplyPageForm = styled.form`
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    position: relative;
 
     @media screen and (max-width: 552px) {
         margin: 0 4%;
@@ -44,15 +42,14 @@ export const OpenPositionApplyPageForm = styled.form`
 `
 
 export const OpenPositionApplyPageInput = styled.input`
-    width: calc(90% - 20px);
-    padding: 20px 10px;
+    width: calc(81% - 20px);
+    padding: 20px 10px 20px 20%;
+    margin-top: 15px;
     border: none;
-    border-bottom: 1px solid ${props => props.unvalid === "true" ? 'red' : '#1D1D1F'};
+    border-bottom: 1px solid #1D1D1F;
 
-    @media screen and (max-width: 552px) {
-      margin-bottom: 35px;
-      padding: 20px 0;
-      width: 100%;
+    @media screen and (max-width: 992px) {
+      padding: 20px 10px 20px 20%;
     }
 `
 
@@ -132,16 +129,6 @@ export const OpenPositionApplyPageTextareaTitle = styled.div`
     }
 `
 
-export const OpenPositionApplyInputError = styled.p`
-    width: 100%;
-    height: 15px;
-    transform: translateX(-6px);
-    text-align: left;
-    font-size: 13px;
-    font-family: "DM Sans Regular";
-    color: red;
-`
-
 export const OpenPositionApplyPageSubmit = styled.input`
     background-color: transparent;
     border: 1px solid #000000;
@@ -149,6 +136,7 @@ export const OpenPositionApplyPageSubmit = styled.input`
     cursor: pointer;
     color: #000000;
     padding: 15px 85px;
+    float: right;
     font-size: 14px;
     font-family: 'DM Sans Regular';
     text-decoration: none;
@@ -163,9 +151,10 @@ export const OpenPositionApplyPageSubmit = styled.input`
 export const OpenPositionApplyPageInputTitle = styled.div`
     width: 10%;
     padding: 20px 10px;
-    align-self: start;
+    position: absolute;
+    left: 0;
+    transform: translateY(19px);
     color: #000000;
-    transform: translateY(59px);
     font-size: 14px;
     font-family: "DM Sans Bold";
     border-bottom: 1px solid #1D1D1F;
@@ -182,20 +171,20 @@ export const OpenPositionApplyPageInputPhone = {
             'border': 'none',
             'borderBottom': '1px solid #1D1D1F',
             'borderRadius': '0',
-            'padding': '29px 10px 29px 50px',
+            'padding': '29px 10px 29px 110px',
             'backgroundColor': 'transparent',
             'fontFamily': 'DM Sans Regular',
             'fontsize': '14px'        
         },
         containerStyle: {
-            'marginBottom': '55px',
-            'width': '90%'   
+            'margin': '15px 0 55px 0',
+            'width': '100%'   
         },
         buttonStyle: {
             'border': 'none',
             'backgroundColor': 'transparent',
             'height': '98%',
-            'left' : '0%'
+            'left' : '10%'
         }
     },
     tablet: {
@@ -210,8 +199,8 @@ export const OpenPositionApplyPageInputPhone = {
             'fontsize': '14px'       
         },
         containerStyle: {
-            'marginBottom': '55px', 
-            'width': '90%'   
+            'margin': '15px 0 55px 0',
+            'width': '100%'   
         },
         buttonStyle: {
             'border': 'none',
@@ -232,8 +221,8 @@ export const OpenPositionApplyPageInputPhone = {
             'fontsize': '14px'        
         },
         containerStyle: {
-            'marginBottom': '55px',
-            'width': '90%'    
+            'margin': '15px 0 55px 0',
+            'width': '100%'    
         },
         buttonStyle: {
             'border': 'none',

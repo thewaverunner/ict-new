@@ -104,7 +104,7 @@ export const FooterBottomWrapper = styled.div`
     align-items: center;
     padding: 20px 0;
 
-    @media screen and (max-width: 750px){
+    @media screen and (max-width: 768px){
         flex-direction: column;
     }
 `
@@ -114,7 +114,7 @@ export const FooterCopyright = styled.div`
     color: #a3a3a4;
     font-family: 'DM Sans Medium';
 
-    @media screen and (max-width: 750px){
+    @media screen and (max-width: 768px){
         margin-bottom: 20px;
         text-align: center;
     }

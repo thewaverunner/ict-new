@@ -37,8 +37,8 @@ function OpenPositionsPage ({ t }) {
                             <OpenPositionsPageItem key={index}>
                                 <Link href={`/open-positions/manager-${index}`}>
                                     <OpenPositionsPageItemLink>
-                                        <OpenPositionsPageItemTitle>{t('OpenPositionsPage-Job-Title')} {index}</OpenPositionsPageItemTitle>
-                                        <OpenPositionsPageItemContent>{t('OpenPositionsPage-Job-Description')}</OpenPositionsPageItemContent>
+                                        <OpenPositionsPageItemTitle>Job Title {index}</OpenPositionsPageItemTitle>
+                                        <OpenPositionsPageItemContent>Description</OpenPositionsPageItemContent>
                                     </OpenPositionsPageItemLink>
                                 </Link>
                             </OpenPositionsPageItem>

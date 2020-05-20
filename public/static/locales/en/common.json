@@ -74,8 +74,6 @@
 
     "OpenPositionsPage-Title": "Our open positions",
     "OpenPositionsPage-Heading": "Work with us",
-    "OpenPositionsPage-Job-Title": "Job Title",
-    "OpenPositionsPage-Job-Description": "Description",
     "OpenPositionsPage-JoinUs-Banner-Title": "Join our team",
     "OpenPositionsPage-JoinUs-Banner-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
 
@@ -98,5 +96,22 @@
     "OpenPositionApplyPage-ApplicationForm-Upload_Description": "You can also upload files by",
     "OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage": "clicking here",
     "OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title": "Cover Letter",
-    "OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description": "optional"
+    "OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description": "optional",
+
+    "PressroomPage-Title": "Pressroom",
+    "PressroomPage-Heading": "Pressroom",
+    "PressroomPage-Learn-More": "Learn more",
+    "PressroomPage-Form-Title": "Press Inquiries",
+    "PressroomPage-Form-Name-Input": "Name",
+    "PressroomPage-Form-Story-Input": "Story topic",
+    "PressroomPage-Form-Email-Input": "Your email",
+    "PressroomPage-Form-Publication-Input": "Publication media",
+    "PressroomPage-Form-Phone-Input": "Your phone",
+    "PressroomPage-Form-Inquiri-Input": "Type your inquiry here",
+    "PressroomPage-Media-Banner-Title": "Media Kit",
+    "PressroomPage-Media-Banner-Description": "Impact Crowd Technology has been set up in accordance with strict corporate governance and a solid managerial foundation that meets all European laws and regulations.",
+
+    "ArticlePage-Title": "Article",
+    "ArticlePage-Heading": "Pressroom",
+    "ArticlePage-Download": "Download pdf."
 }

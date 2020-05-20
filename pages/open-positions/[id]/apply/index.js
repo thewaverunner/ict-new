@@ -18,7 +18,6 @@ import {
     OpenPositionApplyPageTitle,
     OpenPositionApplyPageForm,
     OpenPositionApplyPageInput,
-    OpenPositionApplyInputError,
     OpenPositionApplyPageInputPhone,
     OpenPositionApplyPageInputFile,
     OpenPositionApplyPageInputFileImages,
@@ -84,8 +83,6 @@ function OpenPositionApplyPage ({ t }) {
                         ref={register({ required: true })} 
                     />
 
-                    {errors.name && errors.name.type === 'required' && <OpenPositionApplyInputError>{t('OpenPositionApplyPage-ApplicationForm-ErrorRequired')}</OpenPositionApplyInputError>}
-
                     <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</OpenPositionApplyPageInputTitle> 
 
                     <OpenPositionApplyPageInput
@@ -99,9 +96,6 @@ function OpenPositionApplyPage ({ t }) {
                             }
                         })}
                     />
-
-                    {errors.email && errors.email.type === 'required' && <OpenPositionApplyInputError>{t('OpenPositionApplyPage-ApplicationForm-ErrorRequired')}</OpenPositionApplyInputError>}
-                    {errors.email && errors.email.type === 'patern' && <OpenPositionApplyInputError>{errors.email.message}</OpenPositionApplyInputError>}
 
                     <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Phone')}</OpenPositionApplyPageInputTitle> 
 

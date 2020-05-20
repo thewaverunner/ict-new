@@ -4,11 +4,29 @@ import Link from 'next/link'
 
 import { Button } from './BaseButton.styles'
 
-function BaseButton ({ children, hideBorder, blackStyle }) {
+function BaseButton ({ children, hideBorder, blackStyle, withArrow, linkUrl }) {
+    function renderButton () {
+        return (
+            <Button 
+                blackStyle={blackStyle} 
+                hideBorder={hideBorder}
+            >
+                {children} {withArrow ? <span/> : ''}
+            </Button>
+        )
+    }
     return (
-        <Link href="/">
-            <Button blackStyle={blackStyle} hideBorder={hideBorder}>{children}</Button>
-        </Link>
+        <>
+            {
+                linkUrl
+                ? (
+                    <Link href={linkUrl ? linkUrl : '/'}>
+                        {renderButton()}
+                    </Link>
+                )
+                : renderButton()
+            }
+        </>
     )
 }
 
