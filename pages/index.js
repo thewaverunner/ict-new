@@ -10,11 +10,6 @@ import BaseSectionHeading from '../components/BaseSectionHeading'
 import BaseSectionWide from '../components/BaseSectionWide'
 
 import {
-    Home,
-    Marketing,
-    MarketingDescription,
-    MarketingTitle,
-    MarketingContent,
     BannerSection,
     BannerWrapper,
     BannerImage,
@@ -26,7 +21,7 @@ import {
 
 function HomePage ({ t }) {
     return (
-        <Home>
+        <>
             <Head>
                 <title>Home page</title>
             </Head>
@@ -36,20 +31,17 @@ function HomePage ({ t }) {
                 description={t('BaseHeader_Description')}
                 mainPage={true}
             />
-       
-            <Marketing>
-                <MarketingDescription>
-                    <MarketingTitle>{t('HomePage_Marketing_Title')}</MarketingTitle>
-                    <MarketingContent>{t('HomePage_Marketing_Content')}</MarketingContent>
-                    
-                    <BaseButton 
-                        blackStyle 
-                        withArrow={true} 
-                    >
-                        Learn more
-                    </BaseButton>
-                </MarketingDescription>
-            </Marketing>
+
+            <BaseSectionWide
+                mode={'full'}
+                themeMode={'light'}
+                contentWidth={'50%'}
+                reverse={true}
+                imageUrl={'/static/images/home-marketing.svg'}
+                title={t('HomePage_Marketing_Title')}
+                description={t('HomePage_Marketing_Content')}
+                buttonTitle={'Learn more'}
+            />
 
             <BannerSection>
                 <BannerWrapper>
@@ -114,8 +106,10 @@ function HomePage ({ t }) {
             </BannerSection> 
 
             <BaseSectionWide
-                backgroundImage={'/static/images/home-impact-technology.svg'}
-                backgroundImageMode={'full'}
+                mode={'full'}
+                reverse={false}
+                contentWidth={'65%'}
+                imageUrl={'/static/images/home-impact-technology.svg'}
                 title={t('HomePage_Impact_Title')}
                 description={t('HomePage_Impact_Content')}
                 buttonTitle={'Learn more'}
@@ -128,7 +122,7 @@ function HomePage ({ t }) {
                 buttonTitle={'Learn more'}
                 buttonStyle={'blackStyle'}
             />
-        </Home>
+        </>
     )
 }
 

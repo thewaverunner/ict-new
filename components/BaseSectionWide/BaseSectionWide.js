@@ -3,95 +3,127 @@ import React from 'react'
 import BaseButton from '../BaseButton'
 
 import {
-    Impact,
-    ImpactDescription,
-    ImpactTitle,
-    ImpactContent,
-    ImpactSection,
-    ImpactSectionImage,
-    ImpactSectionContent,
-    ImpactSectionDescription,
-    ImpactSectionTitle,
-    ImpactSectionWrapper,
-    AboutBottomSection,
-    AboutBottomDescription,
-    AboutBottomTitle,
-    AboutBottomContent,
+    BaseSectionWideFullWrapper,
+    BaseSectionWideFullContent,
+    BaseSectionWideFullContentWrapper,
+    BaseSectionWideFullTitle,
+    BaseSectionWideFullSubtitle,
+    BaseSectionWideFullDescription,
+
+    BaseSectionWideHalfWrapper,
+    BaseSectionWideHalfImageWrapper,
+    BaseSectionWideHalfImage,
+    BaseSectionWideHalfContent,
+    BaseSectionWideHalfContentWrapper,
+    BaseSectionWideHalfTitle,
+    BaseSectionWideHalfSubtitle,
+    BaseSectionWideHalfDescription,
+
+    BaseSectionWideShadowWrapper,
+    BaseSectionWideShadowImage,
+    BaseSectionWideShadowMode,
+    BaseSectionWideShadowContent,
+    BaseSectionWideShadowTitle,
+    BaseSectionWideShadowSubtitle,
+    BaseSectionWideShadowDescription,
 } from './BaseSectionWide.styles'
 
 function BaseSectionWide (props) {
     const {
-        backgroundImageMode,
-        backgroundImageDirection,
-        buttonStyle, 
-        backgroundImage, 
+        mode,
+        themeMode,
+        reverse,
+        imageUrl,
+        imageResized,
         title,
-        titleColor,
         subtitle,
+        contentWidth,
         description, 
         buttonTitle, 
-        buttonLink 
     } = props
 
     return (
         <>
             {
-                backgroundImageMode === 'full' && (
-                    <Impact backgroundImage={backgroundImage}>
-                        <ImpactDescription>
-                            <ImpactTitle>{title}</ImpactTitle>
-                            <ImpactContent>{description}</ImpactContent>
+                mode === 'full' && (
+                    <BaseSectionWideFullWrapper 
+                        themeMode={themeMode}
+                        reverse={reverse}
+                        imageUrl={imageUrl}
+                    >
+                        <BaseSectionWideFullContent reverse={reverse}>
+                            <BaseSectionWideFullContentWrapper contentWidth={contentWidth}>
+                                {title && <BaseSectionWideFullTitle themeMode={themeMode}>{title}</BaseSectionWideFullTitle>}
+                                {subtitle && <BaseSectionWideFullSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideFullSubtitle>}
+                                {description && <BaseSectionWideFullDescription themeMode={themeMode}>{description}</BaseSectionWideFullDescription>}
 
-                            <BaseButton>Learn more <span /></BaseButton>
-                        </ImpactDescription>
-                    </Impact>
+                                {
+                                    buttonTitle && (
+                                        <BaseButton 
+                                            blackStyle={themeMode === 'light'} 
+                                            withArrow={true}
+                                        >
+                                            {buttonTitle}
+                                        </BaseButton>
+                                    )
+                                }
+                            </BaseSectionWideFullContentWrapper>
+                        </BaseSectionWideFullContent>
+                    </BaseSectionWideFullWrapper>
                 )
             }
 
             {
-                backgroundImageMode === 'half' && backgroundImageDirection === 'left' && (
-                    <ImpactSection>
-                        <ImpactSectionImage>
-                            <img src={backgroundImage} />
-                        </ImpactSectionImage>
+                mode === 'half' && (
+                    <BaseSectionWideHalfWrapper 
+                        themeMode={themeMode}
+                        reverse={reverse}
+                    >
+                        <BaseSectionWideHalfImageWrapper imageResized={imageResized}>
+                            <BaseSectionWideHalfImage src={imageUrl} />
+                        </BaseSectionWideHalfImageWrapper>
 
-                        <ImpactSectionDescription>
-                            <ImpactSectionWrapper>
-                                <ImpactSectionTitle>{title}</ImpactSectionTitle>
-                                <ImpactSectionContent>{description}</ImpactSectionContent>
-                            </ImpactSectionWrapper>     
-                        </ImpactSectionDescription>    
-                    </ImpactSection>
+                        <BaseSectionWideHalfContent>
+                            <BaseSectionWideHalfContentWrapper>
+                                {title && <BaseSectionWideHalfTitle themeMode={themeMode}>{title}</BaseSectionWideHalfTitle>}
+                                {subtitle && <BaseSectionWideHalfSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideHalfSubtitle>}
+                                {description && <BaseSectionWideHalfDescription themeMode={themeMode}>{description}</BaseSectionWideHalfDescription>}
+                            </BaseSectionWideHalfContentWrapper>
+                        </BaseSectionWideHalfContent>
+                    </BaseSectionWideHalfWrapper>
                 )
             }
 
             {
-                backgroundImageMode === 'half' && backgroundImageDirection === 'right' && (
-                    <ImpactSection>
-                        <ImpactSectionDescription>
-                            <ImpactSectionWrapper>
-                                <ImpactSectionTitle>{title}</ImpactSectionTitle>
-                                <ImpactSectionContent>{description}</ImpactSectionContent>
-                            </ImpactSectionWrapper>     
-                        </ImpactSectionDescription> 
+                mode === 'shadow' && (
+                    <BaseSectionWideShadowWrapper 
+                        themeMode={themeMode}
+                        reverse={reverse}
+                    >
+                        <BaseSectionWideShadowImage src={imageUrl} />
 
-                        <ImpactSectionImage>
-                            <img src={backgroundImage} />
-                        </ImpactSectionImage>   
-                    </ImpactSection>
-                )
-            }
+                        <BaseSectionWideShadowMode
+                            reverse={reverse} 
+                            themeMode={themeMode} 
+                        />
 
-            {
-                backgroundImageMode === 'shadow' && backgroundImageDirection && (
-                    <AboutBottomSection backgroundImageDirection={backgroundImageDirection} backgroundImage={backgroundImage}>
-                        <AboutBottomDescription backgroundImageDirection={backgroundImageDirection}>
-                            <AboutBottomTitle>{title}</AboutBottomTitle>
-                            <AboutBottomContent>{description}</AboutBottomContent>
-
-                            <BaseButton>{buttonTitle}</BaseButton>
-                        </AboutBottomDescription>    
-                    </AboutBottomSection> 
+                        <BaseSectionWideShadowContent reverse={reverse} >
+                            {title && <BaseSectionWideShadowTitle themeMode={themeMode}>{title}</BaseSectionWideShadowTitle>}
+                            {subtitle && <BaseSectionWideShadowSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideShadowSubtitle>}
+                            {description && <BaseSectionWideShadowDescription themeMode={themeMode}>{description}</BaseSectionWideShadowDescription>}
+        
+                            {
+                                buttonTitle && (
+                                    <BaseButton 
+                                        blackStyle={themeMode === 'light'} 
+                                        withArrow={true}
+                                    >
+                                        {buttonTitle}
+                                    </BaseButton>
+                                )
+                            }
+                        </BaseSectionWideShadowContent>
+                    </BaseSectionWideShadowWrapper>
                 )
             }
         </>

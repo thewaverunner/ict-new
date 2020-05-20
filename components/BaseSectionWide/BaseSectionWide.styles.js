@@ -2,295 +2,396 @@ import styled from 'styled-components'
 
 import { BREAKPOINTS } from '../../utils/constants'
 
-export const Impact = styled.div`
-  background: url(${props => props.backgroundImage});
-  background-size: cover;
-  width: 100%;
-  height: 646px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+// Full Mode
+
+export const BaseSectionWideFullWrapper = styled.div`
+    padding: 190px 0 180px 0; 
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: center;
+
+    flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+    background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
+    background-image: url(${(props) => props.imageUrl});
+
+    background-size: cover;
+
+    @media screen and (max-width: 1170px) {
+        padding: 160px 0 145px; 
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 130px 0 125px; 
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 90px 25px 85px; 
+        justify-content: start;
+    }
+
+    @media screen and (max-width: 552px) {
+        padding: 60px 25px 75px; 
+    }
 `
 
-export const ImpactDescription = styled.div`
-  max-width: 35%;
-  transform: translate(-50%, 10%);
+export const BaseSectionWideFullContent = styled.div`
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  @media screen and (max-width:1360px){
-    max-width: 48%;
-    transform: translate(-39%, 10%);
-  }
+    align-items: ${(props) => props.reverse ? 'flex-end' : 'flex-start'};
 
-  @media screen and (max-width: 1150px){
-    transform: translate(-45%, 10%);
-  }
+    @media screen and (max-width: 1170px) {
+        max-width: 950px;
+    }
 
-  @media screen and (max-width: 1000px){
-    max-width: 50%;
-    transform: translate(-30%, 10%)
-  }
+    @media screen and (max-width: 992px) {
+        max-width: 720px;
+    }
 
-  @media screen and (max-width: 850px){
-    max-width: 52%;
-    transform: translate(-30%, 10%)
-  }
-
-  @media screen and (max-width: 750px){
-    max-width: 66%;
-    transform: translate(-15%, 10%);
-  }
-
-  @media screen and (max-width: 600px){
-    max-width: 66%;
-    transform: translate(-15%, 10%);
-  }
-
-  @media screen and (max-width: 440px){
-    max-width: 100%;
-    transform: none;
-    padding: 0 15px;
-  }
+    @media screen and (max-width: 768px) {
+        max-width: 520px;
+    }  
 `
 
-export const ImpactTitle = styled.h1`
-  font-size: 47px;
-  color:#ffffff;
-  margin-bottom: 20px;
-  font-family: 'DM Sans Bold';
-  line-height: 60px;
+export const BaseSectionWideFullContentWrapper = styled.div`
+    max-width: ${props => props.contentWidth};
 
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-  }
+    @media screen and (max-width: 1170px) {
+        max-width: 60%;
+    }
 
-  @media screen and (max-width: 850px){
-    font-size: 32px;
-  }
+    @media screen and (max-width: 992px) {
+        max-width: 70%;
+    }
 
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-  }
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
 `
 
-export const ImpactContent = styled.p`
-  font-size: 21px;
-  color: #ffffff;
-  margin-bottom: 70px;
-  font-family: 'DM Sans Regular';
-  line-height: 31px;
+export const BaseSectionWideFullTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FFFFFF'};
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 56px;
+    margin-bottom: 17px;
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+    @media screen and (max-width: 1170px) {
+        font-size: 44px;
+        line-height: 50px;
+    }
 
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
+    @media screen and (max-width: 992px) {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+       font-size: 34px;
+       line-height: 44px;
+    }
+
+    @media screen and (max-width: 552px) {
+        font-size: 30px;
+        line-height: 34px;
+    }
 `
 
+export const BaseSectionWideFullSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-export const ImpactSection = styled.div`
-  display: flex;
-  margin-bottom: 16px;
+    font-size: 14px;
+    font-family: "DM Sans";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
 
-  @media screen and (max-width: 1000px){
-    flex-wrap: wrap;
-  }
+    @media screen and (max-width: 600px){
+        font-size: 12px;
+        line-height: 30px;
+    }
 `
 
-export const ImpactSectionImage = styled.div`
-  width: 50%;
+export const BaseSectionWideFullDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-  @media screen and (max-width: 775px){
-    width: 100%;
-  }
+    font-size: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31px;
+    margin-bottom: 75px;
+    position: relative;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 552px) {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 35px;
+    }
 `
 
-export const ImpactSectionDescription = styled.div`
-  background-color: #000000;
-  width: 50%; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+// Half Mode
 
-  @media screen and (max-width: 775px){
-    width: 100%;
-    padding: 20px;
-  }
+export const BaseSectionWideHalfWrapper = styled.div`
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: center;
+
+    flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+    background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
+
 `
 
-export const ImpactSectionWrapper = styled.div`
-  max-width: 60%;
-  margin-left: 100px;
+export const BaseSectionWideHalfImageWrapper = styled.div`
+    width: 50%;
+    display: flex;
 
-  @media screen and (max-width: 1200px){
-    max-width: 100%;
-    margin: 0 25px;
-  }
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 `
 
-export const ImpactSectionTitle = styled.h1`
-  color: #ffffff;
-  font-size: 47px;
-  font-family: "DM Sans Bold";
-  line-height: 60px;
-  margin-bottom: 15px;
-
-  @media screen and (max-width: 1200px){
-    font-size: 38px;
-    line-height: 55px;
-  }
-
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-    line-height: 50px;
-  }
-
-  @media screen and (max-width: 870px){
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-    line-height: 30px;
-  }
+export const BaseSectionWideHalfImage = styled.img`
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 `
 
-export const ImpactSectionContent = styled.p`
-  color: #ffffff;
-  font-size: 21px;
-  font-family: "DM Sans Regular";
-  line-height: 31px;
+export const BaseSectionWideHalfContent = styled.div`
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 `
 
-export const SocialImpactSection = styled.div`
-  background-size: cover;
-  height: 435px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
+export const BaseSectionWideHalfContentWrapper = styled.div`
+    max-width: 60%;
+
+    @media screen and (max-width: 1170px){
+        max-width: 100%;
+        padding: 0 25px;
+    }
+
+    @media screen and (max-width: 768px){
+        max-width: 100%;
+        padding: 50px 25px;
+    }
 `
 
-export const SocialImpactDescription = styled.div`
-  max-width: 43%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+export const BaseSectionWideHalfTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-  @media screen and (max-width: 1200px){
-    max-width: 80%;
-  }
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 60px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+       font-size: 34px;
+       line-height: 44px;
+    }
+
+    @media screen and (max-width: 552px) {
+        font-size: 30px;
+        line-height: 34px;
+    }
 `
 
-export const SocialImpactTitle = styled.h1`
-  color: #ffffff;
-  font-size: 47px;
-  font-family: "DM Sans Bold";
-  line-height: 60px;
-  margin-bottom: 15px;
+export const BaseSectionWideHalfSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-  }
+    font-size: 14px;
+    font-family: "DM Sans";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
 
-  @media screen and (max-width: 850px){
-    font-size: 32px;
-  }
-
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-  }
+    &:before {
+        content: '';
+        height: 1px;
+        width: 42.4px;
+        display: block;
+        background-color: #A23BFF;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
 `
 
-export const SocialImpactContent = styled.p`
-  color: #ffffff;
-  font-size: 21px;
-  font-family: "DM Sans Regular";
-  line-height: 31px;
-  margin-bottom: 60px;
+export const BaseSectionWideHalfDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+    font-size: 14px;
+    font-family: "DM Sans";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
 
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
+    @media screen and (max-width: 1170px) {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 19px;
+        line-height: 26px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 552px) {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 35px;
+    }
 `
 
-export const  AboutBottomSection = styled.div`
-  background-image: linear-gradient(${props => props.backgroundImageDirection === 'right' ? 'to right' : 'to left'}, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${props => props.backgroundImage});
-  background-size: cover;
-  height: 696px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+// Shadow Mode
+
+export const BaseSectionWideShadowWrapper = styled.div`
+    display: flex;
+    margin-bottom: 16px;
+
+    position: relative;
+
+    flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+    background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
+
+    @media screen and (max-width: 1000px){
+        flex-wrap: wrap;
+    }
 `
 
-export const  AboutBottomDescription = styled.div`
-  max-width: 40%;
-  transform: ${props => props.backgroundImageDirection === 'right' ? "translate(-50%, 10%);" : "translate(50%, 10%);"}
+export const BaseSectionWideShadowImage = styled.img`
+    width: 65%;
 
-  @media screen and (max-width:1170px){
-    max-width: 48%;
-    transform: ${props => props.backgroundImageDirection === 'right' ? "translate(-39%, 10%);" : "translate(39%, 10%);"}
-  }
-
-  @media screen and (max-width:992px){
-    max-width: 68%;
-    transform: ${props => props.backgroundImageDirection === 'right' ? "translate(0%, 10%);" : "translate(0%, 10%);"}
-  }
-
-  @media screen and (max-width: 552px){
-    max-width: 100%;
-    transform: none;
-    padding: 0 10px;
-  }
+    @media screen and (max-width: 775px){
+        width: 100%;
+    }
 `
 
-export const  AboutBottomTitle = styled.h1`
-  font-size: 47px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-family: 'DM Sans Bold';
-  line-height: 60px;
+export const BaseSectionWideShadowMode = styled.div`
+    width: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
 
-  @media screen and (max-width: 1170px){
-    font-size: 35px;
-    line-height: 55px;
-  }
-
-  @media screen and (max-width: 768px){
-    font-size: 32px;
-    line-height: 50px;
-  }
-
-  @media screen and (max-width: 552px){
-    font-size: 28px;
-  }
+    ${(props) => props.reverse ? 'left: 35%' : 'right: 35%'};
+    
+    background: linear-gradient(${(props) => props.reverse ? '-270deg' : '270deg'}, ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'} 0%, rgba(29, 29, 31, 0) 100%);
 `
 
-export const  AboutBottomContent = styled.p`
-  font-size: 21px;
-  color: #ffffff;
-  margin-bottom: 70px;
-  font-family: 'DM Sans Regular';
-  line-height: 31px;
+export const BaseSectionWideShadowContent = styled.div`
+    max-width: 25%;
+    position: absolute;
+    ${(props) => props.reverse ? 'left: 20%' : 'right: 20%'};
+    top: 15%;  
+`
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+export const BaseSectionWideShadowTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 60px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 1200px){
+        font-size: 38px;
+        line-height: 55px;
+    }
+
+    @media screen and (max-width: 1000px){
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: 870px){
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    @media screen and (max-width: 600px){
+        font-size: 28px;
+        line-height: 30px;
+    }
+`
+
+export const BaseSectionWideShadowSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 14px;
+    font-family: "DM Sans";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    
+    padding-top: 30px;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 42.4px;
+        display: block;
+        background-color: #A23BFF;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+
+    @media screen and (max-width: 600px){
+        font-size: 12px;
+        line-height: 30px;
+    }
+`
+
+export const BaseSectionWideShadowDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+    font-size: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31px;
+    margin-bottom: 55px;
+    position: relative;
+    padding-top: 30px;
 `

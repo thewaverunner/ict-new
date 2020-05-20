@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components'
 
-export const Home = styled.section``
-
 export const Header = styled.header`
     @media screen and (max-width: 750px){
         padding-top: 0;
@@ -122,6 +120,7 @@ export const BannerWrapper = styled.div`
 
   @media screen and (max-width:992px) {
     max-width: 720px;
+    flex-wrap: wrap;
   }
 
   @media screen and (max-width: 768px) {
