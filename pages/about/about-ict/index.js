@@ -95,8 +95,8 @@ function AboutICTPage ({ t }) {
             <InfoBannerSection>
                 <InfoBannerWrapper>
                     {
-                        banners.map((banner) => (
-                            <InfoBanner>
+                        banners.map((banner, index) => (
+                            <InfoBanner key={index}>
                                 <InfoBannerDescription>
                                     <InfoBannerTitle>{banner.title}</InfoBannerTitle>
                                     <InfoBannerContent>{banner.description}</InfoBannerContent>
@@ -125,8 +125,8 @@ function AboutICTPage ({ t }) {
             <QuestionsBannerSection>
                 <QuestionsBannerWrapper>
                     {
-                        questions.map((question) => (
-                            <QuestionsBanner>
+                        questions.map((question, index) => (
+                            <QuestionsBanner key={index}>
                                 <QuestionsBannerImage>
                                     <img src="../static/images/question-icon.svg" />
                                 </QuestionsBannerImage>

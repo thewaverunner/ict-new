@@ -63,8 +63,8 @@ function HomePage ({ t }) {
 
             <BannerSection>
                 <BannerWrapper>
-                    {banners.map((banner) => (
-                            <Banner>
+                    {banners.map((banner, index) => (
+                            <Banner key={index}>
                                 <BannerImage>
                                     <img src={banner.image} />
                                 </BannerImage>  

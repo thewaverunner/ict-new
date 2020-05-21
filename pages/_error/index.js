@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { withTranslation } from '../i18n'
+import { withTranslation } from '../../i18n'
 
 function Error ({ statusCode, t }) {
     return (
