@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { BREAKPOINTS } from '../../utils/constants'
 
 export const Header = styled.header`
     position: absolute;
@@ -7,7 +8,7 @@ export const Header = styled.header`
     right: 0;
     margin: 35px auto 0;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
         margin: 0 auto;
     }
 `
@@ -16,15 +17,15 @@ export const HeaderContainer = styled.div`
     width: 1170px;
     margin: 0 auto;
 
-    @media screen and (max-width: 1170px){
+    @media screen and (max-width: ${BREAKPOINTS.lg}px){
         max-width: 950px;
     }
 
-    @media screen and (max-width:992px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px){
         max-width: 720px;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
         max-width: 520px;
     }  
 `
@@ -33,7 +34,7 @@ export const HeaderNavWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 768px){ 
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){ 
         display: none;
     }
 `
@@ -46,5 +47,9 @@ export const HeaderMobileNav = styled.div`
     align-items: center;
 `
 
-export const HeaderMobileLogo = styled.div``
-export const HeaderLogo = styled.div``
+export const HeaderMobileLogo = styled.div`
+    cursor: pointer;
+`
+export const HeaderLogo = styled.div`
+    cursor: pointer;
+`

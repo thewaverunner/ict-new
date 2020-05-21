@@ -20,6 +20,24 @@ import {
 } from './index.styles'
 
 function HomePage ({ t }) {
+    const banners = [
+        {
+            image: '/static/images/home-continuous-innovation.svg',
+            title: t('HomePage_FirstBanner_Title'),
+            description: t('HomePage_FirstBanner_Content')
+        },
+        { 
+            image: '/static/images/home-purely-digital.svg',
+            title: t('HomePage_SecondBanner_Title'),
+            description: t('HomePage_SecondBanner_Content')
+        },
+        { 
+            image: '/static/images/home-global-reach.svg',
+            title: t('HomePage_ThirdBanner_Title'),
+            description: t('HomePage_ThirdBanner_Content')
+        }
+    ]
+
     return (
         <>
             <Head>
@@ -45,63 +63,27 @@ function HomePage ({ t }) {
 
             <BannerSection>
                 <BannerWrapper>
-                    <Banner>
-                        <BannerImage>
-                            <img src="/static/images/home-continuous-innovation.svg"/>
-                        </BannerImage>  
-
-                        <BannerDescription>
-                            <BannerTitle>{t('HomePage_FirstBanner_Title')}</BannerTitle>
-                            <BannerContent>{t('HomePage_FirstBanner_Content')}</BannerContent>
-                        </BannerDescription>
-
-                        <BaseButton 
-                            blackStyle 
-                            hideBorder={true} 
-                            withArrow={true}
-                        >
-                            Learn more
-                        </BaseButton>        
-                    </Banner>
-
-                    <Banner>
-                        <BannerImage>
-                            <img src="/static/images/home-purely-digital.svg"/>
-                        </BannerImage>  
-
-                        <BannerDescription>
-                            <BannerTitle>{t('HomePage_SecondBanner_Title')}</BannerTitle>
-                            <BannerContent>{t('HomePage_SecondBanner_Content')}</BannerContent>
-                        </BannerDescription>
-
-                        <BaseButton 
-                            blackStyle 
-                            hideBorder={true} 
-                            withArrow={true}
-                        > 
-                            Learn more
-                        </BaseButton>      
-                    </Banner>
-
-                    <Banner>
-                        <BannerImage>
-                            <img src="/static/images/home-global-reach.svg"/>
-                        </BannerImage>
-
-                        <BannerDescription>
-                            <BannerTitle>{t('HomePage_ThirdBanner_Title')}</BannerTitle>
-                            <BannerContent>{t('HomePage_ThirdBanner_Content')} </BannerContent>
-                        </BannerDescription>
-
-                        <BaseButton 
-                            blackStyle
-                            hideBorder={true} 
-                            withArrow={true}
-                        >
-                            Learn more
-                        </BaseButton>      
-                    </Banner>
-
+                    {banners.map((banner) => (
+                            <Banner>
+                                <BannerImage>
+                                    <img src={banner.image} />
+                                </BannerImage>  
+        
+                                <BannerDescription>
+                                    <BannerTitle>{banner.title}</BannerTitle>
+                                    <BannerContent>{banner.description}</BannerContent>
+                                </BannerDescription>
+        
+                                <BaseButton 
+                                    blackStyle 
+                                    hideBorder={true} 
+                                    withArrow={true}
+                                >
+                                    Learn more
+                                </BaseButton>        
+                            </Banner>
+                        ))
+                    }
                 </BannerWrapper>
             </BannerSection> 
 

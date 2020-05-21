@@ -12,12 +12,12 @@ export const BaseSectionHeadingWrapper = styled.div`
     flex-direction: ${props => props.mainPage ? "column;" : " ;"}
     justify-content: ${props => props.mainPage ? "center;" : " ;"}
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         padding: 130px 0 55px;
         background-size: ${props => props.mainPage ? "cover;" : "auto;"}
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         height: ${props => props.mainPage ? "650px;" : "auto;"}
     }
 `
@@ -26,20 +26,20 @@ export const BaseSectionHeadingContent = styled.div`
     max-width: 1170px;
     margin: 0 auto;
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 950px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 720px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 95%;
         text-align: left;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         max-width: 92%;
         margin: 0 4%;
     }
@@ -75,7 +75,7 @@ export const BaseSectionDescription = styled.p`
     line-height: 35px;
     max-width: 53%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 100%;
     }
 `

@@ -5,14 +5,13 @@ import Head from 'next/head'
 import { useForm } from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
 
-import { withTranslation } from '../../../../i18n'
-
 import PhoneInput from 'react-phone-input-2'
 
-import BaseSection from '../../../../components/BaseSection'
-import BaseSectionHeading from '../../../../components/BaseSectionHeading'
+import { withTranslation } from '../../../../../i18n'
+import { useMediaQuery } from '../../../../../utils/hooks'
 
-import { useMediaQuery } from '../../../../utils/hooks'
+import BaseSection from '../../../../../components/BaseSection'
+import BaseSectionHeading from '../../../../../components/BaseSectionHeading'
 
 import {
     OpenPositionApplyPageTitle,
@@ -59,9 +58,7 @@ function OpenPositionApplyPage ({ t }) {
                 <title>{t('OpenPositionApplyPage-Title')}</title>
             </Head>
 
-            <BaseSectionHeading 
-                title={t('OpenPositionApplyPage-Heading')}
-            />
+            <BaseSectionHeading title={t('OpenPositionApplyPage-Heading')} />
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}

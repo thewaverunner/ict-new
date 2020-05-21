@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import Link from 'next/link'
+
 import { withTranslation } from '../../i18n'
 
 import StripeNavbar from '../StripeNavbar'
@@ -14,9 +16,9 @@ import {
     HeaderMobileNav,
     HeaderMobileLogo,
     HeaderLogo,
-} from './BaseNavbar.styles'
+} from './BaseHeader.styles'
 
-function BaseNavbar () {
+function BaseHeader () {
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -39,9 +41,11 @@ function BaseNavbar () {
         return (
             <>
                 <HeaderMobileNav>
-                    <HeaderMobileLogo>
-                        <MobileLogo />
-                    </HeaderMobileLogo>
+                    <Link href="/">
+                        <HeaderMobileLogo>
+                            <MobileLogo />
+                        </HeaderMobileLogo>
+                    </Link>
 
                     <StripeNavbar duration={300} isMobile={isMobile} /> 
                 </HeaderMobileNav> 
@@ -53,9 +57,11 @@ function BaseNavbar () {
         return (
             <HeaderContainer> 
                 <HeaderNavWrapper>
-                    <HeaderLogo>
-                        <DesktopLogo />
-                    </HeaderLogo>
+                    <Link href="/">
+                        <HeaderLogo>
+                            <DesktopLogo />
+                        </HeaderLogo>
+                    </Link>
                     
                     <StripeNavbar duration={300} isMobile={isMobile} />
                 </HeaderNavWrapper> 
@@ -71,4 +77,4 @@ function BaseNavbar () {
     )
 }
 
-export default withTranslation('common')(BaseNavbar)
+export default withTranslation('common')(BaseHeader)

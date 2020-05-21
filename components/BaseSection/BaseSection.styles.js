@@ -9,7 +9,7 @@ export const BaseSectionWrapper = styled.div`
     padding: 110px 0 100px;
     margin-bottom: 16px;
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         padding-bottom: 50px;
     }
 `
@@ -23,22 +23,22 @@ export const BaseSectionContent = styled.div`
     align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
     text-align: ${props => props.textAlign === 'left' ? 'left' : 'center'};
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 960px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 740px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 520px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         max-width: 92%;
         margin: 0 4% 20px;
-        align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
+        align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
 `
 
@@ -55,14 +55,27 @@ export const BaseSectionTitle = styled.h1`
     max-width: ${props => props.titleColor === 'gradient' ? '74%' : ''};
     text-align: ${props => props.titleColor === 'gradient' ? 'center' : ''};
 
-    @media screen and (max-width: 768px) {
-        font-size: 41px;
-        line-height: 60px;
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 34px;
+        line-height: 44px;
+
         max-width: ${props => props.titleColor === 'gradient' ? '84%' : ''};
     }
 
-    @media screen and (max-width: 552px) {
-        font-size: 35px;
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 30px;
+        line-height: 34px;
+
         text-align: ${props => props.titleColor === 'gradient' ? 'center' : 'left'};
     }
 `
@@ -86,7 +99,7 @@ export const BaseSectionSubtitle = styled.h3`
         transform: translateX(-10px)
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 28px;
     }
 `
@@ -97,18 +110,30 @@ export const BaseSectionDescription = styled.p`
     margin-bottom: 50px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
-    max-width: 50%;
+    max-width: 65%;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 80%;
+        font-size: 20px;
+        line-height: 29px;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 19px;
+        line-height: 26px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+        max-width: 100%;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        text-align: left;
-        max-width: 100%;
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 35px;
     }
 `

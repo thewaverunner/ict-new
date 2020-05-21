@@ -1,4 +1,7 @@
 import React from 'react'
+
+import Link from 'next/link'
+
 import styled from 'styled-components'
 
 import { withTranslation } from '../../../i18n'
@@ -21,19 +24,27 @@ const CompanyDropdown = ({ t }) => {
             <DropdownSection data-first-dropdown-section>
                 <ul>
                    <li>
-                       <a href='#'>{t('BaseFooter_About_ICT')}</a>
+                       <Link href="/about/about-ict">
+                            <a>{t('BaseFooter_About_ICT')}</a>
+                       </Link>
                    </li>
 
                    <li>
-                       <a href='#'>{t('BaseFooter_About_Industry')}</a>
+                       <Link href="/about/our-industry">
+                            <a>{t('BaseFooter_About_Industry')}</a>
+                       </Link>
                     </li>
 
                     <li>
-                       <a href='#'>{t('BaseFooter_About_Business')}</a>
+                        <Link href="/about/our-business">
+                            <a>{t('BaseFooter_About_Business')}</a>
+                        </Link>
                     </li>    
                     
                     <li>
-                       <a href='#'>{t('BaseFooter_About_FAQ')}</a>
+                        <Link href="/about/our-industry">
+                            <a>{t('BaseFooter_About_FAQ')}</a>
+                       </Link>
                     </li>
                 </ul>    
             </DropdownSection>

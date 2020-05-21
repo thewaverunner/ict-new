@@ -3,10 +3,10 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { withTranslation } from '../../i18n'
+import { withTranslation } from '../../../i18n'
 
-import BaseSection from '../../components/BaseSection'
-import BaseSectionHeading from '../../components/BaseSectionHeading'
+import BaseSection from '../../../components/BaseSection'
+import BaseSectionHeading from '../../../components/BaseSectionHeading'
 
 import {
     OpenPositionsPageSection,
@@ -35,7 +35,7 @@ function OpenPositionsPage ({ t }) {
                     <OpenPositionsPageList>
                         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => 
                             <OpenPositionsPageItem key={index}>
-                                <Link href={`/open-positions/manager-${index}`}>
+                                <Link href={`/company/open-positions/manager-${index}`}>
                                     <OpenPositionsPageItemLink>
                                         <OpenPositionsPageItemTitle>Job Title {index}</OpenPositionsPageItemTitle>
                                         <OpenPositionsPageItemContent>Description</OpenPositionsPageItemContent>

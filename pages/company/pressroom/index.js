@@ -1,14 +1,14 @@
 import React from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
 
-import { withTranslation } from '../../i18n'
 import { useForm } from 'react-hook-form'
 
-import BaseButton from '../../components/BaseButton'
-import BaseSection from '../../components/BaseSection'
-import BaseSectionHeading from '../../components/BaseSectionHeading'
+import { withTranslation } from '../../../i18n'
+
+import BaseButton from '../../../components/BaseButton'
+import BaseSection from '../../../components/BaseSection'
+import BaseSectionHeading from '../../../components/BaseSectionHeading'
 
 import {
     NewsPageArticles,

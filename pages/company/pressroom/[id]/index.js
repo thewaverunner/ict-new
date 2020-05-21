@@ -2,10 +2,10 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import { withTranslation } from '../../../i18n'
+import { withTranslation } from '../../../../i18n'
 
-import BaseButton from '../../../components/BaseButton'
-import BaseSectionHeading from '../../../components/BaseSectionHeading'
+import BaseButton from '../../../../components/BaseButton'
+import BaseSectionHeading from '../../../../components/BaseSectionHeading'
 
 import {
     ArticlePageSection,

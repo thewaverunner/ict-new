@@ -8,13 +8,13 @@ import { appWithTranslation } from '../i18n'
 import '../public/static/styles/reset.css'
 import '../public/static/styles/main.css'
 
-import BaseNavbar from '../components/BaseNavbar'
+import BaseHeader from '../components/BaseHeader'
 import BaseFooter from '../components/BaseFooter'
 
 function MyApp ({ Component, pageProps }) {
     return (
         <div className="main-container">
-            <BaseNavbar />
+            <BaseHeader />
 
             <Component {...pageProps}/>
 
