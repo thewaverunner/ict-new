@@ -8,48 +8,42 @@ import { withTranslation } from '../../../i18n'
 
 import { DropdownSection } from './Components'
 
-const CompanyDropdownSection = styled.div`
-    min-width: 14rem;
+const ResponsibilityDropdownSection = styled.div`
+   min-width: 12rem;
 `
 
-const CompanyDropdown = ({ t }) => {
+const ResponsibilityDropdown = ({ t }) => {
     return (
-        <CompanyDropdownSection>
+        <ResponsibilityDropdownSection>
             <DropdownSection data-first-dropdown-section>
                 <ul> 
                     <li>
                         <Link href="/">
-                            <a>{t('BaseFooter_Company_Governance')}</a>
+                            <a>{t('BaseFooter_Responsibility_Values')}</a>
                         </Link>
                     </li>
 
                     <li>
                         <Link href="/">
-                            <a>{t('BaseFooter_Company_People')}</a>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link href="/company/open-positions">
-                            <a>{t('BaseFooter_Company_Positions')}</a>
+                            <a>{t('BaseFooter_Responsibility_Strategy')}</a>
                         </Link>
                     </li>
 
                     <li>
                         <Link href="/">
-                            <a>{t('BaseFooter_Company_Pressroom')}</a>
+                            <a>{t('BaseFooter_Responsibility_CSR')}</a>
                         </Link>
                     </li>
 
                     <li>
                         <Link href="/">
-                            <a>{t('BaseFooter_Company_Contact')}</a>
+                            <a>{t('BaseFooter_Responsibility_Challenges')}</a>
                         </Link>
                     </li>
-                </ul>                 
+                </ul> 
             </DropdownSection>
-        </CompanyDropdownSection>
+        </ResponsibilityDropdownSection>
     )
 }
 
-export default withTranslation('common')(CompanyDropdown)
+export default withTranslation('common')(ResponsibilityDropdown)

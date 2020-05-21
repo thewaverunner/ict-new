@@ -4,15 +4,16 @@ import { Flipper } from 'react-flip-toolkit'
 import Navbar from './Navbar'
 import NavbarItem from './Navbar/NavbarItem'
 import DropdownContainer from './DropdownContainer'
+
+import AboutICTDropdown from './DropdownContents/AboutICTDropdown'
 import CompanyDropdown from './DropdownContents/CompanyDropdown'
-import DevelopersDropdown from './DropdownContents/DevelopersDropdown'
-import ProductsDropdown from './DropdownContents/ProductsDropdown'
+import ResponsibilityDropdown from './DropdownContents/ResponsibilityDropdown'
 import MobileDropdown from './DropdownContents/MobileDropdown'
 
 const navbarConfig = [
-    { title: 'ABOUT US', dropdown: CompanyDropdown },
-    { title: 'RESPONSIBILITY', dropdown: ProductsDropdown },
-    { title: 'COMPANY', dropdown: DevelopersDropdown },
+    { title: 'ABOUT US', dropdown: AboutICTDropdown },
+    { title: 'RESPONSIBILITY', dropdown: ResponsibilityDropdown },
+    { title: 'COMPANY', dropdown: CompanyDropdown },
     { title: 'CONTACT US', dropdown: null },
 ]
 
