@@ -382,10 +382,11 @@ export const BaseSectionWideShadowContent = styled.div`
 `
 
 export const BaseSectionWideShadowContentWrapper = styled.div`
-    max-width: 43%;
+    max-width: 55%;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px){
         padding: 0 25px;
+        max-width: 65%;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px){
