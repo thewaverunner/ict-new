@@ -6,6 +6,8 @@ import {
     BaseSectionWideFullWrapper,
     BaseSectionWideFullContent,
     BaseSectionWideFullContentWrapper,
+    BaseSectionWideFullImageWrapper,
+    BaseSectionWideFullImage,
     BaseSectionWideFullTitle,
     BaseSectionWideFullSubtitle,
     BaseSectionWideFullDescription,
@@ -23,6 +25,7 @@ import {
     BaseSectionWideShadowImage,
     BaseSectionWideShadowMode,
     BaseSectionWideShadowContent,
+    BaseSectionWideShadowContentWrapper,
     BaseSectionWideShadowTitle,
     BaseSectionWideShadowSubtitle,
     BaseSectionWideShadowDescription,
@@ -35,9 +38,9 @@ function BaseSectionWide (props) {
         reverse,
         imageUrl,
         imageResized,
+        imageFull,
         title,
         subtitle,
-        contentWidth,
         description, 
         buttonTitle, 
     } = props
@@ -49,13 +52,14 @@ function BaseSectionWide (props) {
                     <BaseSectionWideFullWrapper 
                         themeMode={themeMode}
                         reverse={reverse}
-                        imageUrl={imageUrl}
                     >
+                        <BaseSectionWideFullImageWrapper imageResized={imageResized} src={imageUrl} />
+
                         <BaseSectionWideFullContent reverse={reverse}>
-                            <BaseSectionWideFullContentWrapper contentWidth={contentWidth}>
-                                {title && <BaseSectionWideFullTitle themeMode={themeMode}>{title}</BaseSectionWideFullTitle>}
-                                {subtitle && <BaseSectionWideFullSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideFullSubtitle>}
-                                {description && <BaseSectionWideFullDescription themeMode={themeMode}>{description}</BaseSectionWideFullDescription>}
+                            <BaseSectionWideFullContentWrapper>
+                                {title && <BaseSectionWideFullTitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: title }} />}
+                                {subtitle && <BaseSectionWideFullSubtitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: subtitle }} />}
+                                {description && <BaseSectionWideFullDescription themeMode={themeMode} dangerouslySetInnerHTML={{ __html: description }} />}
 
                                 {
                                     buttonTitle && (
@@ -71,23 +75,24 @@ function BaseSectionWide (props) {
                         </BaseSectionWideFullContent>
                     </BaseSectionWideFullWrapper>
                 )
-            }
+            }   
 
-            {
+            { 
                 mode === 'half' && (
                     <BaseSectionWideHalfWrapper 
                         themeMode={themeMode}
                         reverse={reverse}
+                        imageFull={imageFull}
                     >
-                        <BaseSectionWideHalfImageWrapper imageResized={imageResized}>
+                        <BaseSectionWideHalfImageWrapper imageFull={imageFull} imageResized={imageResized}>
                             <BaseSectionWideHalfImage src={imageUrl} />
                         </BaseSectionWideHalfImageWrapper>
 
-                        <BaseSectionWideHalfContent>
+                        <BaseSectionWideHalfContent reverse={reverse}>
                             <BaseSectionWideHalfContentWrapper>
-                                {title && <BaseSectionWideHalfTitle themeMode={themeMode}>{title}</BaseSectionWideHalfTitle>}
-                                {subtitle && <BaseSectionWideHalfSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideHalfSubtitle>}
-                                {description && <BaseSectionWideHalfDescription themeMode={themeMode}>{description}</BaseSectionWideHalfDescription>}
+                                {title && <BaseSectionWideHalfTitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: title }} />}
+                                {subtitle && <BaseSectionWideHalfSubtitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: subtitle }} />}
+                                {description && <BaseSectionWideHalfDescription themeMode={themeMode} dangerouslySetInnerHTML={{ __html: description }} />}
                             </BaseSectionWideHalfContentWrapper>
                         </BaseSectionWideHalfContent>
                     </BaseSectionWideHalfWrapper>
@@ -108,24 +113,26 @@ function BaseSectionWide (props) {
                         />
 
                         <BaseSectionWideShadowContent reverse={reverse} >
-                            {title && <BaseSectionWideShadowTitle themeMode={themeMode}>{title}</BaseSectionWideShadowTitle>}
-                            {subtitle && <BaseSectionWideShadowSubtitle themeMode={themeMode}>{subtitle}</BaseSectionWideShadowSubtitle>}
-                            {description && <BaseSectionWideShadowDescription themeMode={themeMode}>{description}</BaseSectionWideShadowDescription>}
-        
-                            {
-                                buttonTitle && (
-                                    <BaseButton 
-                                        blackStyle={themeMode === 'light'} 
-                                        withArrow={true}
-                                    >
-                                        {buttonTitle}
-                                    </BaseButton>
-                                )
-                            }
+                            <BaseSectionWideShadowContentWrapper>
+                                {title && <BaseSectionWideShadowTitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: title }} />}
+                                {subtitle && <BaseSectionWideShadowSubtitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: subtitle }} />}
+                                {description && <BaseSectionWideShadowDescription themeMode={themeMode} dangerouslySetInnerHTML={{ __html: description }} />}
+            
+                                {
+                                    buttonTitle && (
+                                        <BaseButton 
+                                            blackStyle={themeMode === 'light'} 
+                                            withArrow={true}
+                                        >
+                                            {buttonTitle}
+                                        </BaseButton>
+                                    )
+                                }
+                            </BaseSectionWideShadowContentWrapper>
                         </BaseSectionWideShadowContent>
                     </BaseSectionWideShadowWrapper>
                 )
-            }
+            } 
         </>
     )
 }

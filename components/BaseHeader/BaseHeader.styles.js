@@ -43,7 +43,7 @@ export const HeaderMobileNav = styled.div`
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 15px 25px;
+    padding: 18px 25px;
     align-items: center;
 `
 

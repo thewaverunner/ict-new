@@ -20,23 +20,20 @@ export const FooterWrapper = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 520px;
+       padding: 50px 25px;
     }  
 `
 
 export const FooterTopContent = styled.div`
     display: flex;
-    padding: 70px 0 45px;
     justify-content: space-between;
     border-bottom: 1px solid #ededed;
-
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
-        padding: 30px 0;
-    }
+    padding: 80px 0 40px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         flex-wrap: wrap;
         display: flex;
+        padding: 0;
     }
 ` 
 
@@ -51,12 +48,12 @@ export const FooterChangeLanguage = styled.div`
     img {
         width: 12px;
         height: 12px;
-        margin: 3px 5px 0;
+        margin: 3px 5px 0 0;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         flex: 1 1 100%;  
-        margin: 20px; 
+        margin-bottom: 20px;
     }
 `
 
@@ -65,7 +62,7 @@ export const FooterLinks = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         flex: 1 1 100%;  
-        margin: 20px;
+        margin: 20px 0;
     }
 `
 
@@ -83,9 +80,10 @@ export const FooterLinksItem = styled.li`
 `
 
 export const FooterLinksItemLink = styled.a`
-    font-size: 14px;
-    font-family: 'DM Sans Medium';
-    color:#1D1D20;
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 13px;
+    color: #1D1D20;
     text-decoration: none;
     transition: opacity .3s ease-in-out;
 
@@ -103,7 +101,7 @@ export const FooterBottomWrapper = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 0;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
@@ -117,8 +115,10 @@ export const FooterCopyright = styled.div`
     font-family: 'DM Sans Medium';
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
-        margin-bottom: 20px;
-        text-align: center;
+        margin-top: 20px;
+        order: 2;
+        max-width: 58%;
+        line-height: 20px;
     }
 `
 

@@ -73,9 +73,9 @@ export const BaseSectionTitle = styled.h1`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        font-size: 30px;
         line-height: 34px;
-
+        
+        font-size: ${props => props.titleColor === 'gradient' ? '18px' : '30px'};
         text-align: ${props => props.titleColor === 'gradient' ? 'center' : 'left'};
     }
 `

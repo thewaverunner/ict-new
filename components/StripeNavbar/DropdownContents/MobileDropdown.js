@@ -15,10 +15,11 @@ const MobileDropdownSection = styled.div`
 
 const SubProductsListMobile = styled.div`
         display: flex;
-        padding: 15px 0;
+        padding: 15px 0 25px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #EFEFEF;
     }
 
     h3 {

@@ -53,7 +53,6 @@ function HomePage ({ t }) {
             <BaseSectionWide
                 mode={'full'}
                 themeMode={'light'}
-                contentWidth={'50%'}
                 reverse={true}
                 imageUrl={'/static/images/home-marketing.svg'}
                 title={t('HomePage_Marketing_Title')}
@@ -90,7 +89,6 @@ function HomePage ({ t }) {
             <BaseSectionWide
                 mode={'full'}
                 reverse={false}
-                contentWidth={'65%'}
                 imageUrl={'/static/images/home-impact-technology.svg'}
                 title={t('HomePage_Impact_Title')}
                 description={t('HomePage_Impact_Content')}

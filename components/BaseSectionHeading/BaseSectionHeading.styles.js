@@ -5,22 +5,23 @@ import { BREAKPOINTS } from '../../utils/constants'
 export const BaseSectionHeadingWrapper = styled.div`
     background: url('/static/images/header-background.svg');
     background-size: cover;
-    padding: ${props => props.mainPage ? "0;" : "230px 0 50px;"}
     margin-bottom: 16px;
-    height: ${props => props.mainPage ? "850px;" : "auto;"}
-    display: ${props => props.mainPage ? "flex;" : " ;"}
-    flex-direction: ${props => props.mainPage ? "column;" : " ;"}
-    justify-content: ${props => props.mainPage ? "center;" : " ;"}
+
+    padding: ${props => props.mainPage ? '290px 0' : '230px 0 50px'};
+    display: ${props => props.mainPage ? 'flex' : ''};
+    flex-direction: ${props => props.mainPage ? 'column' : ''};
+    justify-content: ${props => props.mainPage ? 'center' : ''};
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        padding: 130px 0 55px;
-        background-size: ${props => props.mainPage ? "cover;" : "auto;"}
+        padding: ${props => props.mainPage ? '130px 30px 105px;' : '150px 25px 70px'};
+        background-size: ${props => props.mainPage ? 'cover' : 'auto'};
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        height: ${props => props.mainPage ? "650px;" : "auto;"}
+        padding: ${props => props.mainPage ? '170px 30px' : '130px 25px 70px'};
     }
 `
+
 
 export const BaseSectionHeadingContent = styled.div`
     max-width: 1170px;
@@ -35,19 +36,19 @@ export const BaseSectionHeadingContent = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 95%;
+        max-width: 65%;
         text-align: left;
+        margin: 0;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        max-width: 92%;
-        margin: 0 4%;
+        max-width: 95%;
     }
 `
 
 export const BaseSectionTitle = styled.h1`
     font-size: 47px;
-    color: #ffffff;
+    color: #fafafa;
     line-height: 60px;
     font-family: 'DM Sans Bold';
 
@@ -57,25 +58,36 @@ export const BaseSectionTitle = styled.h1`
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         font-size: 40px;
+        line-height: 45px;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 30px;
         line-height: 37px;
         text-align: left;
-     }
- 
+    }
 `
 
+
 export const BaseSectionDescription = styled.p`
-    font-size: 21px;
-    color: #ffffff;
-    margin: 30px 0 60px;
-    font-family: 'DM Sans Regular';
-    line-height: 35px;
+    margin: 25px 0 70px;
     max-width: 53%;
+    font-family: "DM Sans Regular";
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 31.5px;
+    text-align: left;
+    color: #fafafa;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 100%;
+        margin: 25px 0 40px;
+        font-size: 16px;
+        line-height: 21px;
+        color: #ffffff;
     }
 `
+
+
+
+

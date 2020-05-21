@@ -10,7 +10,7 @@ function OurBusinessPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('AboutICTPage-Heading')}</title>
+                <title>Our Business</title>
             </Head>
         </>
     )
