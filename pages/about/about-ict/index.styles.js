@@ -6,6 +6,10 @@ export const InfoBannerSection = styled.div`
     background-color: #fafafa;
     padding: 50px 0 100px;
     margin-bottom: 16px;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        padding: 53px 25px 87px;
+    }  
 `
 
 export const InfoBannerWrapper = styled.div`
@@ -18,12 +22,7 @@ export const InfoBannerWrapper = styled.div`
         max-width: 950px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        max-width: 720px;
-    }
-
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 520px;
         flex-wrap: wrap;
     }  
 `
@@ -48,9 +47,11 @@ export const InfoBanner = styled.div`
         }
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        padding: 0 25px;
-        width: 100%;
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-bottom: 50px;
+        }
     }
 `
 
@@ -63,7 +64,11 @@ export const  InfoBannerTitle = styled.h2`
     color: #1d1d1f;
     margin: 45px 0 25px;
     font-family: "DM Sans Bold";
-    line-height: 31px;
+    line-height: 31px; 
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px){
+        margin: 0 0 20px;
+    }
 `
 
 export const  InfoBannerContent = styled.p`
@@ -76,12 +81,20 @@ export const  InfoBannerContent = styled.p`
     @media screen and (max-width: ${BREAKPOINTS.md}px){
         margin-bottom: 20px;
     }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px){
+        margin-bottom: 40px;
+    }
 `
 
 export const  QuestionsBannerSection = styled.div`
     background-color: #fafafa;
-    padding: 80px 0 30px;
+    padding: 101px 0 15px;
     margin-bottom: 16px;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        padding: 47px 25px 37px;
+    }  
 `
 
 export const  QuestionsBannerWrapper = styled.div`
@@ -94,26 +107,22 @@ export const  QuestionsBannerWrapper = styled.div`
         max-width: 950px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        max-width: 720px;
-    }
-
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 520px;
         flex-wrap: wrap;
     }  
 `
 
 export const  QuestionsBanner = styled.div`
-    padding-right: 35px;
+    max-width: 30%;
 
-    &:last-child {
-        padding-right: 0;
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        max-width: 720px;
+        padding-right: 35px;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
-        margin: 0 25px;
-        width: 100%;
+        padding-right: 0;
+        margin-bottom: 50px;
     }
 `
 
@@ -124,15 +133,31 @@ export const  QuestionsBannerImage = styled.div`
 `
 
 export const  QuestionsBannerDescription = styled.div`
-    padding-right: 35px;
+    button {
+        display: none;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+        padding-right: 0;
+
+        button {
+            display: block;
+        }
+    }
+
+  
 `
 
 export const  QuestionsBannerTitle = styled.h2`
-    font-size: 21px;
+    font-size: 31px;
     color: #1D1D1F;
-    margin: 20px 0 10px; 
+    margin: 25px 0 20px; 
     font-family: 'DM Sans Bold';
     line-height: 31px;
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+        margin: 10px 0 15px; 
+    }
 `
 
 export const  QuestionsBannerContent = styled.p`
@@ -141,4 +166,8 @@ export const  QuestionsBannerContent = styled.p`
     margin-bottom: 58px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+        margin-bottom: 25px;
+    }
 `

@@ -2,8 +2,13 @@ import styled from 'styled-components'
 
 export const ContactUsPageFormWrapper = styled.div`
     max-width: 890px;
-    padding: 134px 0 210px 0;
+    padding: 134px 0 174px 0;
     margin: 0 auto;
+
+    @media screen and (max-width: 992px) {
+        max-width: 740px;
+        padding: 100px 0 150px;
+    }
 
     @media screen and (max-width: 768px) {
         max-width: 520px;
@@ -11,7 +16,29 @@ export const ContactUsPageFormWrapper = styled.div`
     }
 
     @media screen and (max-width: 552px) {
-        padding: 50px 0 75px;
+        padding: 50px 25px 75px;
+    }
+`
+
+export const ContactUsPageFormTitle = styled.h1`
+    font-size: 47px;
+    font-family: 'DM Sans Bold';
+    line-height: 56px;
+    text-align: center;
+    color: #1d1d1f;
+    margin-bottom: 79px;
+
+    @media screen and (max-width: 552px) {
+        font-size: 33px;
+        line-height: 50px;
+    }
+`
+
+export const ContactUsPageForm = styled.form`
+    width: 100%;
+    position: relative;
+
+    @media screen and (max-width: 552px) {
         margin: 0 4%;
         max-width: 92%;
     }

@@ -70,7 +70,7 @@ function PressroomPage ({ t }) {
                                             blackStyle 
                                             hideBorder={true} 
                                             withArrow={true} 
-                                            linkUrl={`/pressroom/article-${index}`}
+                                            linkUrl={`/company/pressroom/article-${index}`}
                                         >
                                             {t('PressroomPage-Learn-More')}
                                         </BaseButton>

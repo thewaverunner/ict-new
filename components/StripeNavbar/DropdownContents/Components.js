@@ -52,7 +52,7 @@ export const DropdownSectionMobile = styled.div`
 
     li a {
         text-decoration: none;
-        font-family: "DM Sans";
+        font-family: "DM Sans Regular";
         font-weight: 500;
         font-size: 14px;
         line-height: 30px;
@@ -82,7 +82,7 @@ export const DropdownSectionMobile = styled.div`
         display: block;
         width: 100%;
         height: 4px;
-        background-color: #000;
+        background-color: #1D1D20;
         border-radius: 3px;
         transition: transform 0.3s ease;
     }

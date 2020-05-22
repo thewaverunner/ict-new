@@ -135,6 +135,14 @@ function AboutICTPage ({ t }) {
                                 <QuestionsBannerDescription>
                                     <QuestionsBannerTitle>{question.title}</QuestionsBannerTitle>
                                     <QuestionsBannerContent>{question.description}</QuestionsBannerContent>
+
+                                    <BaseButton 
+                                    blackStyle 
+                                    hideBorder={true} 
+                                    withArrow={true}
+                                    >
+                                        Learn more
+                                    </BaseButton>  
                                 </QuestionsBannerDescription>   
                             </QuestionsBanner>
                         ))

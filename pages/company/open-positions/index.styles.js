@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 
 export const OpenPositionsPageSection = styled.div`
-    padding: 40px 0 60px;
+    padding: 114px 0 189px;
+    margin-bottom: 16px;
 `
 
 export const OpenPositionsPageWrapper = styled.div`

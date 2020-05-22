@@ -116,7 +116,7 @@ function BaseSectionWide (props) {
                         />
 
                         <BaseSectionWideShadowContent reverse={reverse} >
-                            <BaseSectionWideShadowContentWrapper>
+                            <BaseSectionWideShadowContentWrapper reverse={reverse}>
                                 {title && <BaseSectionWideShadowTitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: title }} />}
                                 {subtitle && <BaseSectionWideShadowSubtitle themeMode={themeMode} dangerouslySetInnerHTML={{ __html: subtitle }} />}
                                 {description && <BaseSectionWideShadowDescription themeMode={themeMode} dangerouslySetInnerHTML={{ __html: description }} />}

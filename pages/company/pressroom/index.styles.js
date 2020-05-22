@@ -7,7 +7,7 @@ export const NewsPageArticlesSection = styled.div`
 export const NewsPageArticlesSectionWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto 16px;
-    padding: 90px 10px;
+    padding: 113px 10px 93px;
 
     @media screen and (max-width: 1170px) {
         max-width: 950px;
@@ -18,14 +18,13 @@ export const NewsPageArticlesSectionWrapper = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        max-width: 520px;
-        padding: 40px 10px;
+        padding: 40px 25px;
     }  
 `
 
 export const NewsPageArticlesSectionTitle = styled.h1`
     color:#1d1d1f;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     font-size: 47px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
@@ -46,7 +45,7 @@ export const NewsPageArticlesSectionTitle = styled.h1`
 
 export const NewsPageArticles = styled.div`
     flex: 0 1 32%;
-    margin-bottom: 35px;
+    margin-bottom: 70px;
 
     @media screen and (max-width: 768px) {
         flex:1 1 45%;
@@ -80,7 +79,7 @@ export const NewsPageArticlesTitle = styled.h2`
 
 export const NewsPageArticlesDescription = styled.p`
     color: #1d1d1f;
-    margin-bottom: 58px;
+    margin-bottom: 40px;
     font-size: 14px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
@@ -110,15 +109,19 @@ export const NewsPagePressInquiriesSectionWrapper = styled.div`
     margin: 0 auto 16px;
     padding: 125px 0 128px;
 
+    @media screen and (max-width: 992px) {
+        max-width: 740px;
+        padding: 100px 0 100px;
+    }
+
     @media screen and (max-width: 768px) {
         max-width: 520px;
+        padding: 80px 0 80px;
     }
 
     @media screen and (max-width: 552px) {
-        margin: 0 4%;
-        max-width: 92%;
-        padding: 50px 0 60px;
-    } 
+        padding: 50px 25px 75px;
+    }
 `
 
 export const NewsPagePressInquiresTitle = styled.h1`
@@ -147,11 +150,6 @@ export const NewsPagePressInquiresForm = styled.form`
     width: 100%;
     position: relative;
     overflow: hidden;
-
-    @media screen and (max-width: 552px) {
-        margin: 0 4%;
-        max-width: 92%;
-    }
 `
 
 export const InputWrapper = styled.div`

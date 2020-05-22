@@ -4,14 +4,14 @@ import { BREAKPOINTS } from '../../utils/constants'
 
 export const BaseSectionWrapper = styled.div`
     background: url(${props => props.backgroundImage});
-    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : '110px 0 100px'};
+    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : (props.buttonTitle  ? '126px 0 126px' : '150px 0')};
 
     background-size: cover;
     width: 100%;
     margin-bottom: 16px;
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding: 60px 0 50px;
+        padding:  42px 0 50px;
     }
 `
 
@@ -34,14 +34,8 @@ export const BaseSectionContent = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 520px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        max-width: 92%;
-        margin: 0 25px;
-
-        align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
+       padding: 0 25px;
+       align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
 `
 
@@ -106,6 +100,13 @@ export const BaseSectionSubtitle = styled.h3`
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 28px;
+        text-align: left;
+    }
+    
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        &:before {
+            left: 10%;
+        }
     }
 `
 
@@ -113,8 +114,8 @@ export const BaseSectionDescription = styled.p`
     font-size: 21px;
 
     color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    margin-bottom: ${props => props.buttonTitle ? '50px' : '0'};
 
-    margin-bottom: 50px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
     max-width: 65%;

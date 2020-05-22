@@ -2,18 +2,20 @@ import styled from 'styled-components'
 
 export const OpenPositionApplyPageWrapper = styled.div`
     max-width: 890px;
-    padding: 90px 0 210px 0;
+    padding: 121px 0 210px 0;
     margin: 0 auto;
 
-    @media screen and (max-width: 768px) {
-        max-width: 520px;
+    @media screen and (max-width: 992px) {
+        max-width: 740px;
         padding: 100px 0 150px;
     }
 
+    @media screen and (max-width: 768px) {
+        max-width: 520px;
+    }
+
     @media screen and (max-width: 552px) {
-        padding: 50px 0 75px;
-        margin: 0 4%;
-        max-width: 92%;
+        padding: 50px 25px 75px;
     }
 `
 

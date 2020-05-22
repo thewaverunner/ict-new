@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const OpenPositionPageSection = styled.div`
     max-width: 900px;
-    padding: 96px 0 105px 0;
+    padding: 105px 0;
     margin: 0 auto;
     margin-bottom: 16px;
-    display: flex;
+    display: inherit;
     flex-direction: column;
     text-align: left;
 
@@ -25,12 +25,11 @@ export const OpenPositionPageSection = styled.div`
 `
 
 export const OpenPositionPageTitle = styled.h1`
-    font-family: "DM Sans";
-    font-weight: bold;
+    font-family: "DM Sans Bold";
     font-size: 47px;
     line-height: 56.4px;
     color: #1d1d1f;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     @media screen and (max-width: 992px) {
         font-size: 37px;
@@ -43,12 +42,11 @@ export const OpenPositionPageTitle = styled.h1`
 `
 
 export const OpenPositionPageDescription = styled.p`
-    font-family: "DM Sans";
-    font-weight: normal;
+    font-family: "DM Sans Regular";
     font-size: 21px;
     line-height: 31.5px;
     color: #1d1d1f;
-    margin-bottom: 95px;
+    margin-bottom: 75px;
 
     @media screen and (max-width: 992px) {
         font-size: 19px;

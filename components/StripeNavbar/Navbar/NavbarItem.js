@@ -10,7 +10,6 @@ const NavbarItemTitle = styled.button`
     font-family: "DM Sans Bold";
     font-size: 14px;
     line-height: 60px;
-    padding: 0 20px;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -28,7 +27,6 @@ const NavbarItemTitle = styled.button`
         padding: 0 1.5rem 1.2rem 0;
     }
 `
-
 
 const NavbarItemTitleMobile = styled.div`
     display: flex;
@@ -60,6 +58,7 @@ span:last-child {
 
 const NavbarItemEl = styled.li`
     position: relative;
+    padding-left: 25px;
 `
 
 const DropdownSlot = styled.div`

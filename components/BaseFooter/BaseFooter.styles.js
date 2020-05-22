@@ -20,7 +20,7 @@ export const FooterWrapper = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-       padding: 50px 25px;
+       padding: 52px 25px;
     }  
 `
 
@@ -62,7 +62,7 @@ export const FooterLinks = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         flex: 1 1 100%;  
-        margin: 20px 0 10px;
+        margin: 20px 0 0;
     }
 `
 
@@ -73,7 +73,6 @@ export const FooterLinksTitle = styled.div`
     color: #1D1D20;
 `
 
-
 export const FooterLinksList = styled.ul``
 
 export const FooterLinksItem = styled.li`
@@ -81,8 +80,7 @@ export const FooterLinksItem = styled.li`
 `
 
 export const FooterLinksItemLink = styled.a`
-    font-family: "DM Sans";
-    font-weight: 500;
+    font-family: "DM Sans Regular";
     font-size: 14px;
     color: #1d1d20;
     text-decoration: none;
@@ -124,6 +122,7 @@ export const FooterCopyright = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 12px;
+        max-width: 61%;
     }  
 `
 

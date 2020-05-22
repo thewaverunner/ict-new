@@ -86,51 +86,6 @@ function ContactUsPage ({ t }) {
                     </TextareaWrapper>
 
                     <SubmitButton type="submit">Send</SubmitButton>
-
-             
-
-                
-                    {/* <ContactUsPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Name')}</ContactUsPageInputTitle> 
-
-                    <ContactUsPageInput 
-                        name="name" 
-                        unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                        ref={register({ required: true })} 
-                    />
-
-                    <ContactUsPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</ContactUsPageInputTitle> 
-
-                    <ContactUsPageInput
-                        name="email"
-                        unvalid={errors.email && errors.email.message ? 'true' : 'false'}
-                        ref={register({
-                            required: "Required",
-                            pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                message: "Invalid email address"
-                            }
-                        })}
-                    />
-
-                    <ContactUsPageInputTitle>Topic</ContactUsPageInputTitle> 
-
-                    <ContactUsPageInput 
-                        name="name" 
-                        unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                        ref={register({ required: true })} 
-                    />
-
-                    <ContactUsPageTextareaTitle>Type your inquiry here</ContactUsPageTextareaTitle> 
-
-                    <ContactUsPageTextarea
-                        rows="9"
-                        cols="5"
-                    />
-
-                    <ContactUsPageSubmit
-                        type="submit" 
-                        value="Send"
-                    />            */}
                 </ContactUsPageForm>
             </ContactUsPageFormWrapper>
 

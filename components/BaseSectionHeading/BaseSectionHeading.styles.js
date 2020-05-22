@@ -18,7 +18,7 @@ export const BaseSectionHeadingWrapper = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding: ${props => props.mainPage ? '170px 25px' : '130px 25px 70px'};
+        padding: ${props => props.mainPage ? '170px 25px' : '126px 25px 40px'};
     }
 `
 

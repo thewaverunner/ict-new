@@ -31,13 +31,13 @@ export const OurMissionWrapper = styled.div`
 `
 export const OurMissionTitle = styled.h1`
     width: 100%;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     font-weight: bold;
     font-size: 47px;
     line-height: 60px;
     text-align: left;
     color: #1d1d1d;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 45px;
@@ -55,7 +55,7 @@ export const OurMissionTitle = styled.h1`
 `
 
 export const OurMissionImage = styled.div`
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
     img {
         width: auto;
@@ -86,7 +86,7 @@ export const OurMissionContent = styled.div`
 
 export const OurMissionDescription = styled.p`
     max-width: 316px;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
@@ -134,7 +134,7 @@ export const OurGoalsWrapper = styled.div`
 
 export const OurGoalsTitle = styled.h2`
     width: 100%;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     font-weight: bold;
     font-size: 47px;
     line-height: 60px;
@@ -158,7 +158,7 @@ export const OurGoalsTitle = styled.h2`
 `
 
 export const OurGoalsSubTitle = styled.h3`
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     font-weight: bold;
     font-size: 31px;
     line-height: 45px;
@@ -207,7 +207,7 @@ export const OurGoalsContent = styled.div`
 export const OurGoalsDescription = styled.p`
     color: #fafafa;
     font-size: 14px;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     line-height: 21px;
     margin-bottom: 15px;
     position: relative;

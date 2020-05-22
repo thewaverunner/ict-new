@@ -128,7 +128,7 @@ export const BaseSectionWideFullDescription = styled.p`
     color: ${(props) => props.themeMode === 'light' ? '#333333' : '#FFFFFF'};
 
     font-size: 21px;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     line-height: 31px;
     margin-bottom: 70px;
     position: relative;
@@ -267,7 +267,8 @@ export const BaseSectionWideHalfTitle = styled.h1`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 30px;
-        line-height: 34px;
+        line-height: 37px;
+        margin-bottom: 30px;
     }
 `
 
@@ -385,6 +386,7 @@ export const BaseSectionWideShadowContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: ${(props) => props.reverse ? 'flex-start' : 'flex-end'};
 
     position: absolute;
@@ -399,11 +401,12 @@ export const BaseSectionWideShadowContent = styled.div`
 `
 
 export const BaseSectionWideShadowContentWrapper = styled.div`
-    max-width: 45%;
+    max-width: 55%;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         padding: 0 25px;
         max-width: 65%;
+        transform: none;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -439,7 +442,7 @@ export const BaseSectionWideShadowSubtitle = styled.h3`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
     font-size: 14px;
-    font-family: "DM Sans";
+    font-family: "DM Sans Regular";
     line-height: 21px;
     margin-bottom: 15px;
     position: relative;
