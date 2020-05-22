@@ -1,43 +1,54 @@
 import React from 'react'
+
+import Link from 'next/link'
+
 import styled from 'styled-components'
 
 import { withTranslation } from '../../../i18n'
 
-import {
-    Heading,
-    HeadingLink,
-    LinkList,
-    DropdownSection,
-    Icon
-} from './Components'
+import { DropdownSection } from './Components'
 
-const CompanyDropdownEl = styled.div`
+const CompanyDropdownSection = styled.div`
     min-width: 14rem;
 `
 
 const CompanyDropdown = ({ t }) => {
     return (
-        <CompanyDropdownEl>
+        <CompanyDropdownSection>
             <DropdownSection data-first-dropdown-section>
-                <ul>
-                   <li>
-                       <a href='#'>{t('BaseFooter_About_ICT')}</a>
-                   </li>
-
-                   <li>
-                       <a href='#'>{t('BaseFooter_About_Industry')}</a>
+                <ul> 
+                    <li>
+                        <Link href="/">
+                            <a>{t('BaseFooter_Company_Governance')}</a>
+                        </Link>
                     </li>
 
                     <li>
-                       <a href='#'>{t('BaseFooter_About_Business')}</a>
-                    </li>    
-                    
-                    <li>
-                       <a href='#'>{t('BaseFooter_About_FAQ')}</a>
+                        <Link href="/">
+                            <a>{t('BaseFooter_Company_People')}</a>
+                        </Link>
                     </li>
-                </ul>    
+
+                    <li>
+                        <Link href="/company/open-positions">
+                            <a>{t('BaseFooter_Company_Positions')}</a>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/">
+                            <a>{t('BaseFooter_Company_Pressroom')}</a>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/">
+                            <a>{t('BaseFooter_Company_Contact')}</a>
+                        </Link>
+                    </li>
+                </ul>                 
             </DropdownSection>
-        </CompanyDropdownEl>
+        </CompanyDropdownSection>
     )
 }
 

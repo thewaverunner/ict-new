@@ -48,7 +48,6 @@ export const DropdownBackground = styled.div`
     background-color: var(--white);
     overflow: hidden;
     position: relative;
-    margin-top: 20px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1);
     ${promoteLayer}
 `
