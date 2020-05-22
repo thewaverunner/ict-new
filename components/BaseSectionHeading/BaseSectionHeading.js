@@ -17,9 +17,8 @@ function BaseSectionHeading (props) {
             <BaseSectionHeadingContent>
                 <BaseSectionTitle mainPage={mainPage}>{title}</BaseSectionTitle>
 
-                {description &&<BaseSectionDescription>{description}</BaseSectionDescription>}  
-
-                {description &&<BaseButton>Learn more <span /></BaseButton>}   
+                {description && <BaseSectionDescription>{description}</BaseSectionDescription>}  
+                {description && <BaseButton>Learn more</BaseButton>}   
             </BaseSectionHeadingContent>    
         </BaseSectionHeadingWrapper>
     )

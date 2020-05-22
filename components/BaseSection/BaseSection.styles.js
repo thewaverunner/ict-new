@@ -4,13 +4,14 @@ import { BREAKPOINTS } from '../../utils/constants'
 
 export const BaseSectionWrapper = styled.div`
     background: url(${props => props.backgroundImage});
+    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : (props.buttonTitle  ? '126px 0 126px' : '150px 0')};
+
     background-size: cover;
     width: 100%;
-    padding: 110px 0 100px;
     margin-bottom: 16px;
 
-    @media screen and (max-width: 552px) {
-        padding-bottom: 50px;
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        padding:  42px 0 50px;
     }
 `
 
@@ -20,56 +21,67 @@ export const BaseSectionContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
     text-align: ${props => props.textAlign === 'left' ? 'left' : 'center'};
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 960px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 740px;
     }
 
-    @media screen and (max-width: 768px) {
-        max-width: 520px;
-    }
-
-    @media screen and (max-width: 552px) {
-        max-width: 92%;
-        margin: 0 4% 20px;
-        align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+       padding: 0 25px;
+       align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
 `
 
 export const BaseSectionTitle = styled.h1`
     font-size: 47px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
-    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '15px'};
     line-height: 60px;
     font-family: 'DM Sans Bold';
 
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '15px'};
     background: ${props => props.titleColor === 'gradient' ? 'linear-gradient(90deg, rgba(67,195,251,1) 0%, rgba(167,56,250,1) 100%)' : '' };
     -webkit-background-clip: ${props => props.titleColor === 'gradient' ? 'text' : ''};
     -webkit-text-fill-color: ${props => props.titleColor === 'gradient' ? 'transparent' : ''};
     max-width: ${props => props.titleColor === 'gradient' ? '74%' : ''};
     text-align: ${props => props.titleColor === 'gradient' ? 'center' : ''};
 
-    @media screen and (max-width: 768px) {
-        font-size: 41px;
-        line-height: 60px;
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 34px;
+        line-height: 44px;
+
         max-width: ${props => props.titleColor === 'gradient' ? '84%' : ''};
     }
 
-    @media screen and (max-width: 552px) {
-        font-size: 35px;
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        line-height: 34px;
+        
+        font-size: ${props => props.titleColor === 'gradient' ? '18px' : '30px'};
         text-align: ${props => props.titleColor === 'gradient' ? 'center' : 'left'};
     }
 `
 
 export const BaseSectionSubtitle = styled.h3`
     font-size: 31px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
+
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+
     margin-bottom: 15px;
     line-height: 60px;
     font-family: 'DM Sans Bold';
@@ -86,29 +98,50 @@ export const BaseSectionSubtitle = styled.h3`
         transform: translateX(-10px)
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 28px;
+        text-align: left;
+    }
+    
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        &:before {
+            left: 10%;
+        }
     }
 `
 
 export const BaseSectionDescription = styled.p`
     font-size: 21px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
-    margin-bottom: 50px;
+
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    margin-bottom: ${props => props.buttonTitle ? '50px' : '0'};
+
     font-family: 'DM Sans Regular';
     line-height: 31px;
-    max-width: 50%;
+    max-width: 65%;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 80%;
+        font-size: 20px;
+        line-height: 29px;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 19px;
+        line-height: 26px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+        max-width: 100%;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        text-align: left;
-        max-width: 100%;
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 35px;
     }
 `

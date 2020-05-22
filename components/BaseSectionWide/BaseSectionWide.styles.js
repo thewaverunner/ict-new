@@ -2,295 +2,492 @@ import styled from 'styled-components'
 
 import { BREAKPOINTS } from '../../utils/constants'
 
-export const Impact = styled.div`
-  background: url(${props => props.backgroundImage});
-  background-size: cover;
-  width: 100%;
-  height: 646px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+// Full Mode
+
+export const BaseSectionWideFullWrapper = styled.div`
+    margin-bottom: 16px;    
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
 `
 
-export const ImpactDescription = styled.div`
-  max-width: 35%;
-  transform: translate(-50%, 10%);
-
-  @media screen and (max-width:1360px){
-    max-width: 48%;
-    transform: translate(-39%, 10%);
-  }
-
-  @media screen and (max-width: 1150px){
-    transform: translate(-45%, 10%);
-  }
-
-  @media screen and (max-width: 1000px){
-    max-width: 50%;
-    transform: translate(-30%, 10%)
-  }
-
-  @media screen and (max-width: 850px){
-    max-width: 52%;
-    transform: translate(-30%, 10%)
-  }
-
-  @media screen and (max-width: 750px){
-    max-width: 66%;
-    transform: translate(-15%, 10%);
-  }
-
-  @media screen and (max-width: 600px){
-    max-width: 66%;
-    transform: translate(-15%, 10%);
-  }
-
-  @media screen and (max-width: 440px){
-    max-width: 100%;
-    transform: none;
-    padding: 0 15px;
-  }
-`
-
-export const ImpactTitle = styled.h1`
-  font-size: 47px;
-  color:#ffffff;
-  margin-bottom: 20px;
-  font-family: 'DM Sans Bold';
-  line-height: 60px;
-
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 32px;
-  }
-
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-  }
-`
-
-export const ImpactContent = styled.p`
-  font-size: 21px;
-  color: #ffffff;
-  margin-bottom: 70px;
-  font-family: 'DM Sans Regular';
-  line-height: 31px;
-
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
-`
-
-
-export const ImpactSection = styled.div`
-  display: flex;
-  margin-bottom: 16px;
-
-  @media screen and (max-width: 1000px){
-    flex-wrap: wrap;
-  }
-`
-
-export const ImpactSectionImage = styled.div`
-  width: 50%;
-
-  @media screen and (max-width: 775px){
+export const BaseSectionWideFullContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-  }
+    max-width: 1170px;
+    margin: 0 auto;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    align-items: ${(props) => props.reverse ? 'flex-end' : 'flex-start'};
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        max-width: 950px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        max-width: 720px;
+        align-items: flex-start;
+    }
 `
 
-export const ImpactSectionDescription = styled.div`
-  background-color: #000000;
-  width: 50%; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+export const BaseSectionWideFullContentWrapper = styled.div`
+    max-width: 45%;
+    position: relative;
 
-  @media screen and (max-width: 775px){
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        max-width: 60%;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        max-width: 70%;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        max-width: 70%;
+        padding-left: 25px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        max-width: 90%;
+    }
+`
+
+export const BaseSectionWideFullImageWrapper = styled.div`
     width: 100%;
-    padding: 20px;
-  }
+    min-height: 696px;
+    background-image: url(${props => props.src});
+    background-size: cover;
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+         width: 100%;
+         min-height: 369px;
+    }
 `
 
-export const ImpactSectionWrapper = styled.div`
-  max-width: 60%;
-  margin-left: 100px;
-
-  @media screen and (max-width: 1200px){
-    max-width: 100%;
-    margin: 0 25px;
-  }
+export const BaseSectionWideFullImage = styled.img`
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+        width: 100%;
+    }
 `
 
-export const ImpactSectionTitle = styled.h1`
-  color: #ffffff;
-  font-size: 47px;
-  font-family: "DM Sans Bold";
-  line-height: 60px;
-  margin-bottom: 15px;
+export const BaseSectionWideFullTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 56.4px;
+    margin-bottom: 20px;
 
-  @media screen and (max-width: 1200px){
-    font-size: 38px;
-    line-height: 55px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 44px;
+        line-height: 50px;
+    }
 
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-    line-height: 50px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 38px;
+        line-height: 50px;
+    }
 
-  @media screen and (max-width: 870px){
-    font-size: 32px;
-    line-height: 35px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+       font-size: 34px;
+       line-height: 44px;
+    }
 
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-    line-height: 30px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 20px;
+        font-family: "DM Sans Bold";
+    }
 `
 
-export const ImpactSectionContent = styled.p`
-  color: #ffffff;
-  font-size: 21px;
-  font-family: "DM Sans Regular";
-  line-height: 31px;
+export const BaseSectionWideFullSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+    font-size: 14px;
+    font-family: "DM Sans Regular";
+    line-height: 31.5px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
 
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.xs}px){
+        font-size: 12px;
+        line-height: 30px;
+    }
 `
 
-export const SocialImpactSection = styled.div`
-  background-size: cover;
-  height: 435px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
+export const BaseSectionWideFullDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#333333' : '#FFFFFF'};
+
+    font-size: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31px;
+    margin-bottom: 70px;
+    position: relative;
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-family: "DM Sans Regular";
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 35px;
+    }
 `
 
-export const SocialImpactDescription = styled.div`
-  max-width: 43%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+// Half Mode
 
-  @media screen and (max-width: 1200px){
-    max-width: 80%;
-  }
+export const BaseSectionWideHalfWrapper = styled.div`
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+
+    position: relative;
+
+    ${(props) => props.imageFull ? '' : 'min-height: 696px'};
+
+    flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+    background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        ${(props) => props.imageFull ? '' : 'min-height: 496px'};
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        flex-direction: column;
+    }
 `
 
-export const SocialImpactTitle = styled.h1`
-  color: #ffffff;
-  font-size: 47px;
-  font-family: "DM Sans Bold";
-  line-height: 60px;
-  margin-bottom: 15px;
+export const BaseSectionWideHalfImageWrapper = styled.div`
+    width: 50%;
+    display: flex;
 
-  @media screen and (max-width: 1000px){
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 850px){
-    font-size: 32px;
-  }
-
-  @media screen and (max-width: 600px){
-    font-size: 28px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        width: 100%;
+    }
 `
 
-export const SocialImpactContent = styled.p`
-  color: #ffffff;
-  font-size: 21px;
-  font-family: "DM Sans Regular";
-  line-height: 31px;
-  margin-bottom: 60px;
+export const BaseSectionWideHalfImageContainer = styled.div`
+    display: flex;
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+    ${(props) => props.imageFull ? 'width: 100%' : 'width: 60%'};
 
-  @media screen and (max-width: 850px){
-    font-size: 17px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        width: 100%;
+    }
 `
 
-export const  AboutBottomSection = styled.div`
-  background-image: linear-gradient(${props => props.backgroundImageDirection === 'right' ? 'to right' : 'to left'}, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${props => props.backgroundImage});
-  background-size: cover;
-  height: 696px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+export const BaseSectionWideHalfImage = styled.img`
+    width: 100%;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        width: 100%;
+    }
 `
 
-export const  AboutBottomDescription = styled.div`
-  max-width: 40%;
-  transform: ${props => props.backgroundImageDirection === 'right' ? "translate(-50%, 10%);" : "translate(50%, 10%);"}
+export const BaseSectionWideHalfContent = styled.div`
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
 
-  @media screen and (max-width:1170px){
-    max-width: 48%;
-    transform: ${props => props.backgroundImageDirection === 'right' ? "translate(-39%, 10%);" : "translate(39%, 10%);"}
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  @media screen and (max-width:992px){
-    max-width: 68%;
-    transform: ${props => props.backgroundImageDirection === 'right' ? "translate(0%, 10%);" : "translate(0%, 10%);"}
-  }
+    align-items: ${(props) => props.reverse ? 'flex-start' : 'flex-end'};
 
-  @media screen and (max-width: 552px){
-    max-width: 100%;
-    transform: none;
-    padding: 0 10px;
-  }
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        position: relative;
+    }
 `
 
-export const  AboutBottomTitle = styled.h1`
-  font-size: 47px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-family: 'DM Sans Bold';
-  line-height: 60px;
+export const BaseSectionWideHalfContentWrapper = styled.div`
+    max-width: 43%;
 
-  @media screen and (max-width: 1170px){
-    font-size: 35px;
-    line-height: 55px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        padding: 0 25px;
+    }
 
-  @media screen and (max-width: 768px){
-    font-size: 32px;
-    line-height: 50px;
-  }
-
-  @media screen and (max-width: 552px){
-    font-size: 28px;
-  }
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        max-width: 100%;
+        padding: 50px 25px;
+    }
 `
 
-export const  AboutBottomContent = styled.p`
-  font-size: 21px;
-  color: #ffffff;
-  margin-bottom: 70px;
-  font-family: 'DM Sans Regular';
-  line-height: 31px;
+export const BaseSectionWideHalfTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-  @media screen and (max-width: 1000px){
-    font-size: 19px;
-  }
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 60px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 43px;
+        line-height: 44px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+       font-size: 32px;
+       line-height: 36px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 30px;
+    }
+`
+
+export const BaseSectionWideHalfSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 14px;
+    font-family: "DM Sans Regular";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 42.4px;
+        display: block;
+        background-color: #A23BFF;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 12px;
+        line-height: 20px;
+       
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+
+        line-height: 18px;
+       
+    }
+`
+
+export const BaseSectionWideHalfDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 20px;
+        line-height: 29px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 35px;
+    }
+`
+
+// Shadow Mode
+
+export const BaseSectionWideShadowWrapper = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+
+    flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+    background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        flex-direction: column;
+    }
+`
+
+export const BaseSectionWideShadowImage = styled.img`
+    width: 65%;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        width: 100%;
+    }
+`
+
+export const BaseSectionWideShadowMode = styled.div`
+    width: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
+
+    ${(props) => props.reverse ? 'left: 35%' : 'right: 35%'};
+
+    background: linear-gradient(${(props) => props.reverse ? '-270deg' : '270deg'}, ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'} 0%, rgba(29, 29, 31, 0) 100%);
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        display: none;
+    }
+`
+
+export const BaseSectionWideShadowContent = styled.div`
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: ${(props) => props.reverse ? 'flex-start' : 'flex-end'};
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        position: relative;
+    }
+`
+
+export const BaseSectionWideShadowContentWrapper = styled.div`
+    max-width: 55%;
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        padding: 0 25px;
+        max-width: 65%;
+        transform: none;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        max-width: 100%;
+        padding: 50px 25px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        max-width: 100%;
+    }
+`
+
+export const BaseSectionWideShadowTitle = styled.h1`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 47px;
+    font-family: "DM Sans Bold";
+    line-height: 60px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 24px;
+        line-height: 34px;
+    }
+`
+
+export const BaseSectionWideShadowSubtitle = styled.h3`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: 14px;
+    font-family: "DM Sans Regular";
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 30px;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 42.4px;
+        display: block;
+        background-color: #A23BFF;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        font-size: 13px;
+        line-height: 18px;
+    }
+`
+
+export const BaseSectionWideShadowDescription = styled.p`
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+    font-size: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31px;
+    margin-bottom: 55px;
+    position: relative;
+    padding-top: 30px;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        font-size: 19px;
+        line-height: 26px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 35px;
+    }
 `

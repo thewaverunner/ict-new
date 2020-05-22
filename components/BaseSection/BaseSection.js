@@ -24,11 +24,15 @@ function BaseSection (props) {
     } = props
 
     return (
-        <BaseSectionWrapper backgroundImage={backgroundImage}>
+        <BaseSectionWrapper 
+            titleColor={titleColor} 
+            backgroundImage={backgroundImage}
+            buttonTitle={buttonTitle} 
+        >
             <BaseSectionContent titleColor={titleColor} textAlign={textAlign}>
                 {title && <BaseSectionTitle titleColor={titleColor}>{title}</BaseSectionTitle>}
                 {subtitle && <BaseSectionSubtitle titleColor={titleColor}>{subtitle}</BaseSectionSubtitle>}
-                {description && <BaseSectionDescription titleColor={titleColor}>{description}</BaseSectionDescription>}
+                {description && <BaseSectionDescription buttonTitle={buttonTitle} titleColor={titleColor}>{description}</BaseSectionDescription>}
                 {buttonTitle && <BaseButton blackStyle={buttonStyle}>{buttonTitle}</BaseButton>}
             </BaseSectionContent>
         </BaseSectionWrapper>

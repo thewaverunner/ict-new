@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
+
 import styled from 'styled-components'
+
+import { BREAKPOINTS } from '../../../utils/constants'
 
 const NavbarItemTitle = styled.button`
     background: transparent;
     border: 0;
-    font-weight: bold;
-    font-family: inherit;
+    font-family: "DM Sans Bold";
     font-size: 14px;
-    padding: 1rem 1.5rem 1.2rem 1.5rem;
-    color: white;
+    line-height: 60px;
+    color: #fff;
     display: flex;
     justify-content: center;
-    transition: opacity 250ms;
+    transition: opacity 0.3s;
     cursor: pointer;
     position: relative;
     z-index: 2;
 
     &:hover, &:focus {
-        opacity: 0.7;
-        outline:none;
+        opacity: 0.5;
+        outline: none;
+    }
+
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        padding: 0 1.5rem 1.2rem 0;
     }
 `
 
@@ -27,7 +33,7 @@ const NavbarItemTitleMobile = styled.div`
     flex-direction: column;
     justify-content: space-between;
     width: 40px;
-    height: 30px;
+    height: 25px;
     align-self: center;
     background-color: white;
     z-index: 1;
@@ -37,14 +43,14 @@ const NavbarItemTitleMobile = styled.div`
 span {
     display: block;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #000;
     border-radius: 3px;
     transition: transform 0.3s ease;
 }
 
 span:last-child {
-    width: 75%;
+    width: 65%;
     align-self: flex-end;
     margin-bottom: 0;
 }
@@ -52,6 +58,7 @@ span:last-child {
 
 const NavbarItemEl = styled.li`
     position: relative;
+    padding-left: 25px;
 `
 
 const DropdownSlot = styled.div`
