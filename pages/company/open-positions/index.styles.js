@@ -29,7 +29,7 @@ export const OpenPositionsPageWrapper = styled.div`
 
 export const OpenPositionsPageTitle = styled.h1`
     font-size: 47px;
-    color:#000000;
+    color:#1d1d1f;
     margin-bottom: 30px;
     line-height: 56px;
     font-family: 'DM Sans Bold';
@@ -80,14 +80,14 @@ export const OpenPositionsPageItemLink = styled.a`
 
 export const OpenPositionsPageItemTitle = styled.h2`
     font-size: 31px;
-    color: #000000;
+    color: #1d1d1f;
     line-height: 60px;
     font-family: 'DM Sans Bold';
 `
 
 export const OpenPositionsPageItemContent = styled.p`
     font-size: 21px;
-    color: #000000;
+    color: #1d1d1f;
     line-height: 31px;
     font-family: 'DM Sans Regular';
 `

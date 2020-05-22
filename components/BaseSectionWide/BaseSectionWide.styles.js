@@ -68,7 +68,7 @@ export const BaseSectionWideFullImageWrapper = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
          width: 100%;
-         min-height: 489px;
+         min-height: 369px;
     }
 `
 
@@ -79,11 +79,11 @@ export const BaseSectionWideFullImage = styled.img`
 `
 
 export const BaseSectionWideFullTitle = styled.h1`
-    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
     font-size: 47px;
     font-family: "DM Sans Bold";
-    line-height: 56px;
-    margin-bottom: 17px;
+    line-height: 56.4px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 44px;
@@ -109,11 +109,11 @@ export const BaseSectionWideFullTitle = styled.h1`
 `
 
 export const BaseSectionWideFullSubtitle = styled.h3`
-    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
 
     font-size: 14px;
-    font-family: "DM Sans";
-    line-height: 21px;
+    font-family: "DM Sans Regular";
+    line-height: 31.5px;
     margin-bottom: 15px;
     position: relative;
     padding-top: 30px;
@@ -125,12 +125,12 @@ export const BaseSectionWideFullSubtitle = styled.h3`
 `
 
 export const BaseSectionWideFullDescription = styled.p`
-    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+    color: ${(props) => props.themeMode === 'light' ? '#333333' : '#FFFFFF'};
 
     font-size: 21px;
     font-family: "DM Sans";
     line-height: 31px;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
     position: relative;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
@@ -166,26 +166,43 @@ export const BaseSectionWideHalfWrapper = styled.div`
 
     position: relative;
 
+    ${(props) => props.imageFull ? '' : 'min-height: 696px'};
+
     flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
     background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
-        flex-direction: column;
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+        ${(props) => props.imageFull ? '' : 'min-height: 496px'};
     }
 
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        flex-direction: column;
+    }
 `
 
 export const BaseSectionWideHalfImageWrapper = styled.div`
     width: 50%;
     display: flex;
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
+        width: 100%;
+    }
+`
+
+export const BaseSectionWideHalfImageContainer = styled.div`
+    display: flex;
+
+    ${(props) => props.imageFull ? 'width: 100%' : 'width: 60%'};
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         width: 100%;
     }
 `
 
 export const BaseSectionWideHalfImage = styled.img`
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    width: 100%;
+
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         width: 100%;
     }
 `
@@ -207,7 +224,7 @@ export const BaseSectionWideHalfContent = styled.div`
     top: 0;
     bottom: 0;
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         position: relative;
     }
 `
@@ -215,11 +232,11 @@ export const BaseSectionWideHalfContent = styled.div`
 export const BaseSectionWideHalfContentWrapper = styled.div`
     max-width: 43%;
 
-    @media screen and (max-width: ${BREAKPOINTS.lg}px){
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         padding: 0 25px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 100%;
         padding: 50px 25px;
     }
@@ -340,7 +357,7 @@ export const BaseSectionWideShadowWrapper = styled.div`
 export const BaseSectionWideShadowImage = styled.img`
     width: 65%;
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         width: 100%;
     }
 `
@@ -352,7 +369,7 @@ export const BaseSectionWideShadowMode = styled.div`
     position: absolute;
 
     ${(props) => props.reverse ? 'left: 35%' : 'right: 35%'};
-    
+
     background: linear-gradient(${(props) => props.reverse ? '-270deg' : '270deg'}, ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'} 0%, rgba(29, 29, 31, 0) 100%);
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -376,25 +393,25 @@ export const BaseSectionWideShadowContent = styled.div`
     top: 0;
     bottom: 0;
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         position: relative;
     }
 `
 
 export const BaseSectionWideShadowContentWrapper = styled.div`
-    max-width: 55%;
+    max-width: 45%;
 
-    @media screen and (max-width: ${BREAKPOINTS.lg}px){
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         padding: 0 25px;
         max-width: 65%;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 100%;
         padding: 50px 25px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.sm}px){
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 100%;
     }
 `

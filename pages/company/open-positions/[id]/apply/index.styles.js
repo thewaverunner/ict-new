@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const OpenPositionApplyPageWrapper = styled.div`
-    max-width: 670px;
+    max-width: 890px;
     padding: 90px 0 210px 0;
     margin: 0 auto;
 
@@ -22,13 +22,19 @@ export const OpenPositionApplyPageTitle = styled.h1`
     font-family: 'DM Sans Bold';
     line-height: 56px;
     text-align: center;
-    color: #000000;
-    margin-bottom: 55px;
+    color: #1d1d1f;
+    margin-bottom: 79px;
 
     @media screen and (max-width: 552px) {
         font-size: 33px;
         line-height: 50px;
     }
+`
+
+
+export const OpenPositionApplyPageContent = styled.h1`
+    margin-bottom: 16px;
+    background-color: #fafafa;
 `
 
 export const OpenPositionApplyPageForm = styled.form`
@@ -41,23 +47,9 @@ export const OpenPositionApplyPageForm = styled.form`
     }
 `
 
-export const OpenPositionApplyPageInput = styled.input`
-    width: calc(81% - 20px);
-    padding: 20px 10px 20px 20%;
-    margin-top: 15px;
-    border: none;
-    border-bottom: 1px solid #1D1D1F;
-
-    @media screen and (max-width: 992px) {
-      padding: 20px 10px 20px 20%;
-    }
-`
-
 export const OpenPositionApplyPageInputFileWrapper = styled.div`
-    width: 100%;
+    margin: 57px 0 55px;
     padding: 50px 0;
-    margin-bottom: 55px;
-    padding: 30px 0;
     text-align: center;
     border: 1px dashed #B4B8C5;
 `
@@ -70,7 +62,7 @@ export const OpenPositionApplyPageInputFileMessage = styled.div`
     font-size: 14px;
     font-family: "DM Sans Regular";
     line-height: 21px;
-    color: #000000;
+    color: #1d1d1f;
 
     strong {
         font-family: "DM Sans Bold";
@@ -105,15 +97,39 @@ export const OpenPositionApplyPageInputFileImages = styled.div`
 
 export const OpenPositionApplyPageInputFile = styled.input``
 
-export const OpenPositionApplyPageTextarea = styled.textarea`
-    width: 100%;
-    margin-bottom: 45px;
-    border: none;
-    border-bottom: 1px solid #1D1D1F;
-    resize: none;
+export const InputWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #1d1d1f;
+    margin-bottom: 37px;
 `
 
-export const OpenPositionApplyPageTextareaTitle = styled.div`
+export const InputTitle = styled.div`
+    font-family: "DM Sans Bold";
+    font-size: 14px;
+    color: #000;
+    padding-right: 10px;
+`
+
+export const Input = styled.input`
+    font-family: "DM Sans Regular";
+    font-size: 14px;
+    color: #000;
+    width: 100%;
+    border: none;
+    background-color: #fafafa;
+    outline: none;
+`
+
+export const TextareaWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #1d1d1f;
+    margin-bottom: 46px;
+`
+
+export const TextareaTitle = styled.div`
     align-self: start;
     margin-bottom: 20px;
     color: #B4B8C5;
@@ -121,7 +137,7 @@ export const OpenPositionApplyPageTextareaTitle = styled.div`
     font-family: "DM Sans Regular";
 
     strong {
-        color: #000000;
+        color: #1d1d1f;
         font-size: 14px;
         margin-bottom: 10px;
         font-family: "DM Sans Bold";
@@ -129,107 +145,45 @@ export const OpenPositionApplyPageTextareaTitle = styled.div`
     }
 `
 
-export const OpenPositionApplyPageSubmit = styled.input`
-    background-color: transparent;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #000000;
-    padding: 15px 85px;
-    float: right;
+export const Textarea = styled.textarea`
+    background-color: #fafafa;
+    font-family: "DM Sans Regular";
     font-size: 14px;
-    font-family: 'DM Sans Regular';
-    text-decoration: none;
-    text-align: center;
-
-    &:hover {
-        background-color: #000000;
-        color: #ffffff;
-    }
+    color: #000;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
 `
 
-export const OpenPositionApplyPageInputTitle = styled.div`
-    width: 10%;
-    padding: 20px 10px;
-    position: absolute;
-    left: 0;
-    transform: translateY(19px);
-    color: #000000;
-    font-size: 14px;
-    font-family: "DM Sans Bold";
-    border-bottom: 1px solid #1D1D1F;
+export const SubmitButton = styled.button`
+    min-width: 200px;
+    float: right;
+    padding: 14px;
 
-    &:last-child {
-        transform: translateY(35px);
-    }
+    font-family: "DM Sans Regular";
+    font-size: 14px;
+    color: #000;
+
+    border-radius: 10px;
+    background: transparent;
+    border: 1.5px solid #000;
 `
 
 export const OpenPositionApplyPageInputPhone = {
     desktop: {
         inputStyle: {
+            'backgroundColor': '#fafafa',
+            'fontFamily': 'DM Sans Regular',
+            'fontSize': '14px',
+            'color': '#000',
             'width': '100%',
             'border': 'none',
-            'borderBottom': '1px solid #1D1D1F',
-            'borderRadius': '0',
-            'padding': '29px 10px 29px 110px',
-            'backgroundColor': 'transparent',
-            'fontFamily': 'DM Sans Regular',
-            'fontsize': '14px'        
-        },
-        containerStyle: {
-            'margin': '15px 0 55px 0',
-            'width': '100%'   
+            'outline': 'none'   
         },
         buttonStyle: {
-            'border': 'none',
             'backgroundColor': 'transparent',
-            'height': '98%',
-            'left' : '10%'
+            'border': 'none',
         }
-    },
-    tablet: {
-        inputStyle: {
-            'width': '100%',
-            'border': 'none',
-            'borderBottom': '1px solid #1D1D1F',
-            'borderRadius': '0',
-            'padding': '29px 10px 29px 16%',
-            'backgroundColor': 'transparent',
-            'fontFamily': 'DM Sans Regular',
-            'fontsize': '14px'       
-        },
-        containerStyle: {
-            'margin': '15px 0 55px 0',
-            'width': '100%'   
-        },
-        buttonStyle: {
-            'border': 'none',
-            'backgroundColor': 'transparent',
-            'height': '98%',
-            'left' : '5%'
-        }
-    },
-    mobile :{
-        inputStyle: {
-            'width': '100%',
-            'border': 'none',
-            'borderBottom': '1px solid #1D1D1F',
-            'borderRadius': '0',
-            'padding': '29px 10px 29px 16%',
-            'backgroundColor': 'transparent',
-            'fontFamily': 'DM Sans Regular',
-            'fontsize': '14px'        
-        },
-        containerStyle: {
-            'margin': '15px 0 55px 0',
-            'width': '100%'    
-        },
-        buttonStyle: {
-            'border': 'none',
-            'backgroundColor': 'transparent',
-            'height': '98%',
-            'left' : '10%'
-        }
-    }
-
+    }    
 }

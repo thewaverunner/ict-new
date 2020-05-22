@@ -26,7 +26,7 @@ export const ArticlePageWrapper = styled.div`
 `
 
 export const ArticlePageTitle = styled.h1`
-    color: #000000;
+    color: #1d1d1f;
     font-size: 47px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
@@ -55,7 +55,7 @@ export const ArticlePageTime = styled.p`
 `
 
 export const ArticlePageParagraph = styled.p`
-    color: #000000;
+    color: #1d1d1f;
     margin-bottom: ${props => props.marginMedium ? '75px' : '30px'};
     font-size: 21px;
     font-family: "DM Sans Regular";

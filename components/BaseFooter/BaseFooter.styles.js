@@ -28,7 +28,7 @@ export const FooterTopContent = styled.div`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ededed;
-    padding: 80px 0 40px;
+    padding: 83px 0 40px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         flex-wrap: wrap;
@@ -41,7 +41,7 @@ export const FooterChangeLanguage = styled.div`
     flex-basis: 10%;
     font-size: 16px;
     font-family: 'DM Sans Bold';
-    color: #000000;
+    color: #1D1D20;
     display: flex;
     position: relative;
 
@@ -62,28 +62,29 @@ export const FooterLinks = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         flex: 1 1 100%;  
-        margin: 20px 0;
+        margin: 20px 0 10px;
     }
 `
 
 export const FooterLinksTitle = styled.div`
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 16px;
     font-family: 'DM Sans Bold';
-    color: #000000;
+    color: #1D1D20;
 `
+
 
 export const FooterLinksList = styled.ul``
 
 export const FooterLinksItem = styled.li`
-    line-height: 40px;
+    margin-bottom: 25px;
 `
 
 export const FooterLinksItemLink = styled.a`
     font-family: "DM Sans";
     font-weight: 500;
-    font-size: 13px;
-    color: #1D1D20;
+    font-size: 14px;
+    color: #1d1d20;
     text-decoration: none;
     transition: opacity .3s ease-in-out;
 
@@ -102,7 +103,7 @@ export const FooterBottomWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 0;
+    padding: 26px 0;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         flex-direction: column;
@@ -117,13 +118,23 @@ export const FooterCopyright = styled.div`
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         margin-top: 20px;
         order: 2;
-        max-width: 58%;
+        max-width: 50%;
         line-height: 20px;
     }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 12px;
+    }  
 `
 
 export const FooterBottomPolicyList = styled.ul`
     list-style: none;
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }  
 `
 
 export const FooterBottomPolicyItem = styled.li`
@@ -142,7 +153,11 @@ export const FooterBottomPolicyItemLink = styled.a`
     font-family: 'DM Sans Medium';
 
     &:hover {
-        color: #000000;
+        color: #1D1D20;
         transition: color 0.3s ease-in-out;
     }
+
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
+        font-size: 12px;
+    }  
 `

@@ -29,7 +29,7 @@ function AboutICTPage ({ t }) {
     const banners = [
         { 
             title: t('AboutICTPage_InfoBanner_First_Title'),
-            description: t('AboutICTPage_InfoBanner_Second_Description')
+            description: t('AboutICTPage_InfoBanner_First_Description')
         },
         { 
             title: t('AboutICTPage_InfoBanner_Second_Title'),
@@ -79,6 +79,7 @@ function AboutICTPage ({ t }) {
                 mode={'half'}
                 themeMode={'dark'}
                 reverse={false}
+                imageFull={true}
                 imageUrl={'/static/images/about-ict-ict.svg'}
                 title={t('AboutICTPage_ICT_Title')}
                 description={t('AboutICTPage_ICT_Description')}

@@ -17,6 +17,7 @@ import {
     BaseSectionWideHalfImage,
     BaseSectionWideHalfContent,
     BaseSectionWideHalfContentWrapper,
+    BaseSectionWideHalfImageContainer,
     BaseSectionWideHalfTitle,
     BaseSectionWideHalfSubtitle,
     BaseSectionWideHalfDescription,
@@ -84,8 +85,10 @@ function BaseSectionWide (props) {
                         reverse={reverse}
                         imageFull={imageFull}
                     >
-                        <BaseSectionWideHalfImageWrapper imageFull={imageFull} imageResized={imageResized}>
-                            <BaseSectionWideHalfImage src={imageUrl} />
+                        <BaseSectionWideHalfImageWrapper imageResized={imageResized}>
+                            <BaseSectionWideHalfImageContainer imageFull={imageFull}>
+                                <BaseSectionWideHalfImage imageFull={imageFull} src={imageUrl} />
+                            </BaseSectionWideHalfImageContainer>
                         </BaseSectionWideHalfImageWrapper>
 
                         <BaseSectionWideHalfContent reverse={reverse}>

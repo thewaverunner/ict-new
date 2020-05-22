@@ -31,17 +31,17 @@ const SubProductsListMobile = styled.div`
 
     a {
         background-color: transparent;
-        border: 1px solid #000000;
+        border: 1px solid #1d1d1f;
         text-decoration: none;
         border-radius: 6px;
         padding: 10px 25px;
         font-size: 14px;
-        color: #000000;
+        color: #1d1d1f;
         font-family: 'DM Sans Regular';
     }
     
     a:hover {
-        background-color: #000000;
+        background-color: #1d1d1f;
         color: #ffffff;
     }
 `

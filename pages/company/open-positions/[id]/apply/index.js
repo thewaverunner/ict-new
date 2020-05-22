@@ -14,25 +14,29 @@ import BaseSection from '../../../../../components/BaseSection'
 import BaseSectionHeading from '../../../../../components/BaseSectionHeading'
 
 import {
+    OpenPositionApplyPageContent,
     OpenPositionApplyPageTitle,
     OpenPositionApplyPageForm,
-    OpenPositionApplyPageInput,
     OpenPositionApplyPageInputPhone,
     OpenPositionApplyPageInputFile,
     OpenPositionApplyPageInputFileImages,
     OpenPositionApplyPageInputFileMessage,
     OpenPositionApplyPageInputFileWrapper,
-    OpenPositionApplyPageInputTitle,
     OpenPositionApplyPageWrapper,
-    OpenPositionApplyPageTextarea,
-    OpenPositionApplyPageTextareaTitle,
-    OpenPositionApplyPageSubmit
+    InputWrapper,
+    InputTitle,
+    Input,
+    TextareaWrapper,
+    TextareaTitle,
+    Textarea,
+    SubmitButton
 } from './index.styles'
 
 
 function OpenPositionApplyPage ({ t }) {
     const isMobile = useMediaQuery('(min-width: 552px)')
     const isTablet = useMediaQuery('(min-width: 768px)')
+    
 
     const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles), [])
 
@@ -44,13 +48,8 @@ function OpenPositionApplyPage ({ t }) {
 
     let PhoneInputStyles = {} 
 
-    if (isMobile) {
-        PhoneInputStyles = OpenPositionApplyPageInputPhone.mobile
-    } else if (isTablet) {
-        PhoneInputStyles = OpenPositionApplyPageInputPhone.tablet
-    } else {
-        PhoneInputStyles = OpenPositionApplyPageInputPhone.desktop
-    }
+    PhoneInputStyles = OpenPositionApplyPageInputPhone.desktop
+
     
     return (
         <>
@@ -68,80 +67,87 @@ function OpenPositionApplyPage ({ t }) {
                 textAlign={'center'}
             />
 
-            <OpenPositionApplyPageWrapper>
-                <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage-ApplicationForm-Title')}</OpenPositionApplyPageTitle>
+            <OpenPositionApplyPageContent>
+                <OpenPositionApplyPageWrapper>
+                    <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage-ApplicationForm-Title')}</OpenPositionApplyPageTitle>
 
-                <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
-                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Name')}</OpenPositionApplyPageInputTitle> 
+                    <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
+                        <InputWrapper>
+                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Name')}</InputTitle>
 
-                    <OpenPositionApplyPageInput 
-                        name="name" 
-                        unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                        ref={register({ required: true })} 
-                    />
+                            <Input 
+                                name="name" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
 
-                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</OpenPositionApplyPageInputTitle> 
+                        <InputWrapper>
+                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</InputTitle>
 
-                    <OpenPositionApplyPageInput
-                        name="email"
-                        unvalid={errors.email && errors.email.message ? 'true' : 'false'}
-                        ref={register({
-                            required: "Required",
-                            pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                message: "Invalid email address"
+                            <Input 
+                                name="email"
+                                unvalid={errors.email && errors.email.message ? 'true' : 'false'}
+                                ref={register({
+                                    required: "Required",
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                        message: "Invalid email address"
+                                    }
+                                })}
+                            />
+                        </InputWrapper>
+
+                        <InputWrapper>
+                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Phone')}</InputTitle>
+
+                            <PhoneInput 
+                                country={'se'} 
+                                inputStyle={PhoneInputStyles.inputStyle} 
+                                containerStyle={PhoneInputStyles.containerStyle}
+                                buttonStyle={PhoneInputStyles.buttonStyle}
+                                masks={{ se: '... ... ...' }}
+                            />    
+                        </InputWrapper>
+
+                        <OpenPositionApplyPageInputFileWrapper {...getRootProps()}>
+                            <OpenPositionApplyPageInputFile {...getInputProps()} />
+                        
+                            {
+                                isDragActive 
+                                ? (
+                                    <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage-ApplicationForm-Upload-Success')}</OpenPositionApplyPageInputFileMessage>
+                                )
+                                : (
+                                    <OpenPositionApplyPageInputFileMessage>
+                                        <OpenPositionApplyPageInputFileImages>
+                                            <img src="/static/images/open-positions-apply-page-upload-icon.svg" />
+                                        </OpenPositionApplyPageInputFileImages>
+
+                                        <strong>{t('OpenPositionApplyPage-ApplicationForm-Upload_Title')}</strong> <br/>
+                                        {t('OpenPositionApplyPage-ApplicationForm-Upload_Description')} <br/>
+                                        <span>{t('OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage')}</span>
+                                    </OpenPositionApplyPageInputFileMessage>
+                                )
                             }
-                        })}
-                    />
+                        </OpenPositionApplyPageInputFileWrapper>
 
-                    <OpenPositionApplyPageInputTitle>{t('OpenPositionApplyPage-ApplicationForm-Phone')}</OpenPositionApplyPageInputTitle> 
+                        <TextareaWrapper>
+                            <TextareaTitle>
+                                <strong>{t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title')}</strong> 
+                                {t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description')}
+                            </TextareaTitle>
 
-                    <PhoneInput 
-                        country={'se'} 
-                        inputStyle={PhoneInputStyles.inputStyle} 
-                        containerStyle={PhoneInputStyles.containerStyle}
-                        buttonStyle={PhoneInputStyles.buttonStyle}
-                        masks={{ se: '... ... ...' }}
-                    />
+                            <Textarea
+                                rows="8"
+                                cols="5"
+                            />       
+                        </TextareaWrapper>
 
-                    <OpenPositionApplyPageInputFileWrapper {...getRootProps()}>
-                        <OpenPositionApplyPageInputFile {...getInputProps()} />
-                    
-                        {
-                            isDragActive 
-                            ? (
-                                <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage-ApplicationForm-Upload-Success')}</OpenPositionApplyPageInputFileMessage>
-                            )
-                            : (
-                                <OpenPositionApplyPageInputFileMessage>
-                                    <OpenPositionApplyPageInputFileImages>
-                                        <img src="/static/images/open-positions-apply-page-upload-icon.svg" />
-                                    </OpenPositionApplyPageInputFileImages>
-
-                                    <strong>{t('OpenPositionApplyPage-ApplicationForm-Upload_Title')}</strong> <br/>
-                                    {t('OpenPositionApplyPage-ApplicationForm-Upload_Description')} <br/>
-                                    <span>{t('OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage')}</span>
-                                </OpenPositionApplyPageInputFileMessage>
-                            )
-                        }
-                    </OpenPositionApplyPageInputFileWrapper>
-
-                    <OpenPositionApplyPageTextareaTitle>
-                        <strong>{t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title')}</strong> 
-                        {t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description')}
-                    </OpenPositionApplyPageTextareaTitle> 
-
-                    <OpenPositionApplyPageTextarea
-                        rows="9"
-                        cols="5"
-                    />
-
-                    <OpenPositionApplyPageSubmit
-                        type="submit" 
-                        value="Send"
-                    />           
-                </OpenPositionApplyPageForm>
-            </OpenPositionApplyPageWrapper>
+                        <SubmitButton type="submit">Send</SubmitButton>
+                    </OpenPositionApplyPageForm>
+                </OpenPositionApplyPageWrapper>
+            </OpenPositionApplyPageContent>
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-join-our-team.svg'}

@@ -20,7 +20,7 @@ export const DropdownSection = styled.div`
 
     a {
         text-decoration: none;
-        color: #000000;
+        color: #1D1D20;
         font-size: 14px;
         font-family: 'DM Sans Bold';
     }

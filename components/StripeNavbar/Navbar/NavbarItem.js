@@ -10,7 +10,7 @@ const NavbarItemTitle = styled.button`
     font-family: "DM Sans Bold";
     font-size: 14px;
     line-height: 60px;
-    padding: 1rem 1.5rem 1.2rem 1.5rem;
+    padding: 0 20px;
     color: #fff;
     display: flex;
     justify-content: center;

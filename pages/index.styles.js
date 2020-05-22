@@ -10,11 +10,11 @@ export const Header = styled.header`
 
 export const BannerSection = styled.div`
     background-color: #fafafa;
-    padding: 75px 0;
+    padding: 73px 0;
     margin-bottom: 16px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        padding: 115px 25px 80px;
+        padding: 60px 25px 80px;
     }  
 `
 
@@ -37,13 +37,13 @@ export const BannerWrapper = styled.div`
 export const Banner = styled.div`
     flex: 1 1 30%;
 
-    &:nth-child(1),
+
     &:nth-child(2) {
-        margin: 0 20px 40px 0;
+        margin: 0 35px;
     }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        flex: 1 1 45%;
+        flex: 0 1 45%;
 
         &:nth-child(1) {
             margin: 0 20px 40px 0;
@@ -70,7 +70,7 @@ export const Banner = styled.div`
 `
 
 export const BannerImage = styled.div`
-    margin-bottom: 20px;
+    margin-bottom: 49px;
 `
 
 export const BannerDescription = styled.div`
@@ -79,15 +79,16 @@ export const BannerDescription = styled.div`
 
 export const BannerTitle = styled.h2`
     font-size: 21px;
-    color: #000000;
+    color: #000;
     font-family: 'DM Sans Bold';
-    line-height: 31px;
-    margin-bottom: 20px;
+    line-height: 31.5px;
+    margin-bottom: 7px;
 `
 
 export const BannerContent = styled.p`
     font-size: 14px;
-    color: #000000;
+    min-height: 120px;
+    color: #000;
     font-family: "DM Sans Regular";
     font-weight: normal;
     line-height: 21px;

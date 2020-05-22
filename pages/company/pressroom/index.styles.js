@@ -24,7 +24,7 @@ export const NewsPageArticlesSectionWrapper = styled.div`
 `
 
 export const NewsPageArticlesSectionTitle = styled.h1`
-    color:#000000;
+    color:#1d1d1f;
     margin-bottom: 35px;
     font-size: 47px;
     font-family: 'DM Sans Bold';
@@ -71,7 +71,7 @@ export const NewsPageArticlesContent = styled.div`
 `
 
 export const NewsPageArticlesTitle = styled.h2`
-    color: #000000;
+    color: #1d1d1f;
     margin: 40px 0 6px; 
     font-size: 21px;
     font-family: 'DM Sans Bold';
@@ -79,7 +79,7 @@ export const NewsPageArticlesTitle = styled.h2`
 `
 
 export const NewsPageArticlesDescription = styled.p`
-    color: #000000;
+    color: #1d1d1f;
     margin-bottom: 58px;
     font-size: 14px;
     font-family: 'DM Sans Regular';
@@ -106,9 +106,9 @@ export const NewsPagePressInquiriesSection = styled.div`
 `
 
 export const NewsPagePressInquiriesSectionWrapper = styled.div`
-    max-width: 690px;
+    max-width: 890px;
     margin: 0 auto 16px;
-    padding: 125px 0 140px;
+    padding: 125px 0 128px;
 
     @media screen and (max-width: 768px) {
         max-width: 520px;
@@ -122,8 +122,8 @@ export const NewsPagePressInquiriesSectionWrapper = styled.div`
 `
 
 export const NewsPagePressInquiresTitle = styled.h1`
-    color:#000000;
-    margin-bottom: 75px;
+    color: #1d1d1f;
+    margin-bottom: 79px;
     font-size: 47px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
@@ -154,66 +154,68 @@ export const NewsPagePressInquiresForm = styled.form`
     }
 `
 
-export const NewsPagePressInquiresInputTitle = styled.div`
-    width: 18%;
+export const InputWrapper = styled.div`
+    display: flex;
+    align-items: center;
     padding: 20px 10px;
-    align-self: start;
-    color: #000000;
-    position: absolute;
-    left: 0;
-    transform: translateY(19px);
-    font-size: 14px;
+    border-bottom: 1px solid #1d1d1f;
+    margin-bottom: 37px;
+`
+
+export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
+    font-size: 14px;
     white-space: nowrap;
-    border-bottom: 1px solid #1D1D1F;
+    color: #000;
+    padding-right: 10px;
 `
 
-export const NewsPagePressInquiresInput = styled.input`
-    width: calc(80% - 20px);
-    padding: 20px 10px 20px 20%;
-    margin-top: 15px;
-    border: none;
-    border-bottom: 1px solid #1D1D1F;
-    background-color: #fafafa;
-
-    @media screen and (max-width: 922px) {
-        width: 100%;
-        padding: 20px 10px 20px 25%;
-    }
-`
-
-export const NewsPagePressInquiresTextareaTitle = styled.div`
-    color: #000000;
-    margin: 25px 10px 20px;
+export const Input = styled.input`
+    font-family: "DM Sans Regular";
     font-size: 14px;
-    font-family: "DM Sans Bold";
-    align-self: start;
-`
-
-export const NewsPagePressInquiresTextarea = styled.textarea`
+    color: #000;
+    background-color: #fafafa;
     width: 100%;
-    margin-bottom: 65px;
     border: none;
-    border-bottom: 1px solid #1D1D1F;
-    background-color: #fafafa;
-    resize: none;
+    outline: none;
 `
 
-export const NewsPagePressInquiresSubmit = styled.input`
-    background-color: transparent;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #000000;
-    padding: 15px 83px;
-    float: right;
-    font-size: 14px;
-    font-family: 'DM Sans Regular';
-    text-decoration: none;
-    text-align: center;
+export const TextareaWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #1d1d1f;
+    margin-bottom: 37px;
+`
 
-    &:hover {
-        background-color: #000000;
-        color: #ffffff;
-    }
+export const TextareaTitle = styled.div`
+    font-family: "DM Sans Bold";
+    font-size: 14px;
+    color: #000;
+    padding-left: 10px;
+    margin-bottom: 10px;
+`
+
+export const Textarea = styled.textarea`
+    font-family: "DM Sans Regular";
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #000;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+`
+
+export const SubmitButton = styled.button`
+    min-width: 200px;
+    float: right;
+    padding: 14px;
+
+    font-family: "DM Sans Regular";
+    font-size: 14px;
+    color: #000;
+
+    border-radius: 10px;
+    background: transparent;
+    border: 1.5px solid #000;
 `

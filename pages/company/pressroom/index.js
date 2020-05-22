@@ -24,11 +24,13 @@ import {
     NewsPagePressInquiriesSectionWrapper,
     NewsPagePressInquiresTitle,
     NewsPagePressInquiresForm,
-    NewsPagePressInquiresInputTitle,
-    NewsPagePressInquiresInput,
-    NewsPagePressInquiresTextarea,
-    NewsPagePressInquiresTextareaTitle,
-    NewsPagePressInquiresSubmit,
+    InputWrapper,
+    InputTitle,
+    Input,
+    TextareaWrapper,
+    TextareaTitle,
+    Textarea,
+    SubmitButton
 } from './index.styles'
 
 function PressroomPage ({ t }) {
@@ -84,59 +86,73 @@ function PressroomPage ({ t }) {
                     <NewsPagePressInquiresTitle>{t('PressroomPage-Form-Title')}</NewsPagePressInquiresTitle>
 
                     <NewsPagePressInquiresForm onSubmit={handleSubmit(onSubmit)}> 
-                        <NewsPagePressInquiresInputTitle>{t('PressroomPage-Form-Name-Input')}</NewsPagePressInquiresInputTitle>           
+                        <InputWrapper>
+                            <InputTitle>{t('PressroomPage-Form-Name-Input')}</InputTitle>
 
-                        <NewsPagePressInquiresInput 
-                            name="name" 
-                            ref={register({ required: true })} 
-                        /> 
+                            <Input 
+                                name="name" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
 
-                        <NewsPagePressInquiresInputTitle>{t('PressroomPage-Form-Story-Input')}</NewsPagePressInquiresInputTitle>           
+                        <InputWrapper>
+                            <InputTitle>{t('PressroomPage-Form-Story-Input')}</InputTitle>
+                            
+                            <Input 
+                                name="story" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
 
-                        <NewsPagePressInquiresInput 
-                            name="story" 
-                            ref={register({ required: true })} 
-                        />
+                        <InputWrapper>
+                            <InputTitle>{t('PressroomPage-Form-Email-Input')}</InputTitle>
 
-                        <NewsPagePressInquiresInputTitle>{t('PressroomPage-Form-Email-Input')}</NewsPagePressInquiresInputTitle>           
+                            <Input 
+                                name="email" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({
+                                    required: "Required",
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                        message: "Invalid email address"
+                                    }
+                                })}
+                            />
+                        </InputWrapper>
 
-                        <NewsPagePressInquiresInput 
-                            name="email" 
-                            ref={register({
-                                required: "Required",
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                    message: "Invalid email address"
-                                }
-                            })}
-                        />
+                        <InputWrapper>
+                            <InputTitle>{t('PressroomPage-Form-Publication-Input')}</InputTitle>
 
-                        <NewsPagePressInquiresInputTitle>{t('PressroomPage-Form-Publication-Input')}</NewsPagePressInquiresInputTitle>           
+                            <Input 
+                                name="media" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
 
-                        <NewsPagePressInquiresInput 
-                            name="media" 
-                            ref={register({ required: true })} 
-                        />
+                        <InputWrapper>
+                            <InputTitle>{t('PressroomPage-Form-Phone-Input')}</InputTitle>
 
-                        <NewsPagePressInquiresInputTitle>{t('PressroomPage-Form-Phone-Input')}</NewsPagePressInquiresInputTitle>           
+                            <Input 
+                                name="phone" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
 
-                        <NewsPagePressInquiresInput 
-                            name="phone" 
-                            ref={register({ required: true })} 
-                        /> 
+                        <TextareaWrapper>
+                            <TextareaTitle>{t('PressroomPage-Form-Inquiri-Input')}</TextareaTitle>
 
-                        <NewsPagePressInquiresTextareaTitle>{t('PressroomPage-Form-Inquiri-Input')}</NewsPagePressInquiresTextareaTitle> 
+                            <Textarea
+                                rows="8"
+                                cols="5"
+                            />       
+                        </TextareaWrapper>
 
-                        <NewsPagePressInquiresTextarea
-                            rows="9"
-                            cols="5"
-                        />
-
-                        <NewsPagePressInquiresSubmit
-                            type="submit" 
-                            value="Send"
-                        />    
-                    </NewsPagePressInquiresForm>
+                        <SubmitButton type="submit">Send</SubmitButton>
+                    </NewsPagePressInquiresForm> 
                 </NewsPagePressInquiriesSectionWrapper>    
             </NewsPagePressInquiriesSection>
 

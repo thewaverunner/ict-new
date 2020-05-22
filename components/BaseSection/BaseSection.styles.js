@@ -4,13 +4,14 @@ import { BREAKPOINTS } from '../../utils/constants'
 
 export const BaseSectionWrapper = styled.div`
     background: url(${props => props.backgroundImage});
+    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : '110px 0 100px'};
+
     background-size: cover;
     width: 100%;
-    padding: 110px 0 100px;
     margin-bottom: 16px;
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding-bottom: 50px;
+        padding: 60px 0 50px;
     }
 `
 
@@ -20,6 +21,7 @@ export const BaseSectionContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: ${props => props.textAlign !== 'left' ? 'center' : (props.titleColor == 'gradient' ? 'center' : 'start')};
     text-align: ${props => props.textAlign === 'left' ? 'left' : 'center'};
 
@@ -37,18 +39,19 @@ export const BaseSectionContent = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         max-width: 92%;
-        margin: 0 4% 20px;
+        margin: 0 25px;
+
         align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
 `
 
 export const BaseSectionTitle = styled.h1`
     font-size: 47px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
-    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '15px'};
     line-height: 60px;
     font-family: 'DM Sans Bold';
 
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '15px'};
     background: ${props => props.titleColor === 'gradient' ? 'linear-gradient(90deg, rgba(67,195,251,1) 0%, rgba(167,56,250,1) 100%)' : '' };
     -webkit-background-clip: ${props => props.titleColor === 'gradient' ? 'text' : ''};
     -webkit-text-fill-color: ${props => props.titleColor === 'gradient' ? 'transparent' : ''};
@@ -82,7 +85,9 @@ export const BaseSectionTitle = styled.h1`
 
 export const BaseSectionSubtitle = styled.h3`
     font-size: 31px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
+
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+
     margin-bottom: 15px;
     line-height: 60px;
     font-family: 'DM Sans Bold';
@@ -106,7 +111,9 @@ export const BaseSectionSubtitle = styled.h3`
 
 export const BaseSectionDescription = styled.p`
     font-size: 21px;
-    color: ${props => props.titleColor === 'black' ? '#000000' : '#ffffff'};
+
+    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+
     margin-bottom: 50px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
