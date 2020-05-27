@@ -24,7 +24,7 @@ export const BaseSectionHeadingWrapper = styled.div`
 
 
 export const BaseSectionHeadingContent = styled.div`
-    max-width: 1170px;
+    max-width: 1350px;
     margin: 0 auto;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {

@@ -123,13 +123,15 @@
     "OpenPositionsJobPage-Title": "Job Title",
     "OpenPositionsJobPage-Marketing-Banner-Title": "Job title",
     "OpenPositionsJobPage-Marketing-Banner-Subtitle": "Marketing & Sales - Stockholm",
-    "OpenPositionsJobPage-Job-Title": "Job title",
-    "OpenPositionsJobPage-Job-Description": "We are looking for an experienced SEO (Search Engine Optimization) Manager to join our Marketing team! As a SEO Manager you will be responsible for planning, implementing and managing our SEO strategy. As our online presence is extremely important for the success of the business, the SEO Manager will work with all functions of the business and liaise with the tech team and our agencies to drive organic growth globally. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "OpenPositionsJobPage-Job-Description-Title": "Description",
+    "OpenPositionsJobPage-Job-Description": "We are looking for an experienced SEO (Search Engine Optimization) Manager to join our Marketing team! As a SEO Manager you will be responsible for planning, implementing and managing our SEO strategy. As our online presence is extremely important for the success of the business, the SEO Manager will work with all functions of the business and liaise with the tech team and our agencies to drive organic growth globally.<br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. ",
+    "OpenPositionsJobPage-Job-Task-Title": "Tasks & Responsibilites",
+    "OpenPositionsJobPage-Job-Task-Description": "We are looking for an experienced SEO (Search Engine Optimization) Manager to join our Marketing team! As a SEO Manager you will be responsible for planning, implementing and managing our SEO strategy. As our online presence is extremely important for the success of the business, the SEO Manager will work with all functions of the business and liaise with the tech team and our agencies to drive organic growth globally.",
     "OpenPositionsJobPage-Job-Apply": "Apply now",
 
     "OpenPositionApplyPage-Title": "Job Title - Apply",
     "OpenPositionApplyPage-Heading": "Work with us",
-    "OpenPositionApplyPage-ApplicationForm-Title": "Application Form",
+    "OpenPositionApplyPage-ApplicationForm-Title": "Apply Now",
     "OpenPositionApplyPage-ApplicationForm-Name": "Name",
     "OpenPositionApplyPage-ApplicationForm-Email": "Email",
     "OpenPositionApplyPage-ApplicationForm-ErrorRequired": "Required",
@@ -156,5 +158,20 @@
 
     "ArticlePage-Title": "Article",
     "ArticlePage-Heading": "Pressroom",
-    "ArticlePage-Download": "Download pdf."
+    "ArticlePage-Download": "Download pdf.",
+
+    "CorporateGovernancePage-Title": "Corporate Governance",
+    "CorporateGovernancePage-Description": "ICT meets the strictest demands on compliance, transparency,  as well as legal requirements, including tax laws and the relevant regulations. To support us, we work with one of the most reputable auditing companies in the world.",
+    "CorporateGovernancePage-CrowdSection-Title": "Crowd 1",
+    "CorporateGovernancePage-CrowdSection-Description-First": "We are actively combating the prejudice that surrounds the digital multi-level marketing industry as a whole. To this end, we have established Impact Crowd Technology S.L. in Madrid, Spain.",
+    "CorporateGovernancePage-CrowdSection-Description-Second": "To attract a wider product portfolio, we must achieve complete transparency in our corporate structure. Recruitment of new management is also a priority, with focus on supervision and the implementation of a proper product department to ensure continued growth of Impact Crowd Technology’s portfolio.",
+    "CorporateGovernancePage-CrowdSection-Description-Third": "To fight the concerns regarding the long-term viability of the business, our priority remains the creation of long-term incentives for top management that are addressed through new incentive schemes and option plans.",
+    "CorporateGovernancePage-CrowdSection-Description-Fourth": "The nature of the industry is unable to guarantee the success of a pioneer, which can lead to various outcomes. By encouraging education and establishing a long-term incentive structure, we create a resilient and sustainable business.",
+    "CorporateGovernancePage-GovernanceSection-Title-First": "A solid foundation",
+    "CorporateGovernancePage-GovernanceSection-Description-First": "Impact Crowd Technology (ICT) is set up in accordance with strict corporate governance and a solid managerial foundation that fulfils all European and international laws and regulations. It is a registered Spanish company, based in Madrid. <br> <br> Due to industry specifics, this is a vital and incremental step in order to gain the confidence and trust not only of our members, but of future partners, the media, and legislators too.",
+    "CorporateGovernancePage-GovernanceSection-Title-Second": "As the first digital MLM company",
+    "CorporateGovernancePage-GovernanceSection-Description-Second": "ICT will address the challenge of long-term sustainability. We aim to implement our strategy following strict and ‘traditional’ corporate governance, compliance and transparency with the intention of taking the company public within four years. Over time, we will build a vast library of digital products that are easily accessible for our members. <br> <br> Compliance is looked upon as a competitive advantage within ICT. For KYC of customers, we use idvcheck.com (Malta) to ensure smooth and accurate KYC procedures, including PEP Screening and other compliance controls.",
+    "CorporateGovernancePage-ParthershipsSection-Title": "Results & Partnerships",
+    "CorporateGovernancePage-ParthershipsSection-Description": "Are you our next partner? <br> Get in touch to learn more and see how our team can help.",
+    "CorporateGovernancePage-ParthershipsSection-Button": "Contact Us"
 }

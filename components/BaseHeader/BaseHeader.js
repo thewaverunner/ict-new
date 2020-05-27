@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { withTranslation } from '../../i18n'
 
 import StripeNavbar from '../StripeNavbar'
 
-import DesktopLogo from '../../public/static/images/desktop-logo.svg'
+// import DesktopLogo from '../../public/static/images/desktop-logo.svg'
 import MobileLogo from '../../public/static/images/mobile-logo.svg'
+import DesktopLogo from '../../public/static/images/logo-new-desktop.svg'
 
 import {
+    // HeaderNew,
+    // HeaderNewContainer,
+    // HeaderNewLogo,
+    HeaderMobileNav,
+    HeaderMobileLogo,
     Header,
     HeaderContainer,
     HeaderNavWrapper,
-    HeaderMobileNav,
-    HeaderMobileLogo,
     HeaderLogo,
 } from './BaseHeader.styles'
 
 function BaseHeader () {
+    const router = useRouter()
+
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -43,11 +50,11 @@ function BaseHeader () {
                 <HeaderMobileNav>
                     <Link href="/">
                         <HeaderMobileLogo>
-                            <MobileLogo />
+                            <MobileLogo fill={'#1d1d1f'} />
                         </HeaderMobileLogo>
                     </Link>
 
-                    <StripeNavbar duration={300} isMobile={isMobile} /> 
+                    <StripeNavbar isFixed={isFixed()} duration={300} isMobile={isMobile} /> 
                 </HeaderMobileNav> 
             </>
         )
@@ -55,25 +62,41 @@ function BaseHeader () {
 
     function renderDesktopWrapper () {
         return (
-            <HeaderContainer> 
-                <HeaderNavWrapper>
-                    <Link href="/">
-                        <HeaderLogo>
-                            <DesktopLogo />
-                        </HeaderLogo>
-                    </Link>
-                    
+            <>
+                {/* <HeaderNewContainer>
+                    <HeaderNewLogo>
+                        <DesktopNewLogo />
+                    </HeaderNewLogo>    
+
                     <StripeNavbar duration={300} isMobile={isMobile} />
-                </HeaderNavWrapper> 
-            </HeaderContainer>  
+                </HeaderNewContainer> */}
+                <HeaderContainer> 
+                    <HeaderNavWrapper>
+                        <Link href="/">
+                            <HeaderLogo>
+                                <DesktopLogo fill={isFixed() ? '#FFFFFF' : '#1d1d1f'} />
+                            </HeaderLogo>
+                        </Link>
+                        
+                        <StripeNavbar isFixed={isFixed()} duration={300} isMobile={isMobile} />
+                    </HeaderNavWrapper> 
+                </HeaderContainer>  
+            </>
         )   
     }
 
+    function isFixed () {
+        return ['/'].includes(router.pathname)
+    }
+
     return (
-          
-        <Header>
+        <Header isFixed={isFixed()}>
             {isMobile ? renderMobileWrapper() : renderDesktopWrapper()} 
         </Header>  
+
+        // <HeaderNew>
+        //     {isMobile ? renderMobileWrapper() : renderDesktopWrapper()} 
+        // </HeaderNew>  
     )
 }
 
