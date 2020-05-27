@@ -87,6 +87,7 @@ function HomePage ({ t }) {
             <HomePageTopSectionWrapper>
                 <HomePageTopSection>
                     <HomePageTopSectionTitle>Multi-level marketing, reinvented</HomePageTopSectionTitle>
+
                     <HomePageTopSectionDescription>
                         Impact Crowd Technology will, as the first digital 
                         multi-level marketing company, address the challenge 
