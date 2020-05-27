@@ -47,6 +47,7 @@ export const ContactUsPageForm = styled.form`
 export const InputWrapper = styled.div`
     display: flex;
     align-items: center;
+    
     padding: 20px 10px;
     border-bottom: 1px solid #1d1d1f;
     margin-bottom: 37px;
@@ -55,6 +56,7 @@ export const InputWrapper = styled.div`
 export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
     font-size: 14px;
+
     color: #000;
     padding-right: 10px;
 `
@@ -62,8 +64,10 @@ export const InputTitle = styled.div`
 export const Input = styled.input`
     font-family: "DM Sans Regular";
     font-size: 14px;
+
     color: #000;
     width: 100%;
+
     border: none;
     outline: none;
 `
@@ -71,6 +75,7 @@ export const Input = styled.input`
 export const TextareaWrapper = styled.div`
     display: flex;
     flex-direction: column;
+
     border-bottom: 1px solid #1d1d1f;
     margin-bottom: 37px;
 `
@@ -78,6 +83,7 @@ export const TextareaWrapper = styled.div`
 export const TextareaTitle = styled.div`
     font-family: "DM Sans Bold";
     font-size: 14px;
+
     color: #000;
     padding-left: 10px;
     margin-bottom: 10px;

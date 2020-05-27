@@ -81,7 +81,7 @@ export default class AnimatedNavbar extends Component {
     }
 
     render() {
-        const { duration, isMobile } = this.props
+        const { duration, isMobile, isFixed } = this.props
 
         let config = navbarConfig
 
@@ -115,6 +115,7 @@ export default class AnimatedNavbar extends Component {
                                 title={n.title}
                                 index={index}
                                 isMobile={isMobile}
+                                isFixed={isFixed}
                                 onMouseEnter={this.onMouseEnter}
                                 onOpen={this.onOpen}
                             >

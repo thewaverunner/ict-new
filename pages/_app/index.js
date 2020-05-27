@@ -14,7 +14,7 @@ import BaseFooter from '../../components/BaseFooter'
 function MyApp ({ Component, pageProps }) {
     return (
         <div className="main-container">
-            {/* <BaseHeader /> */}
+            <BaseHeader />
 
             <Component {...pageProps}/>
 

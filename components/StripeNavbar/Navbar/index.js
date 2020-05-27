@@ -20,7 +20,7 @@ const NavbarList = styled.ul`
 
 class Navbar extends Component {
     render() {
-        const { children, onMouseLeave, onClose } = this.props
+        const { children, onMouseLeave, onClose, isFixed } = this.props
 
         return (
             <NavbarEl onMouseLeave={onMouseLeave} onClick={onClose}>

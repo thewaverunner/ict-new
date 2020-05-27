@@ -7,12 +7,16 @@ import { BREAKPOINTS } from '../../../utils/constants'
 const NavbarItemTitle = styled.button`
     background: transparent;
     border: 0;
+
     font-family: "DM Sans Bold";
     font-size: 14px;
     line-height: 60px;
-    color: #fff;
+
+    color: ${props => props.isFixed ? '#ffffff' : '#1d1d1f'};
+
     display: flex;
     justify-content: center;
+
     transition: opacity 0.3s;
     cursor: pointer;
     position: relative;
@@ -24,9 +28,37 @@ const NavbarItemTitle = styled.button`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
-        padding: 0 1.5rem 1.2rem 0;
+        // padding: 0 1.5rem 1.2rem 0;
     }
 `
+
+// const NavbarItemTitle = styled.button`
+//     background: transparent;
+//     border: 0;
+
+//     font-family: "DM Sans Bold";
+//     font-size: 14px;
+//     line-height: 60px;
+
+//     color: #ffffff;
+
+//     display: flex;
+//     justify-content: center;
+
+//     transition: opacity 0.3s;
+//     cursor: pointer;
+//     position: relative;
+//     z-index: 2;
+
+//     &:hover, &:focus {
+//         opacity: 0.5;
+//         outline: none;
+//     }
+
+//     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+//         padding: 0 1.5rem 1.2rem 0;
+//     }
+// `
 
 const NavbarItemTitleMobile = styled.div`
     display: flex;
@@ -87,7 +119,7 @@ export default class NavbarItem extends Component {
     }
 
     render() {
-        const { title, children, isMobile } = this.props
+        const { title, children, isMobile, isFixed } = this.props
 
         return (
             <NavbarItemEl 
@@ -104,7 +136,7 @@ export default class NavbarItem extends Component {
                         </NavbarItemTitleMobile>
                     )
                     : (
-                        <NavbarItemTitle>{title}</NavbarItemTitle>
+                        <NavbarItemTitle isFixed={isFixed}>{title}</NavbarItemTitle>
                     )
                 }
 
