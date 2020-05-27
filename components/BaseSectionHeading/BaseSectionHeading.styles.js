@@ -71,7 +71,7 @@ export const BaseSectionTitle = styled.h1`
 
 
 export const BaseSectionDescription = styled.p`
-    max-width: 53%;
+    max-width: 45%;
     margin-bottom: 70px;
     font-family: "DM Sans Regular";
     font-weight: normal;
