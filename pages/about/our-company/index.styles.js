@@ -9,12 +9,13 @@ export const OurMissionSection = styled.div`
 `
 export const OurMissionWrapper = styled.div`
     max-width: 1170px;
+    min-height: 435px;
+
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 435px;
-
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 980px;
@@ -30,13 +31,15 @@ export const OurMissionWrapper = styled.div`
     }
 `
 export const OurMissionTitle = styled.h1`
-    width: 100%;
     font-family: "DM Sans Regular";
     font-weight: bold;
     font-size: 47px;
     line-height: 60px;
     text-align: left;
+
     color: #1d1d1d;
+
+    width: 100%;
     margin-bottom: 20px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -86,11 +89,13 @@ export const OurMissionContent = styled.div`
 
 export const OurMissionDescription = styled.p`
     max-width: 316px;
+
     font-family: "DM Sans Regular";
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: left;
+
     color: #1d1d1f;
 `
 
@@ -104,19 +109,21 @@ export const OurMissionContentWrapper = styled.div`
 `
 
 export const OurGoalsSection = styled.div`
-    width:100%;
     background: url(../static/images/about-our-company-goals-background.svg) no-repeat;
     background-size: cover;
+
+    width:100%;
     margin-bottom: 16px;
 `
 
 export const OurGoalsWrapper = styled.div`
     max-width: 1170px;
+    min-height: 435px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 435px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 980px;
@@ -134,11 +141,13 @@ export const OurGoalsWrapper = styled.div`
 
 export const OurGoalsTitle = styled.h2`
     width: 100%;
+
     font-family: "DM Sans Regular";
     font-weight: bold;
     font-size: 47px;
     line-height: 60px;
     text-align: left;
+
     color: #ffffff;
     margin-bottom: 30px;
 
@@ -163,6 +172,7 @@ export const OurGoalsSubTitle = styled.h3`
     font-size: 31px;
     line-height: 45px;
     text-align: left;
+
     color: #fafafa;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -205,13 +215,15 @@ export const OurGoalsContent = styled.div`
 
 
 export const OurGoalsDescription = styled.p`
-    color: #fafafa;
     font-size: 14px;
     font-family: "DM Sans Regular";
     line-height: 21px;
-    margin-bottom: 15px;
+
+    color: #fafafa;
     position: relative;
+
     padding-top: 20px;
+    margin-bottom: 15px;
 
     &:before {
         content: '';

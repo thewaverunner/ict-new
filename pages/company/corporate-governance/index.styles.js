@@ -7,6 +7,7 @@ export const CorporateGovernanceWrapper = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         position: relative;
+
         max-width: 930px;
         margin: 0 auto;
         padding: 0;
@@ -38,6 +39,7 @@ export const CorporateGovernanceTopSection = styled.div`
    @media screen and (min-width: ${BREAKPOINTS.md}px) {
         margin: 0 50px;
         padding: 38px 0 130px;
+
         text-align: center;
     }
 `
@@ -71,6 +73,7 @@ export const CorporateGovernanceTopSectionDescription = styled.p`
 
 export const CorporateGovernanceCrowdSection = styled.div`
     background: #fcfcfc;
+    
     padding: 33px 25px 58px; 
     margin-bottom: 60px;
 
@@ -205,8 +208,9 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
     padding: 38px 25px 47px;
-    background: #fcfcfc;
     margin: 0 25px -20px;
+
+    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;

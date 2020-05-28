@@ -6,7 +6,6 @@ import { withTranslation } from '../../../../i18n'
 
 import BaseButton from '../../../../components/BaseButton'
 import BaseSection from '../../../../components/BaseSection'
-// import BaseSectionHeading from '../../../../components/BaseSectionHeading'
 
 import {
     CorporateGovernancePartnershipsSection,
@@ -17,15 +16,11 @@ import {
     CorporateGovernancePartnershipsDescription,
     CorporateGovernancePartnershipsDescriptionWrapper,
 
-
     OpenPositionJobPageSection,
     OpenPositionJobPageSectionTitle,
     OpenPositionJobPageSectionDescription,
     OpenPositionJobPageDescriptionJobWrapper,
-    OpenPositionJobPageTaskWrapper
-    // OpenPositionPageSection,
-    // OpenPositionPageTitle,
-    // OpenPositionPageDescription
+    OpenPositionJobPageTaskWrapper,
 } from './index.styles'
 
 function OpenPositionJobPage ({ t }) {
@@ -35,8 +30,7 @@ function OpenPositionJobPage ({ t }) {
             <Head>
                 <title>{t('OpenPositionsJobPage-Title')}</title>
             </Head>
-    
-            {/* <BaseSectionHeading title={t('OpenPositionsPage-Heading')}/> */}
+
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
@@ -55,25 +49,10 @@ function OpenPositionJobPage ({ t }) {
                 <OpenPositionJobPageTaskWrapper>
                     <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage-Job-Task-Title')}</OpenPositionJobPageSectionTitle>
                     <OpenPositionJobPageSectionDescription>{t('OpenPositionsJobPage-Job-Task-Description')}</OpenPositionJobPageSectionDescription>
+
                     <BaseButton blackStyle>{t('OpenPositionsJobPage-Job-Apply')}</BaseButton>
                 </OpenPositionJobPageTaskWrapper>
             </OpenPositionJobPageSection>
-
-            {/* <OpenPositionPageSection>
-                <OpenPositionPageTitle>{t('OpenPositionsJobPage-Job-Title')}</OpenPositionPageTitle>
-                <OpenPositionPageDescription>{t('OpenPositionsJobPage-Job-Description')}</OpenPositionPageDescription>
-
-                <BaseButton blackStyle linkUrl={`/company/open-positions/manager/apply`}>{t('OpenPositionsJobPage-Job-Apply')}</BaseButton>
-            </OpenPositionPageSection>
-
-            <BaseSection
-                backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={t('OpenPositionsPage-JoinUs-Banner-Title')}
-                titleColor={'black'}
-                description={t('OpenPositionsPage-JoinUs-Banner-Description')}
-                buttonTitle={'Contact Us'}
-                buttonStyle={'blackStyle'}
-            /> */}
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
@@ -83,15 +62,10 @@ function OpenPositionJobPage ({ t }) {
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>Join our team</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionsJobPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionsJobPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
-                            <CorporateGovernancePartnershipsDescription>
-                                We are always looking for talented people to 
-                                join our force. Please don’t hesitate to apply 
-                                to any of our currently open positions within the company.
-                            </CorporateGovernancePartnershipsDescription>
-
-                            <BaseButton blackStyle>View Open Positions</BaseButton>
+                            <BaseButton blackStyle>{t('OpenPositionsJobPage-ParthershipSection-Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>

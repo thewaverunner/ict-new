@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Head from 'next/head'
 
 import { withTranslation } from '../../../i18n'
 
-import OpenIcon from '../../../public/static/images/about-question-open-icon.svg'
-import CloseIcon from '../../../public/static/images/about-question-close-icon.svg'
-
 import BaseButton from '../../../components/BaseButton'
+import QuestionsAndAnswersPageToggleItem from '../../../components/QuestionsAndAnswersPageToggleItem'
 
 import {
     QuestionsAndAnswersPageTopSectionWrapper,
@@ -18,11 +16,6 @@ import {
     QuestionsAndAnswersPageQuestionSection,
     QuestionsAndAnswersPageQuestionSectionTitle,
     QuestionsAndAnswersPageQuestionList,
-    QuestionsAndAnswersPageQuestionItem,
-    QuestionsAndAnswersPageQuestionItemTitleWrapper,
-    QuestionsAndAnswersPageQuestionItemTitle,
-    QuestionsAndAnswersPageQuestionItemDescription,
-    QuestionsAndAnswersPageQuestionIcon,
 
     CorporateGovernancePartnershipsSection,
     CorporateGovernancePartnershipsImage,
@@ -34,132 +27,77 @@ import {
 } from './index.styles'
 
 function QuestionsAndAnswersPage ({ t }) {
-    const [topics, setTopics] = useState([
+    const topics = [
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
+        },
+        { 
+            title: 'Example Question', 
+            description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.',
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
-        { 
-            title: 'Example Question', 
-            description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
-        },
-    ])
+    ]
     
-    const [crowdTopics, setCrowdTopics] = useState([
+    const crowdTopics = [
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
         { 
             title: 'Example Question', 
             description: 'ICT focuses on international trade & development by disrupting and changing traditional software distribution channels. ICT’s leverage lies in combining the crowd and gig economy.', 
-            toggled: false 
         },
-    ])
-
-    function toggleTopic (index) {
-        topics[index].toggled = !topics[index].toggled
-
-        setTopics([...topics])
-    }
-
-    function toggleCrowdTopics (index) {
-        crowdTopics[index].toggled = !crowdTopics[index].toggled
-
-        setCrowdTopics([...crowdTopics])
-    }
+    ]
 
     return (
         <>
             <Head>
-                <title>Questions & Answers</title>
+                <title>{t('QuestionsAndAnswersPage-Title')}</title>
             </Head>
 
             <QuestionsAndAnswersPageTopSectionWrapper>
                 <QuestionsAndAnswersPageTopSection >
-                    <QuestionsAndAnswersPageTopSectionTitle>Meet our people</QuestionsAndAnswersPageTopSectionTitle>
-
-                    <QuestionsAndAnswersPageTopSectionDescription>
-                        ICT meets the strictest demands on compliance, transparency,
-                        as well as legal requirements, including tax laws and 
-                        the relevant regulations.
-                    </QuestionsAndAnswersPageTopSectionDescription>
+                    <QuestionsAndAnswersPageTopSectionTitle>{t('QuestionsAndAnswersPage-TopSection-Title')}</QuestionsAndAnswersPageTopSectionTitle>
+                    <QuestionsAndAnswersPageTopSectionDescription>{t('QuestionsAndAnswersPage-TopSection-Description')}</QuestionsAndAnswersPageTopSectionDescription>
                 </QuestionsAndAnswersPageTopSection>
             </QuestionsAndAnswersPageTopSectionWrapper>  
 
             <QuestionsAndAnswersPageQuestionQrapper>
                 <QuestionsAndAnswersPageQuestionSection>
-                    <QuestionsAndAnswersPageQuestionSectionTitle>ICT</QuestionsAndAnswersPageQuestionSectionTitle>
+                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage-QuestionSection-Title')}</QuestionsAndAnswersPageQuestionSectionTitle>
 
                     <QuestionsAndAnswersPageQuestionList>
-                        {topics.map((topic, index) => (
-                            <QuestionsAndAnswersPageQuestionItem key={index}>
-                                <QuestionsAndAnswersPageQuestionItemTitleWrapper onClick={() => toggleTopic(index)}>
-                                    <QuestionsAndAnswersPageQuestionItemTitle>{topic.title}</QuestionsAndAnswersPageQuestionItemTitle>
-                                    
-                                    <QuestionsAndAnswersPageQuestionIcon>
-                                        {topics[index].toggled ? <CloseIcon /> : <OpenIcon />}
-                                    </QuestionsAndAnswersPageQuestionIcon>
-                                </QuestionsAndAnswersPageQuestionItemTitleWrapper>
-
-                            {topics[index].toggled && (
-                                <QuestionsAndAnswersPageQuestionItemDescription>{topic.description}</QuestionsAndAnswersPageQuestionItemDescription>
-                            )}
-                            </QuestionsAndAnswersPageQuestionItem>
-                        ))}
+                        {topics.map((topic, index) => <QuestionsAndAnswersPageToggleItem key={index} topic={topic} defaultValue={index === 0} />)}
                     </QuestionsAndAnswersPageQuestionList>
 
-                    <QuestionsAndAnswersPageQuestionSectionTitle>Crowd 1</QuestionsAndAnswersPageQuestionSectionTitle>
+                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage-QuestionSection-TitleSecond')}</QuestionsAndAnswersPageQuestionSectionTitle>
 
                     <QuestionsAndAnswersPageQuestionList>
-                        {crowdTopics.map((topic, index) => (
-                                <QuestionsAndAnswersPageQuestionItem key={index}>
-                                    <QuestionsAndAnswersPageQuestionItemTitleWrapper onClick={() => toggleCrowdTopics(index)}>
-                                        <QuestionsAndAnswersPageQuestionItemTitle>{topic.title}</QuestionsAndAnswersPageQuestionItemTitle>
-
-                                            <QuestionsAndAnswersPageQuestionIcon>
-                                                {crowdTopics[index].toggled ? <CloseIcon style={{ marginRight: 2 }} /> : <OpenIcon />}
-                                            </QuestionsAndAnswersPageQuestionIcon>
-                                    </QuestionsAndAnswersPageQuestionItemTitleWrapper>
-
-                                {crowdTopics[index].toggled && (
-                                    <QuestionsAndAnswersPageQuestionItemDescription>{topic.description}</QuestionsAndAnswersPageQuestionItemDescription>
-                                )}
-                                </QuestionsAndAnswersPageQuestionItem>
-                        ))}         
+                        {crowdTopics.map((topic, index) => <QuestionsAndAnswersPageToggleItem key={index} topic={topic} defaultValue={index === 0} />)}   
                     </QuestionsAndAnswersPageQuestionList>
                 </QuestionsAndAnswersPageQuestionSection>
 
@@ -168,18 +106,13 @@ function QuestionsAndAnswersPage ({ t }) {
                         <img src="/static/images/company-governance-parthnership.svg" />
                     </CorporateGovernancePartnershipsImage> 
                 
-                    <CorporateGovernancePartnershipsContent>
+                    <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
                         <CorporateGovernancePartnershipsContentWrapper>
                             <CorporateGovernancePartnershipsDescriptionWrapper>
-                                <CorporateGovernancePartnershipsTitle>Join our team</CorporateGovernancePartnershipsTitle>
+                                <CorporateGovernancePartnershipsTitle>{t('QuestionsAndAnswersPage-ParthnershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                                <CorporateGovernancePartnershipsDescription>{t('QuestionsAndAnswersPage-ParthnershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
-                                <CorporateGovernancePartnershipsDescription>
-                                    We are always looking for talented people to 
-                                    join our force. Please don’t hesitate to apply 
-                                    to any of our currently open positions within the company.
-                                </CorporateGovernancePartnershipsDescription>
-
-                                <BaseButton blackStyle>View Open Positions</BaseButton>
+                                <BaseButton blackStyle>{t('QuestionsAndAnswersPage-QuestionSection-Button')}</BaseButton>
                             </CorporateGovernancePartnershipsDescriptionWrapper>
                         </CorporateGovernancePartnershipsContentWrapper>
                     </CorporateGovernancePartnershipsContent>

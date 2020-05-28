@@ -1,0 +1,3 @@
+import OpenPositionsPagePositionItem from './OpenPositionsPagePositionItem'
+
+export default OpenPositionsPagePositionItem

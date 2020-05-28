@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
+import { BREAKPOINTS } from '../../../utils/constants'
+
 export const ContactUsPageFormWrapper = styled.div`
     max-width: 890px;
     padding: 134px 0 174px 0;
     margin: 0 auto;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 740px;
         padding: 100px 0 150px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 520px;
         padding: 100px 0 150px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         padding: 50px 25px 75px;
     }
 `
@@ -28,7 +30,7 @@ export const ContactUsPageFormTitle = styled.h1`
     color: #1d1d1f;
     margin-bottom: 79px;
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 33px;
         line-height: 50px;
     }
@@ -38,7 +40,7 @@ export const ContactUsPageForm = styled.form`
     width: 100%;
     position: relative;
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         margin: 0 4%;
         max-width: 92%;
     }

@@ -69,9 +69,9 @@ function OurBusinessPage ({ t }) {
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={t('OpenPositionsPage-JoinUs-Banner-Title')}
+                title={t('OpenPositionsJobPage-ParthershipSection-Title')}
                 titleColor={'black'}
-                description={t('OpenPositionsPage-JoinUs-Banner-Description')}
+                description={t('OpenPositionsJobPage-ParthershipSection-Description')}
                 buttonTitle={'Open Positions'}
                 buttonStyle={'blackStyle'}
             />

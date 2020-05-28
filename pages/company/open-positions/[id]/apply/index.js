@@ -12,7 +12,7 @@ import { useMediaQuery } from '../../../../../utils/hooks'
 
 import BaseButton from '../../../../../components/BaseButton'
 import BaseSection from '../../../../../components/BaseSection'
-import BaseSectionHeading from '../../../../../components/BaseSectionHeading'
+
 
 import {
     OpenPositionApplyPageContent,
@@ -24,6 +24,7 @@ import {
     OpenPositionApplyPageInputFileMessage,
     OpenPositionApplyPageInputFileWrapper,
     OpenPositionApplyPageWrapper,
+
     InputWrapper,
     InputTitle,
     Input,
@@ -44,8 +45,8 @@ import {
 
 
 function OpenPositionApplyPage ({ t }) {
-    const isMobile = useMediaQuery('(min-width: 552px)')
-    const isTablet = useMediaQuery('(min-width: 768px)')
+    // const isMobile = useMediaQuery('(min-width: 552px)')
+    // const isTablet = useMediaQuery('(min-width: 768px)')
     
 
     const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles), [])
@@ -58,16 +59,13 @@ function OpenPositionApplyPage ({ t }) {
 
     let PhoneInputStyles = {} 
 
-    PhoneInputStyles = OpenPositionApplyPageInputPhone.desktop
+    PhoneInputStyles = OpenPositionApplyPageInputPhone
 
-    
     return (
         <>
             <Head>
                 <title>{t('OpenPositionApplyPage-Title')}</title>
             </Head>
-
-            {/* <BaseSectionHeading title={t('OpenPositionApplyPage-Heading')} /> */}
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
@@ -154,7 +152,7 @@ function OpenPositionApplyPage ({ t }) {
                             />       
                         </TextareaWrapper>
 
-                        <SubmitButton type="submit">Send</SubmitButton>
+                        <SubmitButton type="submit"> {t('OpenPositionApplyPage-ApplicationForm-Send')}</SubmitButton>
                     </OpenPositionApplyPageForm>
                 </OpenPositionApplyPageWrapper>
             </OpenPositionApplyPageContent>
@@ -164,30 +162,16 @@ function OpenPositionApplyPage ({ t }) {
                     <img src="/static/images/company-governance-parthnership.svg" />
                 </CorporateGovernancePartnershipsImage> 
             
-                <CorporateGovernancePartnershipsContent>
+                <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>Browse all open positions</CorporateGovernancePartnershipsTitle>
-
-                            <CorporateGovernancePartnershipsDescription>
-                                We are always looking for talented people to 
-                                join our force. Please don’t hesitate to apply 
-                                to any of our currently open positions within the company.
-                            </CorporateGovernancePartnershipsDescription>
-
-                            <BaseButton blackStyle>View Open Positions</BaseButton>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
+                            <BaseButton blackStyle>{t('OpenPositionApplyPage-ParthershipSection-Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>
             </CorporateGovernancePartnershipsSection>
-            {/* <BaseSection
-                backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={t('OpenPositionsPage-JoinUs-Banner-Title')}
-                titleColor={'black'}
-                description={t('OpenPositionsPage-JoinUs-Banner-Description')}
-                buttonTitle={'Contact Us'}
-                buttonStyle={'blackStyle'}
-            /> */}
         </>
     )
 }

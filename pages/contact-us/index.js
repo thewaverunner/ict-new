@@ -11,6 +11,7 @@ import {
     ContactUsPageFormTitle,
     ContactUsPageForm,
     ContactUsPageFormWrapper,
+    
     InputWrapper,
     InputTitle,
     Input,
@@ -28,7 +29,7 @@ function ContactUsPage ({ t }) {
     return (
         <>
             <Head>
-                <title>Contact-us</title>
+                <title>{t('ContactUsPage-Title')}</title>
             </Head>
 
             <BaseSectionHeading 
@@ -37,7 +38,7 @@ function ContactUsPage ({ t }) {
             />
 
             <ContactUsPageFormWrapper>
-                <ContactUsPageFormTitle>Contact us</ContactUsPageFormTitle>
+                <ContactUsPageFormTitle>{t('ContactUsPage-Title')}</ContactUsPageFormTitle>
 
                 <ContactUsPageForm onSubmit={handleSubmit(onSubmit)}>
                     <InputWrapper>
@@ -51,7 +52,7 @@ function ContactUsPage ({ t }) {
                     </InputWrapper>
 
                     <InputWrapper>
-                        <InputTitle>Topic</InputTitle>
+                        <InputTitle>{t('ContactUsPage-Topic-Title')}</InputTitle>
 
                         <Input 
                           name="topic" 
@@ -77,7 +78,7 @@ function ContactUsPage ({ t }) {
                     </InputWrapper>
 
                     <TextareaWrapper>
-                        <TextareaTitle>Type your inquiry here</TextareaTitle>
+                        <TextareaTitle>{t('ContactUsPage-Textarea-Title')}</TextareaTitle>
 
                         <Textarea
                             rows="9"
@@ -85,7 +86,7 @@ function ContactUsPage ({ t }) {
                         />       
                     </TextareaWrapper>
 
-                    <SubmitButton type="submit">Send</SubmitButton>
+                    <SubmitButton type="submit">{t('ContactUsPage-Send')}</SubmitButton>
                 </ContactUsPageForm>
             </ContactUsPageFormWrapper>
 

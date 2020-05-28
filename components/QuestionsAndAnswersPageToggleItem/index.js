@@ -1,0 +1,3 @@
+import QuestionsAndAnswersPageToggleItem from './QuestionsAndAnswersPageToggleItem'
+
+export default QuestionsAndAnswersPageToggleItem

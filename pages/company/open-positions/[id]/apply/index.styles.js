@@ -177,21 +177,19 @@ export const SubmitButton = styled.button`
 `
 
 export const OpenPositionApplyPageInputPhone = {
-    desktop: {
-        inputStyle: {
-            'backgroundColor': '#fafafa',
-            'fontFamily': 'DM Sans Regular',
-            'fontSize': '14px',
-            'color': '#000',
-            'width': '100%',
-            'border': 'none',
-            'outline': 'none'   
-        },
-        buttonStyle: {
-            'backgroundColor': 'transparent',
-            'border': 'none',
-        }
-    }    
+    inputStyle: {
+        'backgroundColor': '#fafafa',
+        'fontFamily': 'DM Sans Regular',
+        'fontSize': '14px',
+        'color': '#000',
+        'width': '100%',
+        'border': 'none',
+        'outline': 'none'   
+    },
+    buttonStyle: {
+        'backgroundColor': 'transparent',
+        'border': 'none',
+    }
 }
 
 export const CorporateGovernancePartnershipsSection = styled.div`
@@ -217,7 +215,8 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
-    background: #ffffff;
+  
+    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
 
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
