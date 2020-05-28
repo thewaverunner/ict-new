@@ -97,7 +97,7 @@ function CorporateGovernancePage ({ t }) {
                     <img src="/static/images/company-governance-parthnership.svg" />
                 </CorporateGovernancePartnershipsImage> 
             
-                <CorporateGovernancePartnershipsContent>
+                <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
                             <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage-ParthershipsSection-Title')}</CorporateGovernancePartnershipsTitle>

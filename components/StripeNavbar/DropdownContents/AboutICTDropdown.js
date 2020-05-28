@@ -36,7 +36,7 @@ const AboutICTDropdown = ({ t }) => {
                     </li>    
                     
                     <li>
-                        <Link href="/">
+                        <Link href="/about/questions-and-answers">
                             <a>{t('BaseFooter_About_FAQ')}</a>
                        </Link>
                     </li>

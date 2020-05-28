@@ -118,7 +118,8 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
-    background: #ffffff;
+   
+    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
     
     padding: 38px 25px 47px;
     margin: 0 25px -20px;

@@ -208,8 +208,9 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
     padding: 38px 25px 47px;
-    background: #fcfcfc;
     margin: 0 25px -20px;
+
+    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;

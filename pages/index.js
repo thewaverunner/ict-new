@@ -76,7 +76,6 @@ function HomePage ({ t }) {
         }
     ]
 
-
     return (
         <>
             <Head>
