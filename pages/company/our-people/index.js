@@ -6,21 +6,18 @@ import { withTranslation } from '../../../i18n'
 
 import BaseButton from '../../../components/BaseButton'
 
+import OurPeoplePageMemberItem from '../../../components/OurPeoplePageMemberItem'
+
 import {
     OurPeopleTopSection,
     OurPeopleTopSectionTitle,
     OurPeopleTopSectionDescription,
+
     OurPeoplePageManagementSectionWrapper,
     OurPeoplePageManagementSection,
     OurPeoplePageManagementTitle,
     OurPeoplePageManagementList,
-    OurPeoplePageManagementItem,
-    OurPeoplePageManagementItemImage,
-    OurPeoplePageManagementItemInfoWrapper,
-    OurPeoplePageManagementItemDescription,
-    OurPeoplePageManagementItemDescriptionWrapper,
-    OurPeoplePageManagementItemName,
-    OurPeoplePageManagementItemPosition,
+    
     CorporateGovernancePartnershipsSection,
     CorporateGovernancePartnershipsImage,
     CorporateGovernancePartnershipsContent,
@@ -81,77 +78,26 @@ function OurPeoplePage ({ t }) {
     return (
         <>
             <Head>
-                <title>Our People</title>
+                <title>{t('OurPeoplePage-Title')}</title>
             </Head>
 
             <OurPeopleTopSection>
-                <OurPeopleTopSectionTitle>Meet our people</OurPeopleTopSectionTitle>
-
-                <OurPeopleTopSectionDescription>
-                    ICT meets the strictest demands on compliance, transparency,
-                    as well as legal requirements, including tax laws and 
-                    the relevant regulations.
-                </OurPeopleTopSectionDescription>
+                <OurPeopleTopSectionTitle>{t('OurPeoplePage-TopSection-Title')}</OurPeopleTopSectionTitle>
+                <OurPeopleTopSectionDescription>{t('OurPeoplePage-TopSection-Description')}</OurPeopleTopSectionDescription>
             </OurPeopleTopSection>
 
             <OurPeoplePageManagementSectionWrapper>
                 <OurPeoplePageManagementSection>
-                    <OurPeoplePageManagementTitle>Management</OurPeoplePageManagementTitle>
+                    <OurPeoplePageManagementTitle>{t('OurPeoplePage-ManagementSection-Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
-                        {ourPeoples.map((person, index) => (
-                            <OurPeoplePageManagementItem key={index}>
-                                <OurPeoplePageManagementItemImage>
-                                    <img src="/static/images/management-image.svg" />
-
-                                    <OurPeoplePageManagementItemInfoWrapper>
-                                        <OurPeoplePageManagementItemName>{person.name}</OurPeoplePageManagementItemName>
-                                        <OurPeoplePageManagementItemPosition>{person.position}</OurPeoplePageManagementItemPosition>
-                                    </OurPeoplePageManagementItemInfoWrapper>
-                                </OurPeoplePageManagementItemImage>
-                            
-                                <OurPeoplePageManagementItemDescriptionWrapper>
-                                    <OurPeoplePageManagementItemDescription dangerouslySetInnerHTML={{ __html: person.description }} />
-
-                                    <BaseButton 
-                                        withArrow={true}
-                                        hideBorder
-                                        blackStyle
-                                    >
-                                        Read more
-                                    </BaseButton>
-                                </OurPeoplePageManagementItemDescriptionWrapper>
-                            </OurPeoplePageManagementItem>
-                        ))}
+                        {ourPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
                     </OurPeoplePageManagementList>
 
-                    <OurPeoplePageManagementTitle>Board</OurPeoplePageManagementTitle>
+                    <OurPeoplePageManagementTitle>{t('OurPeoplePage-ManagementSectionBoard-Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
-                        {boardPeoples.map((person, index) => (
-                            <OurPeoplePageManagementItem key={index}>
-                                <OurPeoplePageManagementItemImage>
-                                    <img src="/static/images/management-image.svg" />
-
-                                    <OurPeoplePageManagementItemInfoWrapper>
-                                        <OurPeoplePageManagementItemName>{person.name}</OurPeoplePageManagementItemName>
-                                        <OurPeoplePageManagementItemPosition>{person.position}</OurPeoplePageManagementItemPosition>
-                                    </OurPeoplePageManagementItemInfoWrapper>
-                                </OurPeoplePageManagementItemImage>
-                            
-                                <OurPeoplePageManagementItemDescriptionWrapper>
-                                    <OurPeoplePageManagementItemDescription dangerouslySetInnerHTML={{ __html: person.description }}/>
-
-                                    <BaseButton 
-                                        withArrow={true}
-                                        hideBorder
-                                        blackStyle
-                                    >
-                                        Read more
-                                    </BaseButton>
-                                </OurPeoplePageManagementItemDescriptionWrapper>
-                            </OurPeoplePageManagementItem>
-                        ))}
+                        {boardPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
                     </OurPeoplePageManagementList>
                 </OurPeoplePageManagementSection>
 
@@ -163,15 +109,10 @@ function OurPeoplePage ({ t }) {
                     <CorporateGovernancePartnershipsContent>
                         <CorporateGovernancePartnershipsContentWrapper>
                             <CorporateGovernancePartnershipsDescriptionWrapper>
-                                <CorporateGovernancePartnershipsTitle>Join our team</CorporateGovernancePartnershipsTitle>
+                                <CorporateGovernancePartnershipsTitle>{t('OurPeoplePage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                                <CorporateGovernancePartnershipsDescription>{t('OurPeoplePage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
-                                <CorporateGovernancePartnershipsDescription>
-                                    We are always looking for talented people to 
-                                    join our force. Please don’t hesitate to apply 
-                                    to any of our currently open positions within the company.
-                                </CorporateGovernancePartnershipsDescription>
-
-                                <BaseButton blackStyle>View Open Positions</BaseButton>
+                                <BaseButton blackStyle>{t('OurPeoplePage-ParthershipSection-Button')}</BaseButton>
                             </CorporateGovernancePartnershipsDescriptionWrapper>
                         </CorporateGovernancePartnershipsContentWrapper>
                     </CorporateGovernancePartnershipsContent>

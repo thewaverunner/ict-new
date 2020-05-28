@@ -1,23 +1,26 @@
 import styled from 'styled-components'
 
+import { BREAKPOINTS } from '../../../utils/constants'
+
 export const NewsPageArticlesSection = styled.div`
     background-color: #fafafa;
 `
 
 export const NewsPageArticlesSectionWrapper = styled.div`
     max-width: 1170px;
+
     margin: 0 auto 16px;
     padding: 113px 10px 93px;
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 950px;
     }
 
-    @media screen and (max-width:992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 720px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         padding: 40px 25px;
     }  
 `
@@ -29,15 +32,15 @@ export const NewsPageArticlesSectionTitle = styled.h1`
     font-family: 'DM Sans Bold';
     line-height: 56px;
 
-    @media screen and (max-width: 1170px){
+    @media screen and (max-width: ${BREAKPOINTS.lg}px){
         font-size: 35px;
     }
 
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: ${BREAKPOINTS.md}px){
         font-size: 32px;
     }
 
-    @media screen and (max-width: 552px){
+    @media screen and (max-width: ${BREAKPOINTS.sm}px){
         font-size: 28px;
         padding-left: 10px;
     }
@@ -47,7 +50,7 @@ export const NewsPageArticles = styled.div`
     flex: 0 1 32%;
     margin-bottom: 70px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}}px) {
         flex:1 1 45%;
         padding-right: 20px;
 
@@ -57,7 +60,7 @@ export const NewsPageArticles = styled.div`
         }    
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         flex: 1 1 100%;
         padding: 0 10px;
     } 
@@ -71,7 +74,8 @@ export const NewsPageArticlesContent = styled.div`
 
 export const NewsPageArticlesTitle = styled.h2`
     color: #1d1d1f;
-    margin: 40px 0 6px; 
+    margin: 40px 0 6px;
+
     font-size: 21px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
@@ -84,11 +88,11 @@ export const NewsPageArticlesDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}}px) {
         font-size: 12px;
     }
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}}px) {
         font-size: 11px;
         margin-bottom: 20px;
     }
@@ -109,17 +113,17 @@ export const NewsPagePressInquiriesSectionWrapper = styled.div`
     margin: 0 auto 16px;
     padding: 125px 0 128px;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         max-width: 740px;
-        padding: 100px 0 100px;
+        padding: 100px 25px 100px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         max-width: 520px;
-        padding: 80px 0 80px;
+        padding: 80px 25px 80px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         padding: 50px 25px 75px;
     }
 `
@@ -132,15 +136,15 @@ export const NewsPagePressInquiresTitle = styled.h1`
     line-height: 56px;
     text-align: center;
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 35px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 32px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 28px;
         margin-bottom: 0;
     }
@@ -164,6 +168,7 @@ export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
     font-size: 14px;
     white-space: nowrap;
+
     color: #000;
     padding-right: 10px;
 `
@@ -171,9 +176,11 @@ export const InputTitle = styled.div`
 export const Input = styled.input`
     font-family: "DM Sans Regular";
     font-size: 14px;
+
     color: #000;
     background-color: #fafafa;
     width: 100%;
+
     border: none;
     outline: none;
 `
@@ -181,6 +188,7 @@ export const Input = styled.input`
 export const TextareaWrapper = styled.div`
     display: flex;
     flex-direction: column;
+
     border-bottom: 1px solid #1d1d1f;
     margin-bottom: 37px;
 `
@@ -188,17 +196,21 @@ export const TextareaWrapper = styled.div`
 export const TextareaTitle = styled.div`
     font-family: "DM Sans Bold";
     font-size: 14px;
+
     color: #000;
+
     padding-left: 10px;
     margin-bottom: 10px;
 `
 
 export const Textarea = styled.textarea`
     font-family: "DM Sans Regular";
-    background-color: #fafafa;
     font-size: 14px;
+
+    background-color: #fafafa;
     color: #000;
     width: 100%;
+    
     resize: none;
     border: none;
     outline: none;

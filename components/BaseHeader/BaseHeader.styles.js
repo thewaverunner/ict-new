@@ -80,7 +80,7 @@ export const Header = styled.header`
     border: ${props => props.isFixed ? '' : '1px solid rgba(112, 112, 112, 0.08)'};
     background: ${props => props.isFixed ? 'transparent' : '#fff'};
 
-    @media screen and (min-width: ${BREAKPOINTS.sm}px){ 
+    @media screen and (min-width: 769px){ 
         padding: 28px;
     }
 `
@@ -89,9 +89,6 @@ export const HeaderContainer = styled.div`
     max-width: 1350px;
     margin: 0 auto;
 
-    @media screen and (max-width: ${BREAKPOINTS.sm}px){ 
-        display: none;
-    }
 `
 
 export const HeaderNavWrapper = styled.div`

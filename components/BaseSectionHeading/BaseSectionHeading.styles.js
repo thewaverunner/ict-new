@@ -24,25 +24,18 @@ export const BaseSectionHeadingWrapper = styled.div`
 
 
 export const BaseSectionHeadingContent = styled.div`
-    max-width: 1350px;
-    margin: 0 auto;
-
-    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
-        max-width: 950px;
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        padding-left: 25px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        max-width: 720px;
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        font-size: 45px;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 65%;
-        text-align: left;
-        margin: 0;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        max-width: 95%;
+    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+        padding-left: 0;
+        max-width: 1350px;
+        margin: 0 auto;
     }
 `
 

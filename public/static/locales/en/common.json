@@ -36,6 +36,7 @@
     "BaseHeader_Mobile_Partner": "Are you our next partner?",
     "BaseHeader_Mobile_Contact": "Contact Us",
 
+    "HomePage_Title": "Home page",
     "HomePage_Marketing_Title": "Multi-level marketing, reinvented",
     "HomePage_Marketing_Content": "Impact Crowd Technology will, as the first digital multi-level marketing company, address the challenge of long-term sustainability.",
     "HomePage_FirstBanner_Title": "Continuous innovation",
@@ -47,6 +48,14 @@
     "HomePage_Impact_Title": "Impact Technology",
     "HomePage_Impact_Content": "Impact Technology refers to the intentional use of frontier technology to benefit and promote new sources of employment and accelerate economic diversification – while simultaneously addressing major social issues.",
     "HomePage_Network_Content": "The network marketing business model has been around for decades. And it works.",
+    "HomePage_NewsSection_Title": "Latest News",
+    "HomePage_NewsSection_Button": "Go to newsroom",
+    "HomePage_News-First-Release": "Press release",
+    "HomePage_News-First-Title": "ICT acquires Miggster",
+    "HomePage_News-Second-Release": "Press release",
+    "HomePage_News-Second-Title": "New board members",
+    "HomePage_News-Third-Release": "Press release",
+    "HomePage_News-Third-Title": "ICT acquires Miggster",
 
     "AboutICTPage-Heading": "About ITC",
     "AboutICTPage_AboutICTBanner_Title": "Who we are",
@@ -116,10 +125,13 @@
     "About-OurBusinessPage-Milestones-SubTitle": "Since early 2019, Crowd1 has achieved remarkable growth, gaining approximately 2 million members in the first 12 months. We have created the industry’s fastest-growing global digital multi-level marketing company. <br> <br> The focus on growth during Crowd1’s pre-launch phase has been key. In 2020, our focus will lie in expanding our product portfolio and building an extensive library of digital products accessible for our network to use, recommend and sell.",
 
     "OpenPositionsPage-Title": "Our open positions",
-    "OpenPositionsPage-Heading": "Work with us",
-    "OpenPositionsPage-JoinUs-Banner-Title": "Join our team",
-    "OpenPositionsPage-JoinUs-Banner-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
-
+    "OpenPositionsPage-TopSection-Title": "Open Positions",
+    "OpenPositionsPage-TopSection-Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "OpenPositionsPage-ParthershipSection-Title": "Working at ICT",
+    "OpenPositionsPage-ParthershipSection-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
+    "OpenPositionsPage-ParthershipSection-Button": "Learn more",
+  
+    
     "OpenPositionsJobPage-Title": "Job Title",
     "OpenPositionsJobPage-Marketing-Banner-Title": "Job title",
     "OpenPositionsJobPage-Marketing-Banner-Subtitle": "Marketing & Sales - Stockholm",
@@ -128,10 +140,14 @@
     "OpenPositionsJobPage-Job-Task-Title": "Tasks & Responsibilites",
     "OpenPositionsJobPage-Job-Task-Description": "We are looking for an experienced SEO (Search Engine Optimization) Manager to join our Marketing team! As a SEO Manager you will be responsible for planning, implementing and managing our SEO strategy. As our online presence is extremely important for the success of the business, the SEO Manager will work with all functions of the business and liaise with the tech team and our agencies to drive organic growth globally.",
     "OpenPositionsJobPage-Job-Apply": "Apply now",
+    "OpenPositionsJobPage-ParthershipSection-Title": "Join our team",
+    "OpenPositionsJobPage-ParthershipSection-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
+    "OpenPositionsJobPage-ParthershipSection-Button": "View Open Positions",
 
     "OpenPositionApplyPage-Title": "Job Title - Apply",
     "OpenPositionApplyPage-Heading": "Work with us",
     "OpenPositionApplyPage-ApplicationForm-Title": "Apply Now",
+    "OpenPositionApplyPage-ApplicationForm-Send": "Send",
     "OpenPositionApplyPage-ApplicationForm-Name": "Name",
     "OpenPositionApplyPage-ApplicationForm-Email": "Email",
     "OpenPositionApplyPage-ApplicationForm-ErrorRequired": "Required",
@@ -142,11 +158,16 @@
     "OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage": "clicking here",
     "OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title": "Cover Letter",
     "OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description": "optional",
+    "OpenPositionApplyPage-ParthershipSection-Title": "Browse all open positions",
+    "OpenPositionApplyPage-ParthershipSection-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
+    "OpenPositionApplyPage-ParthershipSection-Button": "View Open Positions",
 
     "PressroomPage-Title": "Pressroom",
     "PressroomPage-Heading": "Pressroom",
+    "PressroomPage-Articles-Title": "Articles",
     "PressroomPage-Learn-More": "Learn more",
     "PressroomPage-Form-Title": "Press Inquiries",
+    "PressroomPage-Form-Send": "Send",
     "PressroomPage-Form-Name-Input": "Name",
     "PressroomPage-Form-Story-Input": "Story topic",
     "PressroomPage-Form-Email-Input": "Your email",
@@ -159,7 +180,7 @@
     "ArticlePage-Title": "Article",
     "ArticlePage-Heading": "Pressroom",
     "ArticlePage-Download": "Download pdf.",
-
+ 
     "CorporateGovernancePage-Title": "Corporate Governance",
     "CorporateGovernancePage-Description": "ICT meets the strictest demands on compliance, transparency,  as well as legal requirements, including tax laws and the relevant regulations. To support us, we work with one of the most reputable auditing companies in the world.",
     "CorporateGovernancePage-CrowdSection-Title": "Crowd 1",
@@ -173,5 +194,28 @@
     "CorporateGovernancePage-GovernanceSection-Description-Second": "ICT will address the challenge of long-term sustainability. We aim to implement our strategy following strict and ‘traditional’ corporate governance, compliance and transparency with the intention of taking the company public within four years. Over time, we will build a vast library of digital products that are easily accessible for our members. <br> <br> Compliance is looked upon as a competitive advantage within ICT. For KYC of customers, we use idvcheck.com (Malta) to ensure smooth and accurate KYC procedures, including PEP Screening and other compliance controls.",
     "CorporateGovernancePage-ParthershipsSection-Title": "Results & Partnerships",
     "CorporateGovernancePage-ParthershipsSection-Description": "Are you our next partner? <br> Get in touch to learn more and see how our team can help.",
-    "CorporateGovernancePage-ParthershipsSection-Button": "Contact Us"
+    "CorporateGovernancePage-ParthershipsSection-Button": "Contact Us",
+
+    "QuestionsAndAnswersPage-Title": "Questions & Answers",
+    "QuestionsAndAnswersPage-TopSection-Title": "Meet our people",
+    "QuestionsAndAnswersPage-TopSection-Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "QuestionsAndAnswersPage-QuestionSection-Title": "ICT",
+    "QuestionsAndAnswersPage-QuestionSection-TitleSecond": "Crowd 1",
+    "QuestionsAndAnswersPage-ParthnershipSection-Title": "Join our team",
+    "QuestionsAndAnswersPage-ParthnershipSection-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
+    "QuestionsAndAnswersPage-QuestionSection-Button": "View Open Positions",
+
+    "OurPeoplePage-Title": "Our People",
+    "OurPeoplePage-TopSection-Title": "Meet our people",
+    "OurPeoplePage-TopSection-Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "OurPeoplePage-ManagementSection-Title": "Management",
+    "OurPeoplePage-ManagementSectionBoard-Title": "Board",
+    "OurPeoplePage-ParthershipSection-Title": "Join our team",
+    "OurPeoplePage-ParthershipSection-Description": "We are always looking for talented people to join our force. Please don’t hesitate to apply to any of our currently open positions within the company.",
+    "OurPeoplePage-ParthershipSection-Button": "View Open Positions",
+
+    "ContactUsPage-Title": "Contact-us",
+    "ContactUsPage-Topic-Title": "Topic",
+    "ContactUsPage-Textarea-Title": "Type your inquiry here",
+    "ContactUsPage-Send": "Send"
 }

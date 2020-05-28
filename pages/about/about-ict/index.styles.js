@@ -4,6 +4,7 @@ import { BREAKPOINTS } from '../../../utils/constants'
 
 export const InfoBannerSection = styled.div`
     background-color: #fafafa;
+
     padding: 50px 0 100px;
     margin-bottom: 16px;
 
@@ -15,6 +16,7 @@ export const InfoBannerSection = styled.div`
 export const InfoBannerWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
 
@@ -60,9 +62,10 @@ export const  InfoBannerDescription = styled.div`
 `
 
 export const  InfoBannerTitle = styled.h2`
-    font-size: 31px;
     color: #1d1d1f;
     margin: 45px 0 25px;
+
+    font-size: 31px;
     font-family: "DM Sans Bold";
     line-height: 31px; 
 
@@ -72,9 +75,10 @@ export const  InfoBannerTitle = styled.h2`
 `
 
 export const  InfoBannerContent = styled.p`
-    font-size: 14px;
     color: #1D1D1F;
     margin-bottom: 58px;
+
+    font-size: 14px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
@@ -89,6 +93,7 @@ export const  InfoBannerContent = styled.p`
 
 export const  QuestionsBannerSection = styled.div`
     background-color: #fafafa;
+
     padding: 101px 0 15px;
     margin-bottom: 16px;
 
@@ -100,6 +105,7 @@ export const  QuestionsBannerSection = styled.div`
 export const  QuestionsBannerWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
 
@@ -144,14 +150,13 @@ export const  QuestionsBannerDescription = styled.div`
             display: block;
         }
     }
-
-  
 `
 
 export const  QuestionsBannerTitle = styled.h2`
-    font-size: 31px;
     color: #1D1D1F;
-    margin: 25px 0 20px; 
+    margin: 25px 0 20px;
+
+    font-size: 31px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
 
@@ -161,9 +166,10 @@ export const  QuestionsBannerTitle = styled.h2`
 `
 
 export const  QuestionsBannerContent = styled.p`
-    font-size: 14px;
     color: #1D1D1F;
     margin-bottom: 58px;
+    
+    font-size: 14px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 

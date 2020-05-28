@@ -1,24 +1,14 @@
 import React from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
 
 import { withTranslation } from '../../../i18n'
 
 import BaseButton from '../../../components/BaseButton'
-import BaseSection from '../../../components/BaseSection'
-import BaseSectionHeading from '../../../components/BaseSectionHeading'
+import OpenPositionsPagePositionItem from '../../../components/OpenPositionsPagePositionItem'
 
 import {
-    // OpenPositionsPageSection,
-    // OpenPositionsPageWrapper,
-    // OpenPositionsPageTitle,
-
     OpenPositionsPageList,
-    OpenPositionsPageItem,
-    OpenPositionsPageItemLink,
-    OpenPositionsPageItemTitle,
-    OpenPositionsPageItemContent,
 
     OpenPositionsPageWrapper,
     OpenPositionsPageTopSection,
@@ -43,26 +33,12 @@ function OpenPositionsPage ({ t }) {
 
             <OpenPositionsPageWrapper>
                 <OpenPositionsPageTopSection>
-                    <OpenPositionsPageTopSectionTitle>Open Positions</OpenPositionsPageTopSectionTitle>
-
-                    <OpenPositionsPageTopSectionDescription>
-                        ICT meets the strictest demands on compliance,
-                        transparency, as well as legal requirements, 
-                        including tax laws and the relevant regulations.
-                    </OpenPositionsPageTopSectionDescription>
+                    <OpenPositionsPageTopSectionTitle>{t('OpenPositionsPage-TopSection-Title')}</OpenPositionsPageTopSectionTitle>
+                    <OpenPositionsPageTopSectionDescription>{t('OpenPositionsPage-TopSection-Description')}</OpenPositionsPageTopSectionDescription>
                 </OpenPositionsPageTopSection>
 
                 <OpenPositionsPageList>
-                        {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => (
-                            <OpenPositionsPageItem key={index}>
-                                <Link href={`/company/open-positions/manager`}>
-                                    <OpenPositionsPageItemLink>
-                                        <OpenPositionsPageItemTitle>Job Title {index}</OpenPositionsPageItemTitle>
-                                        <OpenPositionsPageItemContent>Description</OpenPositionsPageItemContent>
-                                    </OpenPositionsPageItemLink>
-                                </Link>
-                            </OpenPositionsPageItem>
-                        ))}
+                    {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => <OpenPositionsPagePositionItem key={index} position={_} />)}
                 </OpenPositionsPageList>
 
             </OpenPositionsPageWrapper>
@@ -75,49 +51,14 @@ function OpenPositionsPage ({ t }) {
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>Working at ICT</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionsPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionsPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
-                            <CorporateGovernancePartnershipsDescription>
-                                We are always looking for talented people 
-                                to join our force. Please don’t hesitate to 
-                                apply to any of our currently open positions within the company.
-                            </CorporateGovernancePartnershipsDescription>
-
-                            <BaseButton blackStyle>Learn More</BaseButton>
+                            <BaseButton blackStyle>{t('OpenPositionsPage-ParthershipSection-Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>
             </CorporateGovernancePartnershipsSection>
-
-            {/* <BaseSectionHeading title={t('OpenPositionsPage-Heading')} />
-
-            <OpenPositionsPageSection>
-                <OpenPositionsPageWrapper>
-                    <OpenPositionsPageTitle>{t('OpenPositionsPage-Title')}</OpenPositionsPageTitle>
-
-                    <OpenPositionsPageList>
-                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => 
-                            <OpenPositionsPageItem key={index}>
-                                <Link href={`/company/open-positions/manager`}>
-                                    <OpenPositionsPageItemLink>
-                                        <OpenPositionsPageItemTitle>Job Title {index}</OpenPositionsPageItemTitle>
-                                        <OpenPositionsPageItemContent>Description</OpenPositionsPageItemContent>
-                                    </OpenPositionsPageItemLink>
-                                </Link>
-                            </OpenPositionsPageItem>
-                        )}
-                    </OpenPositionsPageList>
-                </OpenPositionsPageWrapper>
-            </OpenPositionsPageSection>    
-
-            <BaseSection
-                backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={t('OpenPositionsPage-JoinUs-Banner-Title')}
-                titleColor={'black'}
-                description={t('OpenPositionsPage-JoinUs-Banner-Description')}
-                buttonTitle={'Contact Us'}
-                buttonStyle={'blackStyle'}
-            /> */}
         </>
     )
 }

@@ -20,10 +20,12 @@ import {
     NewsPageArticlesTitle,
     NewsPageArticlesDescription,
     NewsPageArticlesWrapper,
+    
     NewsPagePressInquiriesSection,
     NewsPagePressInquiriesSectionWrapper,
     NewsPagePressInquiresTitle,
     NewsPagePressInquiresForm,
+
     InputWrapper,
     InputTitle,
     Input,
@@ -48,7 +50,7 @@ function PressroomPage ({ t }) {
 
             <NewsPageArticlesSection>
                 <NewsPageArticlesSectionWrapper>
-                    <NewsPageArticlesSectionTitle>Articles</NewsPageArticlesSectionTitle>
+                    <NewsPageArticlesSectionTitle>{t('PressroomPage-Articles-Title')}</NewsPageArticlesSectionTitle>
                         <NewsPageArticlesWrapper>
                             {[0, 1, 2, 3, 4, 5].map((_, index) => 
                                 <NewsPageArticles key={index}>
@@ -151,7 +153,7 @@ function PressroomPage ({ t }) {
                             />       
                         </TextareaWrapper>
 
-                        <SubmitButton type="submit">Send</SubmitButton>
+                        <SubmitButton type="submit">{t('PressroomPage-Form-Send')}</SubmitButton>
                     </NewsPagePressInquiresForm> 
                 </NewsPagePressInquiriesSectionWrapper>    
             </NewsPagePressInquiriesSection>

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { BREAKPOINTS } from '../../../../utils/constants'
+
 export const ArticlePageSection = styled.div`
     background-color: #fafafa;
 `
@@ -8,37 +10,40 @@ export const ArticlePageWrapper = styled.div`
     max-width: 690px;
     margin: 0 auto 16px;
     padding: 145px 0 310px;
+
     display: inherit;
+
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
         padding: 80px 0 160px;
         max-width: 520px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         padding: 50px 25px 100px;
     } 
 `
 
 export const ArticlePageTitle = styled.h1`
-    color: #1d1d1f;
     font-size: 47px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
+
+    color: #1d1d1f;
     text-align: left;
 
-    @media screen and (max-width: 1170px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 35px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 32px;
     }
 
-    @media screen and (max-width: 552px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 28px;
         margin-bottom: 0;
     }
@@ -47,6 +52,7 @@ export const ArticlePageTitle = styled.h1`
 export const ArticlePageTime = styled.p`
     color: #1D1D1F;
     margin-bottom: 37px;
+
     font-size: 21px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
@@ -54,16 +60,18 @@ export const ArticlePageTime = styled.p`
 
 export const ArticlePageParagraph = styled.p`
     color: #1d1d1f;
+
     margin-bottom: ${props => props.marginMedium ? '75px' : '35px'};
+    
     font-size: 21px;
     font-family: "DM Sans Regular";
     line-height: 31px;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 19px;
     }
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 17px;
     }
 `
