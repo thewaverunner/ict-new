@@ -10,9 +10,7 @@ export const ArticlePageWrapper = styled.div`
     max-width: 690px;
     margin: 0 auto 16px;
     padding: 145px 0 310px;
-
     display: inherit;
-
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
@@ -28,12 +26,12 @@ export const ArticlePageWrapper = styled.div`
 `
 
 export const ArticlePageTitle = styled.h1`
-    font-size: ${FONTS.h2}px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
-
     color: #1d1d1f;
     text-align: left;
+
+    font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 35px;
@@ -52,21 +50,21 @@ export const ArticlePageTitle = styled.h1`
 export const ArticlePageTime = styled.p`
     color: #1D1D1F;
     margin-bottom: 37px;
-
-    font-size: ${FONTS.h3}px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
+
+    font-size: ${FONTS.h3}px;
 `
 
 export const ArticlePageParagraph = styled.p`
     color: #1d1d1f;
-
-    margin-bottom: ${props => props.marginMedium ? '75px' : '35px'};
-    
-    font-size: ${FONTS.h3}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 31px;
+    
+    margin-bottom: ${props => props.marginMedium ? '75px' : '35px'};
 
+    font-size: ${FONTS.h3}px;
+    
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 19px;
     }

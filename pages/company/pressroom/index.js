@@ -43,7 +43,7 @@ function PressroomPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('PressroomPage-Title')}</title>
+                <title>{t('PressroomPage-Head-Title')}</title>
             </Head>
 
             <BaseSectionHeading title={t('PressroomPage-Heading')}/>

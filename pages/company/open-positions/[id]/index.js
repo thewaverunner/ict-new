@@ -28,7 +28,7 @@ function OpenPositionJobPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OpenPositionsJobPage-Title')}</title>
+                <title>{t('OpenPositionsJobPage-Head-Title')}</title>
             </Head>
 
 

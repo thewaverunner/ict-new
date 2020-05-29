@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS } from '../../utils/constants'
+import { 
+    BREAKPOINTS, 
+    FONTS 
+} from '../../utils/constants'
 
 export const QuestionsAndAnswersPageQuestionItem = styled.li` 
     padding: 15px 10px;
     border-top: 1px solid #1d1d1f;
-
     cursor: pointer;
 
     &:last-child {
@@ -25,21 +27,21 @@ export const QuestionsAndAnswersPageQuestionItemTitleWrapper = styled.div`
 `
 
 export const QuestionsAndAnswersPageQuestionItemTitle = styled.h2`       
-    font-family: "DM Sans Bold";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Bold';
     line-height: 31.5px;
-
     color: #000;
+    
+    font-size: ${FONTS.p}px;
 `
 
 export const QuestionsAndAnswersPageQuestionIcon = styled.div``
 
 export const QuestionsAndAnswersPageQuestionItemDescription = styled.p`       
-    font-family: "DM Sans Regular";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Regular';
     line-height: 21px;
-
     color: #1d1d1f;
     padding: 0 0 10px 0;
     max-width: 90%;
+    
+    font-size: ${FONTS.p}px;
 `

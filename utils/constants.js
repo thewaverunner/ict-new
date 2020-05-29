@@ -6,6 +6,8 @@ export const BREAKPOINTS = {
     xl: 1400,
 }
 
+export const MAX_WIDTH_CONTAINER = 1200
+
 export const FONTS = {
     h1: 46,
     h2: 32,

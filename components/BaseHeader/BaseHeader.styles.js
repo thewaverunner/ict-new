@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import {
+    BREAKPOINTS,
+    MAX_WIDTH_CONTAINER 
+} from '../../utils/constants'
 
 export const Header = styled.header`
     padding: 0;
@@ -17,8 +20,9 @@ export const Header = styled.header`
 `
 
 export const HeaderContainer = styled.div`
-    max-width: 1200px;
     margin: 0 auto;
+
+    max-width: ${MAX_WIDTH_CONTAINER}px;
 `
 
 export const HeaderNavWrapper = styled.div`
@@ -34,14 +38,12 @@ export const HeaderNavWrapper = styled.div`
 export const HeaderMobileNav = styled.div`
     background-color: #fff;
     padding: 17px 25px;
-
     border:1px solid rgba(112, 112, 112, 0.08);
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 2;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;

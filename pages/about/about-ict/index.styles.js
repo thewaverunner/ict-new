@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS } from '../../../utils/constants'
+import { 
+    BREAKPOINTS, 
+    FONTS 
+} from '../../../utils/constants'
 
 export const InfoBannerSection = styled.div`
     background-color: #fafafa;
-
     padding: 50px 0 100px;
     margin-bottom: 16px;
 
@@ -16,7 +18,6 @@ export const InfoBannerSection = styled.div`
 export const InfoBannerWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
 
@@ -31,6 +32,7 @@ export const InfoBannerWrapper = styled.div`
 
 export const InfoBanner = styled.div`
     padding-right: 35px;
+
     &:last-child {
         padding-right: 0;
     }
@@ -64,7 +66,6 @@ export const  InfoBannerDescription = styled.div`
 export const  InfoBannerTitle = styled.h2`
     color: #1d1d1f;
     margin: 45px 0 25px;
-
     font-size: 31px;
     font-family: "DM Sans Bold";
     line-height: 31px; 
@@ -77,10 +78,10 @@ export const  InfoBannerTitle = styled.h2`
 export const  InfoBannerContent = styled.p`
     color: #1D1D1F;
     margin-bottom: 58px;
-
-    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
+
+    font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px){
         margin-bottom: 20px;
@@ -93,7 +94,6 @@ export const  InfoBannerContent = styled.p`
 
 export const  QuestionsBannerSection = styled.div`
     background-color: #fafafa;
-
     padding: 101px 0 15px;
     margin-bottom: 16px;
 
@@ -105,7 +105,6 @@ export const  QuestionsBannerSection = styled.div`
 export const  QuestionsBannerWrapper = styled.div`
     max-width: 1170px;
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
 
@@ -155,7 +154,6 @@ export const  QuestionsBannerDescription = styled.div`
 export const  QuestionsBannerTitle = styled.h2`
     color: #1D1D1F;
     margin: 25px 0 20px;
-
     font-size: 31px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
@@ -168,10 +166,10 @@ export const  QuestionsBannerTitle = styled.h2`
 export const  QuestionsBannerContent = styled.p`
     color: #1D1D1F;
     margin-bottom: 58px;
-    
-    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
+
+    font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         margin-bottom: 25px;

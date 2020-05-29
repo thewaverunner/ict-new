@@ -15,18 +15,14 @@ import {
     HomePageTopSection,
     HomePageTopSectionTitle,
     HomePageTopSectionDescription,
-
     HomePageBannersWrapper,
-
     HomePageImpactSection,
     HomePageImpactContentWrapper,
     HomePageImpactContent,
     HomePageImpactContentTitle,
     HomePageImpactContentDescription,
-
     HomePageNetworkSection,
     HomePageNetworkTitle,
-
     HomePageLatestNewsSection,
     HomePageLatestNewsWrapper,
     HomePageLatestNewsTitle,
@@ -79,7 +75,7 @@ function HomePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('HomePage_Title')}</title>
+                <title>{t('HomePage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
@@ -97,7 +93,6 @@ function HomePage ({ t }) {
             </HomePageTopSectionWrapper>
 
             <HomePageBannersWrapper>
-                {/* {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)} */}
                 {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)}
             </HomePageBannersWrapper>
 

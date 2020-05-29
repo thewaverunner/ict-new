@@ -28,7 +28,7 @@ function OpenPositionsPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OpenPositionsPage-Title')}</title>
+                <title>{t('OpenPositionsPage-Head-Title')}</title>
             </Head>
 
             <OpenPositionsPageWrapper>

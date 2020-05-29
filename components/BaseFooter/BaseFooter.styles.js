@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
+import { 
+    BREAKPOINTS,
+    FONTS, 
+    COLORS, 
+    MAX_WIDTH_CONTAINER 
+} from '../../utils/constants'
 
 export const Footer = styled.footer`
     width: 100%;
@@ -9,8 +14,9 @@ export const Footer = styled.footer`
 `
 
 export const FooterWrapper = styled.div`
-    max-width: 1200px;
     margin: 0 auto;
+
+    max-width: ${MAX_WIDTH_CONTAINER}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 950px;
@@ -28,7 +34,6 @@ export const FooterWrapper = styled.div`
 export const FooterTopContent = styled.div`
     display: flex;
     justify-content: space-between;
-    
     border-bottom: 1px solid #ededed;
     padding: 83px 0 40px;
 
@@ -43,11 +48,11 @@ export const FooterChangeLanguage = styled.div`
     flex-basis: 10%;
     font-size: 16px;
     font-family: 'DM Sans Bold';
-
-    color: ${COLORS.dark};
     display: flex;
     position: relative;
-
+    
+    color: ${COLORS.dark};
+    
     img {
         width: 12px;
         height: 12px;
@@ -73,6 +78,7 @@ export const FooterLinksTitle = styled.div`
     margin-bottom: 25px;
     font-size: 16px;
     font-family: 'DM Sans Bold';
+
     color: ${COLORS.dark};
 `
 
@@ -83,12 +89,12 @@ export const FooterLinksItem = styled.li`
 `
 
 export const FooterLinksItemLink = styled.a`
-    font-family: "DM Sans Regular";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Regular';
     text-decoration: none;
-
-    color: ${COLORS.dark};
     transition: opacity .3s ease-in-out;
+    
+    font-size: ${FONTS.p}px;
+    color: ${COLORS.dark};
 
     &:hover {
         opacity: 0.5;
@@ -103,7 +109,6 @@ export const FooterBottomWrapper = styled.div`
     max-width: 1280px;
     margin: 0 auto;
     padding: 26px 0;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -114,10 +119,10 @@ export const FooterBottomWrapper = styled.div`
 `
 
 export const FooterCopyright = styled.div`
-    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Medium';
-
     color: #a3a3a4;
+
+    font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         margin-top: 20px;
@@ -154,13 +159,12 @@ export const FooterBottomPolicyItem = styled.li`
 
 export const FooterBottomPolicyItemLink = styled.a`
     color: #a3a3a4;
-
-    font-size: ${FONTS.p}px;
     text-decoration: none;
     font-family: 'DM Sans Medium';
-    
     transition: color 0.3s ease-in-out;
-
+    
+    font-size: ${FONTS.p}px;
+    
     &:hover {
         color: ${COLORS.dark};
     }

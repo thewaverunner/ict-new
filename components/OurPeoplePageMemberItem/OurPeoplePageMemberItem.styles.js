@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS } from '../../utils/constants'
+import { 
+    BREAKPOINTS, 
+    FONTS 
+} from '../../utils/constants'
 
 export const OurPeoplePageManagementItem = styled.div`       
     margin-bottom: 30px;
@@ -36,7 +39,6 @@ export const OurPeoplePageManagementItemInfoWrapper = styled.div`
     position: absolute;
     left: 25px;
     bottom: 25px;
-
     display: flex;
     flex-direction: column;
 
@@ -48,40 +50,37 @@ export const OurPeoplePageManagementItemInfoWrapper = styled.div`
 
 export const OurPeoplePageManagementItemDescriptionWrapper = styled.div`       
     padding: 25px;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-
     background: #fafafa;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
-
     min-height: 297px;
     box-sizing: border-box;
 `
 
 export const OurPeoplePageManagementItemDescription = styled.p`       
-    font-family: "DM Sans Regular";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Regular';
     line-height: 21px;
-
     color: #1d1d1f;
     padding-bottom: 20px;
+    
+    font-size: ${FONTS.p}px;
 `
 
 export const OurPeoplePageManagementItemName = styled.div`       
-    font-family: "DM Sans Bold";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Bold';
     line-height: 16.8px;
-
     color: #fafafa;
+    
+    font-size: ${FONTS.p}px;
 `
 
 export const OurPeoplePageManagementItemPosition = styled.div`       
-    font-family: "DM Sans Regular";
-    font-size: ${FONTS.p}px;
+    font-family: 'DM Sans Regular';
     line-height: 16.8px;
-
     color: #fafafa;
+    
+    font-size: ${FONTS.p}px;
 `

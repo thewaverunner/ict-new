@@ -76,7 +76,7 @@ function QuestionsAndAnswersPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('QuestionsAndAnswersPage-Title')}</title>
+                <title>{t('QuestionsAndAnswersPage-Head-Title')}</title>
             </Head>
 
             <QuestionsAndAnswersPageTopSectionWrapper>

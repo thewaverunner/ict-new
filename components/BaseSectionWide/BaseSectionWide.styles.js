@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
+import { 
+    BREAKPOINTS, 
+    FONTS, 
+    COLORS 
+} from '../../utils/constants'
 
 // Full Mode
 
@@ -19,7 +23,6 @@ export const BaseSectionWideFullContent = styled.div`
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
-
     position: absolute;
     left: 0;
     right: 0;
@@ -63,12 +66,13 @@ export const BaseSectionWideFullContentWrapper = styled.div`
 export const BaseSectionWideFullImageWrapper = styled.div`
     width: 100%;
     min-height: 696px;
-    background-image: url(${props => props.src});
     background-size: cover;
 
+    background-image: url(${props => props.src});
+
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
-         width: 100%;
-         min-height: 369px;
+        width: 100%;
+        min-height: 369px;
     }
 `
 
@@ -79,11 +83,13 @@ export const BaseSectionWideFullImage = styled.img`
 `
 
 export const BaseSectionWideFullTitle = styled.h1`
-    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
-    font-size: ${FONTS.h2}px;
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     line-height: 56.4px;
     margin-bottom: 20px;
+
+    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
+
+    font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 44px;
@@ -104,19 +110,20 @@ export const BaseSectionWideFullTitle = styled.h1`
         font-size: 30px;
         line-height: 37px;
         margin-bottom: 20px;
-        font-family: "DM Sans Bold";
+        font-family: 'DM Sans Bold';
     }
 `
 
 export const BaseSectionWideFullSubtitle = styled.h3`
-    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
-
-    font-size: ${FONTS.p}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 31.5px;
     margin-bottom: 15px;
     position: relative;
     padding-top: 30px;
+
+    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
+
+    font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         font-size: 12px;
@@ -125,13 +132,14 @@ export const BaseSectionWideFullSubtitle = styled.h3`
 `
 
 export const BaseSectionWideFullDescription = styled.p`
-    color: ${(props) => props.themeMode === 'light' ? '#333333' : COLORS.white};
-
-    font-size: ${FONTS.h3}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 31px;
     margin-bottom: 70px;
     position: relative;
+
+    color: ${(props) => props.themeMode === 'light' ? '#333333' : COLORS.white};
+
+    font-size: ${FONTS.h3}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 20px;
@@ -149,11 +157,12 @@ export const BaseSectionWideFullDescription = styled.p`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        font-family: "DM Sans Regular";
+        font-family: 'DM Sans Regular';
         font-weight: normal;
-        font-size: ${FONTS.p}px;
         line-height: 28px;
         margin-bottom: 35px;
+
+        font-size: ${FONTS.p}px;
     }
 `
 
@@ -163,11 +172,9 @@ export const BaseSectionWideHalfWrapper = styled.div`
     display: flex;
     margin-bottom: 16px;
     justify-content: flex-start;
-
     position: relative;
 
     ${(props) => props.imageFull ? '' : 'min-height: 696px'};
-
     flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
     background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
 
@@ -211,18 +218,16 @@ export const BaseSectionWideHalfContent = styled.div`
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    align-items: ${(props) => props.reverse ? 'flex-start' : 'flex-end'};
-
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+
+    align-items: ${(props) => props.reverse ? 'flex-start' : 'flex-end'};
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         position: relative;
@@ -243,12 +248,13 @@ export const BaseSectionWideHalfContentWrapper = styled.div`
 `
 
 export const BaseSectionWideHalfTitle = styled.h1`
+    font-family: 'DM Sans Bold';
+    line-height: 44px;
+    margin-bottom: 15px;
+
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
     font-size: ${FONTS.h2}px;
-    font-family: "DM Sans Bold";
-    line-height: 44px;
-    margin-bottom: 15px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 43px;
@@ -273,14 +279,15 @@ export const BaseSectionWideHalfTitle = styled.h1`
 `
 
 export const BaseSectionWideHalfSubtitle = styled.h3`
-    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
-
-    font-size: ${FONTS.p}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 21px;
     margin-bottom: 15px;
     position: relative;
     padding-top: 30px;
+
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: ${FONTS.p}px;
 
     &:before {
         content: '';
@@ -307,14 +314,15 @@ export const BaseSectionWideHalfSubtitle = styled.h3`
 `
 
 export const BaseSectionWideHalfDescription = styled.p`
-    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
-
-    font-size: ${FONTS.h3}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 31px;
     margin-bottom: 15px;
     position: relative;
     padding-top: 30px;
+
+    color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
+
+    font-size: ${FONTS.h3}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 20px;
@@ -423,7 +431,7 @@ export const BaseSectionWideShadowTitle = styled.h1`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
     font-size: ${FONTS.h2}px;
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     line-height: 44px;
     margin-bottom: 15px;
 
@@ -442,7 +450,7 @@ export const BaseSectionWideShadowSubtitle = styled.h3`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
     font-size: ${FONTS.p}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 21px;
     margin-bottom: 15px;
     position: relative;
@@ -468,7 +476,7 @@ export const BaseSectionWideShadowSubtitle = styled.h3`
 export const BaseSectionWideShadowDescription = styled.p`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
     font-size: ${FONTS.h3}px;
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 31px;
     margin-bottom: 55px;
     position: relative;

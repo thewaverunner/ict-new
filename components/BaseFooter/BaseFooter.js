@@ -24,10 +24,10 @@ import {
 
 function BaseFooter ({ t, backgroundWhite }) {
     const aboutLinks = [
-        { title: t('BaseFooter_About_ICT'), link: '#' },
-        { title: t('BaseFooter_About_Industry'), link: '#' },
-        { title: t('BaseFooter_About_Business'), link: '#' },
-        { title: t('BaseFooter_About_FAQ'), link: '#' },
+        { title: t('BaseFooter_About_ICT'), link: '/about/about-ict' },
+        { title: t('BaseFooter_About_Industry'), link: '/about/our-industry' },
+        { title: t('BaseFooter_About_Business'), link: '/about/our-business' },
+        { title: t('BaseFooter_About_FAQ'), link: '/about/questions-and-answers' },
     ]
     
     const responsibilityLinks = [
@@ -38,11 +38,11 @@ function BaseFooter ({ t, backgroundWhite }) {
     ]
     
     const companyLinks = [
-        { title: t('BaseFooter_Company_Governance'), link: '#' },
-        { title: t('BaseFooter_Company_People'), link: '#' },
-        { title: t('BaseFooter_Company_Positions'), link: '#' },
-        { title: t('BaseFooter_Company_Pressroom'), link: '#' },
-        { title: t('BaseFooter_Company_Contact'), link: '#' }
+        { title: t('BaseFooter_Company_Governance'), link: '/company/corporate-governance' },
+        { title: t('BaseFooter_Company_People'), link: '/company/our-people' },
+        { title: t('BaseFooter_Company_Positions'), link: '/company/open-positions' },
+        { title: t('BaseFooter_Company_Pressroom'), link: '/company/pressroom' },
+        { title: t('BaseFooter_Company_Contact'), link: '/contact-us' }
     ]
     
     const footerBottomLinks = [

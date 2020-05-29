@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
+import {
+    BREAKPOINTS, 
+    FONTS, 
+    COLORS 
+} from '../../utils/constants'
 
 export const BaseSectionWrapper = styled.div`
-    background: url(${props => props.backgroundImage});
-    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : (props.buttonTitle  ? '126px 0 126px' : '150px 0')};
-
     background-size: cover;
     width: 100%;
     margin-bottom: 16px;
+
+    background: url(${props => props.backgroundImage}) no-repeat;
+    padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : (props.buttonTitle  ? '126px 0 126px' : '150px 0')};
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         padding:  42px 0 50px;
@@ -35,12 +39,12 @@ export const BaseSectionContent = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
        padding: 0 25px;
+
        align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
 `
 
 export const BaseSectionTitle = styled.h1`
-    font-size: ${FONTS.h1}px;
     line-height: 44px;
     font-family: 'DM Sans Bold';
 
@@ -51,6 +55,8 @@ export const BaseSectionTitle = styled.h1`
     -webkit-text-fill-color: ${props => props.titleColor === 'gradient' ? 'transparent' : ''};
     max-width: ${props => props.titleColor === 'gradient' ? '74%' : ''};
     text-align: ${props => props.titleColor === 'gradient' ? 'center' : ''};
+
+    font-size: ${FONTS.h1}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         font-size: 44px;
@@ -80,13 +86,12 @@ export const BaseSectionTitle = styled.h1`
 
 export const BaseSectionSubtitle = styled.h3`
     font-size: 31px;
-
-    color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
-
     margin: 22px 0 15px;
     line-height: 44px;
     font-family: 'DM Sans Bold';
     position: relative;
+    
+    color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
 
     &:before {
         content: '';
@@ -116,14 +121,14 @@ export const BaseSectionSubtitle = styled.h3`
 `
 
 export const BaseSectionDescription = styled.p`
-    font-size: ${FONTS.h3}px;
+    font-family: 'DM Sans Regular';
+    line-height: 31px;
+    max-width: 65%;
 
     color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
     margin-bottom: ${props => props.buttonTitle ? '50px' : '0'};
 
-    font-family: 'DM Sans Regular';
-    line-height: 31px;
-    max-width: 65%;
+    font-size: ${FONTS.h3}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
         max-width: 80%;

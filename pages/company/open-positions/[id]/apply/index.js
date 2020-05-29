@@ -64,7 +64,7 @@ function OpenPositionApplyPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OpenPositionApplyPage-Title')}</title>
+                <title>{t('OpenPositionApplyPage-Head-Title')}</title>
             </Head>
 
             <BaseSection

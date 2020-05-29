@@ -20,7 +20,7 @@ function ArticlePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('ArticlePage-Title')}</title>
+                <title>{t('ArticlePage-Head-Title')}</title>
             </Head>
 
             <BaseSectionHeading title={t('ArticlePage-Heading')} />

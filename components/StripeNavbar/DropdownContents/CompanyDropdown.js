@@ -24,7 +24,7 @@ const CompanyDropdown = ({ t }) => {
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/company/our-people">
                             <a>{t('BaseFooter_Company_People')}</a>
                         </Link>
                     </li>
@@ -36,13 +36,13 @@ const CompanyDropdown = ({ t }) => {
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/company/pressroom">
                             <a>{t('BaseFooter_Company_Pressroom')}</a>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href="/">
+                        <Link href="/contact-us">
                             <a>{t('BaseFooter_Company_Contact')}</a>
                         </Link>
                     </li>

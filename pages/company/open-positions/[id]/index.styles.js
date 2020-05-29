@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../../../utils/constants'
-
+import { 
+    BREAKPOINTS, 
+    FONTS, 
+    COLORS, 
+    MAX_WIDTH_CONTAINER 
+} from '../../../../utils/constants'
 
 export const OpenPositionJobPageSection = styled.div`
     max-width: 890px;
-
     margin: 0 auto;
     padding: 50px 25px;
 
@@ -23,10 +26,9 @@ export const OpenPositionJobPageDescriptionJobWrapper = styled.div`
 export const OpenPositionJobPageTaskWrapper = styled.div``
 
 export const OpenPositionJobPageSectionTitle = styled.h2`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 24px;
     line-height: 24px;
-
     color: #1d1d1f;
     margin-bottom: 20px;
 
@@ -36,12 +38,12 @@ export const OpenPositionJobPageSectionTitle = styled.h2`
 `
 
 export const OpenPositionJobPageSectionDescription = styled.p`
-    font-family: "DM Sans Regular";
-    font-size: ${FONTS.h3}px;
+    font-family: 'DM Sans Regular';
     line-height: 31.5px;
-
     color: #1d1d1f;
     margin-bottom: 56px;
+
+    font-size: ${FONTS.h3}px;
 `
 
 export const CorporateGovernancePartnershipsSection = styled.div`
@@ -69,7 +71,6 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
-
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
     
@@ -86,19 +87,18 @@ export const CorporateGovernancePartnershipsContent = styled.div`
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1200px;
         margin: 0 auto;
         padding-left: 20px;
-    
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
+
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `
 
@@ -117,27 +117,29 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 34px;
-
-    color: ${COLORS.dark};
     margin-bottom: 22px;
 
+    color: ${COLORS.dark};
+    
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: ${FONTS.h1}px;
         line-height: 44px;
+    
+        font-size: ${FONTS.h1}px;
     }
 `
 
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: ${FONTS.p}px;
     line-height: 21px;
-
     color: #1d1d1f;
     margin-bottom: 31px;
+    
+    font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
+
+        font-size: ${FONTS.h3}px;
     }
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS, MAX_WIDTH_CONTAINER } from '../../../utils/constants'
 
 export const QuestionsAndAnswersPageTopSectionWrapper = styled.div`
     padding: 0 25px;
@@ -31,30 +31,32 @@ export const QuestionsAndAnswersPageTopSectionTitle = styled.h1`
     font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 34px;
+    margin-bottom: 20px;
 
     color: ${COLORS.dark};
-    margin-bottom: 20px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         text-align: center;
     }
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: ${FONTS.h1}px;
         line-height: 44px;
+
+        font-size: ${FONTS.h1}px;
     }
 `
 
 export const QuestionsAndAnswersPageTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
-    font-size: ${FONTS.p}px;
     line-height: 21px;
-
     color: #1d1d1f;
+    
+    font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: ${FONTS.h3}px;
         line-height: 24px;
+
+        font-size: ${FONTS.h3}px;
     }
 `
 
@@ -77,10 +79,9 @@ export const QuestionsAndAnswersPageQuestionSection = styled.div`
 `
 
 export const QuestionsAndAnswersPageQuestionSectionTitle = styled.h2`       
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 32px;
     line-height: 44px;
-
     color: #1d1d1f;
     margin-bottom: 15px;
 `
@@ -118,11 +119,10 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
-
-    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
-    
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
+
+    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
@@ -135,19 +135,18 @@ export const CorporateGovernancePartnershipsContent = styled.div`
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1200px;
         margin: 0 auto;
         padding-left: 20px;
-    
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
+
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `
 
@@ -166,27 +165,29 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 34px;
+    margin-bottom: 22px;
 
     color: ${COLORS.dark};
-    margin-bottom: 22px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: ${FONTS.h1}px;
         line-height: 44px;
+
+        font-size: ${FONTS.h1}px;
     }
 `
 
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: ${FONTS.p}px;
     line-height: 21px;
-
     color: #1d1d1f;
     margin-bottom: 31px;
 
+    font-size: ${FONTS.p}px;
+
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
+
+        font-size: ${FONTS.h3}px;
     }
 `

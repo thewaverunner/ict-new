@@ -57,7 +57,7 @@ function CorporateGovernancePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('CorporateGovernancePage-Title')}</title>
+                <title>{t('CorporateGovernancePage-Head-Title')}</title>
             </Head>
 
             <CorporateGovernanceWrapper>

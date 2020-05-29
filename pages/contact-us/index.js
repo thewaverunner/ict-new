@@ -29,7 +29,7 @@ function ContactUsPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('ContactUsPage-Title')}</title>
+                <title>{t('ContactUsPage-Head-Title')}</title>
             </Head>
 
             <BaseSectionHeading 

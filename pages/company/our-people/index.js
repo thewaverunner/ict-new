@@ -113,7 +113,7 @@ function OurPeoplePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OurPeoplePage-Title')}</title>
+                <title>{t('OurPeoplePage-Head-Title')}</title>
             </Head>
 
             <OurPeopleTopSection>
