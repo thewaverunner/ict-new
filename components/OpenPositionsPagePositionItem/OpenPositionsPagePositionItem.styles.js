@@ -44,8 +44,7 @@ export const OpenPositionsPageItem = styled.div`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.xl}px) {
-        min-width: 410px;
-        min-height: 298px;
+     
     }
 `
 

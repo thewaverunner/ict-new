@@ -54,7 +54,7 @@ export const OpenPositionsPageList = styled.div`
     flex-wrap: wrap;
 
     @media screen and (min-width: ${BREAKPOINTS.xl}px) {
-        max-width: 1350px;
+        max-width: 1200px;
 
         margin: 0 auto;
         margin-bottom: 98px;

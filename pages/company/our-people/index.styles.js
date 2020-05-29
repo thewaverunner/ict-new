@@ -63,7 +63,7 @@ export const OurPeoplePageManagementSection = styled.div`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.xl}px) {
-        max-width: 1350px;
+        max-width: 1200px;
     }
 `
 

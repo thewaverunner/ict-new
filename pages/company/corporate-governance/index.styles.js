@@ -225,7 +225,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
         padding-left: 20px;
     
