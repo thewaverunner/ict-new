@@ -9,7 +9,8 @@ import {
 // Full Mode
 
 export const BaseSectionWideFullWrapper = styled.div`
-    margin-bottom: 16px;    
+    margin-bottom: 16px;   
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     background-size: cover;
@@ -173,6 +174,7 @@ export const BaseSectionWideHalfWrapper = styled.div`
     margin-bottom: 16px;
     justify-content: flex-start;
     position: relative;
+    overflow: hidden; 
 
     ${(props) => props.imageFull ? '' : 'min-height: 696px'};
     flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
@@ -354,6 +356,7 @@ export const BaseSectionWideShadowWrapper = styled.div`
     justify-content: flex-start;
     margin-bottom: 16px;
     position: relative;
+    overflow: hidden; 
 
     flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
     background-color: ${(props) => props.themeMode === 'dark' ? '#1D1D1F' : '#FAFAFA'};
