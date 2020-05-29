@@ -22,7 +22,7 @@ import {
     FooterBottomPolicyItemLink,
 } from './BaseFooter.styles'
 
-function BaseFooter ({ t }) {
+function BaseFooter ({ t, backgroundWhite }) {
     const aboutLinks = [
         { title: t('BaseFooter_About_ICT'), link: '#' },
         { title: t('BaseFooter_About_Industry'), link: '#' },
@@ -80,7 +80,7 @@ function BaseFooter ({ t }) {
     }
 
     return (
-        <Footer>
+        <Footer backgroundWhite={backgroundWhite}>
             <FooterWrapper>
                 <FooterTopContent>
                     <FooterChangeLanguage>

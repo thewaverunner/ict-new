@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { BREAKPOINTS, FONTS } from '../../utils/constants'
 
 export const OpenPositionsPageItem = styled.div`
     min-width: 100%;
@@ -68,7 +68,7 @@ export const OpenPositionsPageItemTitle = styled.h2`
 `
 
 export const OpenPositionsPageItemContent = styled.p`
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     line-height: 31px;
     font-family: 'DM Sans Regular';
 

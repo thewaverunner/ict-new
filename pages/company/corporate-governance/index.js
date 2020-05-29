@@ -77,7 +77,6 @@ function CorporateGovernancePage ({ t }) {
                     ))}
                 </CorporateGovernanceCrowdSection>
 
-
                 {governanceSection.map((section, index) => (
                     <CorporateGovernanceFoundationSection key={index}>
                         <CorporateGovernanceFoundationImage>
@@ -94,10 +93,10 @@ function CorporateGovernancePage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
-                    <img src="/static/images/company-governance-parthnership.svg" />
+                    <img src="/static/images/company-parthership.svg" />
                 </CorporateGovernancePartnershipsImage> 
             
-                <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
+                <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
                             <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage-ParthershipsSection-Title')}</CorporateGovernancePartnershipsTitle>

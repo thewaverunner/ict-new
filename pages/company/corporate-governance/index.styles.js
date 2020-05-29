@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../../utils/constants'
 
 export const CorporateGovernanceWrapper = styled.div`
     padding: 0 25px;
@@ -20,7 +20,7 @@ export const CorporateGovernanceWrapper = styled.div`
             height: 4px;
             background: #1D1D1F;  
             position: absolute;
-            top: 5%;
+            top: 9%;
         }
 
         &:before {
@@ -38,7 +38,7 @@ export const CorporateGovernanceTopSection = styled.div`
 
    @media screen and (min-width: ${BREAKPOINTS.md}px) {
         margin: 0 50px;
-        padding: 38px 0 130px;
+        padding: 130px 0;
 
         text-align: center;
     }
@@ -49,25 +49,25 @@ export const CorporateGovernanceTopSectionTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
     margin-bottom: 20px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 56px;
-        line-height: 60px;
+        font-size: ${FONTS.h1}px;
+        line-height: 44px;
     }
 `
 
 export const CorporateGovernanceTopSectionDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #333333;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 24px;
-        line-height: 38px;
+        font-size: ${FONTS.h3}px;
+        line-height: 24px;
     }
 `
 
@@ -94,11 +94,11 @@ export const CorporateGovernanceCrowdTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h2}px;
+        line-height: 44px;
         text-align: center;
         width: 100%;
     }
@@ -131,7 +131,7 @@ export const CorporateGovernanceCrowdNumber = styled.div`
 
 export const CorporateGovernanceCrowdDescription = styled.div`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #1d1d1f;
@@ -167,18 +167,18 @@ export const CorporateGovernanceFoundationTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
     margin-bottom: 35px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h2}px;
+        line-height: 44px;
     }
 `
 
 export const CorporateGovernanceFoundationDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
     color: #1d1d1f;
 `
@@ -194,9 +194,11 @@ export const CorporateGovernancePartnershipsSection = styled.div`
 `
 
 export const CorporateGovernancePartnershipsImage = styled.div`
+    background: ${props => props.backgroundStyle === 'white' ? '#fafafa' : COLORS.white};
+
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
-        width: 45%;
+        width: 40%;
         overflow: hidden;
 
         img {
@@ -210,20 +212,20 @@ export const CorporateGovernancePartnershipsContent = styled.div`
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
 
-    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
+    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
         margin: 0;
         padding: 0;
-        width: 55%;
+        width: 60%;
     }
 `
 
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1170px;
+        max-width: 1000px;
         margin: 0 auto;
         padding-left: 20px;
     
@@ -255,26 +257,26 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
     margin-bottom: 22px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h2}px;
+        line-height: 44px;
     }
 `
 
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #1d1d1f;
     margin-bottom: 31px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 21px;
+        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
     }
 `

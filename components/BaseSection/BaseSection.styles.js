@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
 
 export const BaseSectionWrapper = styled.div`
     background: url(${props => props.backgroundImage});
@@ -40,12 +40,12 @@ export const BaseSectionContent = styled.div`
 `
 
 export const BaseSectionTitle = styled.h1`
-    font-size: 47px;
-    line-height: 60px;
+    font-size: ${FONTS.h1}px;
+    line-height: 44px;
     font-family: 'DM Sans Bold';
 
-    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
-    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '15px'};
+    color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
+    margin-bottom: ${props => props.titleColor === 'gradient' ? '30px' : '22px'};
     background: ${props => props.titleColor === 'gradient' ? 'linear-gradient(90deg, rgba(67,195,251,1) 0%, rgba(167,56,250,1) 100%)' : '' };
     -webkit-background-clip: ${props => props.titleColor === 'gradient' ? 'text' : ''};
     -webkit-text-fill-color: ${props => props.titleColor === 'gradient' ? 'transparent' : ''};
@@ -80,10 +80,10 @@ export const BaseSectionTitle = styled.h1`
 export const BaseSectionSubtitle = styled.h3`
     font-size: 31px;
 
-    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
 
     margin-bottom: 15px;
-    line-height: 60px;
+    line-height: 44px;
     font-family: 'DM Sans Bold';
     position: relative;
 
@@ -111,9 +111,9 @@ export const BaseSectionSubtitle = styled.h3`
 `
 
 export const BaseSectionDescription = styled.p`
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
 
-    color: ${props => props.titleColor === 'black' ? '#1D1D20' : '#ffffff'};
+    color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
     margin-bottom: ${props => props.buttonTitle ? '50px' : '0'};
 
     font-family: 'DM Sans Regular';

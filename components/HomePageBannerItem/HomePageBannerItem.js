@@ -23,7 +23,7 @@ function HomePageBannerItem ({ banner }) {
                         <HomePageBannerContentTitle>{banner.title}</HomePageBannerContentTitle>
                         <HomePageBannerContentDescription>{banner.description}</HomePageBannerContentDescription>
 
-                        <BaseButton blackStyle>Learn More</BaseButton>
+                        {/* <BaseButton blackStyle>Learn More</BaseButton> */}
                     </HomePageBannerContent>
                 </HomePageBannerContentWrapper>
             </HomePageBannerContentSection>

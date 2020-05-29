@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import {FONTS} from '../../../utils/constants'
+
 const NavbarEl = styled.nav`
     margin: auto;
 `
@@ -13,7 +15,7 @@ const NavbarList = styled.ul`
     background-color: transparent;
 
     li {
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         font-family: 'DM Sans Bold';
     }
 `

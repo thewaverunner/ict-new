@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import {FONTS, COLORS} from '../../utils/constants'
+
 export const Button = styled.button`
     background-color: transparent;
     text-decoration: none;
@@ -8,7 +10,7 @@ export const Button = styled.button`
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     display: flex;
     
@@ -16,12 +18,12 @@ export const Button = styled.button`
     
     min-width: ${props => (props.hideBorder ? "" : '160px')};
     padding: ${props => (props.hideBorder ? "0" : '14px 0')};
-    color: ${props => (props.blackStyle ? "#000" : '#ffffff')};
-    border: ${props => props.hideBorder ? '' : `1.5px solid ${props.blackStyle ? '#000000' : '#ffffff'}`};
+    color: ${props => (props.blackStyle ? "#000" : COLORS.white)};
+    border: ${props => props.hideBorder ? '' : `1.5px solid ${props.blackStyle ? COLORS.black : COLORS.white}`};
 
     &:hover {
-        background-color:${props => props.hideBorder ? '' : (props.blackStyle ? "#1D1D20" : '#ffffff')};
-        color:${props => props.hideBorder ? '' : (props.blackStyle ? "#ffffff" : '#1D1D20')};
+        background-color:${props => props.hideBorder ? '' : (props.blackStyle ? COLORS.dark : COLORS.white)};
+        color:${props => props.hideBorder ? '' : (props.blackStyle ? COLORS.white : COLORS.dark)};
     }
 
     span {

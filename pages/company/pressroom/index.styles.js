@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS } from '../../../utils/constants'
 
 export const NewsPageArticlesSection = styled.div`
     background-color: #fafafa;
@@ -28,7 +28,7 @@ export const NewsPageArticlesSectionWrapper = styled.div`
 export const NewsPageArticlesSectionTitle = styled.h1`
     color:#1d1d1f;
     margin-bottom: 50px;
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
 
@@ -76,7 +76,7 @@ export const NewsPageArticlesTitle = styled.h2`
     color: #1d1d1f;
     margin: 40px 0 6px;
 
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
 `
@@ -84,7 +84,7 @@ export const NewsPageArticlesTitle = styled.h2`
 export const NewsPageArticlesDescription = styled.p`
     color: #1d1d1f;
     margin-bottom: 40px;
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
@@ -131,7 +131,7 @@ export const NewsPagePressInquiriesSectionWrapper = styled.div`
 export const NewsPagePressInquiresTitle = styled.h1`
     color: #1d1d1f;
     margin-bottom: 79px;
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
     text-align: center;
@@ -166,7 +166,7 @@ export const InputWrapper = styled.div`
 
 export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     white-space: nowrap;
 
     color: #000;
@@ -175,7 +175,7 @@ export const InputTitle = styled.div`
 
 export const Input = styled.input`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     background-color: #fafafa;
@@ -195,7 +195,7 @@ export const TextareaWrapper = styled.div`
 
 export const TextareaTitle = styled.div`
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
 
@@ -205,7 +205,7 @@ export const TextareaTitle = styled.div`
 
 export const Textarea = styled.textarea`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     background-color: #fafafa;
     color: #000;
@@ -222,7 +222,7 @@ export const SubmitButton = styled.button`
     padding: 14px;
 
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     color: #000;
 
     border-radius: 10px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Head from 'next/head'
 
@@ -7,6 +7,8 @@ import { withTranslation } from '../../../i18n'
 import BaseButton from '../../../components/BaseButton'
 
 import OurPeoplePageMemberItem from '../../../components/OurPeoplePageMemberItem'
+
+import ContentfulService from '../../../services/contentful'
 
 import {
     OurPeopleTopSection,
@@ -28,20 +30,53 @@ import {
 } from './index.styles'
 
 function OurPeoplePage ({ t }) {
+    ContentfulService.createClient()
+
+    async function fetchEntries() {
+        const client = ContentfulService.getClient()
+        const entries = await client.getEntries()
+        if (entries.items) return entries.items
+        console.log(`Error getting Entries for ${contentType.name}.`)
+      }
+    
+      const [photos, setPhotos] = useState([])
+    
+      useEffect(() => {
+        async function getPosts() {
+          const allPhoto = await fetchEntries()
+          setPhotos([...allPhoto])
+        }
+        getPosts()
+      }, [])
+
+      let photoArray = []
+      let positionArray = []
+
+      photos.forEach( item => {
+          photoArray.push(item.fields.managerPhoto.fields.file.url)
+          positionArray.push(item.fields.managerPositions)
+      })
+
+      console.log(positionArray[0])
+ 
+
     const ourPeoples = [
         {
+            image: 'http:' + photoArray[0],
             name: 'Jonas Werner',
-            position: 'Founder & CSD',
+            position: positionArray[0],
             description: 'Widely considered a network industry guru, Jonas is ICT’s Founder and Chief Sales Director. He is a true entrepreneur and visionary, drawing on over two decades of experience in network marketing. <br><br> Jonas boasts an impressive track record in marketing, sales and management of fast-growing network organisations.',    
         },
         {
+            image: 'http:' + photoArray[1],
             name: 'Johan Staël von Holstein',
-            position: 'CEO',
+            position: positionArray[1],
             description: 'Widely considered a network industry guru, Jonas is ICT’s Founder and Chief Sales Director. He is a true entrepreneur and visionary, drawing on over two decades of experience in network marketing. <br><br> Jonas boasts an impressive track record in marketing, sales and management of fast-growing network organisations.',    
         },
         {
+            image: 'http:' + photoArray[2],
             name: 'Johan Westerdahl',
-            position: 'Chief Commercial Officer',
+            position: positionArray[2],
             description: 'Widely considered a network industry guru, Jonas is ICT’s Founder and Chief Sales Director. He is a true entrepreneur and visionary, drawing on over two decades of experience in network marketing. Jonas boasts an impressive track record in marketing, sales and management of fast-growing network organisations.',    
         },
         {
@@ -102,8 +137,8 @@ function OurPeoplePage ({ t }) {
                 </OurPeoplePageManagementSection>
 
                 <CorporateGovernancePartnershipsSection>
-                    <CorporateGovernancePartnershipsImage>
-                        <img src="/static/images/company-governance-parthnership.svg" />
+                    <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
+                        <img src="/static/images/company-parthership.svg" />
                     </CorporateGovernancePartnershipsImage> 
                 
                     <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>

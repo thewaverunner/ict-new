@@ -9,6 +9,8 @@ import BaseButton from '../../BaseButton'
 
 import { DropdownSectionMobile } from './Components'
 
+import { FONTS, COLORS} from '../../../utils/constants'
+
 const MobileDropdownSection = styled.div`
     width: 100%;
 `
@@ -26,7 +28,7 @@ const SubProductsListMobile = styled.div`
         display: block;
         font-size: 16px;
         font-family: 'DM Sans Bold';
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     a {
@@ -35,14 +37,14 @@ const SubProductsListMobile = styled.div`
         text-decoration: none;
         border-radius: 6px;
         padding: 10px 25px;
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         color: #1d1d1f;
         font-family: 'DM Sans Regular';
     }
     
     a:hover {
         background-color: #1d1d1f;
-        color: #ffffff;
+        color: ${COLORS.white}
     }
 `
 
@@ -155,7 +157,7 @@ const MobileDropdown = ({ onClose , t }) => {
             <SubProductsListMobile>
                 <h3>{t('BaseHeader_Mobile_Partner')}</h3>
 
-                <BaseButton mode={'dark'}>{t('BaseHeader_Mobile_Contact')}</BaseButton>
+                <BaseButton blackStyle>{t('BaseHeader_Mobile_Contact')}</BaseButton>
             </SubProductsListMobile>
         </MobileDropdownSection>
     )

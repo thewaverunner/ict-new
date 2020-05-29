@@ -7,14 +7,12 @@ import { withTranslation } from '../../i18n'
 
 import StripeNavbar from '../StripeNavbar'
 
-// import DesktopLogo from '../../public/static/images/desktop-logo.svg'
 import MobileLogo from '../../public/static/images/mobile-logo.svg'
 import DesktopLogo from '../../public/static/images/logo-new-desktop.svg'
 
+import {COLORS} from '../../utils/constants'
+
 import {
-    // HeaderNew,
-    // HeaderNewContainer,
-    // HeaderNewLogo,
     HeaderMobileNav,
     HeaderMobileLogo,
     Header,
@@ -63,18 +61,11 @@ function BaseHeader () {
     function renderDesktopWrapper () {
         return (
             <>
-                {/* <HeaderNewContainer>
-                    <HeaderNewLogo>
-                        <DesktopNewLogo />
-                    </HeaderNewLogo>    
-
-                    <StripeNavbar duration={300} isMobile={isMobile} />
-                </HeaderNewContainer> */}
                 <HeaderContainer> 
                     <HeaderNavWrapper>
                         <Link href="/">
                             <HeaderLogo>
-                                <DesktopLogo fill={isFixed() ? '#FFFFFF' : '#1d1d1f'} />
+                                <DesktopLogo fill={isFixed() ? COLORS.white : '#1d1d1f'} />
                             </HeaderLogo>
                         </Link>
                         

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../../utils/constants'
 
 export const OurMissionSection = styled.div`
     width:100%;
@@ -33,8 +33,8 @@ export const OurMissionWrapper = styled.div`
 export const OurMissionTitle = styled.h1`
     font-family: "DM Sans Regular";
     font-weight: bold;
-    font-size: 47px;
-    line-height: 60px;
+    font-size: ${FONTS.h2}px;
+    line-height: 44px;
     text-align: left;
 
     color: #1d1d1d;
@@ -92,7 +92,7 @@ export const OurMissionDescription = styled.p`
 
     font-family: "DM Sans Regular";
     font-weight: normal;
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
     text-align: left;
 
@@ -144,11 +144,11 @@ export const OurGoalsTitle = styled.h2`
 
     font-family: "DM Sans Regular";
     font-weight: bold;
-    font-size: 47px;
-    line-height: 60px;
+    font-size: ${FONTS.h2}px;
+    line-height: 44px;
     text-align: left;
 
-    color: #ffffff;
+    color: ${COLORS.white};
     margin-bottom: 30px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -215,7 +215,7 @@ export const OurGoalsContent = styled.div`
 
 
 export const OurGoalsDescription = styled.p`
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
     line-height: 21px;
 

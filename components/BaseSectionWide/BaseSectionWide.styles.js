@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
 
 // Full Mode
 
@@ -79,8 +79,8 @@ export const BaseSectionWideFullImage = styled.img`
 `
 
 export const BaseSectionWideFullTitle = styled.h1`
-    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
-    font-size: 47px;
+    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
+    font-size: ${FONTS.h2}px;
     font-family: "DM Sans Bold";
     line-height: 56.4px;
     margin-bottom: 20px;
@@ -109,9 +109,9 @@ export const BaseSectionWideFullTitle = styled.h1`
 `
 
 export const BaseSectionWideFullSubtitle = styled.h3`
-    color: ${(props) => props.themeMode === 'light' ? '#1d1d20' : '#FFFFFF'};
+    color: ${(props) => props.themeMode === 'light' ? COLORS.dark : COLORS.white};
 
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
     line-height: 31.5px;
     margin-bottom: 15px;
@@ -125,9 +125,9 @@ export const BaseSectionWideFullSubtitle = styled.h3`
 `
 
 export const BaseSectionWideFullDescription = styled.p`
-    color: ${(props) => props.themeMode === 'light' ? '#333333' : '#FFFFFF'};
+    color: ${(props) => props.themeMode === 'light' ? '#333333' : COLORS.white};
 
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: "DM Sans Regular";
     line-height: 31px;
     margin-bottom: 70px;
@@ -151,7 +151,7 @@ export const BaseSectionWideFullDescription = styled.p`
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-family: "DM Sans Regular";
         font-weight: normal;
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         line-height: 28px;
         margin-bottom: 35px;
     }
@@ -245,9 +245,9 @@ export const BaseSectionWideHalfContentWrapper = styled.div`
 export const BaseSectionWideHalfTitle = styled.h1`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: "DM Sans Bold";
-    line-height: 60px;
+    line-height: 44px;
     margin-bottom: 15px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
@@ -275,7 +275,7 @@ export const BaseSectionWideHalfTitle = styled.h1`
 export const BaseSectionWideHalfSubtitle = styled.h3`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
     line-height: 21px;
     margin-bottom: 15px;
@@ -309,7 +309,7 @@ export const BaseSectionWideHalfSubtitle = styled.h3`
 export const BaseSectionWideHalfDescription = styled.p`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: "DM Sans Regular";
     line-height: 31px;
     margin-bottom: 15px;
@@ -422,9 +422,9 @@ export const BaseSectionWideShadowContentWrapper = styled.div`
 export const BaseSectionWideShadowTitle = styled.h1`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: "DM Sans Bold";
-    line-height: 60px;
+    line-height: 44px;
     margin-bottom: 15px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
@@ -433,7 +433,7 @@ export const BaseSectionWideShadowTitle = styled.h1`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        font-size: 24px;
+        font-size: ${FONTS.h3}px;
         line-height: 34px;
     }
 `
@@ -441,7 +441,7 @@ export const BaseSectionWideShadowTitle = styled.h1`
 export const BaseSectionWideShadowSubtitle = styled.h3`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
 
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
     line-height: 21px;
     margin-bottom: 15px;
@@ -467,7 +467,7 @@ export const BaseSectionWideShadowSubtitle = styled.h3`
 
 export const BaseSectionWideShadowDescription = styled.p`
     color: ${(props) => props.themeMode === 'light' ? '#1D1D1F' : '#FAFAFA'};
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: "DM Sans Regular";
     line-height: 31px;
     margin-bottom: 55px;
@@ -486,7 +486,7 @@ export const BaseSectionWideShadowDescription = styled.p`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         line-height: 21px;
         margin-bottom: 35px;
     }
