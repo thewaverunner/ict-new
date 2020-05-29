@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS } from '../../../utils/constants'
 
 export const ContactUsPageFormWrapper = styled.div`
     max-width: 890px;
@@ -23,7 +23,7 @@ export const ContactUsPageFormWrapper = styled.div`
 `
 
 export const ContactUsPageFormTitle = styled.h1`
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
     text-align: center;
@@ -57,7 +57,7 @@ export const InputWrapper = styled.div`
 
 export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     padding-right: 10px;
@@ -65,7 +65,7 @@ export const InputTitle = styled.div`
 
 export const Input = styled.input`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     width: 100%;
@@ -84,7 +84,7 @@ export const TextareaWrapper = styled.div`
 
 export const TextareaTitle = styled.div`
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     padding-left: 10px;
@@ -93,7 +93,7 @@ export const TextareaTitle = styled.div`
 
 export const Textarea = styled.textarea`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     color: #000;
     width: 100%;
     resize: none;
@@ -107,7 +107,7 @@ export const SubmitButton = styled.button`
     padding: 14px;
 
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     color: #000;
 
     border-radius: 10px;

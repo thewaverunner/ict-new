@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { BREAKPOINTS, FONTS } from '../../utils/constants'
 
 export const OurPeoplePageManagementItem = styled.div`       
     margin-bottom: 30px;
@@ -63,7 +63,7 @@ export const OurPeoplePageManagementItemDescriptionWrapper = styled.div`
 
 export const OurPeoplePageManagementItemDescription = styled.p`       
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #1d1d1f;
@@ -72,7 +72,7 @@ export const OurPeoplePageManagementItemDescription = styled.p`
 
 export const OurPeoplePageManagementItemName = styled.div`       
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 16.8px;
 
     color: #fafafa;
@@ -80,7 +80,7 @@ export const OurPeoplePageManagementItemName = styled.div`
 
 export const OurPeoplePageManagementItemPosition = styled.div`       
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 16.8px;
 
     color: #fafafa;

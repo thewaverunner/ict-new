@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../utils/constants'
 
 export const HomePageTopSectionWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
@@ -12,25 +12,25 @@ export const HomePageTopSectionWrapper = styled.div`
            content: '';
            display: block;
            height: 4px;
-           background-color: #1d1d1f;
+           background-color: ${COLORS.dark};
            width: 729px;
            position: absolute;
        }
 
        &:before {
            left: 0;
-           bottom: 17%;
+           bottom: 15%;
        }
 
        &:after {
            right: 0;
-           top: 17%;
+           top: 12%;
            width: 575px;
        }
     }
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        padding: 175px 0 190px;
+        padding: 120px 0;
      }
 `
 
@@ -46,33 +46,33 @@ export const HomePageTopSection = styled.div`
 
 export const HomePageTopSectionTitle = styled.h1`
     font-family: "DM Sans Bold";
-    font-size: 25px;
+    font-size: 30px;
     line-height: 35px;
     text-align: left;
 
     margin-bottom: 15px;
-    color: #1d1d20;
+    color: ${COLORS.black};
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        font-size: 54px;
-        line-height: 65px;
+        font-size: ${FONTS.h1}px;
+        line-height: 44px;
         text-align: center;
 
-        margin-bottom: 35px;
+        margin-bottom: 28px;
     }
 `
 
 export const HomePageTopSectionDescription = styled.p`
     font-family: "DM Sans Regular";
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26px;
     text-align: left;
 
-    color: #333;
+    color: ${COLORS.black};
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        font-size: 21px;
-        line-height: 31.5px;
+        font-size: ${FONTS.h3}px;
+        line-height: 24px;
         text-align: center;
     }
 `
@@ -81,7 +81,7 @@ export const HomePageBannersWrapper = styled.div``
 
 export const HomePageImpactSection = styled.div`
     width: 100%;
-    min-height: 322px;
+    min-height: 222px;
 
     position: relative;
 
@@ -89,7 +89,7 @@ export const HomePageImpactSection = styled.div`
     background-size: cover;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        min-height: 522px;
+        min-height: 422px;
     }
 `
 
@@ -99,12 +99,11 @@ export const HomePageImpactContentWrapper = styled.div`
     padding-top: 40px;
     margin: 0 auto;
 
-    background-color: #ffffff;
+    background-color: ${COLORS.white};
     transform: translateY(-30%);
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         max-width: 793px;
-        padding-top: 75px;
 
         transform: translateY(-60%);
     }
@@ -122,7 +121,7 @@ export const HomePageImpactContent = styled.div`
     text-align: center;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 600px;
+        max-width: 650px;
         margin: 0 auto;
     }
 `
@@ -133,11 +132,11 @@ export const HomePageImpactContentTitle = styled.h2`
     line-height: 40px;
 
     margin-bottom: 15px;
-    color: #000;
+    color: ${COLORS.black};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h2}px;
+        line-height: 44px;
 
         margin-bottom: 30px;
     }
@@ -149,13 +148,11 @@ export const HomePageImpactContentDescription = styled.p`
     line-height: 27px;
 
     margin-bottom: 25px;
-    color: #000;
+    color: ${COLORS.black};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 21px;
+        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
-    
-        margin-bottom: 48px;
     }
 `
 
@@ -164,7 +161,7 @@ export const HomePageNetworkSection = styled.div`
     padding: 50px 25px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 124px 0;
+        padding: 80px 0;
         margin-top: -60px;
     }
 `
@@ -197,7 +194,7 @@ export const HomePageNetworkTitle = styled.h1`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-        font-size: 47px;
+        font-size: ${FONTS.h1}px;
         line-height: 60px;
     }
 `
@@ -208,7 +205,7 @@ export const HomePageLatestNewsWrapper = styled.div`
     padding: 50px 25px;
 
     @media screen and (min-width: ${BREAKPOINTS.xl}px) {
-        max-width: 1350px;
+        max-width: 1200px;
 
         padding: 98px 0 104px;
         margin: 0 auto;
@@ -223,11 +220,11 @@ export const HomePageLatestNewsTitle = styled.h2`
     
     padding-bottom: 10px;
 
-    color: #000;
+    color: ${COLORS.black};
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h2}px;
+        line-height: 44px;
         padding-bottom: 16px;
     }
 `

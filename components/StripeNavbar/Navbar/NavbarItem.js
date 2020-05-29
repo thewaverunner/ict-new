@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../../utils/constants'
 
 const NavbarItemTitle = styled.button`
     background: transparent;
     border: 0;
 
     font-family: "DM Sans Bold";
-    font-size: 14px;
-    line-height: 60px;
+    font-size: ${FONTS.p}px;
+    line-height: 44px;
 
-    color: ${props => props.isFixed ? '#ffffff' : '#1d1d1f'};
+    color: ${props => props.isFixed ? COLORS.white : '#1d1d1f'};
 
     display: flex;
     justify-content: center;
@@ -37,8 +37,8 @@ const NavbarItemTitle = styled.button`
 //     border: 0;
 
 //     font-family: "DM Sans Bold";
-//     font-size: 14px;
-//     line-height: 60px;
+//     font-size: ${FONTS.p}px;
+//     line-height: 44px;
 
 //     color: #ffffff;
 
@@ -96,6 +96,7 @@ const NavbarItemEl = styled.li`
 const DropdownSlot = styled.div`
    position: absolute;
    left: 50%;
+   z-index: 10;
    transform: translateX(-50%);
    perspective: 1500px;
 `
@@ -104,7 +105,7 @@ const DropdownSlotMobile = styled.div`
     position: fixed;
     top: 15px;
     left: 2%;
-    z-index: 1;
+    z-index: 10;
     width: 96%;
     perspective: 1500px;
 `

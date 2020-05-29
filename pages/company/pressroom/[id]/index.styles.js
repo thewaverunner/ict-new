@@ -28,7 +28,7 @@ export const ArticlePageWrapper = styled.div`
 `
 
 export const ArticlePageTitle = styled.h1`
-    font-size: 47px;
+    font-size: ${FONTS.h2}px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
 
@@ -53,7 +53,7 @@ export const ArticlePageTime = styled.p`
     color: #1D1D1F;
     margin-bottom: 37px;
 
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
 `
@@ -63,7 +63,7 @@ export const ArticlePageParagraph = styled.p`
 
     margin-bottom: ${props => props.marginMedium ? '75px' : '35px'};
     
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     font-family: "DM Sans Regular";
     line-height: 31px;
 

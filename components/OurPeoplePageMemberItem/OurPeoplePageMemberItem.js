@@ -16,7 +16,7 @@ function OurPeoplePageMemberItem ({ member }) {
     return (
         <OurPeoplePageManagementItem>
             <OurPeoplePageManagementItemImage>
-                <img src="/static/images/management-image.svg" />
+                <img src="/static/images/management-image.svg"/>
 
                 <OurPeoplePageManagementItemInfoWrapper>
                     <OurPeoplePageManagementItemName>{member.name}</OurPeoplePageManagementItemName>

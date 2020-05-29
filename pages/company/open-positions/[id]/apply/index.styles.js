@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../../../../utils/constants'
 
 export const OpenPositionApplyPageWrapper = styled.div`
     padding: 50px 25px 75px;
@@ -20,7 +20,7 @@ export const OpenPositionApplyPageWrapper = styled.div`
 export const OpenPositionApplyPageTitle = styled.h1`
     font-size: 34px;
     font-family: 'DM Sans Bold';
-    line-height: 60px;
+    line-height: 44px;
     text-align: left;
 
     color: #1d1d1f;
@@ -28,7 +28,6 @@ export const OpenPositionApplyPageTitle = styled.h1`
 `
 
 export const OpenPositionApplyPageContent = styled.h1`
-    margin-bottom: 16px;
     background-color: #fafafa;
 `
 
@@ -52,7 +51,7 @@ export const OpenPositionApplyPageInputFileMessage = styled.div`
     position: relative;
 
     text-align: center;
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
     line-height: 21px;
 
@@ -103,7 +102,7 @@ export const InputWrapper = styled.div`
 
 export const InputTitle = styled.div`
     font-family: "DM Sans Bold";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     padding-right: 10px;
@@ -111,7 +110,7 @@ export const InputTitle = styled.div`
 
 export const Input = styled.input`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     color: #000;
     background-color: #fafafa;
@@ -135,13 +134,13 @@ export const TextareaTitle = styled.div`
     margin-bottom: 20px;
     color: #B4B8C5;
 
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: "DM Sans Regular";
 
     strong {
         color: #1d1d1f;
 
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         font-family: "DM Sans Bold";
 
         margin-bottom: 10px;
@@ -151,7 +150,7 @@ export const TextareaTitle = styled.div`
 
 export const Textarea = styled.textarea`
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
 
     background-color: #fafafa;
     color: #000;
@@ -168,7 +167,7 @@ export const SubmitButton = styled.button`
     padding: 14px;
 
     font-family: "DM Sans Regular";
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     color: #000;
 
     border-radius: 10px;
@@ -202,6 +201,8 @@ export const CorporateGovernancePartnershipsSection = styled.div`
 `
 
 export const CorporateGovernancePartnershipsImage = styled.div`
+    background: ${props => props.backgroundStyle === 'white' ? '#fafafa' : COLORS.white};
+
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
         width: 45%;
@@ -216,7 +217,7 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 export const CorporateGovernancePartnershipsContent = styled.div`
     transform: translateY(-25%);
   
-    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
+    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
 
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
@@ -232,7 +233,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1350px;
+        max-width: 1200px;
 
         margin: 0 auto;
         padding-left: 20px;
@@ -251,7 +252,7 @@ export const CorporateGovernancePartnershipsContentWrapper = styled.div`
 
 export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 550px;
+        max-width: 530px;
         width: 100%;
     }
 
@@ -265,26 +266,26 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
     margin-bottom: 22px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h1}px;
+        line-height: 44px;
     }
 `
 
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #1d1d1f;
     margin-bottom: 31px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 21px;
+        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
     }
 `

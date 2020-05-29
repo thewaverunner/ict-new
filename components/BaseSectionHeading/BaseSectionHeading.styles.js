@@ -1,24 +1,27 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../utils/constants'
 
 export const BaseSectionHeadingWrapper = styled.div`
-    background: url('/static/images/header-background.svg');
+    background: url('/static/images/header-background.svg') 50% 50%;
     background-size: cover;
     margin-bottom: 16px;
 
-    padding: ${props => props.mainPage ? '290px 0' : '231px 0 54px'};
+
+    min-height:${props => props.mainPage ? '700px' : ''};
+    padding: ${props => props.mainPage ? '0' : '231px 0 54px'};
     display: ${props => props.mainPage ? 'flex' : ''};
     flex-direction: ${props => props.mainPage ? 'column' : ''};
     justify-content: ${props => props.mainPage ? 'center' : ''};
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        min-height: auto;
         padding: ${props => props.mainPage ? '130px 25px 105px;' : '150px 25px 70px'};
         background-size: ${props => props.mainPage ? 'cover' : 'auto'};
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding: ${props => props.mainPage ? '170px 25px' : '126px 25px 40px'};
+        padding: ${props => props.mainPage ? '120px 25px' : '126px 25px 40px'};
     }
 `
 
@@ -30,30 +33,22 @@ export const BaseSectionHeadingContent = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         font-size: 45px;
+
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         padding-left: 0;
-        max-width: 1350px;
-        margin: 0 auto;
     }
 `
 
 export const BaseSectionTitle = styled.h1`
-    font-size: 47px;
+    font-size: ${FONTS.h1}px;
     color: #fafafa;
     margin-bottom: 25px;
-    line-height: 60px;
+    line-height: 44px;
     font-family: 'DM Sans Bold';
-
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        font-size: 45px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        font-size: 40px;
-        line-height: 45px;
-    }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         font-size: 30px;
@@ -68,7 +63,7 @@ export const BaseSectionDescription = styled.p`
     margin-bottom: 70px;
     font-family: "DM Sans Regular";
     font-weight: normal;
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     line-height: 31.5px;
     text-align: left;
     color: #fafafa;
@@ -78,7 +73,7 @@ export const BaseSectionDescription = styled.p`
         margin: 25px 0 40px;
         font-size: 16px;
         line-height: 21px;
-        color: #ffffff;
+        color: ${COLORS.white};
     }
 `
 

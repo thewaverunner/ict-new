@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import {FONTS, COLORS} from '../../../utils/constants'
+
 export const DropdownSection = styled.div`
     padding: 25px 25px;
     position: relative;
@@ -20,14 +22,15 @@ export const DropdownSection = styled.div`
 
     a {
         text-decoration: none;
-        color: #1D1D20;
-        font-size: 14px;
+        color: ${COLORS.dark};
+        transition: opacity .3s ease-in-out;
+        
+        font-size: ${FONTS.p}px;
         font-family: 'DM Sans Bold';
     }
 
     a:hover {
         opacity: 0.5;
-        transition: opacity .3s ease-in-out;
     }
 `
 
@@ -46,7 +49,7 @@ export const DropdownSectionMobile = styled.div`
         font-size: 16px;
         line-height: 40px;
         font-family: 'DM Sans Bold';
-        color: #1d1d20;
+        color: ${COLORS.dark};
         text-transform: uppercase;
     }
 
@@ -54,10 +57,10 @@ export const DropdownSectionMobile = styled.div`
         text-decoration: none;
         font-family: "DM Sans Regular";
         font-weight: 500;
-        font-size: 14px;
+        font-size: ${FONTS.p}px;
         line-height: 30px;
         text-align: left;
-        color: #1d1d20; 
+        color: ${COLORS.dark}; 
     }
 
     a:hover {
@@ -82,7 +85,7 @@ export const DropdownSectionMobile = styled.div`
         display: block;
         width: 100%;
         height: 4px;
-        background-color: #1D1D20;
+        background-color: ${COLORS.dark};
         border-radius: 3px;
         transition: transform 0.3s ease;
     }

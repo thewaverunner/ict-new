@@ -102,8 +102,8 @@ function QuestionsAndAnswersPage ({ t }) {
                 </QuestionsAndAnswersPageQuestionSection>
 
                 <CorporateGovernancePartnershipsSection>
-                    <CorporateGovernancePartnershipsImage>
-                        <img src="/static/images/company-governance-parthnership.svg" />
+                    <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
+                        <img src="/static/images/company-parthership.svg" />
                     </CorporateGovernancePartnershipsImage> 
                 
                     <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>

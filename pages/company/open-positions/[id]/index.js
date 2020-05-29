@@ -56,14 +56,14 @@ function OpenPositionJobPage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
-                    <img src="/static/images/company-governance-parthnership.svg" />
+                    <img src="/static/images/company-parthership.svg" />
                 </CorporateGovernancePartnershipsImage> 
             
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionsJobPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionsJobPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
                             <BaseButton blackStyle>{t('OpenPositionsJobPage-ParthershipSection-Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>

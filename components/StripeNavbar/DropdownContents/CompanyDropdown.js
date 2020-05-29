@@ -18,7 +18,7 @@ const CompanyDropdown = ({ t }) => {
             <DropdownSection data-first-dropdown-section>
                 <ul> 
                     <li>
-                        <Link href="/">
+                        <Link href="/company/corporate-governance">
                             <a>{t('BaseFooter_Company_Governance')}</a>
                         </Link>
                     </li>

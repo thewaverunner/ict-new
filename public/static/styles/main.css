@@ -43,6 +43,12 @@
     overflow: hidden;
 }
 
+@media screen and (max-width: 768px){
+    .main-container {
+        margin-top: 78px;
+    }
+}
+
 img {
     width: 100%;
     height: auto;
@@ -69,9 +75,12 @@ img {
     font-family: 'DM Sans Medium';
 }
 
-.languageDropdown .Dropdown-option:hover {
+.languageDropdown .Dropdown-option:hover,
+.languageDropdown .Dropdown-control:hover {
     cursor: pointer;
 }
+
+
 
 .languageDropdown .Dropdown-option.is-selected {
     opacity: 1;

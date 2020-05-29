@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../../utils/constants'
+import { BREAKPOINTS, FONTS, COLORS } from '../../../../utils/constants'
 
 
 export const OpenPositionJobPageSection = styled.div`
@@ -24,16 +24,20 @@ export const OpenPositionJobPageTaskWrapper = styled.div``
 
 export const OpenPositionJobPageSectionTitle = styled.h2`
     font-family: "DM Sans Bold";
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 24px;
+    line-height: 24px;
 
     color: #1d1d1f;
     margin-bottom: 20px;
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        font-size: 30px;
+    }
 `
 
 export const OpenPositionJobPageSectionDescription = styled.p`
     font-family: "DM Sans Regular";
-    font-size: 21px;
+    font-size: ${FONTS.h3}px;
     line-height: 31.5px;
 
     color: #1d1d1f;
@@ -50,6 +54,8 @@ export const CorporateGovernancePartnershipsSection = styled.div`
 `
 
 export const CorporateGovernancePartnershipsImage = styled.div`
+    background: ${props => props.backgroundStyle === 'white' ? '#fafafa' : COLORS.white};
+
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
         width: 45%;
@@ -67,7 +73,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
     padding: 38px 25px 47px;
     margin: 0 25px -20px;
     
-    background: ${props => props.backgroundStyle === 'white' ? '#ffffff' : '#fafafa'};
+    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
    
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
@@ -80,7 +86,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
 export const CorporateGovernancePartnershipsContentWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         width: 100%;
-        max-width: 1350px;
+        max-width: 1200px;
         margin: 0 auto;
         padding-left: 20px;
     
@@ -98,7 +104,7 @@ export const CorporateGovernancePartnershipsContentWrapper = styled.div`
 
 export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 550px;
+        max-width: 530px;
         width: 100%;
     }
 
@@ -112,26 +118,26 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
     font-size: 30px;
     line-height: 34px;
 
-    color: #1d1d20;
+    color: ${COLORS.dark};
     margin-bottom: 22px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: 47px;
-        line-height: 60px;
+        font-size: ${FONTS.h1}px;
+        line-height: 44px;
     }
 `
 
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     line-height: 21px;
 
     color: #1d1d1f;
     margin-bottom: 31px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: 21px;
+        font-size: ${FONTS.h3}px;
         line-height: 31.5px;
     }
 `

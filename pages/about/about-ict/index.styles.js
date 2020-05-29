@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../utils/constants'
+import { BREAKPOINTS, FONTS } from '../../../utils/constants'
 
 export const InfoBannerSection = styled.div`
     background-color: #fafafa;
@@ -78,7 +78,7 @@ export const  InfoBannerContent = styled.p`
     color: #1D1D1F;
     margin-bottom: 58px;
 
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
@@ -169,7 +169,7 @@ export const  QuestionsBannerContent = styled.p`
     color: #1D1D1F;
     margin-bottom: 58px;
     
-    font-size: 14px;
+    font-size: ${FONTS.p}px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 

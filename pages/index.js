@@ -97,6 +97,7 @@ function HomePage ({ t }) {
             </HomePageTopSectionWrapper>
 
             <HomePageBannersWrapper>
+                {/* {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)} */}
                 {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)}
             </HomePageBannersWrapper>
 

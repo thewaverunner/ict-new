@@ -1,6 +1,8 @@
 import React from 'react'
 import App from 'next/app'
 
+import { useRouter } from 'next/router'
+
 import 'react-phone-input-2/lib/style.css'
 
 import { appWithTranslation } from '../../i18n'
@@ -12,13 +14,17 @@ import BaseHeader from '../../components/BaseHeader'
 import BaseFooter from '../../components/BaseFooter'
 
 function MyApp ({ Component, pageProps }) {
+    const router = useRouter();
+    
+    const footerWithBackgroundWhite = ['/', '/company/corporate-governance', '/company/open-positions', '/company/open-positions/[id]'].includes(router.pathname)
+  
     return (
         <div className="main-container">
             <BaseHeader />
 
             <Component {...pageProps}/>
 
-            <BaseFooter />
+            <BaseFooter backgroundWhite={footerWithBackgroundWhite}/>
         </div>
     )
 }
