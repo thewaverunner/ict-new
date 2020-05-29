@@ -33,7 +33,7 @@ export const QuestionsAndAnswersPageTopSectionTitle = styled.h1`
     line-height: 34px;
 
     color: ${COLORS.dark};
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         text-align: center;
@@ -107,7 +107,7 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
-        width: 40%;
+        width: 45%;
         overflow: hidden;
 
         img {
@@ -128,7 +128,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
         transform: none;
         margin: 0;
         padding: 0;
-        width: 60%;
+        width: 55%;
     }
 `
 
@@ -153,7 +153,7 @@ export const CorporateGovernancePartnershipsContentWrapper = styled.div`
 
 export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 550px;
+        max-width: 530px;
         width: 100%;
     }
 
@@ -172,7 +172,7 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: ${FONTS.h2}px;
+        font-size: ${FONTS.h1}px;
         line-height: 44px;
     }
 `

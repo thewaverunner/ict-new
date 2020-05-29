@@ -12,7 +12,7 @@ export const Header = styled.header`
     background: ${props => props.isFixed ? 'transparent' : '#fff'};
 
     @media screen and (min-width: 769px){ 
-        padding: 18px;
+        padding: 18px 25px;
     }
 `
 
@@ -35,6 +35,7 @@ export const HeaderMobileNav = styled.div`
     background-color: #fff;
     padding: 17px 25px;
 
+    border:1px solid rgba(112, 112, 112, 0.08);
     position: fixed;
     left: 0;
     right: 0;

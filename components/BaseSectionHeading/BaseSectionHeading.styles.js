@@ -21,7 +21,7 @@ export const BaseSectionHeadingWrapper = styled.div`
     }
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding: ${props => props.mainPage ? '170px 25px' : '126px 25px 40px'};
+        padding: ${props => props.mainPage ? '120px 25px' : '126px 25px 40px'};
     }
 `
 
@@ -37,10 +37,14 @@ export const BaseSectionHeadingContent = styled.div`
         max-width: 1200px;
         margin: 0 auto;
     }
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        padding-left: 0;
+    }
 `
 
 export const BaseSectionTitle = styled.h1`
-    font-size: ${FONTS.h2}px;
+    font-size: ${FONTS.h1}px;
     color: #fafafa;
     margin-bottom: 25px;
     line-height: 44px;

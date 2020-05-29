@@ -20,7 +20,7 @@ export const CorporateGovernanceWrapper = styled.div`
             height: 4px;
             background: #1D1D1F;  
             position: absolute;
-            top: 9%;
+            top: 7%;
         }
 
         &:before {
@@ -97,7 +97,7 @@ export const CorporateGovernanceCrowdTitle = styled.h2`
     color: ${COLORS.dark};
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        font-size: ${FONTS.h2}px;
+        font-size: ${FONTS.h1}px;
         line-height: 44px;
         text-align: center;
         width: 100%;
@@ -164,14 +164,14 @@ export const CorporateGovernanceFoundationContent = styled.div`
 
 export const CorporateGovernanceFoundationTitle = styled.h2`
     font-family: 'DM Sans Bold';
-    font-size: 30px;
+    font-size: 25px;
     line-height: 34px;
 
     color: ${COLORS.dark};
     margin-bottom: 35px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        font-size: ${FONTS.h2}px;
+        font-size: ${FONTS.h1}px;
         line-height: 44px;
     }
 `
@@ -198,7 +198,7 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
-        width: 40%;
+        width: 45%;
         overflow: hidden;
 
         img {
@@ -218,7 +218,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
         transform: none;
         margin: 0;
         padding: 0;
-        width: 60%;
+        width: 55%;
     }
 `
 
@@ -262,7 +262,7 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: ${FONTS.h2}px;
+        font-size: ${FONTS.h1}px;
         line-height: 44px;
     }
 `

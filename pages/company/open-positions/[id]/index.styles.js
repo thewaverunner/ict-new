@@ -24,11 +24,15 @@ export const OpenPositionJobPageTaskWrapper = styled.div``
 
 export const OpenPositionJobPageSectionTitle = styled.h2`
     font-family: "DM Sans Bold";
-    font-size: 30px;
+    font-size: 24px;
     line-height: 24px;
 
     color: #1d1d1f;
     margin-bottom: 20px;
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        font-size: 30px;
+    }
 `
 
 export const OpenPositionJobPageSectionDescription = styled.p`
@@ -54,7 +58,7 @@ export const CorporateGovernancePartnershipsImage = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         padding: 40px 0;
-        width: 40%;
+        width: 45%;
         overflow: hidden;
 
         img {
@@ -75,7 +79,7 @@ export const CorporateGovernancePartnershipsContent = styled.div`
         transform: none;
         margin: 0;
         padding: 0;
-        width: 60%;
+        width: 55%;
     }
 `
 
@@ -100,7 +104,7 @@ export const CorporateGovernancePartnershipsContentWrapper = styled.div`
 
 export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 550px;
+        max-width: 530px;
         width: 100%;
     }
 
@@ -119,7 +123,7 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         transform: none;
-        font-size: ${FONTS.h2}px;
+        font-size: ${FONTS.h1}px;
         line-height: 44px;
     }
 `

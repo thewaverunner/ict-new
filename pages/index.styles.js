@@ -46,7 +46,7 @@ export const HomePageTopSection = styled.div`
 
 export const HomePageTopSectionTitle = styled.h1`
     font-family: "DM Sans Bold";
-    font-size: 25px;
+    font-size: 30px;
     line-height: 35px;
     text-align: left;
 
@@ -64,7 +64,7 @@ export const HomePageTopSectionTitle = styled.h1`
 
 export const HomePageTopSectionDescription = styled.p`
     font-family: "DM Sans Regular";
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26px;
     text-align: left;
 

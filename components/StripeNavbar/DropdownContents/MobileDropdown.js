@@ -80,7 +80,7 @@ const MobileDropdown = ({ onClose , t }) => {
                         </li>    
                             
                         <li>
-                            <Link href="/">
+                            <Link href="/about/questions-and-answers">
                                 <a>{t('BaseFooter_About_FAQ')}</a>
                             </Link>
                         </li>
@@ -122,7 +122,7 @@ const MobileDropdown = ({ onClose , t }) => {
                         <li>{t('BaseFooter_Company')}</li>
     
                         <li>
-                            <Link href="/">
+                            <Link href="/company/corporate-governance">
                                 <a>{t('BaseFooter_Company_Governance')}</a>
                             </Link>
                         </li>

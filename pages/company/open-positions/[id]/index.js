@@ -62,8 +62,8 @@ function OpenPositionJobPage ({ t }) {
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionsJobPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionsJobPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
 
                             <BaseButton blackStyle>{t('OpenPositionsJobPage-ParthershipSection-Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>

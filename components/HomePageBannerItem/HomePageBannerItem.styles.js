@@ -183,7 +183,7 @@ export const HomePageBannerContentDescription = styled.p`
     line-height: 20px;
     text-align: left;
 
-    ccolor: ${COLORS.dark};
+    color: ${COLORS.dark};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         font-size: ${FONTS.h3}px;

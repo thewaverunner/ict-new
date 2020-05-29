@@ -15,9 +15,7 @@ import BaseFooter from '../../components/BaseFooter'
 
 function MyApp ({ Component, pageProps }) {
     const router = useRouter();
-
-    console.log(router.pathname)
-
+    
     const footerWithBackgroundWhite = ['/', '/company/corporate-governance', '/company/open-positions', '/company/open-positions/[id]'].includes(router.pathname)
   
     return (

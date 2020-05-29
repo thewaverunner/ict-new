@@ -71,6 +71,7 @@ export const BaseSectionTitle = styled.h1`
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
         line-height: 34px;
+        margin-bottom: 15px;
         
         font-size: ${props => props.titleColor === 'gradient' ? '18px' : '30px'};
         text-align: ${props => props.titleColor === 'gradient' ? 'center' : 'left'};
@@ -82,7 +83,7 @@ export const BaseSectionSubtitle = styled.h3`
 
     color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
 
-    margin-bottom: 15px;
+    margin: 22px 0 15px;
     line-height: 44px;
     font-family: 'DM Sans Bold';
     position: relative;
@@ -95,6 +96,7 @@ export const BaseSectionSubtitle = styled.h3`
         background-color: #A23BFF;
         position: absolute;
         left: 50%;
+        top: -15px;
         transform: translateX(-10px)
     }
 
@@ -104,8 +106,11 @@ export const BaseSectionSubtitle = styled.h3`
     }
     
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
+        margin: 15px 0;
+
         &:before {
             left: 10%;
+            top: -10px;
         }
     }
 `
