@@ -32,6 +32,11 @@
     "BaseHeader_Mobile_Partner": "Are you our next partner?",
     "BaseHeader_Mobile_Contact": "Contact Us",
 
+    "CompanyCard_First_Title": "Press",
+    "CompanyCard_First_Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "CompanyCard_Second_Title": "Media Kit",
+    "CompanyCard_Second_Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+
     "HomePage_Head_Title": "ICT | Home",
     "HomePage_Title": "Home page",
     "HomePage_Marketing_Title": "Multi-level marketing, reinvented",
@@ -224,7 +229,10 @@
  
     "ContactUsPage_Head_Title": "ICT | Contact Us",
     "ContactUsPage_Title": "Contact us",
-    "ContactUsPage_Topic_Title": "Topic",
-    "ContactUsPage_Textarea_Title": "Type your inquiry here",
-    "ContactUsPage_Send": "Send"
+    "ContactUsPage_Company_Title": "Impact Crowd Technology S.L",
+    "ContactUsPage_CompanyInfo_Founded": "Founded in",
+    "ContactUsPage_CompanyInfo_Tax": "Tax Number*",
+    "ContactUsPage_CompanyInfo_Vat": "Vat Number",
+    "ContactUsPage_CompanyInfo_Email": "Email",
+    "ContactUsPage_CompanyInfo_Policy": "*Certificado de Identificación Fiscal"
 }

@@ -17,13 +17,13 @@ import {
     OpenPositionsPageTopSectionDescription,
     OpenPositionsPageFilter,
     ContactUsPageCardsSection,
-    ContactUsPageCard,
-    ContactUsPageCardImage,
-    ContactUsPageCardContentWrapper,
-    ContactUsPageCardContentTitleWrapper,
-    ContactUsPageCardContentTitle,
-    ContactUsPageCardContentArrow,
-    ContactUsPageCardContentDescription,
+    CompanyCard,
+    CompanyCardImage,
+    CompanyCardDescriptionWrapper,
+    CompanyCardTitleWrapper,
+    CompanyCardTitle,
+    CompanyCardArrow,
+    CompanyCardDescription,
 } from './index.styles'
 
 function OpenPositionsPage ({ t }) {
@@ -43,13 +43,13 @@ function OpenPositionsPage ({ t }) {
     const contactUsCard = [
         {
             image: '/static/images/press-card-image.svg',
-            title: 'Press',
-            description: 'ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.',
+            title: t('CompanyCard_First_Title'),
+            description: t('CompanyCard_First_Description'),
         },
         {
             image: '/static/images/mediakit-card-image.svg',
-            title: 'Media Kit',
-            description: 'ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.',
+            title: t('CompanyCard_Second_Title'),
+            description: t('CompanyCard_Second_Description'),
         },
     ]
 
@@ -66,20 +66,23 @@ function OpenPositionsPage ({ t }) {
 
             <ContactUsPageCardsSection>
                 {contactUsCard.map((card, index) => (
-                    <ContactUsPageCard key={index}>
-                        <ContactUsPageCardImage>
+                    <CompanyCard key={index}>
+                        <CompanyCardImage>
                             <img src={card.image}/>
-                        </ContactUsPageCardImage>
+                        </CompanyCardImage>
     
-                        <ContactUsPageCardContentWrapper>
-                            <ContactUsPageCardContentTitleWrapper>
-                                    <ContactUsPageCardContentTitle href='#'>{card.title}</ContactUsPageCardContentTitle>
-                                    <ContactUsPageCardContentArrow><img src='/static/images/card-arrow-image.svg' /></ContactUsPageCardContentArrow>
-                            </ContactUsPageCardContentTitleWrapper>
+                        <CompanyCardDescriptionWrapper>
+                            <CompanyCardTitleWrapper>
+                                    <CompanyCardTitle href='#'>{card.title}</CompanyCardTitle>
+
+                                    <CompanyCardArrow>
+                                        <img src='/static/images/card-arrow-image.svg' />
+                                    </CompanyCardArrow>
+                            </CompanyCardTitleWrapper>
     
-                            <ContactUsPageCardContentDescription>{card.description}</ContactUsPageCardContentDescription>
-                        </ContactUsPageCardContentWrapper>
-                    </ContactUsPageCard>    
+                            <CompanyCardDescription>{card.description}</CompanyCardDescription>
+                        </CompanyCardDescriptionWrapper>
+                    </CompanyCard>    
                 ))}                    
             </ContactUsPageCardsSection>
 

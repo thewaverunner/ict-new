@@ -97,7 +97,7 @@ export const ContactUsPageCardsSection = styled.section`
     }
 `
 
-export const ContactUsPageCard = styled.div`
+export const CompanyCard = styled.div`
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ export const ContactUsPageCard = styled.div`
     }
 `
 
-export const ContactUsPageCardImage = styled.div`
+export const CompanyCardImage = styled.div`
     margin: -52px 0;
     transform: rotate(90deg);
 
@@ -124,7 +124,7 @@ export const ContactUsPageCardImage = styled.div`
     }
 `
 
-export const ContactUsPageCardContentWrapper = styled.div`
+export const CompanyCardDescriptionWrapper = styled.div`
     padding: 15px;
     text-align: center;
 
@@ -138,7 +138,7 @@ export const ContactUsPageCardContentWrapper = styled.div`
     }  
 `
 
-export const ContactUsPageCardContentTitleWrapper = styled.div`
+export const CompanyCardTitleWrapper = styled.div`
     display: flex;
     justify-content: center;
 
@@ -147,7 +147,7 @@ export const ContactUsPageCardContentTitleWrapper = styled.div`
     }  
 `
 
-export const ContactUsPageCardContentTitle = styled.a`
+export const CompanyCardTitle = styled.a`
     font-family: "DM Sans Bold";
     font-size: 20px;
     line-height: 30px;
@@ -156,12 +156,12 @@ export const ContactUsPageCardContentTitle = styled.a`
     text-decoration: none;
 `
 
-export const ContactUsPageCardContentArrow = styled.div`
+export const CompanyCardArrow = styled.div`
     align-self: center;
-    padding-left: 15px;
+    padding-left: 10px;
 `
 
-export const ContactUsPageCardContentDescription = styled.p`
+export const CompanyCardDescription = styled.p`
     font-family: "DM Sans Regular";
     font-size: 16px;
     line-height: 24px;

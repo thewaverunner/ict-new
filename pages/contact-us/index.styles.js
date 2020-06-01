@@ -32,7 +32,7 @@ export const ContactUsPageTopSectionTitle = styled.h1`
     }
 `
 
-export const ContactUsAdressSection = styled.section`
+export const ContactUsCompanySection = styled.section`
     padding: 0 25px;
     margin-bottom: 40px;
 
@@ -48,7 +48,7 @@ export const ContactUsAdressSection = styled.section`
     }
 `
 
-export const ContactUsAdressInfo = styled.div`
+export const ContactUsCompanyInfo = styled.div`
     box-sizing: border-box;
 
     background-color: ${COLORS.darken};
@@ -63,7 +63,7 @@ export const ContactUsAdressInfo = styled.div`
     }
 `
 
-export const ContactUsAdressContentWrapper = styled.div`
+export const ContactUsCompanyInfoWrapper = styled.div`
     padding: 15px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -71,7 +71,7 @@ export const ContactUsAdressContentWrapper = styled.div`
     }
 `
 
-export const ContactUsAdressContentTitle = styled.h2`
+export const ContactUsCompanyTitle = styled.h2`
     font-family: "DM Sans Bold";
     font-size: 24px;
     line-height: 30px;
@@ -86,9 +86,9 @@ export const ContactUsAdressContentTitle = styled.h2`
     }
 `
 
-export const ContactUsAdressContentList = styled.ul`  `
+export const ContactUsCompanyInfoList = styled.ul`  `
 
-export const ContactUsAdressContentItem = styled.li`
+export const ContactUsCompanyInfotItem = styled.li`
     font-family: "DM Sans Regular";
     line-height: 16.8px;
     color: #fafafa;
@@ -119,7 +119,7 @@ export const ContactUsAdressContentItem = styled.li`
     }
 `
 
-export const ContactUsAdressMap = styled.div`
+export const ContactUsCompanyMap = styled.div`
     background-color: #fafafa;
     min-height: 200px;
 
@@ -145,7 +145,7 @@ export const ContactUsPageCardsSection = styled.section`
     }
 `
 
-export const ContactUsPageCard = styled.div`
+export const CompanyCard = styled.div`
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ export const ContactUsPageCard = styled.div`
     }
 `
 
-export const ContactUsPageCardImage = styled.div`
+export const CompanyCardImage = styled.div`
     margin: -52px 0;
     transform: rotate(90deg);
 
@@ -172,7 +172,7 @@ export const ContactUsPageCardImage = styled.div`
     }
 `
 
-export const ContactUsPageCardContentWrapper = styled.div`
+export const CompanyCardDescriptionWrapper = styled.div`
     padding: 15px;
     text-align: center;
 
@@ -186,7 +186,7 @@ export const ContactUsPageCardContentWrapper = styled.div`
     }  
 `
 
-export const ContactUsPageCardContentTitleWrapper = styled.div`
+export const CompanyCardTitleWrapper = styled.div`
     display: flex;
     justify-content: center;
 
@@ -195,7 +195,7 @@ export const ContactUsPageCardContentTitleWrapper = styled.div`
     }  
 `
 
-export const ContactUsPageCardContentTitle = styled.a`
+export const CompanyCardTitle = styled.a`
     font-family: "DM Sans Bold";
     font-size: 20px;
     line-height: 30px;
@@ -204,12 +204,12 @@ export const ContactUsPageCardContentTitle = styled.a`
     text-decoration: none;
 `
 
-export const ContactUsPageCardContentArrow = styled.div`
+export const CompanyCardArrow = styled.div`
     align-self: center;
-    padding-left: 15px;
+    padding-left: 10px;
 `
 
-export const ContactUsPageCardContentDescription = styled.p`
+export const CompanyCardDescription = styled.p`
     font-family: "DM Sans Regular";
     font-size: 16px;
     line-height: 24px;
@@ -218,117 +218,3 @@ export const ContactUsPageCardContentDescription = styled.p`
 
     color: ${COLORS.darken};
 `
-
-
-
-
-// export const ContactUsPageFormWrapper = styled.div`
-//     max-width: 890px;
-//     padding: 134px 0 174px 0;
-//     margin: 0 auto;
-
-//     @media screen and (max-width: ${BREAKPOINTS.md}px) {
-//         max-width: 740px;
-//         padding: 100px 0 150px;
-//     }
-
-//     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-//         max-width: 520px;
-//         padding: 100px 0 150px;
-//     }
-
-//     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-//         padding: 50px 25px 75px;
-//     }
-// `
-
-// export const ContactUsPageFormTitle = styled.h1`
-//     font-family: 'DM Sans Bold';
-//     line-height: 56px;
-//     text-align: center;
-//     color: #1d1d1f;
-//     margin-bottom: 79px;
-
-//     font-size: ${FONTS.h2}px;
-
-//     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-//         font-size: 33px;
-//         line-height: 50px;
-//     }
-// `
-
-// export const ContactUsPageForm = styled.form`
-//     width: 100%;
-//     position: relative;
-
-//     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-//         margin: 0 4%;
-//         max-width: 92%;
-//     }
-// `
-
-// export const InputWrapper = styled.div`
-//     display: flex;
-//     align-items: center;
-//     padding: 20px 10px;
-//     border-bottom: 1px solid #1d1d1f;
-//     margin-bottom: 37px;
-// `
-
-// export const InputTitle = styled.div`
-//     font-family: 'DM Sans Bold';
-//     color: #000;
-//     padding-right: 10px;
-
-//     font-size: ${FONTS.p}px;
-// `
-
-// export const Input = styled.input`
-//     font-family: 'DM Sans Regular';
-//     color: #000;
-//     width: 100%;
-//     border: none;
-//     outline: none;
-    
-//     font-size: ${FONTS.p}px;
-// `
-
-// export const TextareaWrapper = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     border-bottom: 1px solid #1d1d1f;
-//     margin-bottom: 37px;
-// `
-
-// export const TextareaTitle = styled.div`
-//     font-family: 'DM Sans Bold';
-//     color: #000;
-//     padding-left: 10px;
-//     margin-bottom: 10px;
-    
-//     font-size: ${FONTS.p}px;
-// `
-
-// export const Textarea = styled.textarea`
-//     font-family: 'DM Sans Regular';
-//     color: #000;
-//     width: 100%;
-//     resize: none;
-//     border: none;
-//     outline: none;
-    
-//     font-size: ${FONTS.p}px;
-// `
-
-// export const SubmitButton = styled.button`
-//     min-width: 200px;
-//     float: right;
-//     padding: 14px;
-//     font-family: 'DM Sans Regular';
-//     color: #000;
-//     border-radius: 10px;
-//     background: transparent;
-//     border: 1.5px solid #000;
-    
-//     font-size: ${FONTS.p}px;
-// `
