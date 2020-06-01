@@ -14,17 +14,17 @@ function OurIndustryPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OurIndustryPage-Head-Title')}</title>
+                <title>{t('OurIndustryPage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={t('OurIndustryPage-Title')}
+                title={t('OurIndustryPage_Title')}
                 mainPage={false}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/about-top-banner.svg'}
-                description={t('OurIndustryPage-TopBanner-Description')}
+                description={t('OurIndustryPage_TopBanner_Description')}
                 textAlign={'center'}
                 titleColor={'black'}
             />
@@ -35,8 +35,8 @@ function OurIndustryPage ({ t }) {
                 reverse={true}
                 imageFull={true}
                 imageUrl={'/static/images/about-our-industry-direct-selling.svg'}
-                title={t('OurIndustryPage-DirectSelling-Title')}
-                subtitle={t('OurIndustryPage-DirectSelling-SubTitle')}
+                title={t('OurIndustryPage_DirectSelling_Title')}
+                subtitle={t('OurIndustryPage_DirectSelling_SubTitle')}
             />
 
             <BaseSectionWide
@@ -44,8 +44,8 @@ function OurIndustryPage ({ t }) {
                 themeMode={'dark'}
                 reverse={false}
                 imageUrl={'/static/images/about-our-industry-multi-marketing.svg'}
-                title={t('OurIndustryPage-MultiMarketing-Title')}
-                subtitle={t('OurIndustryPage-MultiMarketing-SubTitle')}
+                title={t('OurIndustryPage_MultiMarketing_Title')}
+                subtitle={t('OurIndustryPage_MultiMarketing_SubTitle')}
             />
 
             <BaseSectionWide
@@ -55,13 +55,13 @@ function OurIndustryPage ({ t }) {
                 imageFull={false}
                 imageUrl={'/static/images/about-our-industry-impact-technology.svg'}
                 imageResized={true}
-                title={t('OurIndustryPage-ImpactTechnology-Title')}
-                subtitle={t('OurIndustryPage-ImpactTechnology-SubTitle')}
+                title={t('OurIndustryPage_ImpactTechnology_Title')}
+                subtitle={t('OurIndustryPage_ImpactTechnology_SubTitle')}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/about-our-industry-economy-banner.svg'}
-                description={t('OurIndustryPage-EconomyBanner-Description')}
+                description={t('OurIndustryPage_EconomyBanner_Description')}
                 textAlign={'center'}
             />
 
@@ -70,8 +70,8 @@ function OurIndustryPage ({ t }) {
                 themeMode={'light'}
                 reverse={true}
                 imageUrl={'/static/images/about-our-industry-opportunity.svg'}
-                title={t('OurIndustryPage-Opportunity-Title')}
-                subtitle={t('OurIndustryPage-Opportunity-SubTitle')}
+                title={t('OurIndustryPage_Opportunity_Title')}
+                subtitle={t('OurIndustryPage_Opportunity_SubTitle')}
             />
 
         </>

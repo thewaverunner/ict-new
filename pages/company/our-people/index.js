@@ -113,23 +113,23 @@ function OurPeoplePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OurPeoplePage-Head-Title')}</title>
+                <title>{t('OurPeoplePage_Head_Title')}</title>
             </Head>
 
             <OurPeopleTopSection>
-                <OurPeopleTopSectionTitle>{t('OurPeoplePage-TopSection-Title')}</OurPeopleTopSectionTitle>
-                <OurPeopleTopSectionDescription>{t('OurPeoplePage-TopSection-Description')}</OurPeopleTopSectionDescription>
+                <OurPeopleTopSectionTitle>{t('OurPeoplePage_TopSection_Title')}</OurPeopleTopSectionTitle>
+                <OurPeopleTopSectionDescription>{t('OurPeoplePage_TopSection_Description')}</OurPeopleTopSectionDescription>
             </OurPeopleTopSection>
 
             <OurPeoplePageManagementSectionWrapper>
                 <OurPeoplePageManagementSection>
-                    <OurPeoplePageManagementTitle>{t('OurPeoplePage-ManagementSection-Title')}</OurPeoplePageManagementTitle>
+                    <OurPeoplePageManagementTitle>{t('OurPeoplePage_ManagementSection_Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
                         {ourPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
                     </OurPeoplePageManagementList>
 
-                    <OurPeoplePageManagementTitle>{t('OurPeoplePage-ManagementSectionBoard-Title')}</OurPeoplePageManagementTitle>
+                    <OurPeoplePageManagementTitle>{t('OurPeoplePage_ManagementSectionBoard_Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
                         {boardPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
@@ -144,10 +144,10 @@ function OurPeoplePage ({ t }) {
                     <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
                         <CorporateGovernancePartnershipsContentWrapper>
                             <CorporateGovernancePartnershipsDescriptionWrapper>
-                                <CorporateGovernancePartnershipsTitle>{t('OurPeoplePage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                                <CorporateGovernancePartnershipsDescription>{t('OurPeoplePage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
+                                <CorporateGovernancePartnershipsTitle>{t('OurPeoplePage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
+                                <CorporateGovernancePartnershipsDescription>{t('OurPeoplePage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
 
-                                <BaseButton blackStyle>{t('OurPeoplePage-ParthershipSection-Button')}</BaseButton>
+                                <BaseButton blackStyle>{t('OurPeoplePage_ParthershipSection_Button')}</BaseButton>
                             </CorporateGovernancePartnershipsDescriptionWrapper>
                         </CorporateGovernancePartnershipsContentWrapper>
                     </CorporateGovernancePartnershipsContent>

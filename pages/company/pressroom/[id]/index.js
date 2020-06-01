@@ -20,10 +20,10 @@ function ArticlePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('ArticlePage-Head-Title')}</title>
+                <title>{t('ArticlePage_Head_Title')}</title>
             </Head>
 
-            <BaseSectionHeading title={t('ArticlePage-Heading')} />
+            <BaseSectionHeading title={t('ArticlePage_Heading')} />
 
             <ArticlePageSection>
                 <ArticlePageWrapper>
@@ -50,7 +50,7 @@ function ArticlePage ({ t }) {
                         aute irure dolor in reprehenderit.
                     </ArticlePageParagraph>
 
-                    <BaseButton blackStyle>{t('ArticlePage-Download')}</BaseButton>
+                    <BaseButton blackStyle>{t('ArticlePage_Download')}</BaseButton>
                 </ArticlePageWrapper>
             </ArticlePageSection>
         </>

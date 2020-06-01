@@ -68,7 +68,7 @@ export const OurPeoplePageManagementSection = styled.div`
         padding: 105px 25px 85px;
     }
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `

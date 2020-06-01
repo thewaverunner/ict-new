@@ -14,17 +14,17 @@ function OurBusinessPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OurBusinessPage-Head-Title')}</title>
+                <title>{t('OurBusinessPage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={t('OurBusinessPage-Title')}
+                title={t('OurBusinessPage_Title')}
                 mainPage={false}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/about-top-banner.svg'}
-                description={t('OurBusinessPage-TopBanner-Description')}
+                description={t('OurBusinessPage_TopBanner_Description')}
                 textAlign={'center'}
                 titleColor={'black'}
             />
@@ -34,8 +34,8 @@ function OurBusinessPage ({ t }) {
                 themeMode={'dark'}
                 reverse={false}
                 imageUrl={'/static/images/about-our-business-crowd.svg'}
-                title={t('OurBusinessPage-CrowdBanner-Title')}
-                subtitle={t('OurBusinessPage-CrowdBanner-SubTitle')}
+                title={t('OurBusinessPage_CrowdBanner_Title')}
+                subtitle={t('OurBusinessPage_CrowdBanner_SubTitle')}
             />
 
             <BaseSectionWide
@@ -44,8 +44,8 @@ function OurBusinessPage ({ t }) {
                 reverse={true}
                 imageFull={true}
                 imageUrl={'/static/images/about-our-business-network.svg'}
-                title={t('OurBusinessPage-BusinessNetwork-Title')}
-                subtitle={t('OurBusinessPage-BusinessNetwork-SubTitle')}
+                title={t('OurBusinessPage_BusinessNetwork_Title')}
+                subtitle={t('OurBusinessPage_BusinessNetwork_SubTitle')}
             />
 
             <BaseSectionWide
@@ -53,8 +53,8 @@ function OurBusinessPage ({ t }) {
                 themeMode={'dark'}
                 reverse={false}
                 imageUrl={'/static/images/about-our-business-network-leaders.svg'}
-                title={t('OurBusinessPage-NetworkLeaders-Title')}
-                subtitle={t('OurBusinessPage-NetworkLeaders-SubTitle')}
+                title={t('OurBusinessPage_NetworkLeaders_Title')}
+                subtitle={t('OurBusinessPage_NetworkLeaders_SubTitle')}
             />
 
             <BaseSectionWide
@@ -63,15 +63,15 @@ function OurBusinessPage ({ t }) {
                 reverse={true}
                 imageFull={true}
                 imageUrl={'/static/images/about-our-business-milestones.svg'}
-                title={t('OurBusinessPage-Milestones-Title')}
-                subtitle={t('OurBusinessPage-Milestones-SubTitle')}
+                title={t('OurBusinessPage_Milestones_Title')}
+                subtitle={t('OurBusinessPage_Milestones_SubTitle')}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-join-our-team.svg'}
-                title={t('OpenPositionsJobPage-ParthershipSection-Title')}
+                title={t('OpenPositionsJobPage_ParthershipSection_Title')}
                 titleColor={'black'}
-                description={t('OpenPositionsJobPage-ParthershipSection-Description')}
+                description={t('OpenPositionsJobPage_ParthershipSection_Description')}
                 buttonTitle={'Open Positions'}
                 buttonStyle={'blackStyle'}
             />

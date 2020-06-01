@@ -29,45 +29,45 @@ import {
 function OurCompanyPage ({ t }) {
    
     const ourMission = [
-        { description: t('OurCompanyPage-OurMissionFirst-Description') },
-        { description: t('OurCompanyPage-OurMissionSecond-Description') },
-        { description: t('OurCompanyPage-OurMissionThird-Description') },
-        { description: t('OurCompanyPage-OurMissionFourth-Description') },
+        { description: t('OurCompanyPage_OurMissionFirst_Description') },
+        { description: t('OurCompanyPage_OurMissionSecond_Description') },
+        { description: t('OurCompanyPage_OurMissionThird_Description') },
+        { description: t('OurCompanyPage_OurMissionFourth_Description') },
     ]
 
     const ourGoals = [
         { 
-            title: t('OurCompanyPage-CompanyGoals-Step'),
-            description: t('OurCompanyPage-CompanyGoalsFirst-Description')
+            title: t('OurCompanyPage_CompanyGoals_Step'),
+            description: t('OurCompanyPage_CompanyGoalsFirst_Description')
         },
         { 
-            title: t('OurCompanyPage-CompanyGoals-Step'),
-            description: t('OurCompanyPage-CompanyGoalsSecond-Description')
+            title: t('OurCompanyPage_CompanyGoals_Step'),
+            description: t('OurCompanyPage_CompanyGoalsSecond_Description')
         },
         { 
-            title: t('OurCompanyPage-CompanyGoals-Step'),
-            description: t('OurCompanyPage-CompanyGoalsThird-Description')
+            title: t('OurCompanyPage_CompanyGoals_Step'),
+            description: t('OurCompanyPage_CompanyGoalsThird_Description')
         },
         { 
-            title: t('OurCompanyPage-CompanyGoals-Step'),
-            description: t('OurCompanyPage-CompanyGoalsFourth-Description')
+            title: t('OurCompanyPage_CompanyGoals_Step'),
+            description: t('OurCompanyPage_CompanyGoalsFourth_Description')
         },
     ]
 
     return (
         <>
             <Head>
-                <title>{t('OurCompanyPage-Head-Title')}</title>
+                <title>{t('OurCompanyPage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={t('OurCompanyPage-Title')}
+                title={t('OurCompanyPage_Title')}
                 mainPage={false}
             />
 
             <BaseSection
                 backgroundImage={'/static/images/about-top-banner.svg'}
-                description={t('OurCompanyPage-TopBanner-Description')}
+                description={t('OurCompanyPage_TopBanner_Description')}
                 textAlign={'center'}
                 titleColor={'black'}
             />
@@ -78,8 +78,8 @@ function OurCompanyPage ({ t }) {
                 reverse={true}
                 imageFull={true}
                 imageUrl={'/static/images/about-our-company-business-idea.svg'}
-                title={t('OurCompanyPage-BusinessIdea-Title')}
-                subtitle={t('OurCompanyPage-BusinessIdea-SubTitle')}
+                title={t('OurCompanyPage_BusinessIdea_Title')}
+                subtitle={t('OurCompanyPage_BusinessIdea_SubTitle')}
             />
 
             <BaseSectionWide
@@ -87,13 +87,13 @@ function OurCompanyPage ({ t }) {
                 themeMode={'dark'}
                 reverse={false}
                 imageUrl={'/static/images/about-our-company-sales-product.svg'}
-                title={t('OurCompanyPage-SalesProducts-Title')}
-                subtitle={t('OurCompanyPage-SalesProducts-SubTitle')}
+                title={t('OurCompanyPage_SalesProducts_Title')}
+                subtitle={t('OurCompanyPage_SalesProducts_SubTitle')}
             />
 
             <OurMissionSection>
                 <OurMissionWrapper>
-                    <OurMissionTitle>{t('OurCompanyPage-OurMission-Title')}</OurMissionTitle>
+                    <OurMissionTitle>{t('OurCompanyPage_OurMission_Title')}</OurMissionTitle>
                         <OurMissionContentWrapper>
                         {
                             ourMission.map((mission, index) => (
@@ -112,7 +112,7 @@ function OurCompanyPage ({ t }) {
 
             <OurGoalsSection>
                 <OurGoalsWrapper>
-                    <OurGoalsTitle>{t('OurCompanyPage-CompanyGoals-Title')}</OurGoalsTitle>
+                    <OurGoalsTitle>{t('OurCompanyPage_CompanyGoals_Title')}</OurGoalsTitle>
                         <OurGoalsContentWrapper>
                             {
                                 ourGoals.map((goal, index) => (
@@ -132,8 +132,8 @@ function OurCompanyPage ({ t }) {
                 reverse={false}
                 imageFull={true}
                 imageUrl={'/static/images/about-our-company-our-people.svg'}
-                title={t('OurCompanyPage-OurPeople-Title')}
-                subtitle={t('OurCompanyPage-OurPeople-Subtitle')}
+                title={t('OurCompanyPage_OurPeople_Title')}
+                subtitle={t('OurCompanyPage_OurPeople_Subtitle')}
             />
 
             <BaseSection

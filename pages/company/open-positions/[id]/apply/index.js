@@ -64,24 +64,24 @@ function OpenPositionApplyPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OpenPositionApplyPage-Head-Title')}</title>
+                <title>{t('OpenPositionApplyPage_Head_Title')}</title>
             </Head>
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
-                title={t('OpenPositionsJobPage-Marketing-Banner-Title')}
+                title={t('OpenPositionsJobPage_Marketing_Banner_Title')}
                 titleColor={'black'}
-                subtitle={t('OpenPositionsJobPage-Marketing-Banner-Subtitle')}
+                subtitle={t('OpenPositionsJobPage_Marketing_Banner_Subtitle')}
                 textAlign={'center'}
             />
 
             <OpenPositionApplyPageContent>
                 <OpenPositionApplyPageWrapper>
-                    <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage-ApplicationForm-Title')}</OpenPositionApplyPageTitle>
+                    <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage_ApplicationForm_Title')}</OpenPositionApplyPageTitle>
 
                     <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
                         <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Name')}</InputTitle>
+                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Name')}</InputTitle>
 
                             <Input 
                                 name="name" 
@@ -91,7 +91,7 @@ function OpenPositionApplyPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Email')}</InputTitle>
+                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Email')}</InputTitle>
 
                             <Input 
                                 name="email"
@@ -107,7 +107,7 @@ function OpenPositionApplyPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage-ApplicationForm-Phone')}</InputTitle>
+                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Phone')}</InputTitle>
 
                             <PhoneInput 
                                 country={'se'} 
@@ -124,7 +124,7 @@ function OpenPositionApplyPage ({ t }) {
                             {
                                 isDragActive 
                                 ? (
-                                    <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage-ApplicationForm-Upload-Success')}</OpenPositionApplyPageInputFileMessage>
+                                    <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage_ApplicationForm_Upload_Success')}</OpenPositionApplyPageInputFileMessage>
                                 )
                                 : (
                                     <OpenPositionApplyPageInputFileMessage>
@@ -132,9 +132,9 @@ function OpenPositionApplyPage ({ t }) {
                                             <img src="/static/images/open-positions-apply-page-upload-icon.svg" />
                                         </OpenPositionApplyPageInputFileImages>
 
-                                        <strong>{t('OpenPositionApplyPage-ApplicationForm-Upload_Title')}</strong> <br/>
-                                        {t('OpenPositionApplyPage-ApplicationForm-Upload_Description')} <br/>
-                                        <span>{t('OpenPositionApplyPage-ApplicationForm-Upload-ClickMessage')}</span>
+                                        <strong>{t('OpenPositionApplyPage_ApplicationForm_Upload_Title')}</strong> <br/>
+                                        {t('OpenPositionApplyPage_ApplicationForm_Upload_Description')} <br/>
+                                        <span>{t('OpenPositionApplyPage_ApplicationForm_Upload_ClickMessage')}</span>
                                     </OpenPositionApplyPageInputFileMessage>
                                 )
                             }
@@ -142,8 +142,8 @@ function OpenPositionApplyPage ({ t }) {
 
                         <TextareaWrapper>
                             <TextareaTitle>
-                                <strong>{t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Title')}</strong> 
-                                {t('OpenPositionApplyPage-ApplicationForm-Cover-Letter-Description')}
+                                <strong>{t('OpenPositionApplyPage_ApplicationForm_Cover_Letter_Title')}</strong> 
+                                {t('OpenPositionApplyPage_ApplicationForm_Cover_Letter_Description')}
                             </TextareaTitle>
 
                             <Textarea
@@ -152,7 +152,7 @@ function OpenPositionApplyPage ({ t }) {
                             />       
                         </TextareaWrapper>
 
-                        <SubmitButton type="submit"> {t('OpenPositionApplyPage-ApplicationForm-Send')}</SubmitButton>
+                        <SubmitButton type="submit"> {t('OpenPositionApplyPage_ApplicationForm_Send')}</SubmitButton>
                     </OpenPositionApplyPageForm>
                 </OpenPositionApplyPageWrapper>
             </OpenPositionApplyPageContent>
@@ -165,9 +165,9 @@ function OpenPositionApplyPage ({ t }) {
                 <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
-                            <BaseButton blackStyle>{t('OpenPositionApplyPage-ParthershipSection-Button')}</BaseButton>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
+                            <BaseButton blackStyle>{t('OpenPositionApplyPage_ParthershipSection_Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>

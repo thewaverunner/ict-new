@@ -9,10 +9,15 @@ import {
 
 export const OpenPositionsPageWrapper = styled.div`       
     padding: 0 25px;
+    background-color: #fafafa;
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+       padding: 0;
+    }
 `
 
 export const OpenPositionsPageTopSection = styled.div`       
-    padding: 38px 0 60px;
+    padding: 38px 25px 60px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         text-align: center;
@@ -21,7 +26,7 @@ export const OpenPositionsPageTopSection = styled.div`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 117px 0 145px;
+        padding: 87px 0 74px;
         max-width: 810px;
     }
 `
@@ -44,7 +49,7 @@ export const OpenPositionsPageTopSectionTitle = styled.h2`
 export const OpenPositionsPageTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
+    color: ${COLORS.darken};
 
     font-size: ${FONTS.p}px;
 
@@ -55,112 +60,131 @@ export const OpenPositionsPageTopSectionDescription = styled.p`
     }
 `
 
+export const OpenPositionsPageListWrapper = styled.div`
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
+        max-width: ${MAX_WIDTH_CONTAINER}px;
+    }
+`
+
 export const OpenPositionsPageList = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        margin: 0 -15px;
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        margin: 0 -30px;
+    }
+`
+
+export const ContactUsPageCardsSection = styled.section`
+    padding: 0 25px 50px;
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         margin: 0 auto;
-        margin-bottom: 98px;
+        padding: 0 0 100px 0;
 
         max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `
 
-export const CorporateGovernancePartnershipsSection = styled.div`
-    position: relative;
+export const ContactUsPageCard = styled.div`
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
 
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-`
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        margin-bottom: 0;
+        flex-direction: row;
 
-export const CorporateGovernancePartnershipsImage = styled.div`
-    background: ${props => props.backgroundStyle === 'white' ? '#fafafa' : COLORS.white};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 40px 0;
-        width: 45%;
-        overflow: hidden;
-
-        img {
-            width: 100%;
+        &:first-child {
+            margin-right: 100px;
         }
     }
 `
 
-export const CorporateGovernancePartnershipsContent = styled.div`
-    transform: translateY(-25%);
-    padding: 38px 25px 47px;
-    margin: 0 25px -20px;
+export const ContactUsPageCardImage = styled.div`
+    margin: -52px 0;
+    transform: rotate(90deg);
 
-    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        transform: none;
-        margin: 0;
-        padding: 0;
-        width: 55%;
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+       min-width: 90px;
+       transform: none;
     }
 `
 
-export const CorporateGovernancePartnershipsContentWrapper = styled.div`
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
+export const ContactUsPageCardContentWrapper = styled.div`
+    padding: 15px;
+    text-align: center;
 
-        max-width: ${MAX_WIDTH_CONTAINER}px;
-    }
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        padding: 25px 25px;
+        text-align: left;
+    }  
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        padding: 40px 50px 40px 25px;
+    }  
 `
 
-export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 530px;
-        width: 100%;
+export const ContactUsPageCardContentTitleWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        justify-content: flex-start;
+    }  
+`
+
+export const ContactUsPageCardContentTitle = styled.a`
+    font-family: "DM Sans Bold";
+    font-size: 20px;
+    line-height: 30px;
+    color: #6672e5;
+    position: relative;
+    text-decoration: none;
+`
+
+export const ContactUsPageCardContentArrow = styled.div`
+    align-self: center;
+    padding-left: 15px;
+`
+
+export const ContactUsPageCardContentDescription = styled.p`
+    font-family: "DM Sans Regular";
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.56;
+    margin-top: 15px;
+
+    color: ${COLORS.darken};
+`
+
+export const OpenPositionsPageFilter = styled.div`
+    padding: 25px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-        max-width: 638px;
-    }
-`
+        margin: 0 auto;
+        padding: 60px 0 90px 0;
 
-export const CorporateGovernancePartnershipsTitle = styled.h2`
-    font-family: 'DM Sans Bold';
-    font-size: 30px;
-    line-height: 34px;
-    margin-bottom: 22px;
-
-    color: ${COLORS.dark};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        transform: none;
-        line-height: 44px;
-    
-        font-size: ${FONTS.h1}px;
-    }
-`
-
-export const CorporateGovernancePartnershipsDescription = styled.p`
-    font-family: 'DM Sans Regular';
-    line-height: 21px;
-    color: #1d1d1f;
-    margin-bottom: 31px;
-
-    font-size: ${FONTS.p}px;
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        line-height: 31.5px;
-    
-        font-size: ${FONTS.h3}px;
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `

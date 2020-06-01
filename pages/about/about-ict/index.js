@@ -59,11 +59,11 @@ function AboutICTPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('AboutICTPage-Head-Title')}</title>
+                <title>{t('AboutICTPage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={t('AboutICTPage-Heading')}
+                title={t('AboutICTPage_Heading')}
                 mainPage={false}
             />
 

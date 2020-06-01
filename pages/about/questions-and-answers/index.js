@@ -4,7 +4,6 @@ import Head from 'next/head'
 
 import { withTranslation } from '../../../i18n'
 
-import BaseButton from '../../../components/BaseButton'
 import QuestionsAndAnswersPageToggleItem from '../../../components/QuestionsAndAnswersPageToggleItem'
 
 import {
@@ -16,14 +15,6 @@ import {
     QuestionsAndAnswersPageQuestionSection,
     QuestionsAndAnswersPageQuestionSectionTitle,
     QuestionsAndAnswersPageQuestionList,
-
-    CorporateGovernancePartnershipsSection,
-    CorporateGovernancePartnershipsImage,
-    CorporateGovernancePartnershipsContent,
-    CorporateGovernancePartnershipsContentWrapper,
-    CorporateGovernancePartnershipsTitle,
-    CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper,
 } from './index.styles'
 
 function QuestionsAndAnswersPage ({ t }) {
@@ -76,47 +67,30 @@ function QuestionsAndAnswersPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('QuestionsAndAnswersPage-Head-Title')}</title>
+                <title>{t('QuestionsAndAnswersPage_Head_Title')}</title>
             </Head>
 
             <QuestionsAndAnswersPageTopSectionWrapper>
                 <QuestionsAndAnswersPageTopSection >
-                    <QuestionsAndAnswersPageTopSectionTitle>{t('QuestionsAndAnswersPage-TopSection-Title')}</QuestionsAndAnswersPageTopSectionTitle>
-                    <QuestionsAndAnswersPageTopSectionDescription>{t('QuestionsAndAnswersPage-TopSection-Description')}</QuestionsAndAnswersPageTopSectionDescription>
+                    <QuestionsAndAnswersPageTopSectionTitle>{t('QuestionsAndAnswersPage_Title')}</QuestionsAndAnswersPageTopSectionTitle>
+                    <QuestionsAndAnswersPageTopSectionDescription>{t('QuestionsAndAnswersPage_TopSection_Description')}</QuestionsAndAnswersPageTopSectionDescription>
                 </QuestionsAndAnswersPageTopSection>
             </QuestionsAndAnswersPageTopSectionWrapper>  
 
             <QuestionsAndAnswersPageQuestionQrapper>
                 <QuestionsAndAnswersPageQuestionSection>
-                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage-QuestionSection-Title')}</QuestionsAndAnswersPageQuestionSectionTitle>
+                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage_QuestionSection_Title')}</QuestionsAndAnswersPageQuestionSectionTitle>
 
                     <QuestionsAndAnswersPageQuestionList>
                         {topics.map((topic, index) => <QuestionsAndAnswersPageToggleItem key={index} topic={topic} defaultValue={index === 0} />)}
                     </QuestionsAndAnswersPageQuestionList>
 
-                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage-QuestionSection-TitleSecond')}</QuestionsAndAnswersPageQuestionSectionTitle>
+                    <QuestionsAndAnswersPageQuestionSectionTitle>{t('QuestionsAndAnswersPage_QuestionSection_TitleSecond')}</QuestionsAndAnswersPageQuestionSectionTitle>
 
                     <QuestionsAndAnswersPageQuestionList>
                         {crowdTopics.map((topic, index) => <QuestionsAndAnswersPageToggleItem key={index} topic={topic} defaultValue={index === 0} />)}   
                     </QuestionsAndAnswersPageQuestionList>
                 </QuestionsAndAnswersPageQuestionSection>
-
-                <CorporateGovernancePartnershipsSection>
-                    <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                        <img src="/static/images/company-parthership.svg" />
-                    </CorporateGovernancePartnershipsImage> 
-                
-                    <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
-                        <CorporateGovernancePartnershipsContentWrapper>
-                            <CorporateGovernancePartnershipsDescriptionWrapper>
-                                <CorporateGovernancePartnershipsTitle>{t('QuestionsAndAnswersPage-ParthnershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                                <CorporateGovernancePartnershipsDescription>{t('QuestionsAndAnswersPage-ParthnershipSection-Description')}</CorporateGovernancePartnershipsDescription>
-
-                                <BaseButton blackStyle>{t('QuestionsAndAnswersPage-QuestionSection-Button')}</BaseButton>
-                            </CorporateGovernancePartnershipsDescriptionWrapper>
-                        </CorporateGovernancePartnershipsContentWrapper>
-                    </CorporateGovernancePartnershipsContent>
-                </CorporateGovernancePartnershipsSection>
             </QuestionsAndAnswersPageQuestionQrapper>     
         </>
     )

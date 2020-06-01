@@ -43,14 +43,14 @@ function PressroomPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('PressroomPage-Head-Title')}</title>
+                <title>{t('PressroomPage_Head_Title')}</title>
             </Head>
 
-            <BaseSectionHeading title={t('PressroomPage-Heading')}/>
+            <BaseSectionHeading title={t('PressroomPage_Heading')}/>
 
             <NewsPageArticlesSection>
                 <NewsPageArticlesSectionWrapper>
-                    <NewsPageArticlesSectionTitle>{t('PressroomPage-Articles-Title')}</NewsPageArticlesSectionTitle>
+                    <NewsPageArticlesSectionTitle>{t('PressroomPage_Articles_Title')}</NewsPageArticlesSectionTitle>
                         <NewsPageArticlesWrapper>
                             {[0, 1, 2, 3, 4, 5].map((_, index) => 
                                 <NewsPageArticles key={index}>
@@ -74,7 +74,7 @@ function PressroomPage ({ t }) {
                                             withArrow={true} 
                                             linkUrl={`/company/pressroom/article-${index}`}
                                         >
-                                            {t('PressroomPage-Learn-More')}
+                                            {t('PressroomPage_Learn_More')}
                                         </BaseButton>
                                     </NewsPageArticlesContent>
                                 </NewsPageArticles>
@@ -85,11 +85,11 @@ function PressroomPage ({ t }) {
 
             <NewsPagePressInquiriesSection>
                 <NewsPagePressInquiriesSectionWrapper>
-                    <NewsPagePressInquiresTitle>{t('PressroomPage-Form-Title')}</NewsPagePressInquiresTitle>
+                    <NewsPagePressInquiresTitle>{t('PressroomPage_Form_Title')}</NewsPagePressInquiresTitle>
 
                     <NewsPagePressInquiresForm onSubmit={handleSubmit(onSubmit)}> 
                         <InputWrapper>
-                            <InputTitle>{t('PressroomPage-Form-Name-Input')}</InputTitle>
+                            <InputTitle>{t('PressroomPage_Form_Name_Input')}</InputTitle>
 
                             <Input 
                                 name="name" 
@@ -99,7 +99,7 @@ function PressroomPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('PressroomPage-Form-Story-Input')}</InputTitle>
+                            <InputTitle>{t('PressroomPage_Form_Story_Input')}</InputTitle>
                             
                             <Input 
                                 name="story" 
@@ -109,7 +109,7 @@ function PressroomPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('PressroomPage-Form-Email-Input')}</InputTitle>
+                            <InputTitle>{t('PressroomPage_Form_Email_Input')}</InputTitle>
 
                             <Input 
                                 name="email" 
@@ -125,7 +125,7 @@ function PressroomPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('PressroomPage-Form-Publication-Input')}</InputTitle>
+                            <InputTitle>{t('PressroomPage_Form_Publication_Input')}</InputTitle>
 
                             <Input 
                                 name="media" 
@@ -135,7 +135,7 @@ function PressroomPage ({ t }) {
                         </InputWrapper>
 
                         <InputWrapper>
-                            <InputTitle>{t('PressroomPage-Form-Phone-Input')}</InputTitle>
+                            <InputTitle>{t('PressroomPage_Form_Phone_Input')}</InputTitle>
 
                             <Input 
                                 name="phone" 
@@ -145,7 +145,7 @@ function PressroomPage ({ t }) {
                         </InputWrapper>
 
                         <TextareaWrapper>
-                            <TextareaTitle>{t('PressroomPage-Form-Inquiri-Input')}</TextareaTitle>
+                            <TextareaTitle>{t('PressroomPage_Form_Inquiri_Input')}</TextareaTitle>
 
                             <Textarea
                                 rows="8"
@@ -153,15 +153,15 @@ function PressroomPage ({ t }) {
                             />       
                         </TextareaWrapper>
 
-                        <SubmitButton type="submit">{t('PressroomPage-Form-Send')}</SubmitButton>
+                        <SubmitButton type="submit">{t('PressroomPage_Form_Send')}</SubmitButton>
                     </NewsPagePressInquiresForm> 
                 </NewsPagePressInquiriesSectionWrapper>    
             </NewsPagePressInquiriesSection>
 
             <BaseSection
                 backgroundImage={'/static/images/pressroom-media-kit-banner.svg'}
-                title={t('PressroomPage-Media-Banner-Title')}
-                description={t('PressroomPage-Media-Banner-Description')}
+                title={t('PressroomPage_Media_Banner_Title')}
+                description={t('PressroomPage_Media_Banner_Description')}
                 textAlign={'center'}
                 buttonTitle={'Learn more'}
             />

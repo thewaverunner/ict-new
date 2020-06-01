@@ -3,7 +3,6 @@ export const BREAKPOINTS = {
     sm: 768, 
     md: 992,
     lg: 1250,
-    xl: 1400,
 }
 
 export const MAX_WIDTH_CONTAINER = 1200

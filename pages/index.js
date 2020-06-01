@@ -54,21 +54,21 @@ function HomePage ({ t }) {
     const news = [
         {
             image: '/static/images/home-first-news-image.svg',
-            release: t('HomePage_News-First-Release'),
+            release: t('HomePage_News_First_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-First-Title'),
+            title: t('HomePage_News_First_Title'),
         },
         { 
             image: '/static/images/home-second-news-image.svg',
-            release: t('HomePage_News-Second-Release'),
+            release: t('HomePage_News_Second_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-Second-Title'),
+            title: t('HomePage_News_Second_Title'),
         },
         { 
             image: '/static/images/home-first-news-image.svg',
-            release: t('HomePage_News-Third-Release'),
+            release: t('HomePage_News_Third_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-Third-Title'),
+            title: t('HomePage_News_Third_Title'),
         }
     ]
 

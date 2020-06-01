@@ -203,7 +203,7 @@ export const HomePageLatestNewsSection = styled.div``
 export const HomePageLatestNewsWrapper = styled.div`
     padding: 50px 25px;
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         padding: 98px 0 104px;
         margin: 0 auto;
 

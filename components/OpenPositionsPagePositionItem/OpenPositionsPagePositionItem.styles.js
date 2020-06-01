@@ -6,7 +6,7 @@ import {
 } from '../../utils/constants'
 
 export const OpenPositionsPageItem = styled.div`
-    min-width: 100%;
+    width: 100%;
     min-height: 298px;
     margin-bottom: 30px;
     outline: 1px solid #707070;
@@ -18,29 +18,13 @@ export const OpenPositionsPageItem = styled.div`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.xs}px) {
-       min-width: 46.9%;
-       margin-right: 30px;
-       flex: 1;
-
-       &:nth-child(2n+2) {
-           margin-right: 0;
-       }
+        width: calc(50% - 30px);
+        margin: 0 15px 30px;
     }
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        min-width: 29%; 
-        flex: 0;
-        margin-bottom: 60px;
-        margin-right: 60px;
-
-        &:nth-child(2n+2) {
-            margin-right: 60px;
-        }
- 
-        &:nth-child(3n+3) {
-            margin-right: 0;
-
-        }
+        width: calc(33.333% - 60px);
+        margin: 0 30px 60px;
     }
 `
 

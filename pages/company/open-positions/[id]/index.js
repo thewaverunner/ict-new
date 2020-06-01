@@ -28,29 +28,29 @@ function OpenPositionJobPage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('OpenPositionsJobPage-Head-Title')}</title>
+                <title>{t('OpenPositionsJobPage_Head_Title')}</title>
             </Head>
 
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
-                title={t('OpenPositionsJobPage-Marketing-Banner-Title')}
+                title={t('OpenPositionsJobPage_Marketing_Banner_Title')}
                 titleColor={'black'}
-                subtitle={t('OpenPositionsJobPage-Marketing-Banner-Subtitle')}
+                subtitle={t('OpenPositionsJobPage_Marketing_Banner_Subtitle')}
             />
 
             <OpenPositionJobPageSection>
         
                 <OpenPositionJobPageDescriptionJobWrapper>
-                    <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage-Job-Description-Title')}</OpenPositionJobPageSectionTitle>
-                    <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: t('OpenPositionsJobPage-Job-Description')}}/>
+                    <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage_Job_Description_Title')}</OpenPositionJobPageSectionTitle>
+                    <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: t('OpenPositionsJobPage_Job_Description')}}/>
                 </OpenPositionJobPageDescriptionJobWrapper>
 
                 <OpenPositionJobPageTaskWrapper>
-                    <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage-Job-Task-Title')}</OpenPositionJobPageSectionTitle>
-                    <OpenPositionJobPageSectionDescription>{t('OpenPositionsJobPage-Job-Task-Description')}</OpenPositionJobPageSectionDescription>
+                    <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage_Job_Task_Title')}</OpenPositionJobPageSectionTitle>
+                    <OpenPositionJobPageSectionDescription>{t('OpenPositionsJobPage_Job_Task_Description')}</OpenPositionJobPageSectionDescription>
 
-                    <BaseButton blackStyle>{t('OpenPositionsJobPage-Job-Apply')}</BaseButton>
+                    <BaseButton blackStyle>{t('OpenPositionsJobPage_Job_Apply')}</BaseButton>
                 </OpenPositionJobPageTaskWrapper>
             </OpenPositionJobPageSection>
 
@@ -62,10 +62,10 @@ function OpenPositionJobPage ({ t }) {
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage-ParthershipSection-Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage-ParthershipSection-Description')}</CorporateGovernancePartnershipsDescription>
+                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
 
-                            <BaseButton blackStyle>{t('OpenPositionsJobPage-ParthershipSection-Button')}</BaseButton>
+                            <BaseButton blackStyle>{t('OpenPositionsJobPage_ParthershipSection_Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>
