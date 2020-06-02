@@ -84,7 +84,7 @@ function BaseFooter ({ t, backgroundWhite }) {
             <FooterWrapper>
                 <FooterTopContent>
                     <FooterChangeLanguage>
-                        <img src="/static/images/language-icon.svg"/>
+                        <img src="/static/images/language-icon.svg" alt='lnguage-icon'/>
 
                         <Dropdown
                             options={languages}

@@ -93,7 +93,7 @@ function CorporateGovernancePage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
-                    <img src="/static/images/company-parthership.svg" />
+                    <img src="/static/images/company-parthership.svg" alt='parthnership-icon' />
                 </CorporateGovernancePartnershipsImage> 
             
                 <CorporateGovernancePartnershipsContent>

@@ -81,7 +81,7 @@ export const OpenPositionsPageList = styled.div`
 `
 
 export const ContactUsPageCardsSection = styled.section`
-    padding: 0 25px 50px;
+    padding: 50px 25px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         display: flex;
@@ -91,84 +91,10 @@ export const ContactUsPageCardsSection = styled.section`
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         margin: 0 auto;
-        padding: 0 0 100px 0;
+        padding: 50px 0 100px 0;
 
         max-width: ${MAX_WIDTH_CONTAINER}px;
     }
-`
-
-export const CompanyCard = styled.div`
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
-
-    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        margin-bottom: 0;
-        flex-direction: row;
-
-        &:first-child {
-            margin-right: 100px;
-        }
-    }
-`
-
-export const CompanyCardImage = styled.div`
-    margin: -52px 0;
-    transform: rotate(90deg);
-
-    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-       min-width: 90px;
-       transform: none;
-    }
-`
-
-export const CompanyCardDescriptionWrapper = styled.div`
-    padding: 15px;
-    text-align: center;
-
-    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        padding: 25px 25px;
-        text-align: left;
-    }  
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 40px 50px 40px 25px;
-    }  
-`
-
-export const CompanyCardTitleWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-
-    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        justify-content: flex-start;
-    }  
-`
-
-export const CompanyCardTitle = styled.a`
-    font-family: "DM Sans Bold";
-    font-size: 20px;
-    line-height: 30px;
-    color: #6672e5;
-    position: relative;
-    text-decoration: none;
-`
-
-export const CompanyCardArrow = styled.div`
-    align-self: center;
-    padding-left: 10px;
-`
-
-export const CompanyCardDescription = styled.p`
-    font-family: "DM Sans Regular";
-    font-size: 16px;
-    line-height: 24px;
-    opacity: 0.56;
-    margin-top: 15px;
-
-    color: ${COLORS.darken};
 `
 
 export const OpenPositionsPageFilter = styled.div`

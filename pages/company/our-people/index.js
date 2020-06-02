@@ -138,7 +138,7 @@ function OurPeoplePage ({ t }) {
 
                 <CorporateGovernancePartnershipsSection>
                     <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                        <img src="/static/images/company-parthership.svg" />
+                        <img src="/static/images/company-parthership.svg" alt='parthnership-image' />
                     </CorporateGovernancePartnershipsImage> 
                 
                     <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>

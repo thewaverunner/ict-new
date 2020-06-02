@@ -34,7 +34,7 @@ function ChallengesPage ({ t }) {
 
             <ChallengesTopSection>
                 <ChallengesTopSectionImage>
-                    <img src='/static/images/challenges-top-section-image.svg' />
+                    <img src='/static/images/challenges-top-section-image.svg' alt='responsibilty-icon' />
                 </ChallengesTopSectionImage>
 
                 <ChallengesTopSectionTitle>{t('ChallengesPage_Title')}</ChallengesTopSectionTitle>

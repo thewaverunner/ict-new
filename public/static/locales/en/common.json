@@ -245,5 +245,16 @@
     "ChallengesPage_ChallengesThird_Description": "To counter viability concerns, our priority is to offer long-term incentives for our top leaders (via new incentive plans and option programs).",
     "ChallengesPage_ChallengesFourth_Description": "The nature of the industry means we are unable to guarantee the success of a leader. By enabling education and a long-term incentive structure, we create a resilient and sustainable company.",
 
-    "OpportunityPage_Head_Title": "ICT | Opportunity"
+    "OpportunityPage_Head_Title": "ICT | Opportunity",
+    "OpportunityPage_TopSection_Title": "Help us to disrupt software distribution on a global scale",
+    "OpportunityPage_TopSection_Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "OpportunityPage_TopSection_Button": "View Open Positions",
+    "OpportunityPage_ChallengeSection_Title": "The challenges we’re up against",
+    "OpportunityPage_MindsetSection_Title": "A global mindset",
+
+    "LifeAtICTPage_Head_Title": "ICT | Life At ICT",
+    "LifeAtICTPage_TopSection_Title": "A culture built for innovators",
+    "LifeAtICTPage_TopSection_Description": "ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.",
+    "LifeAtICTPage_TopSection_Button": "View Open Positions",
+    "LifeAtICTPage_MindsetSection_Title": "Why us?"
 }

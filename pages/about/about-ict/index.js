@@ -129,7 +129,7 @@ function AboutICTPage ({ t }) {
                         questions.map((question, index) => (
                             <QuestionsBanner key={index}>
                                 <QuestionsBannerImage>
-                                    <img src="../static/images/question-icon.svg" />
+                                    <img src="../static/images/question-icon.svg" alt='question-icon'/>
                                 </QuestionsBannerImage>
 
                                 <QuestionsBannerDescription>

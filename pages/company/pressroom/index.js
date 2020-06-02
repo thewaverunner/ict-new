@@ -55,7 +55,7 @@ function PressroomPage ({ t }) {
                             {[0, 1, 2, 3, 4, 5].map((_, index) => 
                                 <NewsPageArticles key={index}>
                                     <NewsPageArticlesImage>
-                                        <img src="/static/images/pressroom-articles-image.svg" />
+                                        <img src="/static/images/pressroom-articles-image.svg" alt='article-image' />
                                     </NewsPageArticlesImage>
 
                                     <NewsPageArticlesContent>

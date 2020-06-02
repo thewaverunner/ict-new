@@ -129,7 +129,7 @@ export const ContactUsCompanyMap = styled.div`
 `
 
 export const ContactUsPageCardsSection = styled.section`
-    padding: 0 25px;
+    padding: 50px 25px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         display: flex;
@@ -139,7 +139,7 @@ export const ContactUsPageCardsSection = styled.section`
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         margin: 0 auto;
-        padding: 0;
+        padding: 50px 0  100px ;
 
         max-width: ${MAX_WIDTH_CONTAINER}px;
     }

@@ -20,6 +20,8 @@
     "react-flip-toolkit": "^7.0.9",
     "react-hook-form": "^5.7.2",
     "react-phone-input-2": "^2.13.5",
+    "react-slick": "^0.26.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {

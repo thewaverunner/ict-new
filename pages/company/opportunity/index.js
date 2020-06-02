@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { withTranslation } from '../../../i18n'
 
 import BaseButton from '../../../components/BaseButton'
+import BaseCard from '../../../components/BaseCard'
 
 import {
     OpportunityPageTopSection,
@@ -25,13 +26,6 @@ import {
     OpportunityPageMindsetArticle,
     OpportunityPageMindsetContent,
     OpportunityPageCardSection,
-    CompanyCard,
-    CompanyCardImage,
-    CompanyCardDescriptionWrapper,
-    CompanyCardTitleWrapper,
-    CompanyCardTitle,
-    CompanyCardArrow,
-    CompanyCardDescription,
 } from './index.styles'
 
 function OpportunityPage ({ t }) {
@@ -76,22 +70,17 @@ function OpportunityPage ({ t }) {
             </Head>
 
             <OpportunityPageTopSection>
-                <OpportunityPageTopSectionTitle>Help us to disrupt software distribution on a global scale</OpportunityPageTopSectionTitle>
-                <OpportunityPageTopSectionDescription>
-                    ICT meets the strictest demands on compliance, 
-                    transparency, as well as legal requirements, including 
-                    tax laws and the relevant regulations.
-                </OpportunityPageTopSectionDescription>
-
-                <BaseButton blackStyle>View Open Positions</BaseButton>
+                <OpportunityPageTopSectionTitle>{t('OpportunityPage_TopSection_Title')}</OpportunityPageTopSectionTitle>
+                <OpportunityPageTopSectionDescription>{t('OpportunityPage_TopSection_Description')}</OpportunityPageTopSectionDescription>
+                <BaseButton blackStyle>{t('OpportunityPage_TopSection_Button')}</BaseButton>
             </OpportunityPageTopSection>
 
             <OpportunityPageChallengeSection>
-                <OpportunityPageChallengeTitle>The challenges we’re up against</OpportunityPageChallengeTitle>
+                <OpportunityPageChallengeTitle>{t('OpportunityPage_ChallengeSection_Title')}</OpportunityPageChallengeTitle>
 
                 <OpportunityPageChallengeWrapper>
                     <OpportunityPageChallengeImage>
-                        <img src='/static/images/opportunity-challenges-image.svg' />
+                        <img src='/static/images/opportunity-challenges-image.svg' alt='challenge-image'/>
                     </OpportunityPageChallengeImage>
 
                     <OpportunityPageChallengeContent>
@@ -109,7 +98,7 @@ function OpportunityPage ({ t }) {
 
             <OpportunityPageMindsetSection>
                 <OpportunityPageMindsetContentWrapper>
-                    <OpportunityPageMindsetContentTitle>A global mindset</OpportunityPageMindsetContentTitle>
+                    <OpportunityPageMindsetContentTitle>{t('OpportunityPage_MindsetSection_Title')}</OpportunityPageMindsetContentTitle>
 
                     <OpportunityPageMindsetContent>
                         {mindsetArticles.map((article, index) => (
@@ -121,23 +110,12 @@ function OpportunityPage ({ t }) {
 
             <OpportunityPageCardSection>
                 {opportunityPageCard.map((card, index) => (
-                    <CompanyCard key={index}>
-                        <CompanyCardImage>
-                            <img src={card.image} />
-                        </CompanyCardImage>
-    
-                        <CompanyCardDescriptionWrapper>
-                            <CompanyCardTitleWrapper>
-                                <CompanyCardTitle href='#'>{card.title}</CompanyCardTitle>
-    
-                                <CompanyCardArrow>
-                                    <img src='/static/images/card-arrow-image.svg' />
-                                </CompanyCardArrow>
-                            </CompanyCardTitleWrapper>
-    
-                            <CompanyCardDescription>{card.description}</CompanyCardDescription>
-                        </CompanyCardDescriptionWrapper>
-                    </CompanyCard>    
+                    <BaseCard
+                        key={index}
+                        image={card.image}
+                        title={card.title}
+                        description={card.description}
+                    />  
                 ))}    
             </OpportunityPageCardSection>
         </>

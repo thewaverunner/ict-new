@@ -39,7 +39,7 @@ function ArticlePage ({ t }) {
                     </ArticlePageParagraph>
 
                     <ArticlePageImage>
-                        <img src="/static/images/article-page-article-image.svg" />
+                        <img src="/static/images/article-page-article-image.svg" alt='article-image' />
                     </ArticlePageImage>
 
                     <ArticlePageParagraph marginMedium>

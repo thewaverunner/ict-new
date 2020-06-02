@@ -6,6 +6,7 @@ import Dropdown from 'react-dropdown'
 
 import { withTranslation } from '../../../i18n'
 
+import BaseCard from '../../../components/BaseCard'
 import OpenPositionsPagePositionItem from '../../../components/OpenPositionsPagePositionItem'
 
 import {
@@ -17,13 +18,6 @@ import {
     OpenPositionsPageTopSectionDescription,
     OpenPositionsPageFilter,
     ContactUsPageCardsSection,
-    CompanyCard,
-    CompanyCardImage,
-    CompanyCardDescriptionWrapper,
-    CompanyCardTitleWrapper,
-    CompanyCardTitle,
-    CompanyCardArrow,
-    CompanyCardDescription,
 } from './index.styles'
 
 function OpenPositionsPage ({ t }) {
@@ -32,7 +26,6 @@ function OpenPositionsPage ({ t }) {
         'Western district',
         'South district',
     ]
-
 
     const departments = [
         'All departments',
@@ -66,23 +59,12 @@ function OpenPositionsPage ({ t }) {
 
             <ContactUsPageCardsSection>
                 {contactUsCard.map((card, index) => (
-                    <CompanyCard key={index}>
-                        <CompanyCardImage>
-                            <img src={card.image}/>
-                        </CompanyCardImage>
-    
-                        <CompanyCardDescriptionWrapper>
-                            <CompanyCardTitleWrapper>
-                                    <CompanyCardTitle href='#'>{card.title}</CompanyCardTitle>
-
-                                    <CompanyCardArrow>
-                                        <img src='/static/images/card-arrow-image.svg' />
-                                    </CompanyCardArrow>
-                            </CompanyCardTitleWrapper>
-    
-                            <CompanyCardDescription>{card.description}</CompanyCardDescription>
-                        </CompanyCardDescriptionWrapper>
-                    </CompanyCard>    
+                    <BaseCard 
+                        key={index}
+                        image={card.image}
+                        title={card.title}
+                        description={card.description}
+                    />
                 ))}                    
             </ContactUsPageCardsSection>
 
