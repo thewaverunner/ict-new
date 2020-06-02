@@ -133,9 +133,9 @@ export const CorporateGovernanceCrowdNumber = styled.div`
 export const CorporateGovernanceCrowdDescription = styled.div`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     padding-top: 86px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {

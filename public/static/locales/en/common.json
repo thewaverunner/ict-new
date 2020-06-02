@@ -234,5 +234,16 @@
     "ContactUsPage_CompanyInfo_Tax": "Tax Number*",
     "ContactUsPage_CompanyInfo_Vat": "Vat Number",
     "ContactUsPage_CompanyInfo_Email": "Email",
-    "ContactUsPage_CompanyInfo_Policy": "*Certificado de Identificación Fiscal"
+    "ContactUsPage_CompanyInfo_Policy": "*Certificado de Identificación Fiscal",
+
+    "ChallengesPage_Head_Title": "ICT | Challenges",
+    "ChallengesPage_Title": "Challenges",
+    "ChallengesPage_Description": "We strive for continuous improvement. One of our top priorities is to take on the challenges presented to us by the multi-level marketing industry.",
+    "ChallengesPage_ChallengesSection_Title": "ICT’s priority is to resolve these four issues. To attract the products we need to fulfil our purpose.",
+    "ChallengesPage_ChallengesFirst_Description": "We are actively working against the prejudice that pervades the digital multi-level marketing industry in order to rehabilitate confidence in Crowd1 and ensure that no questions remain unanswered. This is achieved through the establishment of Impact Crowd Technology S.L. in Madrid, Spain.",
+    "ChallengesPage_ChallengesSecond_Description": "With such great potential for growth, our focus is on complete transparency – of our corporate structure – to attract a broader product portfolio. Recruitment of new management is a priority that centres around supervision, focus and implementation of a solid product department to ensure continued growth of Impact Crowd Technology’s portfolio.",
+    "ChallengesPage_ChallengesThird_Description": "To counter viability concerns, our priority is to offer long-term incentives for our top leaders (via new incentive plans and option programs).",
+    "ChallengesPage_ChallengesFourth_Description": "The nature of the industry means we are unable to guarantee the success of a leader. By enabling education and a long-term incentive structure, we create a resilient and sustainable company.",
+
+    "OpportunityPage_Head_Title": "ICT | Opportunity"
 }
