@@ -188,6 +188,7 @@ export const SliderPrevArrow = styled.div`
 
     &:after {
         transform: none;
+        top: 10px;
     }
 `
 

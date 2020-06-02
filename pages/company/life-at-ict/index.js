@@ -115,7 +115,7 @@ function LifeAtICTPage ({ t }) {
                             <SliderItem key={index}>
                                 <SliderContentWrapper>
                                     <SliderItemImage>
-                                        <img src={slider.image} />
+                                        <img src={slider.image} alt='slider-image' />
                                     </SliderItemImage>
 
                                     <SliderItemContent>
