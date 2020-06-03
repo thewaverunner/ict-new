@@ -89,7 +89,12 @@ function OpenPositionsPage ({ t }) {
 
                 <OpenPositionsPageListWrapper>        
                     <OpenPositionsPageList>
-                        {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => <OpenPositionsPagePositionItem key={index} position={_} />)}
+                        {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => (
+                            <OpenPositionsPagePositionItem 
+                                key={index} 
+                                position={_} 
+                            />
+                        ))}
                     </OpenPositionsPageList>
                 </OpenPositionsPageListWrapper>    
             </OpenPositionsPageWrapper>

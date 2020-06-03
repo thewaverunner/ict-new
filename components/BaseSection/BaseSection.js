@@ -7,7 +7,7 @@ import {
     BaseSectionTitle,
     BaseSectionSubtitle,
     BaseSectionDescription,
-    BaseSectionContent
+    BaseSectionContent,
 } from './BaseSection.styles'
 
 function BaseSection (props) {
@@ -20,7 +20,7 @@ function BaseSection (props) {
         subtitle,
         description, 
         buttonTitle, 
-        buttonLink 
+        buttonLink,
     } = props
 
     return (

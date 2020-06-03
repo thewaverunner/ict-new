@@ -15,7 +15,7 @@ import {
     CompanyChallengesList,
     CompanyChallengesItem,
     CompanyChallengesItemNumber,
-    CompanyChallengesItemDescription
+    CompanyChallengesItemDescription,
 } from './index.styles'
 
 function ChallengesPage ({ t }) {
@@ -34,7 +34,10 @@ function ChallengesPage ({ t }) {
 
             <ChallengesTopSection>
                 <ChallengesTopSectionImage>
-                    <img src='/static/images/challenges-top-section-image.svg' alt='responsibilty-icon' />
+                    <img 
+                        src='/static/images/challenges-top-section-image.svg' 
+                        alt='responsibilty-icon' 
+                    />
                 </ChallengesTopSectionImage>
 
                 <ChallengesTopSectionTitle>{t('ChallengesPage_Title')}</ChallengesTopSectionTitle>

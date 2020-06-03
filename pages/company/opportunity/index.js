@@ -41,7 +41,7 @@ function OpportunityPage ({ t }) {
         {
             title: 'Our opportunity',
             description: 'ICT meets the strictest demands on compliance, transparency, as well as legal requirements, including tax laws and the relevant regulations.',
-        }
+        },
     ]
 
     const mindsetArticles = [
@@ -81,7 +81,10 @@ function OpportunityPage ({ t }) {
 
                 <OpportunityPageChallengeWrapper>
                     <OpportunityPageChallengeImage>
-                        <img src='/static/images/opportunity-challenges-image.svg' alt='challenge-image' />
+                        <img 
+                            src='/static/images/opportunity-challenges-image.svg' 
+                            alt='challenge-image' 
+                        />
                     </OpportunityPageChallengeImage>
 
                     <OpportunityPageChallengeContent>

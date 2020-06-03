@@ -8,7 +8,6 @@ import { useDropzone } from 'react-dropzone'
 import PhoneInput from 'react-phone-input-2'
 
 import { withTranslation } from '../../../../../i18n'
-import { useMediaQuery } from '../../../../../utils/hooks'
 
 import BaseButton from '../../../../../components/BaseButton'
 import BaseSection from '../../../../../components/BaseSection'
@@ -31,8 +30,6 @@ import {
     TextareaTitle,
     Textarea,
     SubmitButton,
-
-    //
     CorporateGovernancePartnershipsSection,
     CorporateGovernancePartnershipsImage,
     CorporateGovernancePartnershipsContent,
@@ -124,7 +121,10 @@ function OpenPositionApplyPage ({ t }) {
                                 : (
                                     <OpenPositionApplyPageInputFileMessage>
                                         <OpenPositionApplyPageInputFileImages>
-                                            <img src="/static/images/open-positions-apply-page-upload-icon.svg" alt='upload-image' />
+                                            <img 
+                                                src="/static/images/open-positions-apply-page-upload-icon.svg" 
+                                                alt='upload-image' 
+                                            />
                                         </OpenPositionApplyPageInputFileImages>
 
                                         <strong>{t('OpenPositionApplyPage_ApplicationForm_Upload_Title')}</strong> <br/>
@@ -154,7 +154,10 @@ function OpenPositionApplyPage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                    <img src="/static/images/company-parthership.svg" alt='parthership-image'/>
+                    <img 
+                        src="/static/images/company-parthership.svg" 
+                        alt='parthership-image' 
+                    />
                 </CorporateGovernancePartnershipsImage> 
             
                 <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>

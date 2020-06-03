@@ -6,7 +6,6 @@ import { withTranslation } from '../i18n'
 
 import BaseButton from '../components/BaseButton'
 import BaseSectionHeading from '../components/BaseSectionHeading'
-
 import HomePageArticleItem from '../components/HomePageArticleItem'
 import HomePageBannerItem from '../components/HomePageBannerItem'
 
@@ -48,7 +47,7 @@ function HomePage ({ t }) {
             title: t('HomePage_ThirdBanner_Title'),
             description: t('HomePage_ThirdBanner_Content'),
             imageReverse: false,
-        }
+        },
     ]
 
     const news = [
@@ -69,7 +68,7 @@ function HomePage ({ t }) {
             release: t('HomePage_News_Third_Release'),
             data: '2020-03-02',
             title: t('HomePage_News_Third_Title'),
-        }
+        },
     ]
 
     return (
@@ -92,7 +91,12 @@ function HomePage ({ t }) {
             </HomePageTopSectionWrapper>
 
             <HomePageBannersWrapper>
-                {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)}
+                {banners.map((banner, index) => (
+                    <HomePageBannerItem 
+                        key={index} 
+                        banner={banner} 
+                    />
+                ))}
             </HomePageBannersWrapper>
 
             <HomePageImpactSection />

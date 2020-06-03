@@ -22,7 +22,7 @@ import {
     QuestionsBannerDescription,
     QuestionsBannerTitle,
     QuestionsBannerContent,
-    QuestionsBannerImage
+    QuestionsBannerImage,
 } from './index.styles'
 
 function AboutICTPage ({ t }) {
@@ -38,7 +38,7 @@ function AboutICTPage ({ t }) {
         { 
             title: t('AboutICTPage_InfoBanner_Third_Title'),
             description: t('AboutICTPage_InfoBanner_Third_Description'),
-        }
+        },
     ]
 
     const questions = [
@@ -53,7 +53,7 @@ function AboutICTPage ({ t }) {
         { 
             title: t('AboutICTPage_QuestionBanner_Third_Title'),
             description: t('AboutICTPage_QuestionBanner_Third_Description'),
-        }
+        },
     ]
 
     return (
@@ -129,7 +129,10 @@ function AboutICTPage ({ t }) {
                         questions.map((question, index) => (
                             <QuestionsBanner key={index}>
                                 <QuestionsBannerImage>
-                                    <img src="../static/images/question-icon.svg" alt='question-icon' />
+                                    <img 
+                                        src="../static/images/question-icon.svg" 
+                                        alt='question-icon' 
+                                    />
                                 </QuestionsBannerImage>
 
                                 <QuestionsBannerDescription>

@@ -13,7 +13,7 @@ import {
     ArticlePageTitle,
     ArticlePageTime,
     ArticlePageParagraph,
-    ArticlePageImage
+    ArticlePageImage,
 } from './index.styles'
 
 function ArticlePage ({ t }) {
@@ -39,7 +39,10 @@ function ArticlePage ({ t }) {
                     </ArticlePageParagraph>
 
                     <ArticlePageImage>
-                        <img src="/static/images/article-page-article-image.svg" alt='article-image' />
+                        <img 
+                            src="/static/images/article-page-article-image.svg" 
+                            alt='article-image' 
+                        />
                     </ArticlePageImage>
 
                     <ArticlePageParagraph marginMedium >

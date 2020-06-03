@@ -27,7 +27,7 @@ import {
     CorporateGovernancePartnershipsContentWrapper,
     CorporateGovernancePartnershipsTitle,
     CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper
+    CorporateGovernancePartnershipsDescriptionWrapper,
 } from './index.styles'
 
 function CorporateGovernancePage ({ t }) {
@@ -90,7 +90,10 @@ function CorporateGovernancePage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
-                    <img src="/static/images/company-parthership.svg" alt='parthnership-icon' />
+                    <img 
+                        src="/static/images/company-parthership.svg" 
+                        alt='parthnership-icon' 
+                    />
                 </CorporateGovernancePartnershipsImage> 
             
                 <CorporateGovernancePartnershipsContent>

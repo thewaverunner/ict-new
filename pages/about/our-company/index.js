@@ -22,7 +22,7 @@ import {
     OurGoalsContentWrapper,
     OurGoalsContent,
     OurGoalsDescription,
-    OurGoalsSubTitle
+    OurGoalsSubTitle,
 } from './index.styles'
 
 function OurCompanyPage ({ t }) {
@@ -97,7 +97,10 @@ function OurCompanyPage ({ t }) {
                             ourMission.map((mission, index) => (
                                 <OurMissionContent key={index}>
                                     <OurMissionImage>
-                                        <img src='/static/images/about-our-company-mission-arrow.svg' alt='arrow-icon' />
+                                        <img 
+                                            src='/static/images/about-our-company-mission-arrow.svg' 
+                                            alt='arrow-icon' 
+                                        />
                                     </OurMissionImage>
 
                                     <OurMissionDescription>{mission.description}</OurMissionDescription>

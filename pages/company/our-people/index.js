@@ -21,7 +21,7 @@ import {
     CorporateGovernancePartnershipsContentWrapper,
     CorporateGovernancePartnershipsTitle,
     CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper
+    CorporateGovernancePartnershipsDescriptionWrapper,
 } from './index.styles'
 
 function OurPeoplePage ({ t }) {
@@ -88,19 +88,32 @@ function OurPeoplePage ({ t }) {
                     <OurPeoplePageManagementTitle>{t('OurPeoplePage_ManagementSection_Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
-                        {ourPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
+                        {ourPeoples.map((member, index) => (
+                            <OurPeoplePageMemberItem 
+                                key={index} 
+                                member={member} 
+                            />
+                        ))}
                     </OurPeoplePageManagementList>
 
                     <OurPeoplePageManagementTitle>{t('OurPeoplePage_ManagementSectionBoard_Title')}</OurPeoplePageManagementTitle>
 
                     <OurPeoplePageManagementList>
-                        {boardPeoples.map((member, index) => <OurPeoplePageMemberItem key={index} member={member} />)}
+                        {boardPeoples.map((member, index) => (
+                            <OurPeoplePageMemberItem 
+                                key={index}
+                                member={member}
+                            />
+                        ))}
                     </OurPeoplePageManagementList>
                 </OurPeoplePageManagementSection>
 
                 <CorporateGovernancePartnershipsSection>
                     <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                        <img src="/static/images/company-parthership.svg" alt='parthnership-image' />
+                        <img 
+                            src="/static/images/company-parthership.svg" 
+                            alt='parthnership-image' 
+                        />
                     </CorporateGovernancePartnershipsImage> 
                 
                     <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>

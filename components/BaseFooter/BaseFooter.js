@@ -42,13 +42,13 @@ function BaseFooter ({ t, backgroundWhite }) {
         { title: t('BaseFooter_Company_People'), link: '/company/our-people' },
         { title: t('BaseFooter_Company_Positions'), link: '/company/open-positions' },
         { title: t('BaseFooter_Company_Pressroom'), link: '/company/pressroom' },
-        { title: t('BaseFooter_Company_Contact'), link: '/contact-us' }
+        { title: t('BaseFooter_Company_Contact'), link: '/contact-us' },
     ]
     
     const footerBottomLinks = [
         { title: t('BaseFooter_Bottom_Terms'), link: '#' },
         { title: t('BaseFooter_Bottom_Privacy'), link: '#' },
-        { title: t('BaseFooter_Bottom_Cookie'), link: '#' }
+        { title: t('BaseFooter_Bottom_Cookie'), link: '#' },
     ]
 
     const languages = [
@@ -84,7 +84,10 @@ function BaseFooter ({ t, backgroundWhite }) {
             <FooterWrapper>
                 <FooterTopContent>
                     <FooterChangeLanguage>
-                        <img src="/static/images/language-icon.svg" alt='lnguage-icon'/>
+                        <img 
+                            src="/static/images/language-icon.svg" 
+                            alt='lnguage-icon'
+                        />
 
                         <Dropdown
                             options={languages}

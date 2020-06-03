@@ -15,7 +15,10 @@ function BaseCard ({ image, title, description }) {
         <>
             <ElementBaseCard>
                 <BaseCardImage>
-                    <img src={image} alt='card-image'/>
+                    <img 
+                        src={image} 
+                        alt='card-image' 
+                    />
                 </BaseCardImage>
 
                 <BaseCardDescriptionWrapper>
@@ -23,7 +26,10 @@ function BaseCard ({ image, title, description }) {
                         <BaseCardTitle href='#'>{title}</BaseCardTitle>
 
                         <BaseCardArrow>
-                            <img src='/static/images/card-arrow-image.svg' alt='card-arrow-image'/>
+                            <img 
+                                src='/static/images/card-arrow-image.svg' 
+                                alt='card-arrow-image' 
+                            />
                         </BaseCardArrow>
                     </BaseCardTitleWrapper>
 
