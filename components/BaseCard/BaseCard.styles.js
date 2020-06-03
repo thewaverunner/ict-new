@@ -5,7 +5,7 @@ import {
     COLORS
 } from '../../utils/constants'
 
-export const ElementBaseCard = styled.div`
+export const BaseCardElement = styled.div`
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;

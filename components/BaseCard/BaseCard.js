@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-    ElementBaseCard,
+    BaseCardElement,
     BaseCardImage,
     BaseCardDescriptionWrapper,
     BaseCardTitleWrapper,
@@ -13,7 +13,7 @@ import {
 function BaseCard ({ image, title, description }) {
     return (
         <>
-            <ElementBaseCard>
+            <BaseCardElement>
                 <BaseCardImage>
                     <img 
                         src={image} 
@@ -35,7 +35,7 @@ function BaseCard ({ image, title, description }) {
 
                     <BaseCardDescription>{description}</BaseCardDescription>
                 </BaseCardDescriptionWrapper>
-            </ElementBaseCard> 
+            </BaseCardElement> 
         </>
     )
 }
