@@ -37,7 +37,7 @@ export const CorporateGovernanceWrapper = styled.div`
     }
 `
 
-export const CorporateGovernanceTopSection = styled.div`       
+export const CorporateGovernanceTopSection = styled.section`       
    padding: 38px 0 60px;
 
    @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -76,7 +76,7 @@ export const CorporateGovernanceTopSectionDescription = styled.p`
     }
 `
 
-export const CorporateGovernanceCrowdSection = styled.div`
+export const CorporateGovernanceCrowdSection = styled.section`
     background: #fcfcfc;
     padding: 33px 25px 58px; 
     margin-bottom: 60px;
@@ -93,17 +93,17 @@ export const CorporateGovernanceCrowdSection = styled.div`
 
 export const CorporateGovernanceCrowdTitle = styled.h2`
     font-family: 'DM Sans Bold';
-    font-weight: bold;
     font-size: 30px;
     line-height: 34px;
 
     color: ${COLORS.dark};
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
-        font-size: ${FONTS.h1}px;
         line-height: 44px;
         text-align: center;
         width: 100%;
+        
+        font-size: ${FONTS.h1}px;
     }
 `
 
@@ -133,9 +133,9 @@ export const CorporateGovernanceCrowdNumber = styled.div`
 export const CorporateGovernanceCrowdDescription = styled.div`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     padding-top: 86px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -143,7 +143,7 @@ export const CorporateGovernanceCrowdDescription = styled.div`
     }
 `
 
-export const CorporateGovernanceFoundationSection = styled.div`
+export const CorporateGovernanceFoundationSection = styled.section`
     background: #fcfcfc; 
     margin-bottom: 60px;
 
@@ -181,12 +181,12 @@ export const CorporateGovernanceFoundationTitle = styled.h2`
 export const CorporateGovernanceFoundationDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
-
+  
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 `
 
-export const CorporateGovernancePartnershipsSection = styled.div`
+export const CorporateGovernancePartnershipsSection = styled.section`
     position: relative;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -273,9 +273,9 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     margin-bottom: 31px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {

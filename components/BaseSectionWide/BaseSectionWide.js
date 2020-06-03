@@ -65,7 +65,7 @@ function BaseSectionWide (props) {
                                 {
                                     buttonTitle && (
                                         <BaseButton 
-                                            blackStyle={themeMode === 'light'} 
+                                            mode={themeMode === 'light'} 
                                             withArrow={true}
                                         >
                                             {buttonTitle}
@@ -124,7 +124,7 @@ function BaseSectionWide (props) {
                                 {
                                     buttonTitle && (
                                         <BaseButton 
-                                            blackStyle={themeMode === 'light'} 
+                                            mode={themeMode === 'light'} 
                                             withArrow={true}
                                         >
                                             {buttonTitle}

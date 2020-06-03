@@ -11,63 +11,60 @@ import {
     CorporateGovernanceTopSection,
     CorporateGovernanceTopSectionTitle,
     CorporateGovernanceTopSectionDescription,
-    
     CorporateGovernanceCrowdSection,
     CorporateGovernanceCrowdTitle,
     CorporateGovernanceCrowdContent,
     CorporateGovernanceCrowdNumber,
     CorporateGovernanceCrowdDescription,
-
     CorporateGovernanceFoundationSection,
     CorporateGovernanceFoundationImage,
     CorporateGovernanceFoundationContent,
     CorporateGovernanceFoundationTitle,
     CorporateGovernanceFoundationDescription,
-
     CorporateGovernancePartnershipsSection,
     CorporateGovernancePartnershipsImage,
     CorporateGovernancePartnershipsContent,
     CorporateGovernancePartnershipsContentWrapper,
     CorporateGovernancePartnershipsTitle,
     CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper
+    CorporateGovernancePartnershipsDescriptionWrapper,
 } from './index.styles'
 
 function CorporateGovernancePage ({ t }) {
     const crowdInfo = [
-        { description: t('CorporateGovernancePage-CrowdSection-Description-First') },
-        { description: t('CorporateGovernancePage-CrowdSection-Description-Second') },
-        { description: t('CorporateGovernancePage-CrowdSection-Description-Third') },
-        { description: t('CorporateGovernancePage-CrowdSection-Description-Fourth') },
+        { description: t('CorporateGovernancePage_CrowdSection_Description_First') },
+        { description: t('CorporateGovernancePage_CrowdSection_Description_Second') },
+        { description: t('CorporateGovernancePage_CrowdSection_Description_Third') },
+        { description: t('CorporateGovernancePage_CrowdSection_Description_Fourth') },
     ]
 
     const governanceSection = [
         {
             imageSrc: '/static/images/solid-foundation.svg',
-            title: t('CorporateGovernancePage-GovernanceSection-Title-First'),
-            description: t('CorporateGovernancePage-GovernanceSection-Description-First'),
+            title: t('CorporateGovernancePage_GovernanceSection_Title_First'),
+            description: t('CorporateGovernancePage_GovernanceSection_Description_First'),
         },
         {
             imageSrc: '/static/images/digital-company.svg',
-            title: t('CorporateGovernancePage-GovernanceSection-Title-Second'),
-            description: t('CorporateGovernancePage-GovernanceSection-Description-Second'),
+            title: t('CorporateGovernancePage_GovernanceSection_Title_Second'),
+            description: t('CorporateGovernancePage_GovernanceSection_Description_Second'),
         },
     ]
 
     return (
         <>
             <Head>
-                <title>{t('CorporateGovernancePage-Head-Title')}</title>
+                <title>{t('CorporateGovernancePage_Head_Title')}</title>
             </Head>
 
             <CorporateGovernanceWrapper>
                 <CorporateGovernanceTopSection>
-                    <CorporateGovernanceTopSectionTitle>{t('CorporateGovernancePage-Title')}</CorporateGovernanceTopSectionTitle>
-                    <CorporateGovernanceTopSectionDescription>{t('CorporateGovernancePage-Description')}</CorporateGovernanceTopSectionDescription>
+                    <CorporateGovernanceTopSectionTitle>{t('CorporateGovernancePage_Title')}</CorporateGovernanceTopSectionTitle>
+                    <CorporateGovernanceTopSectionDescription>{t('CorporateGovernancePage_Description')}</CorporateGovernanceTopSectionDescription>
                 </CorporateGovernanceTopSection>
 
                 <CorporateGovernanceCrowdSection>
-                    <CorporateGovernanceCrowdTitle>{t('CorporateGovernancePage-CrowdSection-Title')}</CorporateGovernanceCrowdTitle>
+                    <CorporateGovernanceCrowdTitle>{t('CorporateGovernancePage_CrowdSection_Title')}</CorporateGovernanceCrowdTitle>
 
                     {crowdInfo.map((item, index) => (
                         <CorporateGovernanceCrowdContent key={index}>
@@ -93,16 +90,19 @@ function CorporateGovernancePage ({ t }) {
 
             <CorporateGovernancePartnershipsSection>
                 <CorporateGovernancePartnershipsImage>
-                    <img src="/static/images/company-parthership.svg" />
+                    <img 
+                        src="/static/images/company-parthership.svg" 
+                        alt='parthnership-icon' 
+                    />
                 </CorporateGovernancePartnershipsImage> 
             
                 <CorporateGovernancePartnershipsContent>
                     <CorporateGovernancePartnershipsContentWrapper>
                         <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage-ParthershipsSection-Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription dangerouslySetInnerHTML={{ __html: t('CorporateGovernancePage-ParthershipsSection-Description')}} />
+                            <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage_ParthershipsSection_Title')}</CorporateGovernancePartnershipsTitle>
+                            <CorporateGovernancePartnershipsDescription dangerouslySetInnerHTML={{ __html: t('CorporateGovernancePage_ParthershipsSection_Description')}} />
 
-                            <BaseButton blackStyle>{t('CorporateGovernancePage-ParthershipsSection-Button')}</BaseButton>
+                            <BaseButton mode={'dark'}>{t('CorporateGovernancePage_ParthershipsSection_Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>

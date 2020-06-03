@@ -6,7 +6,6 @@ import { withTranslation } from '../i18n'
 
 import BaseButton from '../components/BaseButton'
 import BaseSectionHeading from '../components/BaseSectionHeading'
-
 import HomePageArticleItem from '../components/HomePageArticleItem'
 import HomePageBannerItem from '../components/HomePageBannerItem'
 
@@ -48,28 +47,28 @@ function HomePage ({ t }) {
             title: t('HomePage_ThirdBanner_Title'),
             description: t('HomePage_ThirdBanner_Content'),
             imageReverse: false,
-        }
+        },
     ]
 
     const news = [
         {
             image: '/static/images/home-first-news-image.svg',
-            release: t('HomePage_News-First-Release'),
+            release: t('HomePage_News_First_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-First-Title'),
+            title: t('HomePage_News_First_Title'),
         },
         { 
             image: '/static/images/home-second-news-image.svg',
-            release: t('HomePage_News-Second-Release'),
+            release: t('HomePage_News_Second_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-Second-Title'),
+            title: t('HomePage_News_Second_Title'),
         },
         { 
             image: '/static/images/home-first-news-image.svg',
-            release: t('HomePage_News-Third-Release'),
+            release: t('HomePage_News_Third_Release'),
             data: '2020-03-02',
-            title: t('HomePage_News-Third-Title'),
-        }
+            title: t('HomePage_News_Third_Title'),
+        },
     ]
 
     return (
@@ -87,23 +86,27 @@ function HomePage ({ t }) {
             <HomePageTopSectionWrapper>
                 <HomePageTopSection>
                     <HomePageTopSectionTitle>{t('HomePage_Marketing_Title')}</HomePageTopSectionTitle>
-
                     <HomePageTopSectionDescription>{t('HomePage_Marketing_Content')}</HomePageTopSectionDescription>
                 </HomePageTopSection>
             </HomePageTopSectionWrapper>
 
             <HomePageBannersWrapper>
-                {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)}
+                {banners.map((banner, index) => (
+                    <HomePageBannerItem 
+                        key={index} 
+                        banner={banner} 
+                    />
+                ))}
             </HomePageBannersWrapper>
 
-            <HomePageImpactSection></HomePageImpactSection>
+            <HomePageImpactSection />
 
             <HomePageImpactContentWrapper>
                 <HomePageImpactContent>
                     <HomePageImpactContentTitle>{t('HomePage_Impact_Title')}</HomePageImpactContentTitle>
                     <HomePageImpactContentDescription>{t('HomePage_Impact_Content')}</HomePageImpactContentDescription>
 
-                    <BaseButton blackStyle>Learn More</BaseButton>
+                    <BaseButton mode={'dark'}>Learn More</BaseButton>
                 </HomePageImpactContent>
             </HomePageImpactContentWrapper>
 
@@ -116,7 +119,7 @@ function HomePage ({ t }) {
                     <HomePageLatestNewsTitle>{t('HomePage_NewsSection_Title')}</HomePageLatestNewsTitle>
 
                     <BaseButton 
-                        blackStyle 
+                        mode={'dark'}
                         hideBorder 
                         withArrow={true}
                     >
@@ -124,7 +127,12 @@ function HomePage ({ t }) {
                     </BaseButton>
 
                     <HomePageLatestNewsList>
-                        {news.map((article, index) => <HomePageArticleItem key={index} article={article} />)}
+                        {news.map((article, index) => (
+                            <HomePageArticleItem 
+                                key={index} 
+                                article={article} 
+                            />
+                        ))}
                     </HomePageLatestNewsList>
                 </HomePageLatestNewsWrapper>
             </HomePageLatestNewsSection>

@@ -7,7 +7,7 @@ import {
     MAX_WIDTH_CONTAINER 
 } from '../../utils/constants'
 
-export const BaseSectionHeadingWrapper = styled.div`
+export const BaseSectionHeadingWrapper = styled.section`
     background: url('/static/images/header-background.svg') 50% 50%;
     background-size: cover;
     margin-bottom: 16px;

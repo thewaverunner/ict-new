@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 import { 
     BREAKPOINTS, 
-    FONTS 
+    FONTS,
+    COLORS 
 } from '../../../utils/constants'
 
-export const InfoBannerSection = styled.div`
+export const InfoBannerSection = styled.section`
     background-color: #fafafa;
     padding: 50px 0 100px;
     margin-bottom: 16px;
@@ -64,11 +65,12 @@ export const  InfoBannerDescription = styled.div`
 `
 
 export const  InfoBannerTitle = styled.h2`
-    color: #1d1d1f;
     margin: 45px 0 25px;
     font-size: 31px;
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     line-height: 31px; 
+
+    color: ${COLORS.darken};
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px){
         margin: 0 0 20px;
@@ -76,11 +78,11 @@ export const  InfoBannerTitle = styled.h2`
 `
 
 export const  InfoBannerContent = styled.p`
-    color: #1D1D1F;
     margin-bottom: 58px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px){
@@ -152,11 +154,12 @@ export const  QuestionsBannerDescription = styled.div`
 `
 
 export const  QuestionsBannerTitle = styled.h2`
-    color: #1D1D1F;
     margin: 25px 0 20px;
     font-size: 31px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
+
+    color: ${COLORS.darken};
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){
         margin: 10px 0 15px; 
@@ -164,11 +167,11 @@ export const  QuestionsBannerTitle = styled.h2`
 `
 
 export const  QuestionsBannerContent = styled.p`
-    color: #1D1D1F;
     margin-bottom: 58px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px){

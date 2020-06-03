@@ -7,12 +7,17 @@ import {
     MAX_WIDTH_CONTAINER 
 } from '../../../utils/constants'
 
-export const OpenPositionsPageWrapper = styled.div`       
+export const OpenPositionsPageWrapper = styled.section`       
     padding: 0 25px;
+    background-color: #fafafa;
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+       padding: 0;
+    }
 `
 
-export const OpenPositionsPageTopSection = styled.div`       
-    padding: 38px 0 60px;
+export const OpenPositionsPageTopSection = styled.section`       
+    padding: 38px 25px 60px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         text-align: center;
@@ -21,7 +26,7 @@ export const OpenPositionsPageTopSection = styled.div`
     }
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 117px 0 145px;
+        padding: 87px 0 74px;
         max-width: 810px;
     }
 `
@@ -44,7 +49,7 @@ export const OpenPositionsPageTopSectionTitle = styled.h2`
 export const OpenPositionsPageTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
+    color: ${COLORS.darken};
 
     font-size: ${FONTS.p}px;
 
@@ -55,112 +60,57 @@ export const OpenPositionsPageTopSectionDescription = styled.p`
     }
 `
 
+export const OpenPositionsPageListWrapper = styled.div`
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
+        max-width: ${MAX_WIDTH_CONTAINER}px;
+    }
+`
+
 export const OpenPositionsPageList = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
-        margin: 0 auto;
-        margin-bottom: 98px;
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        margin: 0 -15px;
+    }
 
-        max-width: ${MAX_WIDTH_CONTAINER}px;
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        margin: 0 -30px;
     }
 `
 
-export const CorporateGovernancePartnershipsSection = styled.div`
-    position: relative;
+export const ContactUsPageCardsSection = styled.section`
+    padding: 50px 25px;
 
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         display: flex;
-        flex-direction: row-reverse;
-    }
-`
-
-export const CorporateGovernancePartnershipsImage = styled.div`
-    background: ${props => props.backgroundStyle === 'white' ? '#fafafa' : COLORS.white};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        padding: 40px 0;
-        width: 45%;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-        }
-    }
-`
-
-export const CorporateGovernancePartnershipsContent = styled.div`
-    transform: translateY(-25%);
-    padding: 38px 25px 47px;
-    margin: 0 25px -20px;
-
-    background: ${props => props.backgroundStyle === 'white' ? COLORS.white : '#fafafa'};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        transform: none;
-        margin: 0;
-        padding: 0;
-        width: 55%;
-    }
-`
-
-export const CorporateGovernancePartnershipsContentWrapper = styled.div`
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-
-        max-width: ${MAX_WIDTH_CONTAINER}px;
-    }
-`
-
-export const CorporateGovernancePartnershipsDescriptionWrapper = styled.div`
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        max-width: 530px;
-        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-        max-width: 638px;
+        margin: 0 auto;
+        padding: 50px 0 100px 0;
+
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `
 
-export const CorporateGovernancePartnershipsTitle = styled.h2`
-    font-family: 'DM Sans Bold';
-    font-size: 30px;
-    line-height: 34px;
-    margin-bottom: 22px;
+export const OpenPositionsPageFilter = styled.div`
+    padding: 25px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
 
-    color: ${COLORS.dark};
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        transform: none;
-        line-height: 44px;
-    
-        font-size: ${FONTS.h1}px;
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
-`
 
-export const CorporateGovernancePartnershipsDescription = styled.p`
-    font-family: 'DM Sans Regular';
-    line-height: 21px;
-    color: #1d1d1f;
-    margin-bottom: 31px;
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
+        padding: 60px 0 90px 0;
 
-    font-size: ${FONTS.p}px;
-
-    @media screen and (min-width: ${BREAKPOINTS.md}px) {
-        line-height: 31.5px;
-    
-        font-size: ${FONTS.h3}px;
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `

@@ -1,0 +1,12 @@
+<svg id="Component_8_1" data-name="Component 8 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2" height="785" viewBox="0 0 2 785">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="1" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#676ee5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_493" data-name="Rectangle 493" width="2" height="196" fill="url(#linear-gradient)"/>
+  <rect id="Rectangle_494" data-name="Rectangle 494" width="2" height="196" transform="translate(0 191)" fill="#676ee5"/>
+  <rect id="Rectangle_499" data-name="Rectangle 499" width="2" height="196" transform="translate(0 389)" fill="#676ee5"/>
+  <rect id="Rectangle_502" data-name="Rectangle 502" width="2" height="196" transform="translate(2 785) rotate(180)" fill="url(#linear-gradient)"/>
+</svg>

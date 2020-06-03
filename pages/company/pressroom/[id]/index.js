@@ -9,24 +9,24 @@ import BaseSectionHeading from '../../../../components/BaseSectionHeading'
 
 import {
     ArticlePageSection,
-    ArticlePageWrapper,
+    ArticlePageItem,
     ArticlePageTitle,
     ArticlePageTime,
     ArticlePageParagraph,
-    ArticlePageImage
+    ArticlePageImage,
 } from './index.styles'
 
 function ArticlePage ({ t }) {
     return (
         <>
             <Head>
-                <title>{t('ArticlePage-Head-Title')}</title>
+                <title>{t('ArticlePage_Head_Title')}</title>
             </Head>
 
-            <BaseSectionHeading title={t('ArticlePage-Heading')} />
+            <BaseSectionHeading title={t('ArticlePage_Heading')} />
 
             <ArticlePageSection>
-                <ArticlePageWrapper>
+                <ArticlePageItem>
                     <ArticlePageTitle>Title</ArticlePageTitle>
                     <ArticlePageTime>14/3/2020</ArticlePageTime>
 
@@ -39,10 +39,13 @@ function ArticlePage ({ t }) {
                     </ArticlePageParagraph>
 
                     <ArticlePageImage>
-                        <img src="/static/images/article-page-article-image.svg" />
+                        <img 
+                            src="/static/images/article-page-article-image.svg" 
+                            alt='article-image' 
+                        />
                     </ArticlePageImage>
 
-                    <ArticlePageParagraph marginMedium>
+                    <ArticlePageParagraph marginMedium >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -50,8 +53,8 @@ function ArticlePage ({ t }) {
                         aute irure dolor in reprehenderit.
                     </ArticlePageParagraph>
 
-                    <BaseButton blackStyle>{t('ArticlePage-Download')}</BaseButton>
-                </ArticlePageWrapper>
+                    <BaseButton mode={'dark'}>{t('ArticlePage_Download')}</BaseButton>
+                </ArticlePageItem>
             </ArticlePageSection>
         </>
     )

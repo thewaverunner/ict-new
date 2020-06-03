@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 import { 
     BREAKPOINTS, 
-    FONTS 
+    FONTS,
+    COLORS 
 } from '../../utils/constants'
 
 export const OurPeoplePageManagementItem = styled.div`       
@@ -63,9 +64,9 @@ export const OurPeoplePageManagementItemDescriptionWrapper = styled.div`
 export const OurPeoplePageManagementItemDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     padding-bottom: 20px;
     
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 `
 

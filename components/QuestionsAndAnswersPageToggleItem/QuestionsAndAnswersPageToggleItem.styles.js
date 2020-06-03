@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 import { 
     BREAKPOINTS, 
-    FONTS 
+    FONTS,
+    COLORS 
 } from '../../utils/constants'
 
 export const QuestionsAndAnswersPageQuestionItem = styled.li` 
@@ -29,8 +30,8 @@ export const QuestionsAndAnswersPageQuestionItemTitleWrapper = styled.div`
 export const QuestionsAndAnswersPageQuestionItemTitle = styled.h2`       
     font-family: 'DM Sans Bold';
     line-height: 31.5px;
-    color: #000;
-    
+ 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
@@ -39,9 +40,9 @@ export const QuestionsAndAnswersPageQuestionIcon = styled.div``
 export const QuestionsAndAnswersPageQuestionItemDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     padding: 0 0 10px 0;
     max-width: 90%;
     
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 `

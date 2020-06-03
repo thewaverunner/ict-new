@@ -7,7 +7,7 @@ import {
     MAX_WIDTH_CONTAINER 
 } from '../../../../utils/constants'
 
-export const OpenPositionJobPageSection = styled.div`
+export const OpenPositionJobPageSection = styled.section`
     max-width: 890px;
     margin: 0 auto;
     padding: 50px 25px;
@@ -29,8 +29,9 @@ export const OpenPositionJobPageSectionTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 24px;
     line-height: 24px;
-    color: #1d1d1f;
     margin-bottom: 20px;
+
+    color: ${COLORS.darken};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         font-size: 30px;
@@ -40,13 +41,13 @@ export const OpenPositionJobPageSectionTitle = styled.h2`
 export const OpenPositionJobPageSectionDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 31.5px;
-    color: #1d1d1f;
     margin-bottom: 56px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
 `
 
-export const CorporateGovernancePartnershipsSection = styled.div`
+export const CorporateGovernancePartnershipsSection = styled.section`
     position: relative;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {

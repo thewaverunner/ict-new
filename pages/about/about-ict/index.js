@@ -22,48 +22,48 @@ import {
     QuestionsBannerDescription,
     QuestionsBannerTitle,
     QuestionsBannerContent,
-    QuestionsBannerImage
+    QuestionsBannerImage,
 } from './index.styles'
 
 function AboutICTPage ({ t }) {
     const banners = [
         { 
             title: t('AboutICTPage_InfoBanner_First_Title'),
-            description: t('AboutICTPage_InfoBanner_First_Description')
+            description: t('AboutICTPage_InfoBanner_First_Description'),
         },
         { 
             title: t('AboutICTPage_InfoBanner_Second_Title'),
-            description: t('AboutICTPage_InfoBanner_Second_Description')
+            description: t('AboutICTPage_InfoBanner_Second_Description'),
         },
         { 
             title: t('AboutICTPage_InfoBanner_Third_Title'),
-            description: t('AboutICTPage_InfoBanner_Third_Description')
-        }
+            description: t('AboutICTPage_InfoBanner_Third_Description'),
+        },
     ]
 
     const questions = [
         { 
             title: t('AboutICTPage_QuestionBanner_First_Title'),
-            description: t('AboutICTPage_QuestionBanner_First_Description')
+            description: t('AboutICTPage_QuestionBanner_First_Description'),
         },
         { 
             title: t('AboutICTPage_QuestionBanner_Second_Title'),
-            description: t('AboutICTPage_QuestionBanner_Second_Description')
+            description: t('AboutICTPage_QuestionBanner_Second_Description'),
         },
         { 
             title: t('AboutICTPage_QuestionBanner_Third_Title'),
-            description: t('AboutICTPage_QuestionBanner_Third_Description')
-        }
+            description: t('AboutICTPage_QuestionBanner_Third_Description'),
+        },
     ]
 
     return (
         <>
             <Head>
-                <title>{t('AboutICTPage-Head-Title')}</title>
+                <title>{t('AboutICTPage_Head_Title')}</title>
             </Head>
 
             <BaseSectionHeading 
-                title={t('AboutICTPage-Heading')}
+                title={t('AboutICTPage_Heading')}
                 mainPage={false}
             />
 
@@ -104,7 +104,7 @@ function AboutICTPage ({ t }) {
                                 </InfoBannerDescription>
 
                                 <BaseButton 
-                                    blackStyle 
+                                    mode={'dark'}
                                     hideBorder={true} 
                                     withArrow={true}
                                 >
@@ -129,7 +129,10 @@ function AboutICTPage ({ t }) {
                         questions.map((question, index) => (
                             <QuestionsBanner key={index}>
                                 <QuestionsBannerImage>
-                                    <img src="../static/images/question-icon.svg" />
+                                    <img 
+                                        src="../static/images/question-icon.svg" 
+                                        alt='question-icon' 
+                                    />
                                 </QuestionsBannerImage>
 
                                 <QuestionsBannerDescription>
@@ -137,9 +140,9 @@ function AboutICTPage ({ t }) {
                                     <QuestionsBannerContent>{question.description}</QuestionsBannerContent>
 
                                     <BaseButton 
-                                    blackStyle 
-                                    hideBorder={true} 
-                                    withArrow={true}
+                                        mode={'dark'}
+                                        hideBorder={true} 
+                                        withArrow={true}
                                     >
                                         Learn more
                                     </BaseButton>  

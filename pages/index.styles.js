@@ -7,7 +7,7 @@ import {
     MAX_WIDTH_CONTAINER
 } from '../utils/constants'
 
-export const HomePageTopSectionWrapper = styled.div`
+export const HomePageTopSectionWrapper = styled.section`
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         padding: 75px 0;
         position: relative;
@@ -84,9 +84,9 @@ export const HomePageTopSectionDescription = styled.p`
     }
 `
 
-export const HomePageBannersWrapper = styled.div``
+export const HomePageBannersWrapper = styled.section``
 
-export const HomePageImpactSection = styled.div`
+export const HomePageImpactSection = styled.section`
     width: 100%;
     min-height: 222px;
     position: relative;
@@ -98,7 +98,7 @@ export const HomePageImpactSection = styled.div`
     }
 `
 
-export const HomePageImpactContentWrapper = styled.div`
+export const HomePageImpactContentWrapper = styled.section`
     max-width: 90%;
     padding-top: 40px;
     margin: 0 auto;
@@ -157,7 +157,7 @@ export const HomePageImpactContentDescription = styled.p`
     }
 `
 
-export const HomePageNetworkSection = styled.div`
+export const HomePageNetworkSection = styled.section`
     background-color: #fafafa;
     padding: 50px 25px;
 
@@ -198,12 +198,12 @@ export const HomePageNetworkTitle = styled.h1`
     }
 `
 
-export const HomePageLatestNewsSection = styled.div``
+export const HomePageLatestNewsSection = styled.section``
 
 export const HomePageLatestNewsWrapper = styled.div`
     padding: 50px 25px;
 
-    @media screen and (min-width: ${BREAKPOINTS.xl}px) {
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         padding: 98px 0 104px;
         margin: 0 auto;
 

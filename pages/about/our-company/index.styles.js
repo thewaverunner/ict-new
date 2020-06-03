@@ -35,14 +35,13 @@ export const OurMissionWrapper = styled.div`
 `
 
 export const OurMissionTitle = styled.h1`
-    font-family: 'DM Sans Regular';
-    font-weight: bold;
+    font-family: 'DM Sans Bold';
     line-height: 44px;
     text-align: left;
-    color: #1d1d1d;
     width: 100%;
     margin-bottom: 20px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -93,11 +92,10 @@ export const OurMissionContent = styled.div`
 export const OurMissionDescription = styled.p`
     max-width: 316px;
     font-family: 'DM Sans Regular';
-    font-weight: normal;
     line-height: 21px;
     text-align: left;
-    color: #1d1d1f;
-
+   
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 `
 
@@ -141,8 +139,7 @@ export const OurGoalsWrapper = styled.div`
 
 export const OurGoalsTitle = styled.h2`
     width: 100%;
-    font-family: 'DM Sans Regular';
-    font-weight: bold;
+    font-family: 'DM Sans Bold';
     line-height: 44px;
     text-align: left;
     margin-bottom: 30px;
@@ -166,8 +163,7 @@ export const OurGoalsTitle = styled.h2`
 `
 
 export const OurGoalsSubTitle = styled.h3`
-    font-family: 'DM Sans Regular';
-    font-weight: bold;
+    font-family: 'DM Sans Bold';
     font-size: 31px;
     line-height: 45px;
     text-align: left;

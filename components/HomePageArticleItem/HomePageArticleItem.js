@@ -14,7 +14,10 @@ function HomePageArticleItem ({ article }) {
     return (
         <HomePageLatestNewsItem>
             <HomePageLatestNewsItemImage>
-                <img src={article.image} />
+                <img 
+                    src={article.image} 
+                    alt="article-image"
+                />
             </HomePageLatestNewsItemImage>
 
             <HomePageLatestNewsItemDescription>

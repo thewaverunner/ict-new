@@ -6,7 +6,7 @@ import {
     BaseSectionHeadingWrapper,
     BaseSectionTitle,
     BaseSectionHeadingContent,
-    BaseSectionDescription
+    BaseSectionDescription,
 } from './BaseSectionHeading.styles'
 
 function BaseSectionHeading (props) {

@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../../../utils/constants'
+import {
+    BREAKPOINTS,
+    COLORS,
+    FONTS
+} from '../../../../utils/constants'
 
-export const ArticlePageSection = styled.div`
+export const ArticlePageSection = styled.section`
     background-color: #fafafa;
 `
 
-export const ArticlePageWrapper = styled.div`
+export const ArticlePageItem = styled.article`
     max-width: 690px;
     margin: 0 auto 16px;
     padding: 145px 0 310px;
@@ -28,9 +32,9 @@ export const ArticlePageWrapper = styled.div`
 export const ArticlePageTitle = styled.h1`
     font-family: 'DM Sans Bold';
     line-height: 56px;
-    color: #1d1d1f;
     text-align: left;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
@@ -48,21 +52,21 @@ export const ArticlePageTitle = styled.h1`
 `
 
 export const ArticlePageTime = styled.p`
-    color: #1D1D1F;
     margin-bottom: 37px;
     font-family: 'DM Sans Regular';
     line-height: 31px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
 `
 
 export const ArticlePageParagraph = styled.p`
-    color: #1d1d1f;
     font-family: 'DM Sans Regular';
     line-height: 31px;
     
     margin-bottom: ${props => props.marginMedium ? '75px' : '35px'};
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
     
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {

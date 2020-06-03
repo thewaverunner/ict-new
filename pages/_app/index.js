@@ -4,6 +4,8 @@ import App from 'next/app'
 import { useRouter } from 'next/router'
 
 import 'react-phone-input-2/lib/style.css'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 import { appWithTranslation } from '../../i18n'
 
@@ -16,15 +18,15 @@ import BaseFooter from '../../components/BaseFooter'
 function MyApp ({ Component, pageProps }) {
     const router = useRouter();
     
-    const footerWithBackgroundWhite = ['/', '/company/corporate-governance', '/company/open-positions', '/company/open-positions/[id]'].includes(router.pathname)
+    const footerWithBackgroundWhite = ['/', '/company/corporate-governance', '/company/open-positions/[id]', '/company/opportunity', '/contact-us', '/company/life-at-ict'].includes(router.pathname)
   
     return (
         <div className="main-container">
             <BaseHeader />
 
-            <Component {...pageProps}/>
+            <Component {...pageProps} />
 
-            <BaseFooter backgroundWhite={footerWithBackgroundWhite}/>
+            <BaseFooter backgroundWhite={footerWithBackgroundWhite} />
         </div>
     )
 }

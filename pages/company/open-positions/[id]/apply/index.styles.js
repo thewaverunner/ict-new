@@ -26,11 +26,12 @@ export const OpenPositionApplyPageTitle = styled.h1`
     font-family: 'DM Sans Bold';
     line-height: 44px;
     text-align: left;
-    color: #1d1d1f;
     margin-bottom: 18px;
+
+    color: ${COLORS.darken};
 `
 
-export const OpenPositionApplyPageContent = styled.h1`
+export const OpenPositionApplyPageContent = styled.section`
     background-color: #fafafa;
 `
 
@@ -54,8 +55,8 @@ export const OpenPositionApplyPageInputFileMessage = styled.div`
     text-align: center;
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     strong {
@@ -94,29 +95,27 @@ export const OpenPositionApplyPageInputFile = styled.input``
 export const InputWrapper = styled.div`
     display: flex;
     align-items: center;
-
     padding: 20px 10px;
     margin-bottom: 37px;
-
     border-bottom: 1px solid #1d1d1f;
 `
 
 export const InputTitle = styled.div`
     font-family: 'DM Sans Bold';
-    color: #000;
     padding-right: 10px;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
 export const Input = styled.input`
     font-family: 'DM Sans Regular';
-    color: #000;
     background-color: #fafafa;
     width: 100%;
     border: none;
     outline: none;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
@@ -136,11 +135,11 @@ export const TextareaTitle = styled.div`
     font-size: ${FONTS.p}px;
 
     strong {
-        color: #1d1d1f;
         font-family: 'DM Sans Bold';
         margin-bottom: 10px;
         margin-right: 5px;
     
+        color: ${COLORS.darken};
         font-size: ${FONTS.p}px;
     }
 `
@@ -148,12 +147,12 @@ export const TextareaTitle = styled.div`
 export const Textarea = styled.textarea`
     font-family: 'DM Sans Regular';
     background-color: #fafafa;
-    color: #000;
     width: 100%;
     resize: none;
     border: none;
     outline: none;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
@@ -162,11 +161,11 @@ export const SubmitButton = styled.button`
     float: right;
     padding: 14px;
     font-family: 'DM Sans Regular';
-    color: #000;
     border-radius: 10px;
     background: transparent;
-    border: 1.5px solid #000;
+    border: 1.5px solid ${COLORS.dark};
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
@@ -186,7 +185,7 @@ export const OpenPositionApplyPageInputPhone = {
     }
 }
 
-export const CorporateGovernancePartnershipsSection = styled.div`
+export const CorporateGovernancePartnershipsSection = styled.section`
     position: relative;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -272,9 +271,9 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
     margin-bottom: 31px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {

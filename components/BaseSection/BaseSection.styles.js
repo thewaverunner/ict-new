@@ -6,7 +6,7 @@ import {
     COLORS 
 } from '../../utils/constants'
 
-export const BaseSectionWrapper = styled.div`
+export const BaseSectionWrapper = styled.section`
     background-size: cover;
     width: 100%;
     margin-bottom: 16px;

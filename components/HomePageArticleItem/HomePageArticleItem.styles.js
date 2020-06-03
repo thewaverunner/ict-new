@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-import { BREAKPOINTS } from '../../utils/constants'
+import { 
+    BREAKPOINTS,
+    COLORS
+} from '../../utils/constants'
 
 export const HomePageLatestNewsItem = styled.div`
     margin-bottom: 25px;
@@ -41,9 +44,10 @@ export const HomePageLatestNewsItemImage = styled.div` `
 export const HomePageLatestNewsItemDescription = styled.div`
     display: flex; 
     flex-direction: column;
-    background: #fff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     padding: 15px;
+    
+    background: ${COLORS.white};
 
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         padding: 25px 25px 30px;
@@ -61,20 +65,23 @@ export const HomePageLatestNewsItemRelease = styled.div`
     font-family: 'DM Sans Regular';
     font-size: 12px;
     text-transform: uppercase;
-    color: #000;
+
+    color: ${COLORS.dark};
 `
 
 export const HomePageLatestNewsItemReleaseData = styled.div`
     font-family: 'DM Sans Regular';
     font-size: 12px;
-    color: #000;
     opacity: 0.38;
     align-self: flex-end;
+
+    color: ${COLORS.dark};
 `
 
 export const HomePageLatestNewsItemTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 18px;
     line-height: 20px;
-    color: #000;
+  
+    color: ${COLORS.dark};
 `
