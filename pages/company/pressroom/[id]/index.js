@@ -9,7 +9,7 @@ import BaseSectionHeading from '../../../../components/BaseSectionHeading'
 
 import {
     ArticlePageSection,
-    ArticlePageWrapper,
+    ArticlePageItem,
     ArticlePageTitle,
     ArticlePageTime,
     ArticlePageParagraph,
@@ -26,7 +26,7 @@ function ArticlePage ({ t }) {
             <BaseSectionHeading title={t('ArticlePage_Heading')} />
 
             <ArticlePageSection>
-                <ArticlePageWrapper>
+                <ArticlePageItem>
                     <ArticlePageTitle>Title</ArticlePageTitle>
                     <ArticlePageTime>14/3/2020</ArticlePageTime>
 
@@ -42,7 +42,7 @@ function ArticlePage ({ t }) {
                         <img src="/static/images/article-page-article-image.svg" alt='article-image' />
                     </ArticlePageImage>
 
-                    <ArticlePageParagraph marginMedium>
+                    <ArticlePageParagraph marginMedium >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -50,8 +50,8 @@ function ArticlePage ({ t }) {
                         aute irure dolor in reprehenderit.
                     </ArticlePageParagraph>
 
-                    <BaseButton blackStyle>{t('ArticlePage_Download')}</BaseButton>
-                </ArticlePageWrapper>
+                    <BaseButton mode={'dark'}>{t('ArticlePage_Download')}</BaseButton>
+                </ArticlePageItem>
             </ArticlePageSection>
         </>
     )

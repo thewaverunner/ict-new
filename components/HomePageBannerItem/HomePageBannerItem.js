@@ -1,7 +1,5 @@
 import React from 'react'
 
-import BaseButton from '../BaseButton'
-
 import {
     HomePageBanner,
     HomePageBannerContentSection,
@@ -14,22 +12,18 @@ import {
 
 function HomePageBannerItem ({ banner }) {
     return (
-        <HomePageBanner
-            imageReverse={banner.imageReverse}
-        >
+        <HomePageBanner imageReverse={banner.imageReverse}>
             <HomePageBannerContentSection>
                 <HomePageBannerContentWrapper imageReverse={banner.imageReverse}>
                     <HomePageBannerContent>
                         <HomePageBannerContentTitle>{banner.title}</HomePageBannerContentTitle>
                         <HomePageBannerContentDescription>{banner.description}</HomePageBannerContentDescription>
-
-                        {/* <BaseButton blackStyle>Learn More</BaseButton> */}
                     </HomePageBannerContent>
                 </HomePageBannerContentWrapper>
             </HomePageBannerContentSection>
 
             <HomePageBannerImage>
-                <img src={banner.image} alt='banner-image'/> 
+                <img src={banner.image} alt='banner-image' /> 
             </HomePageBannerImage>
         </HomePageBanner>
     )

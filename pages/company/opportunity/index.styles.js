@@ -19,7 +19,7 @@ export const OpportunityPageTopSection = styled.section`
 `
 
 export const OpportunityPageTopSectionTitle = styled.h1`       
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-weight: bold;
     font-size: 30px;
     line-height: 41px;
@@ -36,7 +36,7 @@ export const OpportunityPageTopSectionTitle = styled.h1`
 `
 
 export const OpportunityPageTopSectionDescription = styled.p`       
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 30px;
     text-align: left;
     opacity: 0.8;
@@ -71,7 +71,7 @@ export const OpportunityPageChallengeWrapper = styled.div`
 `
 
 export const OpportunityPageChallengeTitle = styled.h1`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 24px;
     line-height: 34px;
     text-align: left;
@@ -111,7 +111,6 @@ export const OpportunityPageChallengeContent = styled.div`
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         min-width: 50%;  
-        
         padding: 125px 0;
     }
 `
@@ -147,7 +146,7 @@ export const OpportunityPageChallengeItem = styled.li`
 `
 
 export const OpportunityPageChallengeItemTitle = styled.h3`       
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 20px;
     line-height: 30px;
     color: #6672e5;
@@ -155,7 +154,7 @@ export const OpportunityPageChallengeItemTitle = styled.h3`
 `
 
 export const OpportunityPageChallengeItemDescription = styled.p`       
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     font-size: 16px;
     line-height: 24px;
     opacity: 0.56;
@@ -179,7 +178,7 @@ export const OpportunityPageMindsetContentWrapper = styled.div`
 `
 
 export const OpportunityPageMindsetContentTitle = styled.h1`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-weight: bold;
     font-size: 30px;
     line-height: 41px;
@@ -203,7 +202,7 @@ export const OpportunityPageMindsetContent = styled.div`
 `
 
 export const OpportunityPageMindsetArticle = styled.p`
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     text-align: left;
     opacity: 0.56;
     margin-bottom: 20px;

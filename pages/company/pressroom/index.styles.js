@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 import {
     BREAKPOINTS,
-    FONTS 
+    FONTS,
+    COLORS 
 } from '../../../utils/constants'
 
-export const NewsPageArticlesSection = styled.div`
+export const NewsPageArticlesSection = styled.section`
     background-color: #fafafa;
 `
 
@@ -28,11 +29,11 @@ export const NewsPageArticlesSectionWrapper = styled.div`
 `
 
 export const NewsPageArticlesSectionTitle = styled.h1`
-    color:#1d1d1f;
     margin-bottom: 50px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
     
+    color: ${COLORS.darken};
     font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px){
@@ -76,20 +77,20 @@ export const NewsPageArticlesContent = styled.div`
 `
 
 export const NewsPageArticlesTitle = styled.h2`
-    color: #1d1d1f;
     margin: 40px 0 6px;
     font-family: 'DM Sans Bold';
     line-height: 31px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
 `
 
 export const NewsPageArticlesDescription = styled.p`
-    color: #1d1d1f;
     margin-bottom: 40px;
     font-family: 'DM Sans Regular';
     line-height: 21px;
     
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
     
     @media screen and (max-width: ${BREAKPOINTS.lg}}px) {
@@ -108,7 +109,7 @@ export const NewsPageArticlesWrapper = styled.div`
     justify-content: space-between;
 `
 
-export const NewsPagePressInquiriesSection = styled.div`
+export const NewsPagePressInquiriesSection = styled.section`
     background-color: #fafafa;
 `
 
@@ -133,12 +134,12 @@ export const NewsPagePressInquiriesSectionWrapper = styled.div`
 `
 
 export const NewsPagePressInquiresTitle = styled.h1`
-    color: #1d1d1f;
     margin-bottom: 79px;
     font-family: 'DM Sans Bold';
     line-height: 56px;
     text-align: center;
     
+    color: ${COLORS.darken};
     font-size: ${FONTS.h2}px;
 
     @media screen and (max-width: ${BREAKPOINTS.lg}px) {
@@ -172,20 +173,20 @@ export const InputWrapper = styled.div`
 export const InputTitle = styled.div`
     font-family: 'DM Sans Bold';
     white-space: nowrap;
-    color: #000;
     padding-right: 10px;
     
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
 export const Input = styled.input`
     font-family: 'DM Sans Regular';
-    color: #000;
     background-color: #fafafa;
     width: 100%;
     border: none;
     outline: none;
     
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
@@ -199,34 +200,34 @@ export const TextareaWrapper = styled.div`
 
 export const TextareaTitle = styled.div`
     font-family: 'DM Sans Bold';
-    color: #000;
     padding-left: 10px;
     margin-bottom: 10px;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `
 
 export const Textarea = styled.textarea`
     font-family: 'DM Sans Regular';
     background-color: #fafafa;
-    color: #000;
     width: 100%;
     resize: none;
     border: none;
     outline: none;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
-    `
+`
 
 export const SubmitButton = styled.button`
     min-width: 200px;
     float: right;
     padding: 14px;
     font-family: 'DM Sans Regular';
-    color: #000;
     border-radius: 10px;
     background: transparent;
     border: 1.5px solid #000;
 
+    color: ${COLORS.dark};
     font-size: ${FONTS.p}px;
 `

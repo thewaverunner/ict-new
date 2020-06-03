@@ -11,19 +11,16 @@ import {
     CorporateGovernanceTopSection,
     CorporateGovernanceTopSectionTitle,
     CorporateGovernanceTopSectionDescription,
-    
     CorporateGovernanceCrowdSection,
     CorporateGovernanceCrowdTitle,
     CorporateGovernanceCrowdContent,
     CorporateGovernanceCrowdNumber,
     CorporateGovernanceCrowdDescription,
-
     CorporateGovernanceFoundationSection,
     CorporateGovernanceFoundationImage,
     CorporateGovernanceFoundationContent,
     CorporateGovernanceFoundationTitle,
     CorporateGovernanceFoundationDescription,
-
     CorporateGovernancePartnershipsSection,
     CorporateGovernancePartnershipsImage,
     CorporateGovernancePartnershipsContent,
@@ -102,7 +99,7 @@ function CorporateGovernancePage ({ t }) {
                             <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage_ParthershipsSection_Title')}</CorporateGovernancePartnershipsTitle>
                             <CorporateGovernancePartnershipsDescription dangerouslySetInnerHTML={{ __html: t('CorporateGovernancePage_ParthershipsSection_Description')}} />
 
-                            <BaseButton blackStyle>{t('CorporateGovernancePage_ParthershipsSection_Button')}</BaseButton>
+                            <BaseButton mode={'dark'}>{t('CorporateGovernancePage_ParthershipsSection_Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>

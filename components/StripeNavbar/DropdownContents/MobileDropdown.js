@@ -157,7 +157,7 @@ const MobileDropdown = ({ onClose , t }) => {
             <SubProductsListMobile>
                 <h3>{t('BaseHeader_Mobile_Partner')}</h3>
 
-                <BaseButton blackStyle>{t('BaseHeader_Mobile_Contact')}</BaseButton>
+                <BaseButton mode={'dark'}>{t('BaseHeader_Mobile_Contact')}</BaseButton>
             </SubProductsListMobile>
         </MobileDropdownSection>
     )

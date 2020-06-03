@@ -7,7 +7,7 @@ import {
     MAX_WIDTH_CONTAINER 
 } from '../../../utils/constants'
 
-export const OurPeopleTopSection = styled.div`       
+export const OurPeopleTopSection = styled.section`       
     padding: 38px 25px 60px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
@@ -45,8 +45,8 @@ export const OurPeopleTopSectionTitle = styled.h2`
 export const OurPeopleTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
-
+    
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -77,8 +77,9 @@ export const OurPeoplePageManagementTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 35px;
-    color: #1d1d1f;
     margin-bottom: 30px;
+    
+    color: ${COLORS.darken};
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
         font-size: 34px;
@@ -99,7 +100,7 @@ export const OurPeoplePageManagementList = styled.div`
     }
 `
 
-export const CorporateGovernancePartnershipsSection = styled.div`
+export const CorporateGovernancePartnershipsSection = styled.section`
     position: relative;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -185,10 +186,9 @@ export const CorporateGovernancePartnershipsTitle = styled.h2`
 export const CorporateGovernancePartnershipsDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
-
-    color: #1d1d1f;
     margin-bottom: 31px;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {

@@ -7,7 +7,7 @@ import {
     MAX_WIDTH_CONTAINER 
 } from '../../../utils/constants'
 
-export const OpenPositionsPageWrapper = styled.div`       
+export const OpenPositionsPageWrapper = styled.section`       
     padding: 0 25px;
     background-color: #fafafa;
 
@@ -16,7 +16,7 @@ export const OpenPositionsPageWrapper = styled.div`
     }
 `
 
-export const OpenPositionsPageTopSection = styled.div`       
+export const OpenPositionsPageTopSection = styled.section`       
     padding: 38px 25px 60px;
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {

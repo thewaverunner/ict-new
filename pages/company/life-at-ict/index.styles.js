@@ -19,7 +19,7 @@ export const LifeAtICTPageTopSection = styled.section`
 `
 
 export const LifeAtICTPageTopSectionTitle = styled.h1`       
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 41px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@ export const LifeAtICTPageTopSectionTitle = styled.h1`
 `
 
 export const LifeAtICTPageTopSectionDescription = styled.p`       
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 30px;
     text-align: left;
     opacity: 0.8;
@@ -107,7 +107,7 @@ export const SliderItemContent = styled.div`
 `
 
 export const SliderItemContentTitle = styled.h1`       
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 35px;
     color: #242424;
@@ -122,7 +122,7 @@ export const SliderItemContentTitle = styled.h1`
 `
 
 export const SliderItemContentDecription = styled.p`       
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     line-height: 20px;
     text-align: left;
     opacity: 0.56;
@@ -140,7 +140,7 @@ export const SliderItemContentDecription = styled.p`
 `
 
 export const SliderItemContentPerson = styled.div`       
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     font-size: 16px;
     line-height: 24px;
     text-align: left;
@@ -151,7 +151,7 @@ export const SliderItemContentPerson = styled.div`
     color: ${COLORS.darken};
 
     span {
-        font-family: "DM Sans Bold";
+        font-family: 'DM Sans Bold';
     }
 `
 
@@ -208,7 +208,7 @@ export const OpportunityPageMindsetContentWrapper = styled.div`
 `
 
 export const OpportunityPageMindsetContentTitle = styled.h1`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 30px;
     line-height: 41px;
     color: #686ee5;
@@ -231,7 +231,7 @@ export const OpportunityPageMindsetContent = styled.div`
 `
 
 export const OpportunityPageMindsetArticle = styled.p`
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     text-align: left;
     opacity: 0.56;
     margin-bottom: 20px;

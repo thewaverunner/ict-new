@@ -53,8 +53,8 @@ export const QuestionsAndAnswersPageTopSectionTitle = styled.h1`
 export const QuestionsAndAnswersPageTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: #1d1d1f;
-    
+  
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -66,7 +66,6 @@ export const QuestionsAndAnswersPageTopSectionDescription = styled.p`
 
 export const QuestionsAndAnswersPageQuestionQrapper = styled.div`       
     background-color: #fafafa;
-
 `
 
 export const QuestionsAndAnswersPageQuestionSection = styled.div`       
@@ -86,8 +85,9 @@ export const QuestionsAndAnswersPageQuestionSectionTitle = styled.h2`
     font-family: 'DM Sans Bold';
     font-size: 32px;
     line-height: 44px;
-    color: #1d1d1f;
     margin-bottom: 15px;
+    
+    color: ${COLORS.darken};
 `
 
 export const QuestionsAndAnswersPageQuestionList = styled.ul`       

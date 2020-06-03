@@ -74,7 +74,7 @@ export const CompanyChallengesContent = styled.div`
 `
 
 export const CompanyChallengesTitle = styled.h2`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 24px;
     line-height: 36px;
     max-width: 660px;
@@ -108,7 +108,7 @@ export const CompanyChallengesItem = styled.li`
 `
 
 export const CompanyChallengesItemNumber = styled.h1`
-    font-family: "DM Sans Bold";
+    font-family: 'DM Sans Bold';
     font-size: 128px;
     line-height: 108px;
     opacity: 0.06;
@@ -124,7 +124,7 @@ export const CompanyChallengesItemNumber = styled.h1`
 `
 
 export const CompanyChallengesItemDescription = styled.p`
-    font-family: "DM Sans Regular";
+    font-family: 'DM Sans Regular';
     font-weight: normal;
     line-height: 21px;
     padding-top: 86px;

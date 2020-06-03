@@ -8,7 +8,7 @@ import {
 
 // Full Mode
 
-export const BaseSectionWideFullWrapper = styled.div`
+export const BaseSectionWideFullWrapper = styled.section`
     margin-bottom: 16px;   
     overflow: hidden; 
     display: flex;
@@ -169,7 +169,7 @@ export const BaseSectionWideFullDescription = styled.p`
 
 // Half Mode
 
-export const BaseSectionWideHalfWrapper = styled.div`
+export const BaseSectionWideHalfWrapper = styled.section`
     display: flex;
     margin-bottom: 16px;
     justify-content: flex-start;
@@ -351,7 +351,7 @@ export const BaseSectionWideHalfDescription = styled.p`
 
 // Shadow Mode
 
-export const BaseSectionWideShadowWrapper = styled.div`
+export const BaseSectionWideShadowWrapper = styled.section`
     display: flex;
     justify-content: flex-start;
     margin-bottom: 16px;

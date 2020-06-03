@@ -73,7 +73,7 @@ function OurBusinessPage ({ t }) {
                 titleColor={'black'}
                 description={t('OpenPositionsJobPage_ParthershipSection_Description')}
                 buttonTitle={'Open Positions'}
-                buttonStyle={'blackStyle'}
+                buttonStyle={'dark'}
             />
         </>
     )

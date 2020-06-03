@@ -16,7 +16,7 @@ function OurPeoplePageMemberItem ({ member }) {
     return (
         <OurPeoplePageManagementItem>
             <OurPeoplePageManagementItemImage>
-                <img src="/static/images/management-image.svg" alt='member-photo'/>
+                <img src="/static/images/management-image.svg" alt='member-photo' />
 
                 <OurPeoplePageManagementItemInfoWrapper>
                     <OurPeoplePageManagementItemName>{member.name}</OurPeoplePageManagementItemName>
@@ -25,12 +25,12 @@ function OurPeoplePageMemberItem ({ member }) {
             </OurPeoplePageManagementItemImage>
         
             <OurPeoplePageManagementItemDescriptionWrapper>
-                <OurPeoplePageManagementItemDescription dangerouslySetInnerHTML={{ __html: member.description }}/>
+                <OurPeoplePageManagementItemDescription dangerouslySetInnerHTML={{ __html: member.description }} />
 
                 <BaseButton 
                     withArrow={true}
                     hideBorder
-                    blackStyle
+                    mode={'dark'}
                 >
                     Read more
                 </BaseButton>

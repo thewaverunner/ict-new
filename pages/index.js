@@ -87,7 +87,6 @@ function HomePage ({ t }) {
             <HomePageTopSectionWrapper>
                 <HomePageTopSection>
                     <HomePageTopSectionTitle>{t('HomePage_Marketing_Title')}</HomePageTopSectionTitle>
-
                     <HomePageTopSectionDescription>{t('HomePage_Marketing_Content')}</HomePageTopSectionDescription>
                 </HomePageTopSection>
             </HomePageTopSectionWrapper>
@@ -96,14 +95,14 @@ function HomePage ({ t }) {
                 {banners.map((banner, index) => <HomePageBannerItem key={index} banner={banner} />)}
             </HomePageBannersWrapper>
 
-            <HomePageImpactSection></HomePageImpactSection>
+            <HomePageImpactSection />
 
             <HomePageImpactContentWrapper>
                 <HomePageImpactContent>
                     <HomePageImpactContentTitle>{t('HomePage_Impact_Title')}</HomePageImpactContentTitle>
                     <HomePageImpactContentDescription>{t('HomePage_Impact_Content')}</HomePageImpactContentDescription>
 
-                    <BaseButton blackStyle>Learn More</BaseButton>
+                    <BaseButton mode={'dark'}>Learn More</BaseButton>
                 </HomePageImpactContent>
             </HomePageImpactContentWrapper>
 
@@ -116,7 +115,7 @@ function HomePage ({ t }) {
                     <HomePageLatestNewsTitle>{t('HomePage_NewsSection_Title')}</HomePageLatestNewsTitle>
 
                     <BaseButton 
-                        blackStyle 
+                        mode={'dark'}
                         hideBorder 
                         withArrow={true}
                     >
@@ -124,7 +123,12 @@ function HomePage ({ t }) {
                     </BaseButton>
 
                     <HomePageLatestNewsList>
-                        {news.map((article, index) => <HomePageArticleItem key={index} article={article} />)}
+                        {news.map((article, index) => (
+                            <HomePageArticleItem 
+                                key={index} 
+                                article={article} 
+                            />
+                        ))}
                     </HomePageLatestNewsList>
                 </HomePageLatestNewsWrapper>
             </HomePageLatestNewsSection>

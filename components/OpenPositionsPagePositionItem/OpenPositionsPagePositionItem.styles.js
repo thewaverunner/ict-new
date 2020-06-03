@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 import { 
     BREAKPOINTS, 
-    FONTS 
+    FONTS,
+    COLORS 
 } from '../../utils/constants'
 
 export const OpenPositionsPageItem = styled.div`
@@ -41,13 +42,14 @@ export const OpenPositionsPageItemTitle = styled.h2`
     font-size: 31px;
     line-height: 35px;
     font-family: 'DM Sans Bold';
-    color: #1d1d1f;
+
+    color: ${COLORS.darken};
 `
 
 export const OpenPositionsPageItemContent = styled.p`
     line-height: 31px;
     font-family: 'DM Sans Regular';
-    color: #1d1d1f;
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
 `

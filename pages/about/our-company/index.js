@@ -16,7 +16,6 @@ import {
     OurMissionTitle,
     OurMissionImage,
     OurMissionDescription,
-
     OurGoalsSection,
     OurGoalsWrapper,
     OurGoalsTitle,
@@ -27,7 +26,6 @@ import {
 } from './index.styles'
 
 function OurCompanyPage ({ t }) {
-   
     const ourMission = [
         { description: t('OurCompanyPage_OurMissionFirst_Description') },
         { description: t('OurCompanyPage_OurMissionSecond_Description') },
@@ -38,19 +36,19 @@ function OurCompanyPage ({ t }) {
     const ourGoals = [
         { 
             title: t('OurCompanyPage_CompanyGoals_Step'),
-            description: t('OurCompanyPage_CompanyGoalsFirst_Description')
+            description: t('OurCompanyPage_CompanyGoalsFirst_Description'),
         },
         { 
             title: t('OurCompanyPage_CompanyGoals_Step'),
-            description: t('OurCompanyPage_CompanyGoalsSecond_Description')
+            description: t('OurCompanyPage_CompanyGoalsSecond_Description'),
         },
         { 
             title: t('OurCompanyPage_CompanyGoals_Step'),
-            description: t('OurCompanyPage_CompanyGoalsThird_Description')
+            description: t('OurCompanyPage_CompanyGoalsThird_Description'),
         },
         { 
             title: t('OurCompanyPage_CompanyGoals_Step'),
-            description: t('OurCompanyPage_CompanyGoalsFourth_Description')
+            description: t('OurCompanyPage_CompanyGoalsFourth_Description'),
         },
     ]
 
@@ -99,7 +97,7 @@ function OurCompanyPage ({ t }) {
                             ourMission.map((mission, index) => (
                                 <OurMissionContent key={index}>
                                     <OurMissionImage>
-                                        <img src='/static/images/about-our-company-mission-arrow.svg' alt='arrow-icon'/>
+                                        <img src='/static/images/about-our-company-mission-arrow.svg' alt='arrow-icon' />
                                     </OurMissionImage>
 
                                     <OurMissionDescription>{mission.description}</OurMissionDescription>

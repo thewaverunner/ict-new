@@ -24,7 +24,6 @@ import {
     OpenPositionApplyPageInputFileMessage,
     OpenPositionApplyPageInputFileWrapper,
     OpenPositionApplyPageWrapper,
-
     InputWrapper,
     InputTitle,
     Input,
@@ -45,10 +44,6 @@ import {
 
 
 function OpenPositionApplyPage ({ t }) {
-    // const isMobile = useMediaQuery('(min-width: 552px)')
-    // const isTablet = useMediaQuery('(min-width: 768px)')
-    
-
     const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles), [])
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
@@ -129,7 +124,7 @@ function OpenPositionApplyPage ({ t }) {
                                 : (
                                     <OpenPositionApplyPageInputFileMessage>
                                         <OpenPositionApplyPageInputFileImages>
-                                            <img src="/static/images/open-positions-apply-page-upload-icon.svg" />
+                                            <img src="/static/images/open-positions-apply-page-upload-icon.svg" alt='upload-image' />
                                         </OpenPositionApplyPageInputFileImages>
 
                                         <strong>{t('OpenPositionApplyPage_ApplicationForm_Upload_Title')}</strong> <br/>
@@ -167,7 +162,8 @@ function OpenPositionApplyPage ({ t }) {
                         <CorporateGovernancePartnershipsDescriptionWrapper>
                             <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
                             <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
-                            <BaseButton blackStyle>{t('OpenPositionApplyPage_ParthershipSection_Button')}</BaseButton>
+                            
+                            <BaseButton mode={'dark'}>{t('OpenPositionApplyPage_ParthershipSection_Button')}</BaseButton>
                         </CorporateGovernancePartnershipsDescriptionWrapper>
                     </CorporateGovernancePartnershipsContentWrapper>
                 </CorporateGovernancePartnershipsContent>

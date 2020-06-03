@@ -105,7 +105,7 @@ function LifeAtICTPage ({ t }) {
                 <LifeAtICTPageTopSectionTitle>{t('LifeAtICTPage_TopSection_Title')}</LifeAtICTPageTopSectionTitle>
                 <LifeAtICTPageTopSectionDescription>{t('LifeAtICTPage_TopSection_Description')}</LifeAtICTPageTopSectionDescription>
 
-                <BaseButton blackStyle>{t('LifeAtICTPage_TopSection_Button')}</BaseButton>
+                <BaseButton mode={'dark'}>{t('LifeAtICTPage_TopSection_Button')}</BaseButton>
             </LifeAtICTPageTopSection>
 
             <LifeAtICTPageSliderSection>

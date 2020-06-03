@@ -72,7 +72,8 @@ function OpportunityPage ({ t }) {
             <OpportunityPageTopSection>
                 <OpportunityPageTopSectionTitle>{t('OpportunityPage_TopSection_Title')}</OpportunityPageTopSectionTitle>
                 <OpportunityPageTopSectionDescription>{t('OpportunityPage_TopSection_Description')}</OpportunityPageTopSectionDescription>
-                <BaseButton blackStyle>{t('OpportunityPage_TopSection_Button')}</BaseButton>
+
+                <BaseButton mode={'dark'}>{t('OpportunityPage_TopSection_Button')}</BaseButton>
             </OpportunityPageTopSection>
 
             <OpportunityPageChallengeSection>
@@ -80,7 +81,7 @@ function OpportunityPage ({ t }) {
 
                 <OpportunityPageChallengeWrapper>
                     <OpportunityPageChallengeImage>
-                        <img src='/static/images/opportunity-challenges-image.svg' alt='challenge-image'/>
+                        <img src='/static/images/opportunity-challenges-image.svg' alt='challenge-image' />
                     </OpportunityPageChallengeImage>
 
                     <OpportunityPageChallengeContent>

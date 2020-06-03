@@ -24,9 +24,9 @@ function MyApp ({ Component, pageProps }) {
         <div className="main-container">
             <BaseHeader />
 
-            <Component {...pageProps}/>
+            <Component {...pageProps} />
 
-            <BaseFooter backgroundWhite={footerWithBackgroundWhite}/>
+            <BaseFooter backgroundWhite={footerWithBackgroundWhite} />
         </div>
     )
 }

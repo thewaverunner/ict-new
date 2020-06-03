@@ -73,7 +73,6 @@ function OurIndustryPage ({ t }) {
                 title={t('OurIndustryPage_Opportunity_Title')}
                 subtitle={t('OurIndustryPage_Opportunity_SubTitle')}
             />
-
         </>
     )
 }

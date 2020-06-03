@@ -19,14 +19,14 @@ export const Button = styled.button`
     
     min-width: ${props => (props.hideBorder ? "" : '160px')};
     padding: ${props => (props.hideBorder ? "0" : '14px 0')};
-    color: ${props => (props.blackStyle ? "#000" : COLORS.white)};
+    color: ${props => (props.blackStyle === 'dark' ? "#000" : COLORS.white)};
     border: ${props => props.hideBorder ? '' : `1.5px solid ${props.blackStyle ? COLORS.black : COLORS.white}`};
     
     font-size: ${FONTS.p}px;
 
     &:hover {
-        background-color:${props => props.hideBorder ? '' : (props.blackStyle ? COLORS.dark : COLORS.white)};
-        color:${props => props.hideBorder ? '' : (props.blackStyle ? COLORS.white : COLORS.dark)};
+        background-color:${props => props.hideBorder ? '' : (props.blackStyle === 'dark' ? COLORS.dark : COLORS.white)};
+        color:${props => props.hideBorder ? '' : (props.blackStyle === 'dark' ? COLORS.white : COLORS.dark)};
     }
 
     span {
@@ -35,10 +35,10 @@ export const Button = styled.button`
         margin-left: 15px;
         height: 10px;
 
-        background: ${props => (props.blackStyle ? "url('../static/images/base-arrow-black.svg') no-repeat;" : "url('../static/images/base-arrow-white.svg') no-repeat;")}
+        background: ${props => (props.blackStyle === 'dark' ? "url('../static/images/base-arrow-black.svg') no-repeat;" : "url('../static/images/base-arrow-white.svg') no-repeat;")}
     }
 
     &:hover span {
-        background: ${props => props.hideBorder ? '' : props.blackStyle ? "url('../static/images/base-arrow-white.svg') no-repeat;" : "url('../static/images/base-arrow-black.svg') no-repeat;"}
+        background: ${props => props.hideBorder ? '' : props.blackStyle === 'dark'  ? "url('../static/images/base-arrow-white.svg') no-repeat;" : "url('../static/images/base-arrow-black.svg') no-repeat;"}
     }
 `

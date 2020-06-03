@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 import { Button } from './BaseButton.styles'
 
-function BaseButton ({ children, hideBorder, blackStyle, withArrow, linkUrl }) {
+function BaseButton ({ children, hideBorder, mode, withArrow, linkUrl }) {
     function renderButton () {
         return (
             <Button 
-                blackStyle={blackStyle} 
+                blackStyle={mode} 
                 hideBorder={hideBorder}
             >
                 {children} {withArrow ? <span/> : ''}

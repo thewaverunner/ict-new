@@ -46,13 +46,13 @@ function PressroomPage ({ t }) {
                 <title>{t('PressroomPage_Head_Title')}</title>
             </Head>
 
-            <BaseSectionHeading title={t('PressroomPage_Heading')}/>
+            <BaseSectionHeading title={t('PressroomPage_Heading')} />
 
             <NewsPageArticlesSection>
                 <NewsPageArticlesSectionWrapper>
                     <NewsPageArticlesSectionTitle>{t('PressroomPage_Articles_Title')}</NewsPageArticlesSectionTitle>
                         <NewsPageArticlesWrapper>
-                            {[0, 1, 2, 3, 4, 5].map((_, index) => 
+                            {[0, 1, 2, 3, 4, 5].map((_, index) => (
                                 <NewsPageArticles key={index}>
                                     <NewsPageArticlesImage>
                                         <img src="/static/images/pressroom-articles-image.svg" alt='article-image' />
@@ -69,7 +69,7 @@ function PressroomPage ({ t }) {
                                         </NewsPageArticlesDescription>
 
                                         <BaseButton 
-                                            blackStyle 
+                                            mode={'dark'}
                                             hideBorder={true} 
                                             withArrow={true} 
                                             linkUrl={`/company/pressroom/article-${index}`}
@@ -78,7 +78,7 @@ function PressroomPage ({ t }) {
                                         </BaseButton>
                                     </NewsPageArticlesContent>
                                 </NewsPageArticles>
-                            )}
+                            ))}
                         </NewsPageArticlesWrapper> 
                     </NewsPageArticlesSectionWrapper>      
             </NewsPageArticlesSection>

@@ -4,17 +4,12 @@ import Head from 'next/head'
 
 import { withTranslation } from '../../i18n'
 
+import BaseCard from '../../components/BaseCard'
+
 import {
     ContactUsPageTopSection,
     ContactUsPageTopSectionTitle,
     ContactUsPageCardsSection,
-    CompanyCard,
-    CompanyCardImage,
-    CompanyCardDescriptionWrapper,
-    CompanyCardTitleWrapper,
-    CompanyCardTitle,
-    CompanyCardArrow,
-    CompanyCardDescription,
     ContactUsCompanySection,
     ContactUsCompanyInfo,
     ContactUsCompanyMap,
@@ -78,7 +73,8 @@ function ContactUsPage ({ t }) {
                         <ContactUsCompanyInfoList>
                             {companyInfo.map((item, index) => (
                                 <ContactUsCompanyInfotItem key={index}>
-                                    {item.title}<span>{item.description}</span>
+                                    {item.title}
+                                    <span>{item.description}</span>
                                 </ContactUsCompanyInfotItem>
                             ))}
                         </ContactUsCompanyInfoList>
@@ -90,23 +86,12 @@ function ContactUsPage ({ t }) {
 
             <ContactUsPageCardsSection>
                 {contactUsCard.map((card, index) => (
-                    <CompanyCard key={index}>
-                        <CompanyCardImage>
-                            <img src={card.image} />
-                        </CompanyCardImage>
-    
-                        <CompanyCardDescriptionWrapper>
-                            <CompanyCardTitleWrapper>
-                                <CompanyCardTitle href='#'>{card.title}</CompanyCardTitle>
-    
-                                <CompanyCardArrow>
-                                    <img src='/static/images/card-arrow-image.svg' />
-                                </CompanyCardArrow>
-                            </CompanyCardTitleWrapper>
-    
-                            <CompanyCardDescription>{card.description}</CompanyCardDescription>
-                        </CompanyCardDescriptionWrapper>
-                    </CompanyCard>    
+                    <BaseCard
+                        key={index}
+                        image={card.image}
+                        title={card.title}
+                        description={card.description}
+                    />
                 ))}                    
             </ContactUsPageCardsSection>
         </>
