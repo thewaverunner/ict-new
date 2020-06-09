@@ -117,7 +117,7 @@ function LifeAtICTPage ({ t }) {
                                     <SliderItemImage>
                                         <img 
                                             src={slider.image} 
-                                            alt='slider-image' 
+                                            alt="slide-presentation"
                                         />
                                     </SliderItemImage>
 

@@ -16,7 +16,7 @@ function HomePageArticleItem ({ article }) {
             <HomePageLatestNewsItemImage>
                 <img 
                     src={article.image} 
-                    alt="article-image"
+                    alt="article"
                 />
             </HomePageLatestNewsItemImage>
 

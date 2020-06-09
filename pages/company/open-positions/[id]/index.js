@@ -55,7 +55,7 @@ function OpenPositionJobPage ({ t }) {
                 <CorporateGovernancePartnershipsImage>
                     <img 
                         src="/static/images/company-parthership.svg" 
-                        alt='parthership-image' 
+                        alt="company-parthership"
                     />
                 </CorporateGovernancePartnershipsImage> 
             

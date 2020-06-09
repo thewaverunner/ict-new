@@ -25,7 +25,7 @@ function HomePageBannerItem ({ banner }) {
             <HomePageBannerImage>
                 <img 
                     src={banner.image}
-                    alt='banner-image' 
+                    alt="banner-presentation"
                 /> 
             </HomePageBannerImage>
         </HomePageBanner>

@@ -41,7 +41,7 @@ function ArticlePage ({ t }) {
                     <ArticlePageImage>
                         <img 
                             src="/static/images/article-page-article-image.svg" 
-                            alt='article-image' 
+                            alt="article-presentation"
                         />
                     </ArticlePageImage>
 

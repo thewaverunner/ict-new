@@ -82,8 +82,8 @@ function OpportunityPage ({ t }) {
                 <OpportunityPageChallengeWrapper>
                     <OpportunityPageChallengeImage>
                         <img 
-                            src='/static/images/opportunity-challenges-image.svg' 
-                            alt='challenge-image' 
+                            src="/static/images/opportunity-challenges-image.svg"
+                            alt="opportunity-challenges"
                         />
                     </OpportunityPageChallengeImage>
 

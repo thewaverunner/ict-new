@@ -92,14 +92,15 @@ function OurCompanyPage ({ t }) {
             <OurMissionSection>
                 <OurMissionWrapper>
                     <OurMissionTitle>{t('OurCompanyPage_OurMission_Title')}</OurMissionTitle>
-                        <OurMissionContentWrapper>
+
+                    <OurMissionContentWrapper>
                         {
                             ourMission.map((mission, index) => (
                                 <OurMissionContent key={index}>
                                     <OurMissionImage>
                                         <img 
-                                            src='/static/images/about-our-company-mission-arrow.svg' 
-                                            alt='arrow-icon' 
+                                            src="/static/images/about-our-company-mission-arrow.svg"
+                                            alt="arrow-icon"
                                         />
                                     </OurMissionImage>
 
@@ -107,23 +108,24 @@ function OurCompanyPage ({ t }) {
                                 </OurMissionContent>
                             ))
                         }
-                        </OurMissionContentWrapper>
+                    </OurMissionContentWrapper>
                 </OurMissionWrapper>
             </OurMissionSection>
 
             <OurGoalsSection>
                 <OurGoalsWrapper>
                     <OurGoalsTitle>{t('OurCompanyPage_CompanyGoals_Title')}</OurGoalsTitle>
-                        <OurGoalsContentWrapper>
-                            {
-                                ourGoals.map((goal, index) => (
-                                    <OurGoalsContent key={index}>
-                                        <OurGoalsSubTitle>{goal.title} {index + 1}</OurGoalsSubTitle>
-                                        <OurGoalsDescription>{goal.description}</OurGoalsDescription>
-                                    </OurGoalsContent>
-                                ))
-                            }
-                        </OurGoalsContentWrapper>
+
+                    <OurGoalsContentWrapper>
+                        {
+                            ourGoals.map((goal, index) => (
+                                <OurGoalsContent key={index}>
+                                    <OurGoalsSubTitle>{goal.title} {index + 1}</OurGoalsSubTitle>
+                                    <OurGoalsDescription>{goal.description}</OurGoalsDescription>
+                                </OurGoalsContent>
+                            ))
+                        }
+                    </OurGoalsContentWrapper>
                 </OurGoalsWrapper>
             </OurGoalsSection>       
 

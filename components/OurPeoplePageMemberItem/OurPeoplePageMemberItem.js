@@ -18,7 +18,7 @@ function OurPeoplePageMemberItem ({ member }) {
             <OurPeoplePageManagementItemImage>
                 <img 
                     src="/static/images/management-image.svg" 
-                    alt='member-photo' 
+                    alt="member-presentation"
                 />
 
                 <OurPeoplePageManagementItemInfoWrapper>

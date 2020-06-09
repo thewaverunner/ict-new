@@ -131,7 +131,7 @@ function AboutICTPage ({ t }) {
                                 <QuestionsBannerImage>
                                     <img 
                                         src="../static/images/question-icon.svg" 
-                                        alt='question-icon' 
+                                        alt="question-icon"
                                     />
                                 </QuestionsBannerImage>
 

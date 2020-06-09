@@ -49,39 +49,40 @@ function PressroomPage ({ t }) {
             <NewsPageArticlesSection>
                 <NewsPageArticlesSectionWrapper>
                     <NewsPageArticlesSectionTitle>{t('PressroomPage_Articles_Title')}</NewsPageArticlesSectionTitle>
-                        <NewsPageArticlesWrapper>
-                            {[0, 1, 2, 3, 4, 5].map((_, index) => (
-                                <NewsPageArticles key={index}>
-                                    <NewsPageArticlesImage>
-                                        <img 
-                                            src="/static/images/pressroom-articles-image.svg" 
-                                            alt='article-image' 
-                                        />
-                                    </NewsPageArticlesImage>
 
-                                    <NewsPageArticlesContent>
-                                        <NewsPageArticlesTitle>Global reach</NewsPageArticlesTitle>
+                    <NewsPageArticlesWrapper>
+                        {[0, 1, 2, 3, 4, 5].map((_, index) => (
+                            <NewsPageArticles key={index}>
+                                <NewsPageArticlesImage>
+                                    <img 
+                                        src="/static/images/pressroom-articles-image.svg" 
+                                        alt="article-presentation"
+                                    />
+                                </NewsPageArticlesImage>
 
-                                        <NewsPageArticlesDescription>
-                                            Our priority is to build global frontrunners in multiple 
-                                            industries, disrupting monopolised markets by offering a 
-                                            unique and robust value proposition on a global scale. The 
-                                            aim of Impact Crowd Technology is to establish online global leaders.
-                                        </NewsPageArticlesDescription>
+                                <NewsPageArticlesContent>
+                                    <NewsPageArticlesTitle>Global reach</NewsPageArticlesTitle>
 
-                                        <BaseButton 
-                                            mode={'dark'}
-                                            hideBorder={true} 
-                                            withArrow={true} 
-                                            linkUrl={`/company/pressroom/article-${index}`}
-                                        >
-                                            {t('PressroomPage_Learn_More')}
-                                        </BaseButton>
-                                    </NewsPageArticlesContent>
-                                </NewsPageArticles>
-                            ))}
-                        </NewsPageArticlesWrapper> 
-                    </NewsPageArticlesSectionWrapper>      
+                                    <NewsPageArticlesDescription>
+                                        Our priority is to build global frontrunners in multiple 
+                                        industries, disrupting monopolised markets by offering a 
+                                        unique and robust value proposition on a global scale. The 
+                                        aim of Impact Crowd Technology is to establish online global leaders.
+                                    </NewsPageArticlesDescription>
+
+                                    <BaseButton 
+                                        mode={'dark'}
+                                        hideBorder={true} 
+                                        withArrow={true} 
+                                        linkUrl={`/company/pressroom/article-${index}`}
+                                    >
+                                        {t('PressroomPage_Learn_More')}
+                                    </BaseButton>
+                                </NewsPageArticlesContent>
+                            </NewsPageArticles>
+                        ))}
+                    </NewsPageArticlesWrapper> 
+                </NewsPageArticlesSectionWrapper>      
             </NewsPageArticlesSection>
 
             <NewsPagePressInquiriesSection>

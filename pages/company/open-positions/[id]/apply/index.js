@@ -123,7 +123,7 @@ function OpenPositionApplyPage ({ t }) {
                                         <OpenPositionApplyPageInputFileImages>
                                             <img 
                                                 src="/static/images/open-positions-apply-page-upload-icon.svg" 
-                                                alt='upload-image' 
+                                                alt="upload"
                                             />
                                         </OpenPositionApplyPageInputFileImages>
 
@@ -156,7 +156,7 @@ function OpenPositionApplyPage ({ t }) {
                 <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
                     <img 
                         src="/static/images/company-parthership.svg" 
-                        alt='parthership-image' 
+                        alt="company-parthership"
                     />
                 </CorporateGovernancePartnershipsImage> 
             

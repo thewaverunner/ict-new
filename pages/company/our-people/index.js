@@ -112,7 +112,7 @@ function OurPeoplePage ({ t }) {
                     <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
                         <img 
                             src="/static/images/company-parthership.svg" 
-                            alt='parthnership-image' 
+                            alt="company-parthership"
                         />
                     </CorporateGovernancePartnershipsImage> 
                 

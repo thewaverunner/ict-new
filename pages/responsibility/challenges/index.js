@@ -35,8 +35,8 @@ function ChallengesPage ({ t }) {
             <ChallengesTopSection>
                 <ChallengesTopSectionImage>
                     <img 
-                        src='/static/images/challenges-top-section-image.svg' 
-                        alt='responsibilty-icon' 
+                        src="/static/images/challenges-top-section-image.svg"
+                        alt="responsibilty-icon" 
                     />
                 </ChallengesTopSectionImage>
 
