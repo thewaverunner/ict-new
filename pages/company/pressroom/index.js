@@ -1,42 +1,56 @@
 import React from 'react'
 
+import Link from 'next/link'
 import Head from 'next/head'
-
-import { useForm } from 'react-hook-form'
 
 import { withTranslation } from '../../../i18n'
 
 import BaseButton from '../../../components/BaseButton'
-import BaseSection from '../../../components/BaseSection'
-import BaseSectionHeading from '../../../components/BaseSectionHeading'
+
+import CardImage from '../../../public/static/images/press-card-image.svg'
 
 import {
-    NewsPageArticles,
-    NewsPageArticlesSection,
-    NewsPageArticlesSectionTitle,
-    NewsPageArticlesSectionWrapper,
-    NewsPageArticlesImage,
-    NewsPageArticlesContent,
-    NewsPageArticlesTitle,
-    NewsPageArticlesDescription,
-    NewsPageArticlesWrapper,
-    NewsPagePressInquiriesSection,
-    NewsPagePressInquiriesSectionWrapper,
-    NewsPagePressInquiresTitle,
-    NewsPagePressInquiresForm,
-    InputWrapper,
-    InputTitle,
-    Input,
-    TextareaWrapper,
-    TextareaTitle,
-    Textarea,
-    SubmitButton
+    PressroomPageTopSection,
+    PressroomPageTopSectionTitle,
+    PressroomPageTopSectionList,
+    PressroomPageTopSectionItem,
+    PressroomPageTopSectionLink,
+    PressroomPageArticles,
+    PressroomPageArticlesSection,
+    PressroomPageArticlesSectionWrapper,
+    PressroomPageArticlesImage,
+    PressroomPageArticlesContent,
+    PressroomPageArticlesTitle,
+    PressroomPageArticlesDescription,
+    PressroomPageArticlesWrapper,
+    PressroomPagePressRelease,
+    PressroomPageArticlesData,
+
+    PressroomCTASection,
+    BaseCardElement,
+    BaseCardImage,
+    BaseCardDescriptionWrapper,
+    BaseCardTitleWrapper,
+    BaseCardTitle,
+    BaseCardDescription,
+    ButtonWrapper,
 } from './index.styles'
 
 function PressroomPage ({ t }) {
-    const { register, handleSubmit, errors } = useForm()
-
-    const onSubmit = data => console.log(data)
+    const pressroomTopNav = [
+        {
+            title: 'Press Inquiry', 
+            link: '/'
+        },
+        {
+            title: 'Press Kit', 
+            link: '/'
+        },
+        {
+            title: 'Archive', 
+            link: '/'
+        },
+    ]
 
     return (
         <>
@@ -44,129 +58,62 @@ function PressroomPage ({ t }) {
                 <title>{t('PressroomPage_Head_Title')}</title>
             </Head>
 
-            <BaseSectionHeading title={t('PressroomPage_Heading')} />
+            <PressroomPageTopSection>
+                <PressroomPageTopSectionTitle>{t('PressroomPage_Title')}</PressroomPageTopSectionTitle>
+                
+                <PressroomPageTopSectionList>
+                    {pressroomTopNav.map((item, index) => (
+                        <PressroomPageTopSectionItem key={index}>
+                            <PressroomPageTopSectionLink href={item.link}>{item.title}</PressroomPageTopSectionLink>
+                        </PressroomPageTopSectionItem>
+                    ))}
+                </PressroomPageTopSectionList>
+            </PressroomPageTopSection>
 
-            <NewsPageArticlesSection>
-                <NewsPageArticlesSectionWrapper>
-                    <NewsPageArticlesSectionTitle>{t('PressroomPage_Articles_Title')}</NewsPageArticlesSectionTitle>
-
-                    <NewsPageArticlesWrapper>
+            <PressroomPageArticlesSection>
+                <PressroomPageArticlesSectionWrapper>
+                    <PressroomPageArticlesWrapper>
                         {[0, 1, 2, 3, 4, 5].map((_, index) => (
-                            <NewsPageArticles key={index}>
-                                <NewsPageArticlesImage>
-                                    <img 
-                                        src="/static/images/pressroom-articles-image.svg" 
-                                        alt="article-presentation"
-                                    />
-                                </NewsPageArticlesImage>
+                            <Link href='pressroom/article' key={index}>
+                                <PressroomPageArticles>
+                                    <PressroomPageArticlesImage>
+                                        <img 
+                                            src="/static/images/pressroom-articles-image.svg" 
+                                            alt="article-presentation"
+                                        />
+                                    </PressroomPageArticlesImage>
 
-                                <NewsPageArticlesContent>
-                                    <NewsPageArticlesTitle>Global reach</NewsPageArticlesTitle>
-
-                                    <NewsPageArticlesDescription>
-                                        Our priority is to build global frontrunners in multiple 
-                                        industries, disrupting monopolised markets by offering a 
-                                        unique and robust value proposition on a global scale. The 
-                                        aim of Impact Crowd Technology is to establish online global leaders.
-                                    </NewsPageArticlesDescription>
-
-                                    <BaseButton 
-                                        mode={'dark'}
-                                        hideBorder={true} 
-                                        withArrow={true} 
-                                        linkUrl={`/company/pressroom/article-${index}`}
-                                    >
-                                        {t('PressroomPage_Learn_More')}
-                                    </BaseButton>
-                                </NewsPageArticlesContent>
-                            </NewsPageArticles>
+                                    <PressroomPageArticlesContent>
+                                        <PressroomPagePressRelease>{t('PressroomPage_Article_PressRelease')}</PressroomPagePressRelease>
+                                        <PressroomPageArticlesTitle>{t('PressroomPage_Article_Title')}</PressroomPageArticlesTitle>
+                                        <PressroomPageArticlesDescription>{t('PressroomPage_Article_Description')}</PressroomPageArticlesDescription>
+                                        <PressroomPageArticlesData>{t('PressroomPage_Article_Date')}</PressroomPageArticlesData>
+                                    </PressroomPageArticlesContent>
+                                </PressroomPageArticles>
+                            </Link>
                         ))}
-                    </NewsPageArticlesWrapper> 
-                </NewsPageArticlesSectionWrapper>      
-            </NewsPageArticlesSection>
+                    </PressroomPageArticlesWrapper> 
+                </PressroomPageArticlesSectionWrapper>      
+            </PressroomPageArticlesSection>
 
-            <NewsPagePressInquiriesSection>
-                <NewsPagePressInquiriesSectionWrapper>
-                    <NewsPagePressInquiresTitle>{t('PressroomPage_Form_Title')}</NewsPagePressInquiresTitle>
+            <PressroomCTASection>                    
+                <BaseCardElement>
+                    <BaseCardImage>
+                        <CardImage />
+                    </BaseCardImage>
 
-                    <NewsPagePressInquiresForm onSubmit={handleSubmit(onSubmit)}> 
-                        <InputWrapper>
-                            <InputTitle>{t('PressroomPage_Form_Name_Input')}</InputTitle>
+                    <BaseCardDescriptionWrapper>
+                        <BaseCardTitleWrapper>
+                            <BaseCardTitle>{t('PressroomPage_CTA_Title')}</BaseCardTitle>
+                            <BaseCardDescription>{t('PressroomPage_CTA_Description')}</BaseCardDescription>
+                        </BaseCardTitleWrapper>
 
-                            <Input 
-                                name="name" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({ required: true })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('PressroomPage_Form_Story_Input')}</InputTitle>
-                            
-                            <Input 
-                                name="story" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({ required: true })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('PressroomPage_Form_Email_Input')}</InputTitle>
-
-                            <Input 
-                                name="email" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({
-                                    required: "Required",
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                        message: "Invalid email address"
-                                    }
-                                })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('PressroomPage_Form_Publication_Input')}</InputTitle>
-
-                            <Input 
-                                name="media" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({ required: true })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('PressroomPage_Form_Phone_Input')}</InputTitle>
-
-                            <Input 
-                                name="phone" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({ required: true })}
-                            />
-                        </InputWrapper>
-
-                        <TextareaWrapper>
-                            <TextareaTitle>{t('PressroomPage_Form_Inquiri_Input')}</TextareaTitle>
-
-                            <Textarea
-                                rows="8"
-                                cols="5"
-                            />       
-                        </TextareaWrapper>
-
-                        <SubmitButton type="submit">{t('PressroomPage_Form_Send')}</SubmitButton>
-                    </NewsPagePressInquiresForm> 
-                </NewsPagePressInquiriesSectionWrapper>    
-            </NewsPagePressInquiriesSection>
-
-            <BaseSection
-                backgroundImage={'/static/images/pressroom-media-kit-banner.svg'}
-                title={t('PressroomPage_Media_Banner_Title')}
-                description={t('PressroomPage_Media_Banner_Description')}
-                textAlign={'center'}
-                buttonTitle={'Learn more'}
-            />
+                        <ButtonWrapper>            
+                            <BaseButton mode={'dark'}>{t('PressroomPage_CTA_Button')}</BaseButton>  
+                        </ButtonWrapper>     
+                    </BaseCardDescriptionWrapper>
+                </BaseCardElement>
+            </PressroomCTASection>                   
         </>
     )
 }

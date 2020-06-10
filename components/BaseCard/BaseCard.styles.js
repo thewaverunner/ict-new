@@ -5,12 +5,24 @@ import {
     COLORS
 } from '../../utils/constants'
 
-export const BaseCardElement = styled.div`
+export const BaseCardElement = styled.a`
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
+    transition: all 0.15s linear;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 
+            0 30px 60px -12px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3), 
+            0 -12px 36px -8px rgba(0,0,0,.025)
+        ;
+    }
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         margin-bottom: 0;
