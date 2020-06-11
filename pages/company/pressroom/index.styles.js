@@ -100,6 +100,10 @@ export const PressroomPageArticlesWrapper = styled.div`
 
 export const PressroomPageArticles = styled.article`
     margin-bottom: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
   
     @media screen and (min-width: ${BREAKPOINTS.xs}px) {
         width: calc(50% - 30px);
@@ -166,6 +170,10 @@ export const BaseCardElement = styled.a`
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
     transition: all 0.15s linear;
 
+    svg {
+        transition: all 0.15s linear;
+    }
+
     &:hover {
         cursor: pointer;
         transform: translateY(-2px);
@@ -174,6 +182,10 @@ export const BaseCardElement = styled.a`
             0 18px 36px -18px rgba(0,0,0,.3), 
             0 -12px 36px -8px rgba(0,0,0,.025)
         ;
+
+        svg {
+            filter: grayscale(0.8);
+        }
     }
 
     background-color: ${COLORS.white};

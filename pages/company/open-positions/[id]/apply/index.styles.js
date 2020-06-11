@@ -103,6 +103,7 @@ export const InputWrapper = styled.div`
 export const InputTitle = styled.div`
     font-family: 'DM Sans Bold';
     padding-right: 10px;
+    white-space: nowrap;
 
     color: ${COLORS.dark};
     font-size: ${FONTS.p}px;

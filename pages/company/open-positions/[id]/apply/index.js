@@ -1,6 +1,8 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 
 import Head from 'next/head'
+
+import axios from 'axios'
 
 import { useForm } from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
@@ -41,17 +43,40 @@ import {
 
 
 function OpenPositionApplyPage ({ t }) {
-    const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles), [])
+    const [phone, setPhone] = useState()
+
+    const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles) , [])
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
     const { register, handleSubmit, errors } = useForm()
 
-    const onSubmit = data => console.log(data)
+    const axiosConfig = {
+        headers: {
+            Authorization: "Token token=6Q185JczKY8NpY-CPQaxMCwJYzIT-juueOVI2SAv",
+            Accept: "application/vnd.api+json",
+            "X-Api-Version": 20161108,
+        },
+    }
 
-    let PhoneInputStyles = {} 
+    const onSubmit = data => {
+        const requestData = {
+            data: {
+                type: "candidates",
+                attributes: {
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    pitch: data.pitch,
+                    phone: phone,
+                }
+            }
+        }
 
-    PhoneInputStyles = OpenPositionApplyPageInputPhone
+        axios.post("url", axiosConfig, JSON.stringify(requestData))
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
+    }
 
     return (
         <>
@@ -73,10 +98,20 @@ function OpenPositionApplyPage ({ t }) {
 
                     <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
                         <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Name')}</InputTitle>
+                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_FirstName')}</InputTitle>
 
                             <Input 
-                                name="name" 
+                                name="firstName" 
+                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
+                                ref={register({ required: true })}
+                            />
+                        </InputWrapper>
+
+                        <InputWrapper>
+                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_LastName')}</InputTitle>
+
+                            <Input 
+                                name="lastName" 
                                 unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
                                 ref={register({ required: true })}
                             />
@@ -84,7 +119,7 @@ function OpenPositionApplyPage ({ t }) {
 
                         <InputWrapper>
                             <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Email')}</InputTitle>
-
+                    
                             <Input 
                                 name="email"
                                 unvalid={errors.email && errors.email.message ? 'true' : 'false'}
@@ -103,10 +138,12 @@ function OpenPositionApplyPage ({ t }) {
 
                             <PhoneInput 
                                 country={'se'} 
-                                inputStyle={PhoneInputStyles.inputStyle} 
-                                containerStyle={PhoneInputStyles.containerStyle}
-                                buttonStyle={PhoneInputStyles.buttonStyle}
+                                inputStyle={OpenPositionApplyPageInputPhone.inputStyle} 
+                                containerStyle={OpenPositionApplyPageInputPhone.containerStyle}
+                                buttonStyle={OpenPositionApplyPageInputPhone.buttonStyle}
                                 masks={{ se: '... ... ...' }}
+                                value={phone}
+                                onChange={setPhone}
                             />    
                         </InputWrapper>
 
@@ -142,8 +179,10 @@ function OpenPositionApplyPage ({ t }) {
                             </TextareaTitle>
 
                             <Textarea
+                                name="pitch"
                                 rows="8"
                                 cols="5"
+                                ref={register}
                             />       
                         </TextareaWrapper>
 

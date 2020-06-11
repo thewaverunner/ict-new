@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import axios from 'axios'
 
 import Head from 'next/head'
 
@@ -8,6 +10,8 @@ import { withTranslation } from '../../../i18n'
 
 import BaseCard from '../../../components/BaseCard'
 import OpenPositionsPagePositionItem from '../../../components/OpenPositionsPagePositionItem'
+
+import { AXIOS_CONFIG } from '../../../utils/constants'
 
 import {
     OpenPositionsPageList,
@@ -20,7 +24,21 @@ import {
     ContactUsPageCardsSection,
 } from './index.styles'
 
+
 function OpenPositionsPage ({ t }) {
+    const [jobs, setJobs] = useState([])
+
+    useEffect(() => {
+        axios.get("https://api.teamtailor.com/v1/jobs", AXIOS_CONFIG)
+            .then(response => {
+                const jobs = response.data.data
+                setJobs(jobs)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, [])
+
     const locations = [
         'All locations',
         'Western district',
@@ -89,10 +107,10 @@ function OpenPositionsPage ({ t }) {
 
                 <OpenPositionsPageListWrapper>        
                     <OpenPositionsPageList>
-                        {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => (
+                        {jobs.map((job, index) => (
                             <OpenPositionsPagePositionItem 
                                 key={index} 
-                                position={_} 
+                                position={job} 
                             />
                         ))}
                     </OpenPositionsPageList>

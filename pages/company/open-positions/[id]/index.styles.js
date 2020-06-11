@@ -43,6 +43,11 @@ export const OpenPositionJobPageSectionDescription = styled.p`
     line-height: 31.5px;
     margin-bottom: 56px;
 
+    ul {
+        list-style: inherit;
+        padding-left: 20px;
+    }
+
     color: ${COLORS.darken};
     font-size: ${FONTS.h3}px;
 `

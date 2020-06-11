@@ -21,3 +21,12 @@ export const COLORS = {
     black: '#000000',
     lighten: '#eff7f7',
 }
+
+export const AXIOS_CONFIG = {
+    headers: {
+        Authorization: "Token token=6Q185JczKY8NpY-CPQaxMCwJYzIT-juueOVI2SAv",
+        Accept: "application/vnd.api+json",
+        "X-Api-Version": 20161108,
+    },
+}
+

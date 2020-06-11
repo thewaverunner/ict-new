@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 
+import axios from 'axios'
+
+import { withRouter } from 'next/router'
 import Head from 'next/head'
 
 import { withTranslation } from '../../../../i18n'
 
 import BaseButton from '../../../../components/BaseButton'
 import BaseSection from '../../../../components/BaseSection'
+
+import { AXIOS_CONFIG } from '../../../../utils/constants'
 
 import {
     CorporateGovernancePartnershipsSection,
@@ -22,7 +27,32 @@ import {
     OpenPositionJobPageTaskWrapper,
 } from './index.styles'
 
-function OpenPositionJobPage ({ t }) {
+function OpenPositionJobPage ({ t, router }) {
+    const jobId = router.query.id
+
+    const [jobDetail, setDescription] = useState({})
+
+    useEffect(() => {
+        axios.get(`https://api.teamtailor.com/v1/jobs/${jobId}`, AXIOS_CONFIG)
+            .then(response => {
+                const jobDetail = response.data.data.attributes.body.split('The position:')
+                const jobDescription = jobDetail[0]
+                const jobTasks = jobDetail[1]
+                const jobTitle = response.data.data.attributes.title
+
+                setDescription(prevState => {
+                    return {
+                        ...prevState,
+                        description: jobDescription,
+                        tasks: jobTasks,
+                        title: jobTitle,
+                    }
+                })
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, [])
 
     return (
         <>
@@ -32,7 +62,7 @@ function OpenPositionJobPage ({ t }) {
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
-                title={t('OpenPositionsJobPage_Marketing_Banner_Title')}
+                title={jobDetail.title}
                 titleColor={'black'}
                 subtitle={t('OpenPositionsJobPage_Marketing_Banner_Subtitle')}
             />
@@ -40,14 +70,14 @@ function OpenPositionJobPage ({ t }) {
             <OpenPositionJobPageSection>
                 <OpenPositionJobPageDescriptionJobWrapper>
                     <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage_Job_Description_Title')}</OpenPositionJobPageSectionTitle>
-                    <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: t('OpenPositionsJobPage_Job_Description')}} />
+                    <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: jobDetail.description}} />
                 </OpenPositionJobPageDescriptionJobWrapper>
 
                 <OpenPositionJobPageTaskWrapper>
                     <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage_Job_Task_Title')}</OpenPositionJobPageSectionTitle>
-                    <OpenPositionJobPageSectionDescription>{t('OpenPositionsJobPage_Job_Task_Description')}</OpenPositionJobPageSectionDescription>
+                    <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: jobDetail.tasks}} />
 
-                    <BaseButton mode={'dark'}>{t('OpenPositionsJobPage_Job_Apply')}</BaseButton>
+                    <BaseButton mode={'dark'} linkUrl={`/company/open-positions/${jobId}/apply`}>{t('OpenPositionsJobPage_Job_Apply')}</BaseButton>
                 </OpenPositionJobPageTaskWrapper>
             </OpenPositionJobPageSection>
 
@@ -78,4 +108,4 @@ OpenPositionJobPage.getInitialProps = async () => ({
     namespacesRequired: ['common'],
 })
 
-export default withTranslation('common')(OpenPositionJobPage)
+export default withRouter(withTranslation('common')(OpenPositionJobPage))

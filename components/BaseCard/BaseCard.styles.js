@@ -14,6 +14,10 @@ export const BaseCardElement = styled.a`
     transition: all 0.15s linear;
     text-decoration: none;
 
+    img, h2 {
+        transition: all 0.15s linear;
+    }
+
     &:hover {
         cursor: pointer;
         transform: translateY(-2px);
@@ -22,6 +26,10 @@ export const BaseCardElement = styled.a`
             0 18px 36px -18px rgba(0,0,0,.3), 
             0 -12px 36px -8px rgba(0,0,0,.025)
         ;
+
+        img, h2{
+            filter: grayscale(0.8);
+        }
     }
 
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
@@ -67,7 +75,7 @@ export const BaseCardTitleWrapper = styled.div`
     }  
 `
 
-export const BaseCardTitle = styled.a`
+export const BaseCardTitle = styled.h2`
     font-family: "DM Sans Bold";
     font-size: 20px;
     line-height: 30px;
