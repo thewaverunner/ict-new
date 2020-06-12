@@ -49,7 +49,7 @@ function OpenPositionJobPage ({ t, router }) {
                 tasks: jobDetail[1],
                 title: data.data.attributes.title,
                 city: locations.data.data.attributes.city,
-                country: locations.data.data.attributes.city,
+                country: locations.data.data.attributes.country,
             }
 
             setJob(job)
