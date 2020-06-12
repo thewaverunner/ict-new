@@ -38,7 +38,7 @@ export const OpenPositionJobPageSectionTitle = styled.h2`
     }
 `
 
-export const OpenPositionJobPageSectionDescription = styled.p`
+export const OpenPositionJobPageSectionDescription = styled.div`
     font-family: 'DM Sans Regular';
     line-height: 31.5px;
     margin-bottom: 56px;

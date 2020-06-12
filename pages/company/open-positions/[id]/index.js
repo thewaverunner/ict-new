@@ -27,47 +27,7 @@ import {
     ButtonWrapper,
 } from './index.styles'
 
-function OpenPositionJobPage ({ t, router }) {
-    const jobId = router.query.id
-
-    const [job, setJob] = useState({})
-
-    useEffect(() => {
-        getJob(jobId)
-    }, [])
-
-    async function getJob (id) {
-        try {
-            const { data } = await JobsService.getJob(id)
-
-            const locations = await getLocations(id)
-
-            const jobDetail = data.data.attributes.body.split('The position:')
-
-            const job = {
-                description: jobDetail[0],
-                tasks: jobDetail[1],
-                title: data.data.attributes.title,
-                city: locations.data.data.attributes.city,
-                country: locations.data.data.attributes.country,
-            }
-
-            setJob(job)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    async function getLocations (id) {
-        const locationsPromises = JobsService.getJobLocation(id)
-
-        try {
-            return await locationsPromises
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
+function OpenPositionJobPage ({ t, router, job }) {
     return (
         <>
             <Head>
@@ -91,7 +51,7 @@ function OpenPositionJobPage ({ t, router }) {
                     <OpenPositionJobPageSectionTitle>{t('OpenPositionsJobPage_Job_Task_Title')}</OpenPositionJobPageSectionTitle>
                     <OpenPositionJobPageSectionDescription dangerouslySetInnerHTML={{ __html: job.tasks}} />
 
-                    <BaseButton mode={'dark'} linkUrl={`/company/open-positions/${jobId}/apply`}>{t('OpenPositionsJobPage_Job_Apply')}</BaseButton>
+                    <BaseButton mode={'dark'} linkUrl={`/company/open-positions/${router.query.id}/apply`}>{t('OpenPositionsJobPage_Job_Apply')}</BaseButton>
                 </OpenPositionJobPageTaskWrapper>
             </OpenPositionJobPageSection>
 
@@ -120,8 +80,43 @@ function OpenPositionJobPage ({ t, router }) {
     )
 }
 
-OpenPositionJobPage.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-})
+OpenPositionJobPage.getInitialProps = async ({ query }) => {
+    async function getJob () {
+        try {
+            const { data } = await JobsService.getJob(query.id)
+
+            const locations = await getLocations()
+
+            const jobDetail = data.data.attributes.body.split('The position:')
+
+            const job = {
+                description: jobDetail[0],
+                tasks: jobDetail[1],
+                title: data.data.attributes.title,
+                city: locations.data.data.attributes.city,
+                country: locations.data.data.attributes.country,
+            }
+
+            return job
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations () {
+        const locationsPromises = JobsService.getJobLocation(query.id)
+
+        try {
+            return await locationsPromises
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    return {
+        namespacesRequired: ['common'],
+        job: await getJob(),
+    }
+}
 
 export default withRouter(withTranslation('common')(OpenPositionJobPage))
