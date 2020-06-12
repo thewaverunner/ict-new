@@ -14,7 +14,6 @@ import {
     PressroomPageTopSectionList,
     PressroomPageTopSectionItem,
     PressroomPageTopSectionLink,
-
     ArticlePageSection,
     ArticlePageItem,
     ArticlePagePressRelease,
@@ -22,14 +21,12 @@ import {
     ArticlePageTime,
     ArticlePageParagraph,
     ArticlePageImage,
-
     ArticlePagePressContactSection,
     ArticlePagePressTitle,
     ArticlePagePressAuthors,
     ArticlePagePressAuthor,
     ArticlePagePressAuthorName,
     ArticlePagePressAuthorEmail,
-
     LatestArticlesSection,
     LatestArticlesSectionTitle,
     LatestArticlesList,
@@ -40,7 +37,6 @@ import {
     LatestArticlesListItemTime,
     LatestArticlesListItemTitle,
     LatestArticlesListItemDescription,
-
     PressroomCTASection,
     BaseCardElement,
     BaseCardImage,
@@ -51,54 +47,54 @@ import {
     ButtonWrapper,
 } from './index.styles'
 
+const pressroomTopNav = [
+    {
+        title: 'Press Inquiry', 
+        link: '/',
+    },
+    {
+        title: 'Press Kit', 
+        link: '/',
+    },
+    {
+        title: 'Archive', 
+        link: '/',
+    },
+]
+
+const latestArticles = [
+    {
+        image: '/static/images/pressroom-articles-image.svg',
+        title: 'Global reach is now inevitable',
+        date: 'May 12, 2020',
+        description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
+    },
+    {
+        image: '/static/images/pressroom-articles-image.svg',
+        title: 'Global reach is now inevitable',
+        date: 'May 12, 2020',
+        description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
+    },
+    {
+        image: '/static/images/pressroom-articles-image.svg',
+        title: 'Global reach is now inevitable',
+        date: 'May 12, 2020',
+        description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
+    },
+]
+
+const authorsArticle = [
+    {
+        name: 'Amanda Carlsson',
+        email: 'amanda.carlsson@impactct.com',
+    },
+    {
+        name: 'Greg Burry',
+        email: 'greg.burry@impactct.com',
+    },
+]
+
 function ArticlePage ({ t }) {
-    const pressroomTopNav = [
-        {
-            title: 'Press Inquiry', 
-            link: '/'
-        },
-        {
-            title: 'Press Kit', 
-            link: '/'
-        },
-        {
-            title: 'Archive', 
-            link: '/'
-        },
-    ]
-
-    const latestArticles = [
-        {
-            image: '/static/images/pressroom-articles-image.svg',
-            title: 'Global reach is now inevitable',
-            date: 'May 12, 2020',
-            description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
-        },
-        {
-            image: '/static/images/pressroom-articles-image.svg',
-            title: 'Global reach is now inevitable',
-            date: 'May 12, 2020',
-            description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
-        },
-        {
-            image: '/static/images/pressroom-articles-image.svg',
-            title: 'Global reach is now inevitable',
-            date: 'May 12, 2020',
-            description: 'Our priority is to build global frontrunners in multiple industries, disrupting monopolised markets by offering a unique and robust value proposition on a global scale.',
-        },
-    ]
-
-    const authorsArticle = [
-        {
-            name: 'Amanda Carlsson',
-            email: 'amanda.carlsson@impactct.com',
-        },
-        {
-            name: 'Greg Burry',
-            email: 'greg.burry@impactct.com',
-        },
-    ]
-
     return (
         <>
             <Head>

@@ -15,13 +15,14 @@ import {
     OurPeoplePageManagementSection,
     OurPeoplePageManagementTitle,
     OurPeoplePageManagementList,
-    CorporateGovernancePartnershipsSection,
-    CorporateGovernancePartnershipsImage,
-    CorporateGovernancePartnershipsContent,
-    CorporateGovernancePartnershipsContentWrapper,
-    CorporateGovernancePartnershipsTitle,
-    CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper,
+    PressroomCTASection,
+    BaseCardElement,
+    BaseCardImage,
+    BaseCardDescriptionWrapper,
+    BaseCardTitleWrapper,
+    BaseCardTitle,
+    BaseCardDescription,
+    ButtonWrapper,
 } from './index.styles'
 
 function OurPeoplePage ({ t }) {
@@ -108,25 +109,27 @@ function OurPeoplePage ({ t }) {
                     </OurPeoplePageManagementList>
                 </OurPeoplePageManagementSection>
 
-                <CorporateGovernancePartnershipsSection>
-                    <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                        <img 
-                            src="/static/images/company-parthership.svg" 
-                            alt="company-parthership"
-                        />
-                    </CorporateGovernancePartnershipsImage> 
-                
-                    <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
-                        <CorporateGovernancePartnershipsContentWrapper>
-                            <CorporateGovernancePartnershipsDescriptionWrapper>
-                                <CorporateGovernancePartnershipsTitle>{t('OurPeoplePage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
-                                <CorporateGovernancePartnershipsDescription>{t('OurPeoplePage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
+                <PressroomCTASection>                    
+                    <BaseCardElement>
+                        <BaseCardImage>
+                            <img 
+                                src="/static/images/press-card-image.svg"
+                                alt="press-card-presentation" 
+                            />
+                        </BaseCardImage>
 
-                                <BaseButton mode={'dark'}>{t('OurPeoplePage_ParthershipSection_Button')}</BaseButton>
-                            </CorporateGovernancePartnershipsDescriptionWrapper>
-                        </CorporateGovernancePartnershipsContentWrapper>
-                    </CorporateGovernancePartnershipsContent>
-                </CorporateGovernancePartnershipsSection>
+                        <BaseCardDescriptionWrapper>
+                            <BaseCardTitleWrapper>
+                                <BaseCardTitle>{t('OurPeoplePage_ParthershipSection_Title')}</BaseCardTitle>
+                                <BaseCardDescription>{t('OurPeoplePage_ParthershipSection_Description')}</BaseCardDescription>
+                            </BaseCardTitleWrapper>
+
+                            <ButtonWrapper>            
+                                <BaseButton mode={'dark'}>{t('OurPeoplePage_ParthershipSection_Button')}</BaseButton>  
+                            </ButtonWrapper>     
+                        </BaseCardDescriptionWrapper>
+                    </BaseCardElement>
+                </PressroomCTASection>   
             </OurPeoplePageManagementSectionWrapper>
         </>
     )

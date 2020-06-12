@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
-import axios from 'axios'
-
 import Head from 'next/head'
 
 import Dropdown from 'react-dropdown'
 
 import { withTranslation } from '../../../i18n'
 
+import JobsService from '../../../services/jobs'
+
 import BaseCard from '../../../components/BaseCard'
 import OpenPositionsPagePositionItem from '../../../components/OpenPositionsPagePositionItem'
-
-import { AXIOS_CONFIG } from '../../../utils/constants'
 
 import {
     OpenPositionsPageList,
@@ -24,32 +22,53 @@ import {
     ContactUsPageCardsSection,
 } from './index.styles'
 
+const locations = [
+    'All locations',
+    'Western district',
+    'South district',
+]
+
+const departments = [
+    'All departments',
+    'Marketing department',
+    'Managers department',
+]
 
 function OpenPositionsPage ({ t }) {
     const [jobs, setJobs] = useState([])
 
     useEffect(() => {
-        axios.get("https://api.teamtailor.com/v1/jobs", AXIOS_CONFIG)
-            .then(response => {
-                const jobs = response.data.data
-                setJobs(jobs)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        getJobs()
     }, [])
 
-    const locations = [
-        'All locations',
-        'Western district',
-        'South district',
-    ]
+    async function getJobs () {
+        try {
+            const { data } = await JobsService.getJobs()
 
-    const departments = [
-        'All departments',
-        'Marketing department',
-        'Managers department',
-    ]
+            const locations = await getLocations(data.data)
+
+            const jobsWithLocations = data.data.map((job, index) => {
+                return {
+                    ...job,
+                    location: locations[index].data.data
+                }
+            })
+
+            setJobs(jobsWithLocations)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations (jobs) {
+        const locationsPromises = jobs.map(({ id }) => JobsService.getJobLocation(id))
+
+        try {
+            return await Promise.all(locationsPromises)
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     const contactUsCard = [
         {

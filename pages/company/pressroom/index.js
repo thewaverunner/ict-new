@@ -7,8 +7,6 @@ import { withTranslation } from '../../../i18n'
 
 import BaseButton from '../../../components/BaseButton'
 
-import CardImage from '../../../public/static/images/press-card-image.svg'
-
 import {
     PressroomPageTopSection,
     PressroomPageTopSectionTitle,
@@ -18,14 +16,12 @@ import {
     PressroomPageArticles,
     PressroomPageArticlesSection,
     PressroomPageArticlesSectionWrapper,
-    PressroomPageArticlesImage,
     PressroomPageArticlesContent,
     PressroomPageArticlesTitle,
     PressroomPageArticlesDescription,
     PressroomPageArticlesWrapper,
     PressroomPagePressRelease,
     PressroomPageArticlesData,
-
     PressroomCTASection,
     BaseCardElement,
     BaseCardImage,
@@ -36,22 +32,22 @@ import {
     ButtonWrapper,
 } from './index.styles'
 
-function PressroomPage ({ t }) {
-    const pressroomTopNav = [
-        {
-            title: 'Press Inquiry', 
-            link: '/'
-        },
-        {
-            title: 'Press Kit', 
-            link: '/'
-        },
-        {
-            title: 'Archive', 
-            link: '/'
-        },
-    ]
+const pressroomTopNav = [
+    {
+        title: 'Press Inquiry', 
+        link: '/'
+    },
+    {
+        title: 'Press Kit', 
+        link: '/'
+    },
+    {
+        title: 'Archive', 
+        link: '/'
+    },
+]
 
+function PressroomPage ({ t }) {
     return (
         <>
             <Head>
@@ -76,13 +72,11 @@ function PressroomPage ({ t }) {
                         {[0, 1, 2, 3, 4, 5].map((_, index) => (
                             <Link href='pressroom/article' key={index}>
                                 <PressroomPageArticles>
-                                    <PressroomPageArticlesImage>
-                                        <img 
-                                            src="/static/images/pressroom-articles-image.svg" 
-                                            alt="article-presentation"
-                                        />
-                                    </PressroomPageArticlesImage>
-
+                                    <img 
+                                        src="/static/images/pressroom-articles-image.svg" 
+                                        alt="article-presentation"
+                                    />
+                               
                                     <PressroomPageArticlesContent>
                                         <PressroomPagePressRelease>{t('PressroomPage_Article_PressRelease')}</PressroomPagePressRelease>
                                         <PressroomPageArticlesTitle>{t('PressroomPage_Article_Title')}</PressroomPageArticlesTitle>
@@ -99,7 +93,10 @@ function PressroomPage ({ t }) {
             <PressroomCTASection>                    
                 <BaseCardElement>
                     <BaseCardImage>
-                        <CardImage />
+                        <img 
+                            src="/static/images/press-card-image.svg"
+                            alt="press-card-presentation" 
+                        />
                     </BaseCardImage>
 
                     <BaseCardDescriptionWrapper>

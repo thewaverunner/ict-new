@@ -15,7 +15,7 @@ function OpenPositionsPagePositionItem ({ position }) {
             <Link href={`/company/open-positions/` + position.id}>
                 <OpenPositionsPageItemLink>
                     <OpenPositionsPageItemTitle dangerouslySetInnerHTML={{ __html: position.attributes.title }} />
-                    <OpenPositionsPageItemContent dangerouslySetInnerHTML={{ __html: position.id }}></OpenPositionsPageItemContent>
+                    <OpenPositionsPageItemContent dangerouslySetInnerHTML={{ __html: `${position.location.attributes.country} - ${position.location.attributes.city}` }} />
                 </OpenPositionsPageItemLink>
             </Link>
         </OpenPositionsPageItem>

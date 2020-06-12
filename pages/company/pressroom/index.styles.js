@@ -115,8 +115,6 @@ export const PressroomPageArticles = styled.article`
     }
 `
 
-export const PressroomPageArticlesImage = styled.div``
-
 export const PressroomPageArticlesContent = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         padding-right: 35px;
@@ -170,7 +168,7 @@ export const BaseCardElement = styled.a`
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
     transition: all 0.15s linear;
 
-    svg {
+    img {
         transition: all 0.15s linear;
     }
 
@@ -183,7 +181,7 @@ export const BaseCardElement = styled.a`
             0 -12px 36px -8px rgba(0,0,0,.025)
         ;
 
-        svg {
+        img {
             filter: grayscale(0.8);
         }
     }

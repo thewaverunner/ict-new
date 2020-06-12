@@ -110,10 +110,11 @@ export const ArticlePageTitle = styled.h1`
     }
 `
 
-export const ArticlePageTime = styled.p`
+export const ArticlePageTime = styled.span`
     font-family: "DM Sans Regular";
     opacity: 0.6;
     margin-bottom: 17px;
+    display: block;
     
     font-size: ${FONTS.p}px;
     color: ${COLORS.dark};
