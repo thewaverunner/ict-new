@@ -3,231 +3,265 @@ import styled from 'styled-components'
 import {
     BREAKPOINTS,
     FONTS,
-    COLORS 
+    COLORS,
+    MAX_WIDTH_CONTAINER 
 } from '../../../utils/constants'
 
-export const NewsPageArticlesSection = styled.section`
+export const PressroomPageTopSection = styled.section`
+    padding: 30px 25px;
+
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        display: flex;
+        justify-content: space-between;    
+        align-items: center; 
+    }
+ 
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
+         
+        max-width: ${MAX_WIDTH_CONTAINER}px;
+    }
+`
+
+export const PressroomPageTopSectionTitle = styled.h1`
+    font-family: "DM Sans Bold";
+    font-size: 30px;
+    padding-bottom: 30px;
+
+    color: ${COLORS.darken};
+
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        font-size: 38px;
+    }
+` 
+
+export const PressroomPageTopSectionList = styled.ul``
+
+export const PressroomPageTopSectionItem = styled.li`
+    padding-bottom: 20px;
+
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        display: inline-block;
+        padding-right: 30px;
+        padding-bottom: 0;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        padding-right: 60px;
+    }
+`
+
+export const PressroomPageTopSectionLink = styled.a`
+    font-family: "DM Sans Regular";
+    text-decoration: none;
+    transition: opacity 0.3s linear;
+
+    color: ${COLORS.darken};
+    font-size: ${FONTS.p}px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+`
+
+export const PressroomPageArticlesSection = styled.section`
     background-color: #fafafa;
+    padding: 50px 25px;
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+       padding: 50px 0 80px;
+    }
 `
 
-export const NewsPageArticlesSectionWrapper = styled.div`
-    max-width: 1170px;
-    margin: 0 auto 16px;
-    padding: 113px 10px 93px;
+export const PressroomPageArticlesSectionWrapper = styled.div`
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
 
-    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
-        max-width: 950px;
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
-
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        max-width: 720px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        padding: 40px 25px;
-    }  
 `
 
-export const NewsPageArticlesSectionTitle = styled.h1`
-    margin-bottom: 50px;
+export const PressroomPageArticlesWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        margin: 0 -15px;
+    }
+`
+
+export const PressroomPageArticles = styled.article`
+    margin-bottom: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+  
+    @media screen and (min-width: ${BREAKPOINTS.xs}px) {
+        width: calc(50% - 30px);
+        margin: 0 15px 45px;
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        width: calc(33.333% - 30px);
+    }
+`
+
+export const PressroomPageArticlesContent = styled.div`
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        padding-right: 35px;
+    }
+`
+
+export const PressroomPagePressRelease = styled.h3`
+    font-family: "DM Sans Bold";
+    text-transform: uppercase;
+    color: #007a9d;
+    padding: 19px 0;
+
+    font-size: ${FONTS.p}px;
+`
+
+export const PressroomPageArticlesTitle = styled.h2`
     font-family: 'DM Sans Bold';
-    line-height: 56px;
-    
-    color: ${COLORS.darken};
-    font-size: ${FONTS.h2}px;
-
-    @media screen and (max-width: ${BREAKPOINTS.lg}px){
-        font-size: 35px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.md}px){
-        font-size: 32px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.sm}px){
-        font-size: 28px;
-        padding-left: 10px;
-    }
-`
-
-export const NewsPageArticles = styled.div`
-    flex: 0 1 32%;
-    margin-bottom: 70px;
-
-    @media screen and (max-width: ${BREAKPOINTS.sm}}px) {
-        flex:1 1 45%;
-        padding-right: 20px;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-            margin-bottom: 30px;
-        }    
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        flex: 1 1 100%;
-        padding: 0 10px;
-    } 
-`
-
-export const NewsPageArticlesImage = styled.div``
-
-export const NewsPageArticlesContent = styled.div`
-    padding-right: 35px;
-`
-
-export const NewsPageArticlesTitle = styled.h2`
-    margin: 40px 0 6px;
-    font-family: 'DM Sans Bold';
-    line-height: 31px;
+    font-size: 21px;
+    padding-bottom: 19px;
 
     color: ${COLORS.darken};
-    font-size: ${FONTS.h3}px;
 `
 
-export const NewsPageArticlesDescription = styled.p`
-    margin-bottom: 40px;
+export const PressroomPageArticlesDescription = styled.p`
     font-family: 'DM Sans Regular';
     line-height: 21px;
+    padding-bottom: 19px;
     
     color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
-    
-    @media screen and (max-width: ${BREAKPOINTS.lg}}px) {
-        font-size: 12px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.md}}px) {
-        font-size: 11px;
-        margin-bottom: 20px;
-    }
 `
 
-export const NewsPageArticlesWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
+export const PressroomPageArticlesData = styled.p`
+    font-family: "DM Sans Regular";
+    opacity: 0.6;
+
+    color: ${COLORS.dark};
+    font-size: ${FONTS.p}px;
 `
 
-export const NewsPagePressInquiriesSection = styled.section`
+export const PressroomCTASection = styled.section`
     background-color: #fafafa;
+    padding: 25px;
 `
 
-export const NewsPagePressInquiriesSectionWrapper = styled.div`
-    max-width: 890px;
-    margin: 0 auto 16px;
-    padding: 125px 0 128px;
+export const BaseCardElement = styled.a`
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
+    transition: all 0.15s linear;
 
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        max-width: 740px;
-        padding: 100px 25px 100px;
+    img {
+        transition: all 0.15s linear;
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.sm}px) {
-        max-width: 520px;
-        padding: 80px 25px 80px;
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 
+            0 30px 60px -12px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3), 
+            0 -12px 36px -8px rgba(0,0,0,.025)
+        ;
+
+        img {
+            filter: grayscale(0.8);
+        }
     }
 
-    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        padding: 50px 25px 75px;
+    background-color: ${COLORS.white};
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+        margin: 0 auto;
+
+        max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `
 
-export const NewsPagePressInquiresTitle = styled.h1`
-    margin-bottom: 79px;
-    font-family: 'DM Sans Bold';
-    line-height: 56px;
+export const BaseCardImage = styled.div`
+    margin: -52px 0;
+    transform: rotate(90deg);
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+       min-width: 90px;
+       transform: none;
+    }
+`
+
+export const BaseCardDescriptionWrapper = styled.div`
+    padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        width: 100%;
+        padding: 40px 45px 40px 25px;
+        text-align: left;
+        justify-content: space-between;
+        flex-direction: row;
+    }  
+`
+
+export const BaseCardTitleWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
+        max-width: 520px;
+        padding-right: 20px;
+    }
     
+    @media screen and (min-width: ${BREAKPOINTS.md}px) {
+        padding-right: 0;
+    } 
+`
+
+export const BaseCardTitle = styled.h1`
+    font-family: "DM Sans Bold";
+    font-size: 21px;
+    line-height: 31.5px;
+    margin-bottom: 10px;
+
+    color: ${COLORS.dark};
+`
+
+export const BaseCardDescription = styled.p`
+    font-family: "DM Sans Regular";
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.56;
+    margin-bottom: 15px;
+
     color: ${COLORS.darken};
-    font-size: ${FONTS.h2}px;
 
-    @media screen and (max-width: ${BREAKPOINTS.lg}px) {
-        font-size: 35px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.md}px) {
-        font-size: 32px;
-    }
-
-    @media screen and (max-width: ${BREAKPOINTS.xs}px) {
-        font-size: 28px;
+    @media screen and (min-width: ${BREAKPOINTS.sm}px) {
         margin-bottom: 0;
     }
 `
 
-export const NewsPagePressInquiresForm = styled.form`
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-`
-
-export const InputWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    padding: 20px 10px;
-    border-bottom: 1px solid #1d1d1f;
-    margin-bottom: 37px;
-`
-
-export const InputTitle = styled.div`
-    font-family: 'DM Sans Bold';
-    white-space: nowrap;
-    padding-right: 10px;
-    
-    color: ${COLORS.dark};
-    font-size: ${FONTS.p}px;
-`
-
-export const Input = styled.input`
-    font-family: 'DM Sans Regular';
-    background-color: #fafafa;
-    width: 100%;
-    border: none;
-    outline: none;
-    
-    color: ${COLORS.dark};
-    font-size: ${FONTS.p}px;
-`
-
-export const TextareaWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    border-bottom: 1px solid #1d1d1f;
-    margin-bottom: 37px;
-`
-
-export const TextareaTitle = styled.div`
-    font-family: 'DM Sans Bold';
-    padding-left: 10px;
-    margin-bottom: 10px;
-
-    color: ${COLORS.dark};
-    font-size: ${FONTS.p}px;
-`
-
-export const Textarea = styled.textarea`
-    font-family: 'DM Sans Regular';
-    background-color: #fafafa;
-    width: 100%;
-    resize: none;
-    border: none;
-    outline: none;
-
-    color: ${COLORS.dark};
-    font-size: ${FONTS.p}px;
-`
-
-export const SubmitButton = styled.button`
-    min-width: 200px;
-    float: right;
-    padding: 14px;
-    font-family: 'DM Sans Regular';
-    border-radius: 10px;
-    background: transparent;
-    border: 1.5px solid #000;
-
-    color: ${COLORS.dark};
-    font-size: ${FONTS.p}px;
-`
+export const ButtonWrapper = styled.div``

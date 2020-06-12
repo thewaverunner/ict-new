@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Head from 'next/head'
 
 import Dropdown from 'react-dropdown'
 
 import { withTranslation } from '../../../i18n'
+
+import JobsService from '../../../services/jobs'
 
 import BaseCard from '../../../components/BaseCard'
 import OpenPositionsPagePositionItem from '../../../components/OpenPositionsPagePositionItem'
@@ -20,18 +22,53 @@ import {
     ContactUsPageCardsSection,
 } from './index.styles'
 
-function OpenPositionsPage ({ t }) {
-    const locations = [
-        'All locations',
-        'Western district',
-        'South district',
-    ]
+const locations = [
+    'All locations',
+    'Western district',
+    'South district',
+]
 
-    const departments = [
-        'All departments',
-        'Marketing department',
-        'Managers department',
-    ]
+const departments = [
+    'All departments',
+    'Marketing department',
+    'Managers department',
+]
+
+function OpenPositionsPage ({ t }) {
+    const [jobs, setJobs] = useState([])
+
+    useEffect(() => {
+        getJobs()
+    }, [])
+
+    async function getJobs () {
+        try {
+            const { data } = await JobsService.getJobs()
+
+            const locations = await getLocations(data.data)
+
+            const jobsWithLocations = data.data.map((job, index) => {
+                return {
+                    ...job,
+                    location: locations[index].data.data
+                }
+            })
+
+            setJobs(jobsWithLocations)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations (jobs) {
+        const locationsPromises = jobs.map(({ id }) => JobsService.getJobLocation(id))
+
+        try {
+            return await Promise.all(locationsPromises)
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     const contactUsCard = [
         {
@@ -89,10 +126,10 @@ function OpenPositionsPage ({ t }) {
 
                 <OpenPositionsPageListWrapper>        
                     <OpenPositionsPageList>
-                        {[0, 1, 2, 3, 4, 5, 6, 7].map((_, index) => (
+                        {jobs.map((job, index) => (
                             <OpenPositionsPagePositionItem 
                                 key={index} 
-                                position={_} 
+                                position={job} 
                             />
                         ))}
                     </OpenPositionsPageList>

@@ -2,25 +2,31 @@ import React, { Component } from 'react'
 
 import styled from 'styled-components'
 
-import { BREAKPOINTS, FONTS, COLORS } from '../../../utils/constants'
+import { 
+    BREAKPOINTS,
+    FONTS,
+    COLORS 
+} from '../../../utils/constants'
 
 const NavbarItemTitle = styled.button`
     background: transparent;
     border: 0;
-
     font-family: "DM Sans Bold";
-    font-size: ${FONTS.p}px;
     line-height: 44px;
-
-    color: ${props => props.isFixed ? COLORS.white : '#1d1d1f'};
-
     display: flex;
     justify-content: center;
-
     transition: opacity 0.3s;
     cursor: pointer;
     position: relative;
     z-index: 2;
+
+    color: ${props => props.isFixed ? COLORS.white : '#1d1d1f'};
+    
+    font-size: ${FONTS.p}px;
+
+    &:last-child {
+        padding: 1px 0 1px 6px;
+    }
 
     &:hover, &:focus {
         opacity: 0.5;
@@ -90,7 +96,7 @@ span:last-child {
 
 const NavbarItemEl = styled.li`
     position: relative;
-    padding-left: 25px;
+    padding-left: 35px;
 `
 
 const DropdownSlot = styled.div`

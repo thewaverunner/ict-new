@@ -8,10 +8,11 @@ import {
 
 export const BaseSectionWrapper = styled.section`
     background-size: cover;
-    width: 100%;
+    min-width: 100%;
     margin-bottom: 16px;
 
     background: url(${props => props.backgroundImage}) no-repeat;
+    filter: brightness(65%);
     padding: ${props => props.titleColor === 'gradient' ? '87px 0 115px' : (props.buttonTitle  ? '126px 0 126px' : '150px 0')};
 
     @media screen and (max-width: ${BREAKPOINTS.xs}px) {
@@ -39,6 +40,7 @@ export const BaseSectionContent = styled.div`
 
     @media screen and (max-width: ${BREAKPOINTS.sm}px) {
        padding: 0 25px;
+       text-align: left;
 
        align-items: ${props => props.titleColor == 'gradient' ? 'center' : 'end'};
     }
@@ -92,18 +94,6 @@ export const BaseSectionSubtitle = styled.h3`
     position: relative;
     
     color: ${props => props.titleColor === 'black' ? COLORS.dark : COLORS.white};
-
-    &:before {
-        content: '';
-        height: 1px;
-        width: 21.4px;
-        display: block;
-        background-color: #A23BFF;
-        position: absolute;
-        left: 50%;
-        top: -15px;
-        transform: translateX(-10px)
-    }
 
     @media screen and (max-width: ${BREAKPOINTS.md}px) {
         font-size: 28px;

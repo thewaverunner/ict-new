@@ -42,6 +42,9 @@ export const OpenPositionsPageItemTitle = styled.h2`
     font-size: 31px;
     line-height: 35px;
     font-family: 'DM Sans Bold';
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
 
     color: ${COLORS.darken};
 `

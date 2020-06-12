@@ -1,58 +1,69 @@
-import React, { useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Head from 'next/head'
 
-import { useForm } from 'react-hook-form'
-import { useDropzone } from 'react-dropzone'
-
-import PhoneInput from 'react-phone-input-2'
+import { withRouter } from 'next/router'
 
 import { withTranslation } from '../../../../../i18n'
+
+import JobsService from '../../../../../services/jobs'
 
 import BaseButton from '../../../../../components/BaseButton'
 import BaseSection from '../../../../../components/BaseSection'
 
-
 import {
     OpenPositionApplyPageContent,
-    OpenPositionApplyPageTitle,
-    OpenPositionApplyPageForm,
-    OpenPositionApplyPageInputPhone,
-    OpenPositionApplyPageInputFile,
-    OpenPositionApplyPageInputFileImages,
-    OpenPositionApplyPageInputFileMessage,
-    OpenPositionApplyPageInputFileWrapper,
     OpenPositionApplyPageWrapper,
-    InputWrapper,
-    InputTitle,
-    Input,
-    TextareaWrapper,
-    TextareaTitle,
-    Textarea,
-    SubmitButton,
-    CorporateGovernancePartnershipsSection,
-    CorporateGovernancePartnershipsImage,
-    CorporateGovernancePartnershipsContent,
-    CorporateGovernancePartnershipsContentWrapper,
-    CorporateGovernancePartnershipsTitle,
-    CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper
+    OpenPositionApplyPageTitle,
+    PressroomCTASection,
+    BaseCardElement,
+    BaseCardImage,
+    BaseCardDescriptionWrapper,
+    BaseCardTitleWrapper,
+    BaseCardTitle,
+    BaseCardDescription,
+    ButtonWrapper,
 } from './index.styles'
 
 
-function OpenPositionApplyPage ({ t }) {
-    const onDrop = useCallback(acceptedFiles => console.log(acceptedFiles), [])
+function OpenPositionApplyPage ({ t, router }) {
+    const jobId = router.query.id
 
-    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+    const [job, setJob] = useState({})
 
-    const { register, handleSubmit, errors } = useForm()
+    useEffect(() => {
+        getJob(jobId)
+    }, [])
 
-    const onSubmit = data => console.log(data)
+    async function getJob (id) {
+        try {
+            const { data } = await JobsService.getJob(id)
 
-    let PhoneInputStyles = {} 
+            const locations = await getLocations(id)
 
-    PhoneInputStyles = OpenPositionApplyPageInputPhone
+            const job = {
+                jobApply: data.data.links['careersite-job-apply-iframe-url'],
+                title: data.data.attributes.title,
+                city: locations.data.data.attributes.city,
+                country: locations.data.data.attributes.city,
+            }
 
+            setJob(job)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations (id) {
+        const locationsPromises = JobsService.getJobLocation(id)
+
+        try {
+            return await locationsPromises
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    
     return (
         <>
             <Head>
@@ -61,116 +72,40 @@ function OpenPositionApplyPage ({ t }) {
 
             <BaseSection
                 backgroundImage={'/static/images/open-positions-job-title.svg'}
-                title={t('OpenPositionsJobPage_Marketing_Banner_Title')}
+                title={job.title}
                 titleColor={'black'}
-                subtitle={t('OpenPositionsJobPage_Marketing_Banner_Subtitle')}
+                subtitle={`${job.country} - ${job.city}`}
                 textAlign={'center'}
             />
 
             <OpenPositionApplyPageContent>
                 <OpenPositionApplyPageWrapper>
-                    <OpenPositionApplyPageTitle>{t('OpenPositionApplyPage_ApplicationForm_Title')}</OpenPositionApplyPageTitle>
-
-                    <OpenPositionApplyPageForm onSubmit={handleSubmit(onSubmit)}>
-                        <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Name')}</InputTitle>
-
-                            <Input 
-                                name="name" 
-                                unvalid={errors.name && errors.name.message ? 'true' : 'false'} 
-                                ref={register({ required: true })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Email')}</InputTitle>
-
-                            <Input 
-                                name="email"
-                                unvalid={errors.email && errors.email.message ? 'true' : 'false'}
-                                ref={register({
-                                    required: "Required",
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                        message: "Invalid email address"
-                                    }
-                                })}
-                            />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                            <InputTitle>{t('OpenPositionApplyPage_ApplicationForm_Phone')}</InputTitle>
-
-                            <PhoneInput 
-                                country={'se'} 
-                                inputStyle={PhoneInputStyles.inputStyle} 
-                                containerStyle={PhoneInputStyles.containerStyle}
-                                buttonStyle={PhoneInputStyles.buttonStyle}
-                                masks={{ se: '... ... ...' }}
-                            />    
-                        </InputWrapper>
-
-                        <OpenPositionApplyPageInputFileWrapper {...getRootProps()}>
-                            <OpenPositionApplyPageInputFile {...getInputProps()} />
-                        
-                            {
-                                isDragActive 
-                                ? (
-                                    <OpenPositionApplyPageInputFileMessage>{t('OpenPositionApplyPage_ApplicationForm_Upload_Success')}</OpenPositionApplyPageInputFileMessage>
-                                )
-                                : (
-                                    <OpenPositionApplyPageInputFileMessage>
-                                        <OpenPositionApplyPageInputFileImages>
-                                            <img 
-                                                src="/static/images/open-positions-apply-page-upload-icon.svg" 
-                                                alt="upload"
-                                            />
-                                        </OpenPositionApplyPageInputFileImages>
-
-                                        <strong>{t('OpenPositionApplyPage_ApplicationForm_Upload_Title')}</strong> <br/>
-                                        {t('OpenPositionApplyPage_ApplicationForm_Upload_Description')} <br/>
-                                        <span>{t('OpenPositionApplyPage_ApplicationForm_Upload_ClickMessage')}</span>
-                                    </OpenPositionApplyPageInputFileMessage>
-                                )
-                            }
-                        </OpenPositionApplyPageInputFileWrapper>
-
-                        <TextareaWrapper>
-                            <TextareaTitle>
-                                <strong>{t('OpenPositionApplyPage_ApplicationForm_Cover_Letter_Title')}</strong> 
-                                {t('OpenPositionApplyPage_ApplicationForm_Cover_Letter_Description')}
-                            </TextareaTitle>
-
-                            <Textarea
-                                rows="8"
-                                cols="5"
-                            />       
-                        </TextareaWrapper>
-
-                        <SubmitButton type="submit"> {t('OpenPositionApplyPage_ApplicationForm_Send')}</SubmitButton>
-                    </OpenPositionApplyPageForm>
+                    <OpenPositionApplyPageTitle>{t('OpenPositionsJobPage_Job_Apply')}</OpenPositionApplyPageTitle>
+                    <iframe src={job.jobApply} style={{width: '100%', height: '1600px'}}></iframe>
                 </OpenPositionApplyPageWrapper>
             </OpenPositionApplyPageContent>
 
-            <CorporateGovernancePartnershipsSection>
-                <CorporateGovernancePartnershipsImage backgroundStyle={'white'}>
-                    <img 
-                        src="/static/images/company-parthership.svg" 
-                        alt="company-parthership"
-                    />
-                </CorporateGovernancePartnershipsImage> 
-            
-                <CorporateGovernancePartnershipsContent backgroundStyle={'white'}>
-                    <CorporateGovernancePartnershipsContentWrapper>
-                        <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('OpenPositionApplyPage_ParthershipSection_Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription>{t('OpenPositionApplyPage_ParthershipSection_Description')}</CorporateGovernancePartnershipsDescription>
-                            
-                            <BaseButton mode={'dark'}>{t('OpenPositionApplyPage_ParthershipSection_Button')}</BaseButton>
-                        </CorporateGovernancePartnershipsDescriptionWrapper>
-                    </CorporateGovernancePartnershipsContentWrapper>
-                </CorporateGovernancePartnershipsContent>
-            </CorporateGovernancePartnershipsSection>
+            <PressroomCTASection>                    
+                <BaseCardElement>
+                    <BaseCardImage>
+                        <img 
+                            src="/static/images/press-card-image.svg"
+                            alt="press-card-presentation" 
+                        />
+                    </BaseCardImage>
+
+                    <BaseCardDescriptionWrapper>
+                        <BaseCardTitleWrapper>
+                            <BaseCardTitle>{t('OpenPositionApplyPage_ParthershipSection_Title')}</BaseCardTitle>
+                            <BaseCardDescription>{t('OpenPositionApplyPage_ParthershipSection_Description')}</BaseCardDescription>
+                        </BaseCardTitleWrapper>
+
+                        <ButtonWrapper>            
+                            <BaseButton mode={'dark'}>{t('OpenPositionApplyPage_ParthershipSection_Button')}</BaseButton>  
+                        </ButtonWrapper>     
+                    </BaseCardDescriptionWrapper>
+                </BaseCardElement>
+            </PressroomCTASection> 
         </>
     )
 }
@@ -179,4 +114,4 @@ OpenPositionApplyPage.getInitialProps = async () => ({
     namespacesRequired: ['common'],
 })
 
-export default withTranslation('common')(OpenPositionApplyPage)
+export default withRouter(withTranslation('common')(OpenPositionApplyPage))

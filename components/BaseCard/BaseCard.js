@@ -13,7 +13,7 @@ import {
 function BaseCard ({ image, title, description }) {
     return (
         <>
-            <BaseCardElement>
+            <BaseCardElement href='#'>
                 <BaseCardImage>
                     <img 
                         src={image} 
@@ -23,7 +23,7 @@ function BaseCard ({ image, title, description }) {
 
                 <BaseCardDescriptionWrapper>
                     <BaseCardTitleWrapper>
-                        <BaseCardTitle href='#'>{title}</BaseCardTitle>
+                        <BaseCardTitle>{title}</BaseCardTitle>
 
                         <BaseCardArrow>
                             <img 

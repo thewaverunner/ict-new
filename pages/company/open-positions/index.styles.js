@@ -49,8 +49,8 @@ export const OpenPositionsPageTopSectionTitle = styled.h2`
 export const OpenPositionsPageTopSectionDescription = styled.p`       
     font-family: 'DM Sans Regular';
     line-height: 21px;
-    color: ${COLORS.darken};
 
+    color: ${COLORS.darken};
     font-size: ${FONTS.p}px;
 
     @media screen and (min-width: ${BREAKPOINTS.md}px) {
@@ -63,6 +63,7 @@ export const OpenPositionsPageTopSectionDescription = styled.p`
 export const OpenPositionsPageListWrapper = styled.div`
     @media screen and (min-width: ${BREAKPOINTS.lg}px) {
         margin: 0 auto;
+        
         max-width: ${MAX_WIDTH_CONTAINER}px;
     }
 `

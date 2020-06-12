@@ -21,13 +21,14 @@ import {
     CorporateGovernanceFoundationContent,
     CorporateGovernanceFoundationTitle,
     CorporateGovernanceFoundationDescription,
-    CorporateGovernancePartnershipsSection,
-    CorporateGovernancePartnershipsImage,
-    CorporateGovernancePartnershipsContent,
-    CorporateGovernancePartnershipsContentWrapper,
-    CorporateGovernancePartnershipsTitle,
-    CorporateGovernancePartnershipsDescription,
-    CorporateGovernancePartnershipsDescriptionWrapper,
+    PressroomCTASection,
+    BaseCardElement,
+    BaseCardImage,
+    BaseCardDescriptionWrapper,
+    BaseCardTitleWrapper,
+    BaseCardTitle,
+    BaseCardDescription,
+    ButtonWrapper,
 } from './index.styles'
 
 function CorporateGovernancePage ({ t }) {
@@ -88,25 +89,27 @@ function CorporateGovernancePage ({ t }) {
                 ))}
             </CorporateGovernanceWrapper>
 
-            <CorporateGovernancePartnershipsSection>
-                <CorporateGovernancePartnershipsImage>
-                    <img 
-                        src="/static/images/company-parthership.svg" 
-                        alt="company-parthership"
-                    />
-                </CorporateGovernancePartnershipsImage> 
-            
-                <CorporateGovernancePartnershipsContent>
-                    <CorporateGovernancePartnershipsContentWrapper>
-                        <CorporateGovernancePartnershipsDescriptionWrapper>
-                            <CorporateGovernancePartnershipsTitle>{t('CorporateGovernancePage_ParthershipsSection_Title')}</CorporateGovernancePartnershipsTitle>
-                            <CorporateGovernancePartnershipsDescription dangerouslySetInnerHTML={{ __html: t('CorporateGovernancePage_ParthershipsSection_Description')}} />
+            <PressroomCTASection>                    
+                <BaseCardElement>
+                    <BaseCardImage>
+                        <img 
+                            src="/static/images/press-card-image.svg"
+                            alt="press-card-presentation" 
+                        />
+                    </BaseCardImage>
 
-                            <BaseButton mode={'dark'}>{t('CorporateGovernancePage_ParthershipsSection_Button')}</BaseButton>
-                        </CorporateGovernancePartnershipsDescriptionWrapper>
-                    </CorporateGovernancePartnershipsContentWrapper>
-                </CorporateGovernancePartnershipsContent>
-            </CorporateGovernancePartnershipsSection>
+                    <BaseCardDescriptionWrapper>
+                        <BaseCardTitleWrapper>
+                            <BaseCardTitle>{t('CorporateGovernancePage_ParthershipsSection_Title')}</BaseCardTitle>
+                            <BaseCardDescription>{t('CorporateGovernancePage_ParthershipsSection_Description')}</BaseCardDescription>
+                        </BaseCardTitleWrapper>
+
+                        <ButtonWrapper>            
+                            <BaseButton mode={'dark'}>{t('CorporateGovernancePage_ParthershipsSection_Button')}</BaseButton>  
+                        </ButtonWrapper>     
+                    </BaseCardDescriptionWrapper>
+                </BaseCardElement>
+            </PressroomCTASection> 
         </>
     )
 }
