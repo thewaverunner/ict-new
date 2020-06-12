@@ -25,45 +25,7 @@ import {
     ButtonWrapper,
 } from './index.styles'
 
-
-function OpenPositionApplyPage ({ t, router }) {
-    const jobId = router.query.id
-
-    const [job, setJob] = useState({})
-
-    useEffect(() => {
-        getJob(jobId)
-    }, [])
-
-    async function getJob (id) {
-        try {
-            const { data } = await JobsService.getJob(id)
-
-            const locations = await getLocations(id)
-
-            const job = {
-                jobApply: data.data.links['careersite-job-apply-iframe-url'],
-                title: data.data.attributes.title,
-                city: locations.data.data.attributes.city,
-                country: locations.data.data.attributes.city,
-            }
-
-            setJob(job)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    async function getLocations (id) {
-        const locationsPromises = JobsService.getJobLocation(id)
-
-        try {
-            return await locationsPromises
-        } catch (err) {
-            console.log(err)
-        }
-    }
-    
+function OpenPositionApplyPage ({ t, job }) {
     return (
         <>
             <Head>
@@ -110,8 +72,40 @@ function OpenPositionApplyPage ({ t, router }) {
     )
 }
 
-OpenPositionApplyPage.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-})
+OpenPositionApplyPage.getInitialProps = async ({ query }) => {
+    async function getJob () {
+        try {
+            const { data } = await JobsService.getJob(query.id)
+
+            const locations = await getLocations()
+
+            const job = {
+                jobApply: data.data.links['careersite-job-apply-iframe-url'],
+                title: data.data.attributes.title,
+                city: locations.data.data.attributes.city,
+                country: locations.data.data.attributes.city,
+            }
+
+            return job
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations () {
+        const locationsPromises = JobsService.getJobLocation(query.id)
+
+        try {
+            return await locationsPromises
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    return {
+        namespacesRequired: ['common'],
+        job: await getJob(),
+    }
+}
 
 export default withRouter(withTranslation('common')(OpenPositionApplyPage))

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import Head from 'next/head'
 
@@ -34,42 +34,7 @@ const departments = [
     'Managers department',
 ]
 
-function OpenPositionsPage ({ t }) {
-    const [jobs, setJobs] = useState([])
-
-    useEffect(() => {
-        getJobs()
-    }, [])
-
-    async function getJobs () {
-        try {
-            const { data } = await JobsService.getJobs()
-
-            const locations = await getLocations(data.data)
-
-            const jobsWithLocations = data.data.map((job, index) => {
-                return {
-                    ...job,
-                    location: locations[index].data.data
-                }
-            })
-
-            setJobs(jobsWithLocations)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    async function getLocations (jobs) {
-        const locationsPromises = jobs.map(({ id }) => JobsService.getJobLocation(id))
-
-        try {
-            return await Promise.all(locationsPromises)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
+function OpenPositionsPage ({ t, jobs }) {
     const contactUsCard = [
         {
             image: '/static/images/press-card-image.svg',
@@ -139,8 +104,40 @@ function OpenPositionsPage ({ t }) {
     )
 }
 
-OpenPositionsPage.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-})
+OpenPositionsPage.getInitialProps = async () => {
+    async function getJobs () {
+        try {
+            const { data } = await JobsService.getJobs()
+
+            const locations = await getLocations(data.data)
+
+            const jobsWithLocations = data.data.map((job, index) => {
+                return {
+                    ...job,
+                    location: locations[index].data.data
+                }
+            })
+
+            return jobsWithLocations
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function getLocations (jobs) {
+        const locationsPromises = jobs.map(({ id }) => JobsService.getJobLocation(id))
+
+        try {
+            return await Promise.all(locationsPromises)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    return {
+        namespacesRequired: ['common'],
+        jobs: await getJobs(),
+    }
+}
 
 export default withTranslation('common')(OpenPositionsPage)
